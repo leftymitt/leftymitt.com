@@ -1,0 +1,46 @@
+### global settings
+
+title: "leftymitt."
+description: "can you tell the difference between the real and the indistinguishably fake"
+url: "https://leftymitt.com"
+images: "/assets/build/img"
+face: "/assets/build/img/face.svg"
+email: "treefrog@riseup.net"
+github: "https://github.com/leftymitt"
+bitcoin: 
+   address: "1GfMkg4jAqbwb4DWHbVtmqnejs9WnfHkaU"
+   qr_code: "/assets/build/img/qrcode.bmp"
+
+markdown: kramdown
+permalink: pretty
+highlighter: pygments
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+collections: 
+   resources: 
+      output: true
+      permalink: /resources/:path/
+   media: 
+      output: true
+      permalink: /media/:path/
+
+include: 
+ - "CNAME"
+ - "404.html"
+
+exclude: 
+ - "Gemfile"
+ - "Gemfile.lock"
+ - "bower.json"
+ - "bower_components"
+ - "node_modules"
+ - "package.json"
+ - "gulpfile.js"
+ - "Rakefile"
+ - "README.md"
+ - "LICENSE"
+ - "assets/src/"
+
+gems: 
+ - "jekyll-sitemap"

@@ -1,0 +1,99 @@
+---
+title: resources 
+layout: default
+resources: 
+ - name: "Arch Linux"
+   url: "https://wiki.archlinux.org/"
+   img: "arch-linux-logo.svg"
+
+ - name: "Debian"
+   url: "https://www.debian.org/"
+   img: "debian-logo.svg"
+
+ - name: "Wikipedia"
+   url: "https://en.wikipedia.org/wiki/Main_Page"
+   img: "wikipedia-logo.svg"
+
+ - name: "Tails" 
+   url: "https://tails.boum.org/"
+   img: "tails-logo.svg"	
+
+ - name: "Bitcoin"
+   url: "https://bitcoin.org/en/"
+   img: "bitcoin-logo.svg"
+
+ - name: "GitHub"
+   url: "https://github.com/"
+   img: "github-logo.svg"
+
+ - name: "UIkit"
+   url: "http://getuikit.com/"
+   img: "uikit-logo.svg"	
+
+ - name: "Firefox"
+   url: "https://www.mozilla.org/en-US/firefox"
+   img: "firefox-logo.svg"	
+
+ - name: "Tor"
+   url: "https://www.torproject.org/projects/torbrowser.html"
+   img: "tor-logo.svg"
+
+ - name: "Riseup"
+   url: "https://help.riseup.net/"
+   img: "riseup-button-crow.svg"
+--- 
+
+<div class="uk-container uk-container-center">
+	<h2>tutorials</h2>
+
+	<div class="uk-grid uk-grid-match" data-uk-grid-margin data-uk-grid-match="{target:'.uk-grid'}">
+	{% for resource in site.resources %}
+	<div class="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-3">
+		{% if resource.link %} <a href="{{ resource.link }}">
+		{% else %} <a href="{{ resource.url }}">
+		{% endif %}
+		<div class="uk-panel uk-panel-box uk-panel-box-hover">
+			<div class="uk-grid uk-grid-medium uk-flex-middle">
+				<div class="uk-width-2-10">
+				{% if resource.icon %}<img class="uk-thumbnail-expand" src="{{ site.images }}/{{ resource.icon }}">
+				{% else %}<img class="uk-thumbnail-expand" src="{{ site.face }}">
+				{% endif %}
+				</div>
+				<div class="uk-width-8-10">
+					<h3 class="uk-h3">
+						{% if resource.link %}<i class="uk-icon-external-link uk-float-right uk-margin-small-left"></i>{% endif %}
+						{{ resource.title }}
+					</h3>
+				</div>
+			</div>
+		</div>
+		</a>
+	</div>
+	{% endfor %}
+	</div>
+
+	<hr>
+
+	<h2>other places</h2>
+
+	<div class="uk-grid" data-uk-grid-margin>
+	{% for resource in page.resources %}
+	<div class="uk-width-large-1-6 uk-width-medium-1-5 uk-width-small-1-3 uk-width-1-2">
+		<div class="uk-panel uk-panel-box">
+			<a href="{{ resource.url }}">
+			<figure class="uk-thumbnail uk-thumbnail-expand uk-overlay uk-overlay-hover">
+				<img class="uk-overlay-spin" src="{{ site.images }}/{{ resource.img }}"></img>
+				<figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-slide-bottom uk-flex uk-flex-center uk-flex-middle uk-text-center">
+					<div class="">
+						<h3>{{ resource.name }}</h3>
+						<div class="uk-icon-medium uk-icon-external-link uk-hidden-small"></div>
+					</div>
+				</figccaption>
+			</figure>
+			</a>
+		</div>
+	</div>
+	{% endfor %}
+	</div>
+
+</div>

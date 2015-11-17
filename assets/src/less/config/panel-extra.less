@@ -1,0 +1,106 @@
+// Name:            Panel Extra
+// Description:     Extends styles for reusable content areas defined in panel.less
+//
+// Modifiers:       `uk-panel-box-success`
+//                  `uk-panel-box-success-hover`
+//                  `uk-panel-box-warning`
+//                  `uk-panel-box-warning-hover`
+//                  `uk-panel-box-danger`
+//                  `uk-panel-box-danger-hover`
+//
+// Markup:
+//
+// <!-- uk-panel -->
+// <div class="uk-panel">
+//     <div class="uk-panel-badge uk-badge"></div>
+//     <h3 class="uk-panel-title"></h3>
+//     <p></p>
+// </div>
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+
+@panel-box-success-background:                  #ebf7fd;
+@panel-box-success-color:                       #2d7091;
+@panel-box-success-hover-color:                 @panel-box-success-color;
+@panel-box-success-title-color:                 #2d7091;
+
+@panel-box-warning-background:                  #eee;
+@panel-box-warning-color:                       #444;
+@panel-box-warning-hover-color:                 @panel-box-warning-color;
+@panel-box-warning-title-color:                 #444;
+
+@panel-box-danger-background:                   #eee;
+@panel-box-danger-color:                        #444;
+@panel-box-danger-hover-color:                  @panel-box-danger-color;
+@panel-box-danger-title-color:                  #444;
+
+
+/*
+ * Sub-modifier: `uk-panel-box-success`
+ */
+
+.uk-panel-box-success {
+    background-color: @panel-box-success-background;
+    color: @panel-box-success-color;
+    .hook-panel-box-success;
+}
+
+.uk-panel-box-success-hover:hover {
+    /*color: @panel-box-success-hover-color;*/
+    background-color: @panel-box-success-hover-color;
+    .hook-panel-box-success-hover;
+}
+
+.uk-panel-box-success .uk-panel-title { color: @panel-box-success-title-color; }
+
+/*
+ * Sub-modifier: `uk-panel-box-warning`
+ */
+
+.uk-panel-box-warning {
+    background-color: @panel-box-warning-background;
+    color: @panel-box-warning-color;
+    .hook-panel-box-warning;
+}
+
+.uk-panel-box-warning-hover:hover {
+    /*color: @panel-box-warning-hover-color;*/
+    background-color: @panel-box-warning-hover-color;
+    .hook-panel-box-warning-hover;
+}
+
+.uk-panel-box-warning .uk-panel-title { color: @panel-box-warning-title-color; }
+
+/*
+ * Sub-modifier: `uk-panel-box-danger`
+ */
+
+.uk-panel-box-danger {
+    background-color: @panel-box-danger-background;
+    color: @panel-box-danger-color;
+    .hook-panel-box-danger;
+}
+
+.uk-panel-box-danger-hover:hover {
+    /*color: @panel-box-danger-hover-color;*/
+    background-color: @panel-box-danger-hover-color;
+    .hook-panel-box-danger-hover;
+}
+
+.uk-panel-box-danger .uk-panel-title { color: @panel-box-danger-title-color; }
+
+
+// Hooks
+// ========================================================================
+
+.hook-panel-box-success() {}
+.hook-panel-box-success-hover() {}
+.hook-panel-box-warning() {}
+.hook-panel-box-warning-hover() {}
+.hook-panel-box-danger() {}
+.hook-panel-box-danger-hover() {}

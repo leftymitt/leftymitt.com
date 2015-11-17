@@ -95,16 +95,28 @@ task :publish do
 		@post_date = Time.now.strftime("%F")
 
 		unless !File.exists?("_drafts/#{@post_name}")
+
 			if File.readlines("_drafts/#{@post_name}").grep(/categor(y|ies):.resource/).any?
+				Dir.mkdir("_resources") unless File.exists?("_resources")
 				FileUtils.mv("_drafts/#{@post_name}", "_resources/#{@post_name}")
 			elsif File.readlines("_drafts/#{@post_name}").grep(/categor(y|ies):.media/).any?
+				Dir.mkdir("_media") unless File.exists?("_media")
 				FileUtils.mv("_drafts/#{@post_name}", "_media/#{@post_name}")
 			elsif File.readlines("_drafts/#{@post_name}").grep(/categor(y|ies):.project/).any?
+				Dir.mkdir("_projects") unless File.exists?("_projects")
 				FileUtils.mv("_drafts/#{@post_name}", "_projects/#{@post_name}")
 			elsif File.readlines("_drafts/#{@post_name}").grep(/categor(y|ies):.blog/).any?
+				Dir.mkdir("__posts") unless File.exists?("__posts")
 				puts "publish as media? (y/N)"
 				@yes = STDIN.gets.chomp
+
 				if @yes == "Y" || @yes == "y"
+					Dir.mkdir("_media") unless File.exists?("_media")
+
+					text = File.read("_drafts/#{@post_name}")
+					text = text.gsub(/published_date:\ /, "published_date: \"#{@post_date}\"")
+					File.open("_drafts/#{@post_name}", "w") {|file| file.puts text}
+
 					FileUtils.mv("_drafts/#{@post_name}", "_posts/#{@post_date}-#{@post_name}")
 					FileUtils.symlink("../_posts/#{@post_date}-#{@post_name}", "_media/#{@post_name}")
 				end
@@ -115,6 +127,7 @@ task :publish do
 			else
 				puts "done!"
 			end
+
 		end
 
 	else 

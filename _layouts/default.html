@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ page.title }} | {{ site.title }}</title>
+
+		<link rel="stylesheet" href="/assets/build/css/uikit.min.css">
+
+		{{ page.css }}
+
+		<link rel="apple-touch-icon" href="/assets/build/img/apple-touch-icon.png">
+		<link rel="icon" href="/assets/build/img/favicon.ico">
+	</head>
+
+	<body>
+		<div class="uk-flex uk-flex-column" style="min-height:100vh;">
+	
+			<!-- add padding to botton equal to navbar height -->
+			<div style="padding-bottom:50px;">
+			{% include nav.html %}
+			</div>
+
+			<div class="uk-margin-top uk-flex-item-1" style="">
+			{{ content }}
+			</div>
+		
+			{% include footer.html %}
+
+		</div>
+	</body>
+
+	<script src="/assets/build/js/jquery.min.js"></script>
+	<script src="/assets/build/js/uikit.min.js"></script>
+
+	{{ page.js }}
+
+</html>

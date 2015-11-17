@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ page.title }} | {{ site.title }}</title>
+
+		<link rel="stylesheet" href="/assets/build/css/uikit.min.css">
+
+		{{ page.css }}
+
+		<link rel="apple-touch-icon" href="/assets/build/img/apple-touch-icon.png">
+		<link rel="icon" href="/assets/build/img/favicon.ico">
+	</head>
+
+	<body>
+		<div class="uk-flex uk-flex-column" style="min-height:100vh;">
+
+			<!-- add padding to bottom equal to navbar height -->
+			<div style="padding-bottom:50px;">
+			{% include nav.html %}
+			</div>
+			
+			<div class="uk-container uk-container-center uk-margin-top uk-flex-item-1" style="width:100%;">
+
+			{% if page.table_of_contents %}
+				<div class=" uk-grid">
+					<div class="uk-width-1-1 uk-width-medium-4-5 uk-push-1-5">
+			{% endif %}
+
+			<article class="uk-article" style="">
+				<h2 class="uk-h2" id="top">{{ page.title }}</h2>
+				{% if page.category == 'blog' or page.categories == "blog" %}
+				<p class="uk-article-meta uk-margin-left">
+					posted on {% if page.date %} {{ page.date | date_to_string }}
+					          {% elsif page.published_date %} {{ page.published_date | date_to_string }}
+					          {% elsif page.added_date %} {{ page.added_date | date_to_string }}
+					          {% endif %} </p>
+				{% elsif page.category == 'media' or page.categories == "media" %}
+					{% if page.author %}
+						{% if page.published_date %}
+							<p class="uk-article-meta uk-margin-left">
+								by {{ page.author }} on {{ page.published_date | date_to_string }}
+							</p>
+						{% elsif page.added_date %}
+							<p class="uk-article-meta uk-margin-left">
+								by {{ page.author }} on {{ page.added_date | date_to_string }}
+							</p>
+						{% endif %}
+					{% endif %}
+				{% endif %}
+				{% if page.code == true or page.code_button == true %} 
+					<button class="uk-button uk-button-success uk-button-large uk-margin-right uk-margin-bottom"
+							  type="button"
+							  data-uk-toggle="{ target: 'p, h3, h4, h5, h6',
+													  animation: 'uk-animation-fade, uk-animation-fade' }">
+						just code.
+					</button>
+				{% endif %}
+				{{ content }}
+			</article>
+			
+			{% if page.table_of_contents %}
+					</div>
+
+					<div class="uk-hidden-small uk-width-medium-1-5 uk-pull-4-5">
+						<aside class="uk-panel uk-panel-box" data-uk-sticky="{top:70}">
+							<ul class="uk-nav uk-nav-side uk-nav-parent-icon" 
+								 data-uk-scrollspy-nav="{closest:'li', topoffset:-250}"
+								 data-uk-nav>
+								<li class="uk-nav-header">contents.</li>
+								<li class="uk-active"><a href="#top" data-uk-smooth-scroll="{offset:65}">
+									<div class="uk-text-small uk-margin-small-left">back to top.</div>
+								</a></li>
+								{% for toc in page.table_of_contents %}
+									<li><a href="#{{ toc.item }}" data-uk-smooth-scroll="{offset:65}">
+										{{ toc.item | replace: "_", " " | replace: "-", " " }}
+									</a></li>
+								{% endfor %}
+							</ul>
+						</aside>
+					</div>
+
+				</div>
+			{% endif %}
+			
+			</div>
+		
+		{% include footer.html %}
+
+		</div>
+	</body>
+
+	<script src="/assets/build/js/jquery.min.js"></script>
+	<script src="/assets/build/js/uikit.min.js"></script>
+
+	{{ page.js }}
+
+</html>

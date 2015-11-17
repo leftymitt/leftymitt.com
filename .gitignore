@@ -1,0 +1,20 @@
+# text editor backups
+*.swp
+*~
+
+# jekyll 
+_site/
+.sass-cache/
+bower_components
+node_modules
+
+# exclude source files except a few less files
+!assets/src/
+assets/src/*
+!assets/src/less/
+!assets/src/img/
+assets/src/less/*
+!assets/src/less/*.less
+!assets/src/less/config/
+assets/src/less/config/*
+!assets/src/less/config/*.less

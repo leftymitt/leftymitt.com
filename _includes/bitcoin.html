@@ -1,0 +1,24 @@
+<div class="uk-modal" id="bitcoin">
+	<div class="uk-modal-dialog">
+		<button class="uk-modal-close uk-close"></button>
+		<div class="uk-modal-header">
+			<h2>tips are nice.</h2>
+		</div>
+		<div class="uk-text-center">
+			<b>Address:</b>
+			<br>
+			<div style="overflow:auto;">
+				<a href="bitcoin:{{ site.bitcoin.address }}?amount=.025">
+					{{ site.bitcoin.address }}
+				</a>
+			</div>
+		</div>
+		<br>
+		<div class="uk-text-center">
+			<p><b>QR Code:</b></p>
+			<figure class="uk-thumbnail">
+				<img src="{{ site.bitcoin.qr_code }}" alt="Bitcoin QR Code"></img>
+			</figure>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,80 @@
+<nav class="uk-navbar uk-navbar-attached" 
+     style="top:0; width:100vw; position:fixed; z-index:1010;">
+
+<div class="uk-container uk-container-center">
+	<a class="uk-navbar-brand uk-hidden-small" href="/">{{ site.title }}</a>
+	<div class="uk-navbar-flip uk-hidden-small">
+		<ul class="uk-navbar-nav">
+<!--
+			<li {% if page.title == "projects" or page.url contains "/projects/" %} class="uk-active" {% endif %}>
+				<a href="/projects/">projects</a>
+			</li>
+-->
+			<li {% if page.title == "resources" or page.url contains "/resources/" %} class="uk-active" {% endif %}>
+				<a href="/resources/">resources</a>
+			</li>
+			<li {% if page.title == "media" or page.url contains "/media/" %} class="uk-active" {% endif %}>
+				<a href="/media/">media</a>
+			</li>
+			<li {% if page.title == "blog" or page.url contains "/blog/" %} class="uk-active" {% endif %}>
+				<a href="/blog/">blog</a>
+			</li>
+			<li {% if page.title == "rss" %} class="uk-active" {% endif %}>
+				<a href="/feed.xml"><i class="uk-icon-rss"></i></a>
+			</li>
+		</ul>
+	</div>
+
+	<a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+	<div class="uk-visible-small">
+		<div class="uk-navbar-flip"><ul class="uk-navbar-nav">
+			<li><a style="background-color:transparent" href="/feed.xml">
+				<i class="uk-icon-rss uk-icon-small"></i>
+			</a></li>
+		</ul></div>
+		<a href="/" class="uk-navbar-center uk-navbar-brand">{{ site.title }}</a>
+	</div>
+<div>
+
+<div id="offcanvas" class="uk-offcanvas">
+	<div class="uk-offcanvas-bar">
+
+		<ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+
+			<li class="uk-nav-header">pages.</li>
+<!--
+			<li {% if page.title == "projects" or page.url contains "/projects/" %} class="uk-active" {% endif %}>
+				<a href="/projects/">projects</a>
+			</li>
+-->
+			<li {% if page.title == "resources" or page.url contains "/resources/" %} class="uk-active" {% endif %}>
+				<a href="/resources/">resources</a>
+			</li>
+			<li {% if page.title == "media" or page.url contains "/media/" %} class="uk-active" {% endif %}>
+				<a href="/media/">media</a>
+			</li>
+			<li {% if page.title == "blog" or page.url contains "/blog/" %} class="uk-active" {% endif %}>
+				<a href="/blog/">blog</a>
+			</li>
+
+		</ul>
+
+		{% if page.table_of_contents %}
+		<ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-scrollspy-nav="{closest:'li'}">
+			<li class="uk-nav-divider"></li>
+			<li class="uk-nav-header">contents.</li>
+			<li class="uk-active"><a href="#top" data-uk-offcanvas data-uk-smooth-scroll="{offset:65}">
+				back to top.
+			</a></li>
+			{% for toc in page.table_of_contents %}
+			<li><a href="#{{ toc.item }}" data-uk-offcanvas data-uk-smooth-scroll="{offset:65}">
+				{{ toc.item | replace: "_", " " }}
+			</a></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+
+	</div>
+</div>
+
+</nav>

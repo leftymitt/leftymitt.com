@@ -3,6 +3,8 @@
 title: "leftymitt."
 description: "can you tell the difference between the real and the indistinguishably fake"
 url: "https://leftymitt.com"
+enforce_ssl: "leftymitt.com"
+
 images: "/assets/build/img"
 face: "/assets/build/img/face.svg"
 email: "treefrog@riseup.net"

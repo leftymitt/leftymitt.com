@@ -109,7 +109,7 @@ task :publish do
 				Dir.mkdir("_projects") unless File.exists?("_projects")
 				FileUtils.mv("_drafts/#{@post_name}", "_projects/#{@post_name}")
 			elsif File.readlines("_drafts/#{@post_name}").grep(/categor(y|ies):.blog/).any?
-				Dir.mkdir("__posts") unless File.exists?("__posts")
+				Dir.mkdir("__posts") unless File.exists?("_posts")
 				puts "publish as media? (y/N)"
 				@yes = STDIN.gets.chomp
 

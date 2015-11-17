@@ -1,3 +1,5 @@
+# rakefile for starting, editing, and publishing new posts.
+
 desc "print usage information"
 task :default do
 	puts "options: "
@@ -76,6 +78,7 @@ task :publish do
 		Dir.foreach("_drafts") do |fname|
 			next if fname == '.' or fname == '..' 
 
+			# only display drafts that are categorized. 
 			if File.readlines("_drafts/#{fname}").grep(/categor(y|ies):.blog/).any?
 				puts "blog: #{fname}"
 			elsif File.readlines("_drafts/#{fname}").grep(/categor(y|ies):.media/).any?
@@ -113,6 +116,7 @@ task :publish do
 				if @yes == "Y" || @yes == "y"
 					Dir.mkdir("_media") unless File.exists?("_media")
 
+					# automatically fill the published_date field.
 					text = File.read("_drafts/#{@post_name}")
 					text = text.gsub(/published_date:\ /, "published_date: \"#{@post_date}\"")
 					File.open("_drafts/#{@post_name}", "w") {|file| file.puts text}

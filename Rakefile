@@ -43,6 +43,7 @@ task :new do
 				file.puts ""
 				file.puts "table_of_contents: "
 				file.puts "code: false"
+				file.puts "link: "
 				file.puts "---"
 			end
 		end

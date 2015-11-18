@@ -1,14 +1,19 @@
 ---
-title: ...to the legislatures of the southern states.
+title: "...to the legislatures of the southern states."
 category: media
 layout: post
 type: transcript
 format: text
+tags: 
+ - civil war
+ - history
+ - suffrage
 published_date: "1867-01-15"
 added_date: "2015-10-03"
 author: "Henry Blackwell"
 icon: henry-blackwell.jpg"
 ---
+
 WHAT THE SOUTH CAN DO.
 
 How the Southern States can make themselves Masters of the Situation.

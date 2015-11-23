@@ -2,7 +2,7 @@
 title: "us costs of wars through 2014."
 layout: post
 category: media
-author: leftymitt
+author: Neta Crawford
 format: text
 type: report
 tags: 

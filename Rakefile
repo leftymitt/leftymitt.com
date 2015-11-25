@@ -67,7 +67,7 @@ task :edit do
 		puts "pick a page to edit."
 		@name = STDIN.gets.chomp
 
-		unless !File.exists?("_drafts/#{@name}")
+		unless !File.exists?("_drafts/#{@name}") || @name.nil? || @name.empty?
 			system ("#{ENV['EDITOR']} _drafts/#{@name}")
 		end
 	else 
@@ -102,7 +102,7 @@ task :publish do
 		@post_name = STDIN.gets.chomp
 		@post_date = Time.now.strftime("%F")
 
-		unless !File.exists?("_drafts/#{@post_name}")
+		unless !File.exists?("_drafts/#{@post_name}") || @post_name.nil? || @post_name.empty?
 
 			if File.readlines("_drafts/#{@post_name}").grep(/categor(y|ies):.resource/).any?
 				Dir.mkdir("_resources") unless File.exists?("_resources")

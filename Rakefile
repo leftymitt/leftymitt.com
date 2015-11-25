@@ -128,6 +128,13 @@ task :publish do
 
 					FileUtils.mv("_drafts/#{@post_name}", "_posts/#{@post_date}-#{@post_name}")
 					FileUtils.symlink("../_posts/#{@post_date}-#{@post_name}", "_media/#{@post_name}")
+				else 
+					# automatically fill the published_date field.
+					text = File.read("_drafts/#{@post_name}")
+					text = text.gsub(/published_date:\ /, "published_date: \"#{@post_date}\"")
+					File.open("_drafts/#{@post_name}", "w") {|file| file.puts text}
+
+					FileUtils.mv("_drafts/#{@post_name}", "_posts/#{@post_date}-#{@post_name}")
 				end
 			end
 

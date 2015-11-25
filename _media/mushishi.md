@@ -9,7 +9,6 @@ added_date: "2015-10-07"
 tags: 
  - anime
  - supernatural
-icon: none
 cover: mushishi-cover.jpg
 link: "https://en.wikipedia.org/wiki/Mushishi"
 ---

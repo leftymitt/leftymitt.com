@@ -11,7 +11,7 @@ tags:
 published_date: "1867-01-15"
 added_date: "2015-10-03"
 author: "Henry Blackwell"
-icon: henry-blackwell.jpg"
+icon: henry-blackwell.jpg
 ---
 
 WHAT THE SOUTH CAN DO.

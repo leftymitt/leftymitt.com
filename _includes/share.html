@@ -1,0 +1,49 @@
+<!-- icons for sharing page on social media sites -->
+<div class="uk-container uk-margin-large-top uk-align-center">
+	
+	<!-- twitter -->
+	<a class="uk-icon-hover uk-icon-twitter-square uk-icon-large" 
+	   title="tweet it." 
+	   href="https://twitter.com/intent/tweet?source={{ site.url }}{{ page.url}}&text={{ page.title }} {{ site.url }}{{ page.url}}&via={{ site.twitter }}">
+	</a>
+
+	<!-- facebook -->
+	<a class="uk-icon-hover uk-icon-facebook-square uk-icon-large" 
+	   title="share on facebook." 
+	   href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t={{ page.title }}" >
+	</a>
+
+	<!-- google+ -->
+	<a class="uk-icon-hover uk-icon-google-plus-square uk-icon-large" 
+	   title="share on google+."
+	   href="https://plus.google.com/share?url={{ site.url }}{{ page.url}}">
+	</a>
+
+	<!-- reddit -->
+	<a class="uk-icon-hover uk-icon-reddit-square uk-icon-large" 
+	   title="post on reddit."
+	   href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url}}&title={{ page.title }}">
+	</a>
+
+	<!-- pinterest -->
+	<a class="uk-icon-hover uk-icon-pinterest-square uk-icon-large" 
+	   title="pin this."
+	   {% if page.img %} href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.img }}"
+		{% elsif page.icon %} href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.icon }}"
+		{% else %} href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.face }}"
+	   {% endif %} >
+	</a>
+	
+	<!-- tumblr -->
+	<a class="uk-icon-hover uk-icon-tumblr-square uk-icon-large" 
+	   title="post on tumblr."
+	   href="https://www.tumblr.com/share/link?url={{ site.url }}{{ page.url}}&name={{ page.title }}&description={{ page.excerpt | strip_html | truncate:250 }}">
+	</a>
+
+	<!-- email -->
+	<a class="uk-icon-hover uk-icon-envelope-square uk-icon-large" 
+	   title="email this."
+		href="mailto:?subject={{ page.title }}&body={{ page.excerpt | strip_html | truncate:250 }}: {{ site.url }}{{ page.url}}">
+	</a>
+
+</div>

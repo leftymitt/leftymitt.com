@@ -2,7 +2,7 @@
 layout: post
 title: trump and the other republicans.
 category: blog
-img: republican_logo.svg
+img: republican-logo.svg
 ---
 
 Yes, Trump is a blowhard, but so what? Is he using his quasi-populist appeal to advocate things that are uniquely dangerous to the nation or the political establishment? Are his policies substantially different from his Republican rivals? There is no better place to assess that then the recent Republican debate.  

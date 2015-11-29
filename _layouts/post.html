@@ -1,17 +1,58 @@
 <!DOCTYPE html>
-<html lang="en-gb" dir="ltr">
+<html lang="en-gb" dir="ltr" itemscope itemtype="http://schema.org/Article">
 
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>{{ page.title }} | {{ site.title }}</title>
+		<meta name="description" content="{{ site.description }}"/>
 
-		<link rel="stylesheet" href="/assets/build/css/uikit.min.css">
+		<!-- schema.org markup for google+ -->
+		<meta itemprop="name" content="{{ page.title }}"/>
+		<meta itemprop="description" content="{{ page.content | strip_html | truncate:200 }}"/>
+		{% if page.img %}
+		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.img }}"/> 
+		{% elsif page.icon %}
+		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
+		{% else %}
+		<meta itemprop="image" content="{{ site.url }}{{ site.face }}"/>
+		{% endif %}
+
+		<!-- twitter card data -->
+		{% if page.icon %}
+		<meta name="twitter:card" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
+		{% else %}
+		<meta name="twitter:card" content="{{ site.url }}{{ site.face }}"/>
+		{% endif %}
+		<meta name="twitter:site" content="{{ site.twitter }}"/>
+		<meta name="twitter:title" content="{{ page.title }}"/>
+		<meta name="twitter:description" content="{{ page.content | strip_html | truncate:200 }}"/>
+		<meta name="twitter:creator" content="{{ site.twitter }}"/>
+		<!-- twitter summary card with large image must be at least 280x150px -->
+		{% if page.img %}
+		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.img }}"/>
+		{% else %}
+		<meta name="twitter:image:src" content="{{ site.url }}{{ site.face }}"/>
+		{% endif %}
+
+		<!-- open graph data -->
+		<meta property="og:title" content="{{ page.title }}"/>
+		<meta property="og:type" content="article"/>
+		<meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+		<meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
+		<meta property="og:description" content="{{ site.description }}"/>
+		<meta property="og:site_name" content="{{ site.title }}"/>
+		<meta property="article:published_time" content="{{ page.published_date }}"/>
+		<meta property="article:modified_time" content="{{ page.added_date }}"/>
+		<meta property="article:section" content="{{ page.category }}"/>
+		<meta property="article:tag" content="{{ page.tags }}" />
+
+		<link rel="stylesheet" href="/assets/build/css/uikit.min.css"/>
 
 		{{ page.css }}
 
-		<link rel="apple-touch-icon" href="/assets/build/img/apple-touch-icon.png">
-		<link rel="icon" href="/assets/build/img/favicon.ico">
+		<link rel="apple-touch-icon" href="/assets/build/img/apple-touch-icon.png"/>
+		<link rel="icon" href="/assets/build/img/favicon.ico"/>
 	</head>
 
 	<body>

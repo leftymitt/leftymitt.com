@@ -19,21 +19,31 @@
 		{% endif %}
 
 		<!-- twitter card data -->
-		{% if page.icon %}
-		<meta name="twitter:card" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
-		{% else %}
-		<meta name="twitter:card" content="{{ site.url }}{{ site.face }}"/>
-		{% endif %}
+		{% unless page.type == "video" %}
+			{% if page.category == "anime" or page.categories == "anime" %}
+		<meta name="twitter:card" content="summary_large_image"/>
+			{% else %}
+		<meta name="twitter:card" content="summary"/>
+			{% endif %}
+		{% endunless %}
 		<meta name="twitter:site" content="{{ site.twitter }}"/>
 		<meta name="twitter:title" content="{{ page.title }}"/>
 		<meta name="twitter:description" content="{{ page.content | strip_html | truncate:200 }}"/>
 		<meta name="twitter:creator" content="{{ site.twitter }}"/>
 		<!-- twitter summary card with large image must be at least 280x150px -->
-		{% if page.img %}
+		{% unless page.type == "video" %}
+			{% if page.category == "anime" or page.categories == "anime" %}
+		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.cover }}"/>
+			{% else %}
+				{% if page.img %}
 		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.img }}"/>
-		{% else %}
+				{% elsif page.icon %}
+		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
+				{% else %}
 		<meta name="twitter:image:src" content="{{ site.url }}{{ site.face }}"/>
-		{% endif %}
+				{% endif %}
+			{% endif %}
+		{% endunless %}
 
 		<!-- open graph data -->
 		<meta property="og:title" content="{{ page.title }}"/>

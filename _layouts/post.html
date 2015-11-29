@@ -13,7 +13,7 @@
 		{% if page.img %}
 		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/> 
 		{% elsif page.icon %}
-		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.icon | replace: '.svg', '.png' }}"/>
+		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
 		{% else %}
 		<meta itemprop="image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
 		{% endif %}
@@ -39,7 +39,7 @@
 				{% if page.img %}
 		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
 				{% elsif page.icon %}
-		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.icon | replace: '.svg', '.png' }}"/>
+		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
 				{% else %}
 		<meta name="twitter:image:src" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
 				{% endif %}
@@ -53,7 +53,7 @@
 		{% if page.img %}
 		<meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
 		{% elsif page.icon %}
-		<meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.icon | replace: '.svg', '.png' }}"/>
+		<meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
 		{% else %}
 		<meta property="og:image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
 		{% endif %}

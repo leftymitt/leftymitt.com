@@ -149,7 +149,9 @@ types:
 					{% else %} <img class="uk-float-left uk-margin-right" src="{{ site.face }}"></img>
 					{% endif %}
 
+					{% unless item.cover %}
 					{{ item.content | truncate:400 }}
+					{% endunless %}
 				</p>
 			</div>
 			{% if item.link %}</a>

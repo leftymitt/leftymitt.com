@@ -14,6 +14,7 @@ types:
    color: success
    alt: 
     - documentary
+    - book
 
  - name: transcript
    color: warning
@@ -147,6 +148,7 @@ types:
 					{% elsif item.icon %} <img style="max-width:10%" class="uk-float-left uk-margin-small-bottom uk-margin-right" src="{{ site.images }}/{{ item.icon }}"></img>
 					{% else %} <img class="uk-float-left uk-margin-right" src="{{ site.face }}"></img>
 					{% endif %}
+
 					{{ item.content | truncate:400 }}
 				</p>
 			</div>

@@ -1,5 +1,5 @@
 ---
-title: "united states v. nixon"
+title: "united states v. nixon."
 layout: post
 category: media
 author: Warren Burger

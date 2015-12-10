@@ -1,5 +1,5 @@
 ---
-title: "haibane renmei"
+title: haibane renmei.
 layout: post
 category: media
 format: text

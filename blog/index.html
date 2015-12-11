@@ -28,8 +28,8 @@ layout: default
 
 	{% if paginator.total_pages > 1 %} <ul class="uk-pagination">
 
-		{% if paginator.previous_page %} <li class="uk-pagination-previous"><a class="uk-icon-angle-left" href="{{ paginator.previous_page_path }}"></a></li>
-		{% else %} <li class="uk-pagination-previous uk-disabled"><i class="uk-icon-angle-left"></i></li>
+		{% if paginator.previous_page %} <li><a class="uk-icon-angle-left" href="{{ paginator.previous_page_path }}"></a></li>
+		{% else %} <li class="uk-disabled"><span><i class="uk-icon-angle-left"></i></span></li>
 		{% endif %}
 
 		{% for page in (1..paginator.total_pages) %}
@@ -39,8 +39,8 @@ layout: default
 			{% endif %}
 		{% endfor %}
 
-		{% if paginator.next_page %} <li class="uk-pagination-next"><a class="uk-icon-angle-right" href="{{ paginator.next_page_path }}"></a></li>
-		{% else %} <li class="uk-disabled uk-pagination-next"><i class="uk-icon-angle-right"></i></li>
+		{% if paginator.next_page %} <li><a class="uk-icon-angle-right" href="{{ paginator.next_page_path }}"></a></li>
+		{% else %} <li class="uk-disabled"><span><i class="uk-icon-angle-right"></i></span></li>
 		{% endif %}
 	{% endif %} </ul>
 

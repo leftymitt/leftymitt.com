@@ -38,7 +38,7 @@ types:
 		{% endfor %}
 	</ul>
 
-	<div class="uk-grid" data-uk-grid="{gutter:20, controls:'#filter'}"> 
+	<div class="uk-grid" data-uk-grid="{gutter:15, controls:'#filter'}"> 
 	
 	{% assign sorted_media = site.media | sort: 'added_date' | reverse %}
 	{% for item in sorted_media %}

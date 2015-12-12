@@ -1,6 +1,7 @@
 ---
 title: blog
 layout: default
+paginator_edge: 3
 --- 
 
 <div class="uk-container uk-container-center">
@@ -27,17 +28,31 @@ layout: default
 	</div>
 
 	{% if paginator.total_pages > 1 %} <ul class="uk-pagination">
+		{% assign paginator_start = paginator.page | minus: page.paginator_edge %}
+		{% assign paginator_stop = paginator.page | plus: page.paginator_edge %}
+		{% if paginator_start < 1 %} {% assign paginator_start = 1 %} {% endif %}
+		{% if paginator_stop > paginator.total_pages %} {% assign paginator_stop = paginator.total_pages %} {% endif %}
 
 		{% if paginator.previous_page %} <li><a class="uk-icon-angle-left" href="{{ paginator.previous_page_path }}"></a></li>
 		{% else %} <li class="uk-disabled"><span><i class="uk-icon-angle-left"></i></span></li>
 		{% endif %}
 
-		{% for page in (1..paginator.total_pages) %}
+		{% if paginator_start > 1 %} 
+			<li><a href="{{ '/blog/' }}">{{ 1 | pnumber }}</a></li>
+			<li><span>...</span></li>
+		{% endif %}
+
+		{% for page in (paginator_start..paginator_stop) %}
 			{% if page == paginator.page %} <li class="uk-active"><span>{{ page | pnumber }}</span></li>
 			{% elsif page == 1 %} <li><a href="{{ '/blog/' }}">{{ page | pnumber }}</a></li>
 			{% else %} <li><a href="{{ site.paginate_path | replace: ':num', page }}">{{ page | pnumber }}</a></li>
 			{% endif %}
 		{% endfor %}
+		
+		{% if paginator_stop < paginator.total_pages %} 
+			<li><span>...</span></li>
+			<li><a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages | pnumber }}</a></li>
+		{% endif %}
 
 		{% if paginator.next_page %} <li><a class="uk-icon-angle-right" href="{{ paginator.next_page_path }}"></a></li>
 		{% else %} <li class="uk-disabled"><span><i class="uk-icon-angle-right"></i></span></li>

@@ -6,7 +6,7 @@ paginator_edge: 3
 
 <div class="uk-container uk-container-center">
 	
-	<div class="uk-grid" data-uk-grid="{animation:false}">
+	<div class="uk-grid" data-uk-grid="{animation:false}" style="min-height:72vh;">
 	{% for post in paginator.posts %}
 	<div class="uk-width-1-1 uk-width-medium-1-2 uk-margin">
 		<div class="uk-flex">
@@ -27,7 +27,7 @@ paginator_edge: 3
 	{% endfor %}
 	</div>
 
-	{% if paginator.total_pages > 1 %} <ul class="uk-pagination">
+	{% if paginator.total_pages > 1 %} <ul class="uk-pagination uk-margin-large-top">
 		{% assign paginator_start = paginator.page | minus: page.paginator_edge %}
 		{% assign paginator_stop = paginator.page | plus: page.paginator_edge %}
 		{% if paginator_start < 1 %} {% assign paginator_start = 1 %} {% endif %}

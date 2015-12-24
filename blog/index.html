@@ -21,7 +21,7 @@ paginator_edge: 3
 				<div class="uk-article-meta uk-margin-left">posted on {{ post.date | date_to_string }}</div>
 			</div>
 		</div>
-		<p class="uk-article">{{ post.excerpt | strip_html | truncate:400 }}</p>
+		<p class="uk-article">{{ post.excerpt | strip_html | truncatewords:100 }}</p>
 		<hr class="uk-article-divider"></hr>
 	</div>
 	{% endfor %}

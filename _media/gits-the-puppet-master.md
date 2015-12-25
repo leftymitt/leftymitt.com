@@ -5,9 +5,18 @@ type: anime
 format: video
 tags: 
  - anime
- - gits
+ - ghost in the shell
+
 layout: post
-link: "https://www.youtube.com/embed/FpWdFykMVBk"
+iframe_link: "https://www.youtube.com/embed/FpWdFykMVBk"
+link: "https://www.youtube.com/watch?v=FpWdFykMVBk"
 added_date: "2015-04-03"
 rating: "5"
 ---
+
+<div class="uk-text-center uk-cover">
+	<iframe width="560" height="315" 
+			  src="{{ page.iframe_link }}?showinfo=0&wmode=transparent&modestbranding=1&rel=0" 
+			  frameborder="0" allowfullscreen>
+	</iframe>
+</div>

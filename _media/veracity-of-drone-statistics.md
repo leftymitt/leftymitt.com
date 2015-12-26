@@ -1,1 +1,0 @@
-../_posts/2015-12-26-veracity-of-drone-statistics.md

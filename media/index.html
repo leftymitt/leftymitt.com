@@ -169,7 +169,7 @@ types:
 					{% endif %}
 
 					{% unless item.cover %}
-					{{ item.content | truncatewords:60 }}
+					{{ item.content | strip_html | truncatewords:60 }}
 					{% endunless %}
 				</p>
 			</div>

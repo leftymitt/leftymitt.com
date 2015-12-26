@@ -7,9 +7,6 @@ type: article
 format: text
 added_date: "2015-12-26"
 img: predator-drone.jpg
-
-redirect_from: "/blog/2015/12/26/veracity-of-drone-statistics/"
-permalink: "/media/veracity-of-drone-statistics/"
 ---
 
 Drones, the centerpiece of President Obama's counter-terrorism operations, are often advertised as new, precise, even surgical means of combating belligerents and terrorists in the Middle East. 

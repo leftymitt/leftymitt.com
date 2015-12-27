@@ -4,46 +4,67 @@
 	<!-- twitter -->
 	<a class="uk-icon-hover uk-icon-twitter-square uk-icon-large" 
 	   title="tweet it." 
-	   href="https://twitter.com/intent/tweet?source={{ site.url }}{{ page.url}}&text={{ page.title }} {{ site.url }}{{ page.url}}&via={{ site.twitter }}">
+	   {% capture twitter_url %}https://twitter.com/intent/tweet?source={{ site.url }}{{ page.url}}&text={{ page.title }}&via={{ site.twitter }}
+	   {% endcapture %}
+	   href="{{ twitter_url | strip_newlines | url_escape }}">
 	</a>
 
 	<!-- facebook -->
 	<a class="uk-icon-hover uk-icon-facebook-square uk-icon-large" 
 	   title="share on facebook." 
-	   href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t={{ page.title }}" >
+	   {% capture facebook_url %}https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t={{ page.title }}
+	   {% endcapture %}
+	   href="{{ facebook_url | strip_newlines | url_escape }}" >
 	</a>
 
 	<!-- google+ -->
 	<a class="uk-icon-hover uk-icon-google-plus-square uk-icon-large" 
 	   title="share on google+."
-	   href="https://plus.google.com/share?url={{ site.url }}{{ page.url}}">
+	   {% capture google_url %}https://plus.google.com/share?url={{ site.url }}{{ page.url}}
+	   {% endcapture %}
+	   href="{{ google_url | strip_newlines | url_escape }}">
 	</a>
 
 	<!-- reddit -->
 	<a class="uk-icon-hover uk-icon-reddit-square uk-icon-large" 
 	   title="post on reddit."
-	   href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url}}&title={{ page.title }}">
+	   {% capture reddit_url %}https://www.reddit.com/submit?url={{ site.url }}{{ page.url}}&title={{ page.title }}
+	   {% endcapture %}
+	   href="{{ reddit_url | strip_newlines | url_escape }}">
 	</a>
 
 	<!-- pinterest -->
 	<a class="uk-icon-hover uk-icon-pinterest-square uk-icon-large" 
 	   title="pin this."
-	   {% if page.img %} href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.img }}"
-		{% elsif page.icon %} href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.icon }}"
-		{% else %} href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.face }}"
-	   {% endif %} >
+	   {% capture pinterest_url %}
+	   {% endcapture %}
+	   {% if page.img %} 
+	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.img }}
+		   {% endcapture %}
+		{% elsif page.icon %} 
+	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.icon }}
+		   {% endcapture %}
+		{% else %} 
+	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.face }}
+		   {% endcapture %}
+	   {% endif %}
+		href="{{ pinterest_url | strip_newlines | url_escape }}">
 	</a>
 	
 	<!-- tumblr -->
 	<a class="uk-icon-hover uk-icon-tumblr-square uk-icon-large" 
 	   title="post on tumblr."
-	   href="https://www.tumblr.com/share/link?url={{ site.url }}{{ page.url}}&name={{ page.title }}&description={{ page.excerpt | strip_html | truncate:250 }}">
+	   {% capture tumblr_url %}https://www.tumblr.com/share/link?url={{ site.url }}{{ page.url}}&name={{ page.title }}&description={{ page.excerpt | strip_html | truncate:250 }}
+	   {% endcapture %}
+	   href="{{ tubmlr_url | strip_newlines | url_escape }}">
 	</a>
 
 	<!-- email -->
 	<a class="uk-icon-hover uk-icon-envelope-square uk-icon-large" 
 	   title="email this."
-		href="mailto:?subject={{ page.title }}&body={{ page.excerpt | strip_html | truncate:250 }}: {{ site.url }}{{ page.url}}">
+	   {% capture mailto_url %}mailto:?subject={{ page.title }}&body={{ page.excerpt | strip_html | truncate:250 }}: {{ site.url }}{{ page.url}}
+	   {% endcapture %}
+		href="{{ mailto_url | strip_newlines | url_escape }}">
 	</a>
 
 </div>

@@ -9,14 +9,18 @@
 
 		<!-- schema.org markup for google+ -->
 		<meta itemprop="name" content="{{ page.title }}"/>
+<!--
 		<meta itemprop="description" content="{{ page.content | strip_html | truncate:200 }}"/>
+-->
 		<meta itemprop="image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
 
 		<!-- twitter card data -->
 		<meta name="twitter:card" content="summary"/>
 		<meta name="twitter:site" content="{{ site.twitter }}"/>
 		<meta name="twitter:title" content="{{ page.title }}"/>
+<!--
 		<meta name="twitter:description" content="{{ page.content | strip_html | truncate:200 }}"/>
+-->
 		<meta name="twitter:creator" content="{{ site.twitter }}"/>
 		<meta name="twitter:image:src" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
 
@@ -25,7 +29,9 @@
 		<meta property="og:type" content="article"/>
 		<meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
 		<meta property="og:image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+<!--
 		<meta property="og:description" content="{{ page.content | strip_html | truncate:200 }}"/>
+-->
 		<meta property="og:site_name" content="{{ site.title }}"/>
 		<meta property="article:section" content="{{ page.category }}"/>
 

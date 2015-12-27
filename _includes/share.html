@@ -6,7 +6,7 @@
 	   title="tweet it." 
 	   {% capture twitter_url %}https://twitter.com/intent/tweet?source={{ site.url }}{{ page.url}}&text={{ page.title }}&via={{ site.twitter }}
 	   {% endcapture %}
-	   href="{{ twitter_url | strip_newlines | url_escape }}">
+	   href="{{ twitter_url | strip_newlines | uri_escape }}">
 	</a>
 
 	<!-- facebook -->
@@ -14,7 +14,7 @@
 	   title="share on facebook." 
 	   {% capture facebook_url %}https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t={{ page.title }}
 	   {% endcapture %}
-	   href="{{ facebook_url | strip_newlines | url_escape }}" >
+	   href="{{ facebook_url | strip_newlines | uri_escape }}" >
 	</a>
 
 	<!-- google+ -->
@@ -22,7 +22,7 @@
 	   title="share on google+."
 	   {% capture google_url %}https://plus.google.com/share?url={{ site.url }}{{ page.url}}
 	   {% endcapture %}
-	   href="{{ google_url | strip_newlines | url_escape }}">
+	   href="{{ google_url | strip_newlines | uri_escape }}">
 	</a>
 
 	<!-- reddit -->
@@ -30,14 +30,12 @@
 	   title="post on reddit."
 	   {% capture reddit_url %}https://www.reddit.com/submit?url={{ site.url }}{{ page.url}}&title={{ page.title }}
 	   {% endcapture %}
-	   href="{{ reddit_url | strip_newlines | url_escape }}">
+	   href="{{ reddit_url | strip_newlines | uri_escape }}">
 	</a>
 
 	<!-- pinterest -->
 	<a class="uk-icon-hover uk-icon-pinterest-square uk-icon-large" 
 	   title="pin this."
-	   {% capture pinterest_url %}
-	   {% endcapture %}
 	   {% if page.img %} 
 	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.img }}
 		   {% endcapture %}
@@ -48,7 +46,7 @@
 	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.face }}
 		   {% endcapture %}
 	   {% endif %}
-		href="{{ pinterest_url | strip_newlines | url_escape }}">
+		href="{{ pinterest_url | strip_newlines | uri_escape }}">
 	</a>
 	
 	<!-- tumblr -->
@@ -56,7 +54,7 @@
 	   title="post on tumblr."
 	   {% capture tumblr_url %}https://www.tumblr.com/share/link?url={{ site.url }}{{ page.url}}&name={{ page.title }}&description={{ page.excerpt | strip_html | truncate:250 }}
 	   {% endcapture %}
-	   href="{{ tubmlr_url | strip_newlines | url_escape }}">
+	   href="{{ tubmlr_url | strip_newlines | uri_escape }}">
 	</a>
 
 	<!-- email -->
@@ -64,7 +62,7 @@
 	   title="email this."
 	   {% capture mailto_url %}mailto:?subject={{ page.title }}&body={{ page.excerpt | strip_html | truncate:250 }}: {{ site.url }}{{ page.url}}
 	   {% endcapture %}
-		href="{{ mailto_url | strip_newlines | url_escape }}">
+		href="{{ mailto_url | strip_newlines | uri_escape }}">
 	</a>
 
 </div>

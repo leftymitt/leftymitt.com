@@ -4,7 +4,7 @@
 	<!-- twitter -->
 	<a class="uk-icon-hover uk-icon-twitter-square uk-icon-large" 
 	   title="tweet it." 
-	   {% capture twitter_url %}https://twitter.com/intent/tweet?source={{ site.url }}{{ page.url}}&text={{ page.title }}&via={{ site.twitter }}
+	   {% capture twitter_url %}https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url}}&text={{ page.title }}&via={{ site.twitter }}
 	   {% endcapture %}
 	   href="{{ twitter_url | strip_newlines | uri_escape }}">
 	</a>

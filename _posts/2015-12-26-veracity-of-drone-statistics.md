@@ -14,7 +14,7 @@ To date, attack drones have been deployed in Pakistan, Somalia, Syria, Iraq, Yem
 
 <div class="uk-text-center"><div class="uk-thumbnail">
 	<figure class="uk-overlay uk-overlay-hover">
-		<img src="https://img.youtube.com/vi/Z1tz9XiqqMQ/hqdefault.jpg">
+		<img src="https://img.youtube.com/vi/Z1tz9XiqqMQ/hqdefault.jpg" alt="obama's drone speech">
 		<div class="uk-overlay-panel uk-overlay-fade uk-overlay-background
 						uk-flex uk-flex-center uk-flex-middle">
 			<i class="uk-contrast uk-icon-play-circle uk-icon-large"></i>
@@ -23,9 +23,9 @@ To date, attack drones have been deployed in Pakistan, Somalia, Syria, Iraq, Yem
 			href="https://www.youtube.com/watch?v=Z1tz9XiqqMQ">
 		</a>
 	</figure>
-	<figcaption class="uk-thumbnail-caption">
+	<div class="uk-thumbnail-caption">
 		<a href="https://www.nytimes.com/2013/05/24/us/politics/transcript-of-obamas-speech-on-drone-policy.html">Transcript</a>
-	</figcaption>
+	</div>
 </div></div>
 
 But does this make sense? 
@@ -37,10 +37,10 @@ All there is to go on are reports compiled by several agencies, such as [The Bur
 All reports, though they doubtlessly undercount civilian deaths, present one simple fact: the ratio of terrorists to civilians killed is big. Take, for example, the [Council on Foreign Relations report](http://i.cfr.org/content/publications/attachments/Drones_CSR65.pdf). Civilian casualties account for as little as 3 to 10 percent of total deaths.  
 
 <div class="uk-align-medium-right uk-text-center"><div class="uk-thumbnail">
-	<img  src="{{ site.images }}/drone-table.svg">
-	<figcaption class="uk-thumbnail-caption">
+	<img src="{{ site.images }}/drone-table.svg" alt="drone strike datasheet">
+	<div class="uk-thumbnail-caption">
 		<a href="http://i.cfr.org/content/publications/attachments/Drones_CSR65.pdf">Source</a> 
-	</figcaption>
+	</div>
 </div></div>
 
 There is one particularly glaring disconnect in the data, though: the ratio of terrorists killed to drone strikes initiated is also very large. 

@@ -11,9 +11,15 @@ paginator_edge: 3
 	<div class="uk-width-1-1 uk-width-medium-1-2 uk-margin">
 		<div class="uk-flex">
 			<div class="uk-margin-right">
-				{% if post.img %}<img style="min-width:60px; width:60px;" src="{{ site.images }}/{{ post.img }}">
-				{% elsif post.icon %}<img style="min-width:60px; width:60px;" src="{{ site.images }}/{{ post.icon }}">
-				{% else %}<img style="min-width:60px; width:60px;" src="{{ site.face }}">
+				{% if post.img %}
+				<img style="width:60px; height:auto" 
+			        src="{{ site.images }}/{{ post.img }}" alt="post image">
+				{% elsif post.icon %}
+				<img style="width:60px; height:auto" alt="post image"
+				     src="{{ site.images }}/{{ post.icon }}">
+				{% else %}
+				<img style="width:60px; height:auto" alt="post image"
+				     src="{{ site.face }}">
 				{% endif %}
 			</div>
 			<div>
@@ -22,7 +28,7 @@ paginator_edge: 3
 			</div>
 		</div>
 		<p class="uk-article">{{ post.excerpt | strip_html | truncatewords:100 }}</p>
-		<hr class="uk-article-divider"></hr>
+		<hr class="uk-article-divider">
 	</div>
 	{% endfor %}
 	</div>
@@ -57,6 +63,7 @@ paginator_edge: 3
 		{% if paginator.next_page %} <li><a class="uk-icon-angle-right" href="{{ paginator.next_page_path }}"></a></li>
 		{% else %} <li class="uk-disabled"><span><i class="uk-icon-angle-right"></i></span></li>
 		{% endif %}
-	{% endif %} </ul>
+	</ul>
+	{% endif %}
 
 </div>

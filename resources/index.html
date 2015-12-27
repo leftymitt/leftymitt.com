@@ -55,8 +55,12 @@ resources:
 		<div class="uk-panel uk-panel-box uk-panel-box-hover">
 			<div class="uk-grid uk-grid-medium uk-flex-middle">
 				<div class="uk-width-2-10">
-				{% if resource.icon %}<img class="uk-thumbnail-expand" src="{{ site.images }}/{{ resource.icon }}">
-				{% else %}<img class="uk-thumbnail-expand" src="{{ site.face }}">
+				{% if resource.icon %}
+					<img class="uk-thumbnail-expand" src="{{ site.images }}/{{ resource.icon }}"
+					     alt="author logo">
+				{% else %}
+					<img class="uk-thumbnail-expand" src="{{ site.face }}" 
+					     alt="leftymitt logo">
 				{% endif %}
 				</div>
 				<div class="uk-width-8-10">
@@ -82,7 +86,8 @@ resources:
 		<div class="uk-panel uk-panel-box">
 			<a href="{{ resource.url }}">
 			<figure class="uk-thumbnail uk-thumbnail-expand uk-overlay uk-overlay-hover">
-				<img class="uk-overlay-spin" src="{{ site.images }}/{{ resource.img }}">
+				<img class="uk-overlay-spin" src="{{ site.images }}/{{ resource.img }}"
+				     alt="{{ resource.name }} icon">
 				<figcaption class="uk-overlay-panel uk-overlay-background 
 				                   uk-overlay-slide-bottom uk-flex uk-flex-center 
 				                   uk-flex-middle uk-text-center">

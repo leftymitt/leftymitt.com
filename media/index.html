@@ -163,9 +163,9 @@ types:
 				</div>
 				{% endif %}
 				<p>
-					{% if item.cover %} <img class="uk-thumbnail-expand" src="{{ site.images }}/{{ item.cover }}"></img>
-					{% elsif item.icon %} <img style="max-width:10%" class="uk-float-left uk-margin-small-bottom uk-margin-right" src="{{ site.images }}/{{ item.icon }}"></img>
-					{% else %} <img class="uk-float-left uk-margin-right" src="{{ site.face }}"></img>
+					{% if item.cover %} <img class="uk-thumbnail-expand" src="{{ site.images }}/{{ item.cover }}">
+					{% elsif item.icon %} <img style="max-width:10%" class="uk-float-left uk-margin-small-bottom uk-margin-right" src="{{ site.images }}/{{ item.icon }}">
+					{% else %} <img class="uk-float-left uk-margin-right" src="{{ site.face }}">
 					{% endif %}
 
 					{% unless item.cover %}

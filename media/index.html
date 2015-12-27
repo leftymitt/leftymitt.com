@@ -96,7 +96,8 @@ types:
 				{% if item.link contains "youtube.com" %}
 					<div class="uk-text-center">
 						<figure class="uk-overlay uk-overlay-hover">
-							<img src="{{ item.link | replace: 'www.youtube.com/watch?v=', 'img.youtube.com/vi/' }}/hqdefault.jpg">
+							<img alt="{{ item.title }} cover image"
+							     src="{{ item.link | replace: 'www.youtube.com/watch?v=', 'img.youtube.com/vi/' }}/hqdefault.jpg">
 							<div class="uk-overlay-panel uk-overlay-fade uk-overlay-background
 											uk-flex uk-flex-center uk-flex-middle">
 								<i class="uk-contrast uk-icon-play-circle uk-icon-large"></i>
@@ -163,9 +164,16 @@ types:
 				</div>
 				{% endif %}
 				<p>
-					{% if item.cover %} <img class="uk-thumbnail-expand" src="{{ site.images }}/{{ item.cover }}">
-					{% elsif item.icon %} <img style="max-width:10%" class="uk-float-left uk-margin-small-bottom uk-margin-right" src="{{ site.images }}/{{ item.icon }}">
-					{% else %} <img class="uk-float-left uk-margin-right" src="{{ site.face }}">
+					{% if item.cover %}
+					<img class="uk-thumbnail-expand" alt="{{ item.title }} cover"
+					     src="{{ site.images }}/{{ item.cover }}">
+					{% elsif item.icon %}
+					<img style="max-width:10%" alt="source logo"
+					     class="uk-float-left uk-margin-small-bottom uk-margin-right" 
+					     src="{{ site.images }}/{{ item.icon }}">
+					{% else %}
+					<img class="uk-float-left uk-margin-right" alt="source logo"
+					     src="{{ site.face }}">
 					{% endif %}
 
 					{% unless item.cover %}

@@ -55,7 +55,7 @@ types:
 			{% endif %}
 		{% endif %}
 		{% endfor %}
-				<h3 class="uk-panel-title uk-panel-header">
+				<div class="uk-panel-title uk-panel-header">
 					<div class="uk-float-right">
 					{% if item.rating %}
 						{% assign rating = item.rating  | split: '.' %}
@@ -75,7 +75,7 @@ types:
 					{% endif %}
 					</div>
 					{{ item.title }}
-				</h3>
+				</div>
 				
 <!--
 				<div class="uk-cover" style="position:relative; padding-top:35px;
@@ -134,7 +134,7 @@ types:
 		{% endif %}
 		{% endfor %}
 
-				<h3 class="uk-panel-title uk-panel-header">
+				<div class="uk-panel-title uk-panel-header">
 					<div class="uk-float-right">
 						{% if item.rating %}
 							{% assign rating = item.rating  | split: '.' %}
@@ -155,7 +155,7 @@ types:
 						{% if item.link %}<i class="uk-icon-external-link"></i>{% endif %}
 					</div>
 					{{ item.title }}
-				</h3>
+				</div>
 				{% if item.author %}
 				<div class="uk-text-muted uk-margin-small-left">by {{ item.author }}
 					{% if item.published_date %} on {{ item.published_date | date_to_string }}

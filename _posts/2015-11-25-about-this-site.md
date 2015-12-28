@@ -10,7 +10,7 @@ published_date: "2015-11-25"
 
 This site functions mostly as an information aggregator, compiling noteworthy reports, publications, articles, projects, guides, anime, etc. with some original content. To find you here, out of all the other places on the internet, is quite a surprise. Welcome.  
 
-For those concerned about the information you divulge by visiting this site, the entire website is open source, hosted on GitHub at [leftymitt.github.io](https://github.com/leftymitt/leftymitt.github.io). The site uses the [Uikit](getuikit.com) framework for Javascript and CSS.  
+For those concerned about the information you divulge by visiting this site, the entire website is open source, hosted on GitHub at [leftymitt.github.io](https://github.com/leftymitt/leftymitt.github.io). The site uses the [Uikit](http://getuikit.com) framework for Javascript and CSS.  
 
 That notwithstanding, there are some potential areas of concern for the preternaturally paranoid:  
 

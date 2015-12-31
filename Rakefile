@@ -17,9 +17,13 @@ task :new do
 
 	unless @name.nil? || @name.empty?
 
+		unless @name[-1,1] == "."
+			@name = @name + "."
+		end
+
 		@slug = "#{@name}"
 		@slug = @slug.tr('ÁáÉéÍíÓóÚú', 'AaEeIiOoUu')
-		@slug = @slug.downcase.strip.gsub(' ', '-').gsub('.', '')
+		@slug = @slug.downcase.strip.gsub(' ', '-').gsub('.', '').gsub(/[^\w-]/, '')
 		@post_date = Time.now.strftime("%F")
 
 		unless File.file?("_drafts/#{@slug}.md")
@@ -85,13 +89,13 @@ task :publish do
 
 			# only display drafts that are categorized. 
 			if File.readlines("_drafts/#{fname}").grep(/categor(y|ies):.blog/).any?
-				puts "blog: #{fname}"
+				puts "#{fname} (blog)"
 			elsif File.readlines("_drafts/#{fname}").grep(/categor(y|ies):.media/).any?
-				puts "media: #{fname}"
+				puts "#{fname} (media)"
 			elsif File.readlines("_drafts/#{fname}").grep(/categor(y|ies):.resource/).any?
-				puts "resources: #{fname}"
+				puts "#{fname} (resources)"
 			elsif File.readlines("_drafts/#{fname}").grep(/categor(y|ies):.project/).any?
-				puts "projectss: #{fname}"
+				puts "#{fname} (projects)"
 			end
 
 		end
@@ -127,7 +131,7 @@ task :publish do
 					File.open("_drafts/#{@post_name}", "w") {|file| file.puts text}
 
 					FileUtils.mv("_drafts/#{@post_name}", "_posts/#{@post_date}-#{@post_name}")
-					FileUtils.symlink("../_posts/#{@post_date}-#{@post_name}", "_media/#{@post_name}")
+#					FileUtils.symlink("../_posts/#{@post_date}-#{@post_name}", "_media/#{@post_name}")
 				else 
 					# automatically fill the published_date field.
 					text = File.read("_drafts/#{@post_name}")

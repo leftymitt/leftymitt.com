@@ -296,9 +296,9 @@ gulp.task('watch', function() {
 		run_sequence('build-img', 'build', 'build-html', 'reload'); 
 	});
 
-	watch(['_posts/*', '*.html', '_layouts/*', '_config.yml', '_includes/*', 
-	       'resources/*', '_resources/*', '_drafts/*', 'media/*', '_media/*', 
-	       'blog/*', 'projects/*', 'feed.xml'], 
+	watch(['_posts/**', '*.html', '_layouts/*', '_config.yml', '_includes/**', 
+	       'resources/*', '_resources/**', '_drafts/**', 'media/*', '_media/*', 
+	       'blog/*', 'projects/*', '_projects/**', 'feed.xml'], 
 	      function() {
 		run_sequence('build', 'build-html', 'reload'); 
 	});

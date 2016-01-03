@@ -107,7 +107,9 @@
 						</p>
 					{% endif %}
 				{% endif %}
-				{% if page.code == true or page.code_button == true %} 
+
+				{% unless page.code == false or page.code == nil %} 
+					{% if page.code == true %}
 					<button class="uk-button uk-button-success uk-button-large 
 				                  uk-margin-right uk-margin-bottom"
 							  type="button"
@@ -115,8 +117,50 @@
 													  animation: 'uk-animation-fade, uk-animation-fade' }">
 						just code.
 					</button>
-				{% endif %}
-				{{ content }}
+					{% else %}
+					<button class="uk-button uk-button-success uk-button-large 
+				                  uk-margin-right uk-margin-bottom"
+							  type="button"
+							  data-uk-toggle="{ target: '#code, #content',
+													  animation: 'uk-animation-fade, uk-animation-fade' }">
+						just code.
+					</button>
+					<div class="uk-hidden" id="code">
+						{% for snippet in page.code %}
+						<div class="uk-panel uk-panel-box">
+							<div class="uk-panetl-title uk-panel-header">{{ snippet.script }}</div>
+							<!-- hardcode a few languages because they cannot be injected
+			 				     into liquid highlight tags as variables -->
+							{% if snippet.language == "bash" %} 
+								{% highlight bash %}
+								{% include code/{{ snippet.script }} %}
+								{% endhighlight %}
+							{% elsif snippet.language == "cpp" %} 
+								{% highlight cpp %}
+								{% include code/{{ snippet.script }} %}
+								{% endhighlight %}
+							{% elsif snippet.language == "python" %} 
+								{% highlight python %}
+								{% include code/{{ snippet.script }} %}
+								{% endhighlight %}
+							{% elsif snippet.language == "ruby" %} 
+								{% highlight ruby %}
+								{% include code/{{ snippet.script }} %}
+								{% endhighlight %}
+							{% else %} 
+								{% highlight bash %}
+								{% include code/{{ snippet.script }} %}
+								{% endhighlight %}
+							{% endif %}
+						</div>
+						<div class="uk-panel uk-panel-space"></div>
+						{% endfor %}
+					</div>
+					{% endif %}
+				{% endunless %}
+
+				<div id="content">{{ content }}</div>
+
 			</article>
 			
 			{% if page.table_of_contents %}

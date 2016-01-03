@@ -4,7 +4,13 @@ categories: resources
 layout: post
 icon: arch-linux-logo.svg
 added_date: "2015-02-12"
-code: true
+code: 
+ - script: bootstrap_arch_linux.sh
+   language: bash
+ - script: arch_chroot_script.sh
+   language: bash
+ - script: make_luks_key.sh
+   language: bash
 ---
 
 The [Arch Wiki](https://wiki.archlinux.org/) will tell you how to install Arch with a separate, unencrypted boot partition, but it won't help if you want to encrypt your boot partition and mount it along with your other ones. The following is a modified version of [Pavel Kogan's post](http://www.pavelkogan.com/2014/05/23/luks-full-disk-encryption/) on encrypting `/boot`.  

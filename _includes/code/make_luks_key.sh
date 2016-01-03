@@ -1,13 +1,26 @@
 #! /bin/bash
 
 ################################################################################
+# prompt for info.
+################################################################################
+lsblk
+echo "which device? (e.g., sda, sdb, sdc, etc.)"
+read DEVICE
+echo "use device $DEVICE? (y/N)"
+read REPLY
+if [[ ! $REPLY =~ ^([Yy]$|[Yy]es) ]]; then
+	echo "stopping script..."
+	exit 1
+fi
+
+################################################################################
 # (optional) create a binary luks key to store in the initial ramdisk. 
 ################################################################################
 
 # generate keyfile and prevent non-root from reading it. 
 dd bs=512 count=4 if=/dev/random of=/etc/crypto_keyfile.bin
 chmod 600 /etc/crypto_keyfile.bin
-cryptsetup luksAddKey /dev/sdX1 /etc/crypto_keyfile.bin
+cryptsetup luksAddKey /dev/${DEVICE}1 /etc/crypto_keyfile.bin
 
 # add key to /etc/mkinitcpio.conf
 sed -i "s/FILES=\".*\"/FILES=\"\/etc\/crypto_keyfile.bin\"/g" /etc/mkinitcpio.conf

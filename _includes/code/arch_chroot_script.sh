@@ -1,6 +1,19 @@
 #! /bin/bash
 
 ################################################################################
+# prompt for info.
+################################################################################
+lsblk
+echo "which device? (e.g., sda, sdb, sdc, etc.)"
+read DEVICE
+echo "use device $DEVICE? (y/N)"
+read REPLY
+if [[ ! $REPLY =~ ^([Yy]$|[Yy]es) ]]; then
+	echo "stopping script..."
+	exit 1
+fi
+
+################################################################################
 # configure base system.
 ################################################################################
 
@@ -35,9 +48,9 @@ mkinitcpio -p linux
 # install grub (assuing bios/mbr) and add encryption support.
 ################################################################################
 pacman -S grub os-prober
-grub-install --recheck /dev/sdX
+grub-install --recheck /dev/${DEVICE}
 
-FOR_SSD="cryptdevice=/dev/sdX1:lvm:allow-discards"
+FOR_SSD="cryptdevice=/dev/${DEVICE}1:lvm:allow-discards"
 LVM_ROOT="root=/dev/mapper/vg-root"
 GRUB_CMDLINE_LINUX="GRUB_CMDLINE_LINUX=$FOR_SSD $LVM_ROOT"
 GRUB_ENABLE_CRYPTODISK="GRUB_ENABLE_CRYPTODISK=y"

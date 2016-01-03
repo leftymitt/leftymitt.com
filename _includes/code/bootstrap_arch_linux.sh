@@ -1,6 +1,19 @@
 #! /bin/bash
 
 ################################################################################
+# prompt for info.
+################################################################################
+lsblk
+echo "which device? (e.g., sda, sdb, sdc, etc.)"
+read DEVICE
+echo "use device $DEVICE? (y/N)"
+read REPLY
+if [[ ! $REPLY =~ ^([Yy]$|[Yy]es) ]]; then
+	echo "stopping script..."
+	exit 1
+fi
+
+################################################################################
 # connect to internet (automatic for wired connections).
 ################################################################################
 wifi-menu -o wlp2s0 # wireless only
@@ -10,12 +23,12 @@ wifi-menu -o wlp2s0 # wireless only
 ################################################################################
 
 # create partition table
-parted -s /dev/sdX mklabel msdos
-parted -s /dev/sdX mkpart primary 2048s 100%
+parted -s /dev/${DEVICE} mklabel msdos
+parted -s /dev/${DEVICE} mkpart primary 2048s 100%
 
 # create encrypted logical volumes
-cryptsetup luksFormat /dev/sdX1
-cryptsetup luksOpen /dev/sdX1 lvm
+cryptsetup luksFormat /dev/${DEVICE}1
+cryptsetup luksOpen /dev/${DEVICE}1 lvm
 pvcreate /dev/mapper/lvm
 vgcreate vg /dev/mapper/lvm
 lvcreate -L 4G vg -n swap

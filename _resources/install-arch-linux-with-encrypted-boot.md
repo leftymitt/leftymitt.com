@@ -3,7 +3,7 @@ title: install arch linux with an encrypted boot partition.
 categories: resources
 layout: post
 icon: arch-linux-logo.svg
-added_date: "2015-02-12"
+added_date: "2016-01-03"
 code: 
  - script: bootstrap_arch_linux.sh
    language: bash

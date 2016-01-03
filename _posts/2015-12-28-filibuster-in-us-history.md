@@ -5,6 +5,9 @@ layout: post
 author: leftymitt
 type: article
 format: text
+tags: 
+ - filibuster
+ - history
 
 added_date: "2015-12-28"
 img: william-walker.jpg

@@ -3,6 +3,9 @@ title: the veracity of drone strike statistics.
 layout: post
 category: blog 
 author: leftymitt
+tags: 
+ - drones
+
 type: article
 format: text
 added_date: "2015-12-26"

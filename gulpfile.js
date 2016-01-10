@@ -246,7 +246,7 @@ gulp.task('build-img', function() {
 // minify new or changed HTML pages
 gulp.task('build-html', function() {
 	return gulp.src('_site/**/*.html')
-		.pipe(htmlmin({collapseWhitespace:true, removeComments:true}))
+//		.pipe(htmlmin({collapseWhitespace:true, removeComments:true}))
 		.pipe(gulp.dest('_site/'));
 });
 

@@ -13,7 +13,7 @@
 		{% if page.img %}
 		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/> 
 		{% elsif page.icon %}
-		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
+		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.icon | replace: '.svg', '.png'  }}"/>
 		{% else %}
 		<meta itemprop="image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
 		{% endif %}

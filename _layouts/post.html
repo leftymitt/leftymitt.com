@@ -64,7 +64,7 @@
 		<meta property="article:section" content="{{ page.category }}"/>
 		<meta property="article:tag" content="{{ page.tags }}" />
 
-		<link rel="stylesheet" href="/assets/build/css/uikit.min.css"/>
+		<link rel="stylesheet" href="{{ site.css }}/uikit.min.css">
 
 		{{ page.css }}
 
@@ -196,8 +196,8 @@
 		</div>
 	</body>
 
-	<script src="/assets/build/js/jquery.min.js"></script>
-	<script src="/assets/build/js/uikit.min.js"></script>
+	<script src="{{ site.js }}/jquery.min.js"></script>
+	<script src="{{ site.js }}/uikit.min.js"></script>
 
 	{{ page.js }}
 

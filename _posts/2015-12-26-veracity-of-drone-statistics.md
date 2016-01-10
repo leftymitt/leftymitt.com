@@ -63,8 +63,8 @@ Such a definition guarantees that collateral damage counts will be incorrectly l
 Second, statements on drone efficacy fit narratives that reports on inadequacy would not. 
 Defense contractors and weapons manufacturers can more easily [sell drones](https://breakingdefense.com/tag/foreign-military-sales/) and secure multi-billion dollar contracts, and politicians can [claim elusive successes](http://america.aljazeera.com/articles/2014/9/11/obama-yemen-somaliamodels.html) in the war on terror.  
 
-Whether official counts are to be believed, the drone campaign has had tangible effects on the people targeted. 
+Whether official counts are to be believed, the drone campaign has had tangible effects on people, the targets obviously but also their families and communities. 
 As Michael Flynn stated quite frankly, drone warfare has exacerbated anti-American sentiments. 
-People, men, women, and children, have grown to associate clear blue skies with the possibility that a family member will be incinerated without notice or trial.  
+People - men, women, and children - have grown to associate clear blue skies with the possibility that a family member will be incinerated without notice or trial.  
 
 It is not in the world's interest that simple things like body counts be so willingly distorted and politicized.  

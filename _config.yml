@@ -1,6 +1,7 @@
 ### global settings
 
 title: "leftymitt."
+author: "leftymitt"
 description: "the difference between the real and the indistinguishably fake."
 url: "https://leftymitt.com"
 enforce_ssl: "leftymitt.com"
@@ -27,6 +28,9 @@ collections:
    media: 
       output: true
       permalink: /media/:path/
+   projects: 
+      output: true
+      permalink: /projects/:path/
 
 include: 
  - "CNAME"

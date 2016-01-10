@@ -46,7 +46,7 @@ tag: "to know the world empirically, with lots of love and irony."
 --- 
 
 <div class="uk-container uk-container-center">
-	<h2>tutorials</h2>
+	<h1 class="uk-h2">tutorials</h1>
 
 	<div class="uk-grid uk-grid-match" data-uk-grid-margin data-uk-grid-match="{target:'.uk-grid'}">
 	{% for resource in site.resources %}
@@ -62,7 +62,7 @@ tag: "to know the world empirically, with lots of love and irony."
 					     alt="author logo">
 				{% else %}
 					<img class="uk-thumbnail-expand" src="{{ site.face }}" 
-					     alt="leftymitt logo">
+					     alt="{{ site.author }} logo">
 				{% endif %}
 				</div>
 				<div class="uk-width-8-10">
@@ -80,7 +80,7 @@ tag: "to know the world empirically, with lots of love and irony."
 
 	<hr>
 
-	<h2>other resources</h2>
+	<h1 class="uk-h2">other resources</h2>
 
 	<div class="uk-grid" data-uk-grid-margin>
 	{% for resource in page.resources %}

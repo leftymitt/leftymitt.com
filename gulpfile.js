@@ -34,6 +34,9 @@ var bower = {
 	},
 	jquery: {
 		js: './bower_components/jquery/dist/'
+	},
+	snap: {
+		js: './bower_components/Snap.svg/dist/'
 	}
 }
 
@@ -47,6 +50,9 @@ var src = {
 	},
 	jquery: {
 		js: './assets/src/js/jquery/'
+	},
+	snap: {
+		js: './assets/src/js/snap.svg/'
 	},
 	css: './assets/src/css/',
 	less: './assets/src/less/',
@@ -157,6 +163,11 @@ gulp.task('copy', function() {
 		.pipe(changed(src.jquery.js))
 		.pipe(gulp.dest(src.jquery.js))
 		.on('end', function() { util.log("copied jquery js files."); });
+	
+	gulp.src([bower.snap.js + '*.js', '!' + bower.snap.js + '*-min.js'])
+		.pipe(changed(src.snap.js))
+		.pipe(gulp.dest(src.snap.js))
+		.on('end', function() { util.log("copied Snap.svg js files."); });
 });
 
 // rebuild all files in assets/build
@@ -196,6 +207,14 @@ gulp.task('build-js', function() {
 		.pipe(gulp.dest(src.js))
 		.pipe(uglify())
 		.pipe(rename('jquery.min.js'))
+		.pipe(changed(build.js))
+		.pipe(gulp.dest(build.js));
+
+	gulp.src(src.js + 'snap.svg/*.js')
+		.pipe(concat('snap.svg.js'), { newLine: '\n;' })
+		.pipe(gulp.dest(src.js))
+		.pipe(uglify())
+		.pipe(rename('snap.svg.min.js'))
 		.pipe(changed(build.js))
 		.pipe(gulp.dest(build.js));
 

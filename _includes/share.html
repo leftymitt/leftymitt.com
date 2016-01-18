@@ -54,7 +54,7 @@
 	   title="post on tumblr."
 	   {% capture tumblr_url %}https://www.tumblr.com/share/link?url={{ site.url }}{{ page.url}}&name={{ page.title }}&description={{ page.excerpt | strip_html | truncate:250 }}
 	   {% endcapture %}
-	   href="{{ tubmlr_url | strip_newlines | uri_escape }}">
+	   href="{{ tumblr_url | strip_newlines | uri_escape }}">
 	</a>
 
 	<!-- email -->

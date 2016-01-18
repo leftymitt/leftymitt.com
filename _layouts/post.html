@@ -93,7 +93,7 @@
 
 			<article class="uk-article" style="">
 				<h1 class="uk-h2" id="top">{{ page.title }}</h1>
-				{% if page.category == 'projects' or page.category == 'project' %}
+				{% if page.category == 'projects' or page.category == 'project' and page.repo %}
 				<div data-uk-margin class="uk-margin-bottom">
 					<a href="{{ site.github }}/{{ page.repo}}/archive/master.tar.gz" 
 					   class="uk-button uk-button-success" type="button" download>

@@ -22,6 +22,8 @@
 		{% unless page.type == "video" %}
 			{% if page.category == "anime" or page.categories == "anime" %}
 		<meta name="twitter:card" content="summary_large_image"/>
+			{% elsif page.project_image %}
+		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.project_image }}"/>
 			{% else %}
 		<meta name="twitter:card" content="summary"/>
 			{% endif %}
@@ -35,6 +37,8 @@
 		{% unless page.type == "video" %}
 			{% if page.category == "anime" or page.categories == "anime" %}
 		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.cover }}"/>
+			{% elsif page.project_image %}
+		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.project_image | replace: '.svg', '.png' }}"/>
 			{% else %}
 				{% if page.img %}
 		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>

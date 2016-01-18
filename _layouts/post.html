@@ -93,6 +93,18 @@
 
 			<article class="uk-article" style="">
 				<h1 class="uk-h2" id="top">{{ page.title }}</h1>
+				{% if page.category == 'projects' or page.category == 'project' %}
+				<div data-uk-margin class="uk-margin-bottom">
+					<a href="https://github.com/JuliaLang/julia/archive/maser.zip" 
+					   class="uk-button uk-button-success" type="button" download>
+						<i class="uk-icon-download uk-icon-justify"></i> tar.gz
+					</a>
+					<a href="{{ site.github }}/{{ page.repo}}/archive/master.zip" 
+						class="uk-button uk-button-success" type="button" download>
+						<i class="uk-icon-download uk-icon-justify"></i> zip
+					</a>
+				</div>
+				{% endif %}
 				{% if page.category == 'blog' or page.categories == "blog" %}
 				<p class="uk-article-meta uk-margin-left">
 					posted on {% if page.date %} {{ page.date | date_to_string }}

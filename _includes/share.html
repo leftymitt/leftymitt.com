@@ -36,15 +36,18 @@
 	<!-- pinterest -->
 	<a class="uk-icon-hover uk-icon-pinterest-square uk-icon-large" 
 	   title="pin this."
-	   {% if page.img %} 
+	   {% if page.banner %} 
+	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.banner }}
+	   	{% endcapture %}
+	   {% elsif page.img %} 
 	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.img }}
-		   {% endcapture %}
+	   	{% endcapture %}
 		{% elsif page.icon %} 
 	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.icon }}
-		   {% endcapture %}
+	   	{% endcapture %}
 		{% else %} 
 	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.face }}
-		   {% endcapture %}
+	   	{% endcapture %}
 	   {% endif %}
 		href="{{ pinterest_url | strip_newlines | uri_escape }}">
 	</a>
@@ -52,16 +55,26 @@
 	<!-- tumblr -->
 	<a class="uk-icon-hover uk-icon-tumblr-square uk-icon-large" 
 	   title="post on tumblr."
-	   {% capture tumblr_url %}https://www.tumblr.com/share/link?url={{ site.url }}{{ page.url}}&name={{ page.title }}&description={{ page.excerpt | strip_html | truncate:250 }}
-	   {% endcapture %}
+	   {% if page.tag %}
+	   	{% capture tumblr_url %}https://www.tumblr.com/share/link?url={{ site.url }}{{ page.url}}&name={{ page.title }}&description={{ page.tag | strip_html | truncate:200 }}
+	   	{% endcapture %}
+	   {% else %}
+	   	{% capture tumblr_url %}https://www.tumblr.com/share/link?url={{ site.url }}{{ page.url}}&name={{ page.title }}&description={{ page.content | strip_html | truncate:200 }}
+	   	{% endcapture %}
+	   {% endif %}
 	   href="{{ tumblr_url | strip_newlines | uri_escape }}">
 	</a>
 
 	<!-- email -->
 	<a class="uk-icon-hover uk-icon-envelope-square uk-icon-large" 
 	   title="email this."
-	   {% capture mailto_url %}mailto:?subject={{ page.title }}&body={{ page.excerpt | strip_html | truncate:250 }}: {{ site.url }}{{ page.url}}
-	   {% endcapture %}
+	   {% if page.tag %}
+	   	{% capture mailto_url %}mailto:?subject={{ page.title }}&body={{ page.tag | strip_html | truncate:200 }}: {{ site.url }}{{ page.url}}
+	   	{% endcapture %}
+	   {% else %}
+	   	{% capture mailto_url %}mailto:?subject={{ page.title }}&body={{ page.content | strip_html | truncate:200 }}: {{ site.url }}{{ page.url}}
+	   	{% endcapture %}
+	   {% endif %}
 		href="{{ mailto_url | strip_newlines | uri_escape }}">
 	</a>
 

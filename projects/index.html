@@ -28,10 +28,12 @@ tag: "where to go and what to see, all with love and irony."
 			{% if project.link %} <a href="{{ project.link }}">
 			{% else %} <a href="{{ project.url }}">
 			{% endif %}
+				<br>
 				<h2 class="uk-h2 uk-text-contrast">{{ project.title }}</h2>
 				<p class="uk-text-large uk-hidden-small uk-text-contrast">
 					{{ project.tag }}
 				</p>
+				<button class="uk-button uk-button-default">view project.</button>
 			</a>
 		</div>
 	</div>

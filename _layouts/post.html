@@ -9,36 +9,44 @@
 
 		<!-- schema.org markup for google+ -->
 		<meta itemprop="name" content="{{ page.title }}"/>
+		{% if page.tag %}
+		<meta itemprop="description" content="{{ page.tag | strip_html | truncate:200 }}"/>
+		{% else %}
 		<meta itemprop="description" content="{{ page.content | strip_html | truncate:200 }}"/>
+		{% endif %}
 		{% if page.img %}
 		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/> 
 		{% elsif page.icon %}
 		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.icon | replace: '.svg', '.png'  }}"/>
+		{% elsif page.banner %}
+		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png'  }}"/>
 		{% else %}
 		<meta itemprop="image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
 		{% endif %}
 
 		<!-- twitter card data -->
 		{% unless page.type == "video" %}
-			{% if page.category == "anime" or page.categories == "anime" %}
+			{% if page.type == "anime" or page.banner %}
 		<meta name="twitter:card" content="summary_large_image"/>
-			{% elsif page.project_image %}
-		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.project_image }}"/>
 			{% else %}
 		<meta name="twitter:card" content="summary"/>
 			{% endif %}
 		{% endunless %}
 		<meta name="twitter:site" content="{{ site.twitter }}"/>
 		<meta name="twitter:title" content="{{ page.title }}"/>
+		{% if page.tag %}
+		<meta name="twitter:description" content="{{ page.tag | strip_html | truncate:200 }}"/>
+		{% else %}
 		<meta name="twitter:description" content="{{ page.content | strip_html | truncate:200 }}"/>
+		{% endif %}
 		<meta name="twitter:creator" content="{{ site.twitter }}"/>
 		<!-- twitter summary_large_image: at least 280x150px -->
 		<!-- twitter summary: at least 120x120px -->
 		{% unless page.type == "video" %}
-			{% if page.category == "anime" or page.categories == "anime" %}
+			{% if page.type == "anime" %}
 		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.cover }}"/>
-			{% elsif page.project_image %}
-		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.project_image | replace: '.svg', '.png' }}"/>
+			{% elsif page.banner %}
+		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png' }}"/>
 			{% else %}
 				{% if page.img %}
 		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
@@ -54,14 +62,20 @@
 		<meta property="og:title" content="{{ page.title }}"/>
 		<meta property="og:type" content="article"/>
 		<meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-		{% if page.img %}
+		{% if page.banner %}
+		<meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png' }}"/>
+		{% elsif page.img %}
 		<meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
 		{% elsif page.icon %}
 		<meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
 		{% else %}
 		<meta property="og:image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
 		{% endif %}
+		{% if page.tag %}
+		<meta property="og:description" content="{{ page.tag | strip_html | truncate:200 }}"/>
+		{% else %}
 		<meta property="og:description" content="{{ page.content | strip_html | truncate:200 }}"/>
+		{% endif %}
 		<meta property="og:site_name" content="{{ site.title }}"/>
 		<meta property="article:published_time" content="{{ page.published_date }}"/>
 		<meta property="article:modified_time" content="{{ page.added_date }}"/>

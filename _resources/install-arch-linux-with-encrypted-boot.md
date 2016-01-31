@@ -4,6 +4,7 @@ categories: resources
 layout: post
 icon: arch-linux-logo.svg
 added_date: "2016-01-03"
+published_date: "2016-01-03"
 code: 
  - script: bootstrap_arch_linux.sh
    language: bash

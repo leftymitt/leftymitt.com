@@ -2,7 +2,7 @@
 title: "the secret surveillance catalogue."
 layout: post
 category: media
-author: leftymitt
+author: the Intercept
 format: text
 type: article
 tags: 

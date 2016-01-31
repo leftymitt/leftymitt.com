@@ -77,12 +77,17 @@
 		<meta property="og:description" content="{{ page.content | strip_html | truncate:200 }}"/>
 		{% endif %}
 		<meta property="og:site_name" content="{{ site.title }}"/>
+		{% if page.date %}
+		<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}"/>
+		<meta property="article:modified_time" content="{{ page.date | date_to_xmlschema }}"/>
+		{% else %}
 		<meta property="article:published_time" content="{{ page.published_date }}"/>
 		<meta property="article:modified_time" content="{{ page.added_date }}"/>
+		{% endif %}
 		<meta property="article:section" content="{{ page.category }}"/>
-		<meta property="article:tag" content="{{ page.tags }}" />
+		<meta property="article:tag" content="{{ page.tags }}"/>
 
-		<link rel="stylesheet" href="{{ site.css }}/uikit.min.css">
+		<link rel="stylesheet" href="{{ site.css }}/uikit.min.css"/>
 
 		{{ page.css }}
 

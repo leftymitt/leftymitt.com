@@ -2,7 +2,7 @@
 title: "the secret surveillance catalogue."
 layout: post
 category: media
-author: the Intercept
+author: The Intercept
 format: text
 type: article
 tags: 

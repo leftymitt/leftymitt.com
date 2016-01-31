@@ -109,11 +109,15 @@
 				<h1 class="uk-h2" id="top">{{ page.title }}</h1>
 				{% if page.repo %}
 				<div data-uk-margin class="uk-margin-bottom">
-					<a href="{{ site.github }}/{{ page.repo}}/archive/master.tar.gz" 
+					<a href="{{ site.github }}/{{ page.repo }}" 
+						class="uk-button uk-button-success" type="button">
+						<i class="uk-icon-github uk-icon-justify"></i> github
+					</a>
+					<a href="{{ site.github }}/{{ page.repo }}/archive/master.tar.gz" 
 					   class="uk-button uk-button-success" type="button" download>
 						<i class="uk-icon-download uk-icon-justify"></i> tar.gz
 					</a>
-					<a href="{{ site.github }}/{{ page.repo}}/archive/master.zip" 
+					<a href="{{ site.github }}/{{ page.repo }}/archive/master.zip" 
 						class="uk-button uk-button-success" type="button" download>
 						<i class="uk-icon-download uk-icon-justify"></i> zip
 					</a>
@@ -140,7 +144,7 @@
 
 				{% unless page.code == false or page.code == nil %} 
 					{% if page.code == true %}
-					<button class="uk-button uk-button-success uk-button-large 
+					<button class="uk-button uk-button-success  
 				                  uk-margin-right uk-margin-bottom"
 							  type="button"
 							  data-uk-toggle="{ target: 'p, h3, h4, h5, h6',
@@ -148,7 +152,7 @@
 						just code.
 					</button>
 					{% else %}
-					<button class="uk-button uk-button-success uk-button-large 
+					<button class="uk-button uk-button-success 
 				                  uk-margin-right uk-margin-bottom"
 							  type="button"
 							  data-uk-toggle="{ target: '#code, #content',

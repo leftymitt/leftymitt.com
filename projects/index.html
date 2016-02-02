@@ -4,18 +4,6 @@ layout: default
 tag: "where to go and what to see, all with love and irony."
 --- 
 
-<!--
-<div class="uk-container uk-container-center">
-	<h1 class="uk-h2">current projects: </h1>
-	<ol class="uk-list uk-list-striped">
-	{% assign sorted_projects = site.projects | sort: 'added_date' | reverse %}
-	{% for project in sorted_projects %}
-		<li><a href="{{ project.url }}">{{ project.title }}</a></li>
-	{% endfor %}
-	</ol>
-</div>
--->
-
 <div class="uk-container uk-container-center">
 	<!-- <div class="uk-container-center"> -->
 	{% assign sorted_projects = site.projects | sort: 'added_date' | reverse %}

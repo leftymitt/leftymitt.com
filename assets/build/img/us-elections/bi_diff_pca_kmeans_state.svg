@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:gadfly="http://www.gadflyjl.org/ns"
+     version="1.2"
+     width="200mm" height="160mm" viewBox="0 0 200 160"
+     stroke="none"
+     fill="#000000"
+     stroke-width="0.3"
+     font-size="3.88"
+>
+<g class="plotroot xscalable yscalable" id="img-795de5be-1">
+  <g class="guide colorkey" id="img-795de5be-2">
+    <g class="color_3" id="img-795de5be-3">
+      <g fill="#4C404B" font-size="4.76" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" id="img-795de5be-4">
+        <text x="52.23" y="150.05" dy="0.35em">3</text>
+      </g>
+      <g fill="#00B78D" stroke="#000000" stroke-opacity="0.000" id="img-795de5be-5">
+        <rect x="48.51" y="148.69" width="2.72" height="2.72"/>
+      </g>
+    </g>
+    <g class="color_4" id="img-795de5be-6">
+      <g fill="#4C404B" font-size="4.76" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" id="img-795de5be-7">
+        <text x="44.92" y="150.05" dy="0.35em">4</text>
+      </g>
+      <g fill="#FF6DAE" stroke="#000000" stroke-opacity="0.000" id="img-795de5be-8">
+        <rect x="41.2" y="148.69" width="2.72" height="2.72"/>
+      </g>
+    </g>
+    <g class="color_2" id="img-795de5be-9">
+      <g fill="#4C404B" font-size="4.76" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" id="img-795de5be-10">
+        <text x="37.6" y="150.05" dy="0.35em">2</text>
+      </g>
+      <g fill="#D4CA3A" stroke="#000000" stroke-opacity="0.000" id="img-795de5be-11">
+        <rect x="33.89" y="148.69" width="2.72" height="2.72"/>
+      </g>
+    </g>
+    <g class="color_1" id="img-795de5be-12">
+      <g fill="#4C404B" font-size="4.76" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" id="img-795de5be-13">
+        <text x="30.29" y="150.05" dy="0.35em">1</text>
+      </g>
+      <g fill="#00BFFF" stroke="#000000" stroke-opacity="0.000" id="img-795de5be-14">
+        <rect x="26.57" y="148.69" width="2.72" height="2.72"/>
+      </g>
+    </g>
+    <g fill="#362A35" font-size="6.35" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" stroke="#000000" stroke-opacity="0.000" id="img-795de5be-15">
+      <text x="26.57" y="145.57">Color</text>
+    </g>
+  </g>
+  <g font-size="6.35" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-795de5be-16">
+    <text x="110.29" y="130.75" text-anchor="middle" dy="0.6em">PC1</text>
+  </g>
+  <g class="guide xlabels" font-size="4.76" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-795de5be-17">
+    <text x="27.57" y="122.24" text-anchor="middle" dy="0.6em">-0.5</text>
+    <text x="82.71" y="122.24" text-anchor="middle" dy="0.6em">0.0</text>
+    <text x="137.86" y="122.24" text-anchor="middle" dy="0.6em">0.5</text>
+    <text x="193" y="122.24" text-anchor="middle" dy="0.6em">1.0</text>
+  </g>
+<g clip-path="url(#img-795de5be-18)">
+  <g id="img-795de5be-19">
+    <g pointer-events="visible" opacity="1" fill="#000000" fill-opacity="0.000" stroke="#000000" stroke-opacity="0.000" class="guide background" id="img-795de5be-20">
+      <rect x="25.57" y="14.91" width="169.43" height="106.33"/>
+    </g>
+    <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.26" stroke="#000000" id="img-795de5be-21">
+      <path fill="none" d="M25.57,119.24 L 195 119.24"/>
+      <path fill="none" d="M25.57,98.77 L 195 98.77"/>
+      <path fill="none" d="M25.57,78.31 L 195 78.31"/>
+      <path fill="none" d="M25.57,57.84 L 195 57.84"/>
+      <path fill="none" d="M25.57,37.38 L 195 37.38"/>
+      <path fill="none" d="M25.57,16.91 L 195 16.91"/>
+    </g>
+    <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.26" stroke="#000000" id="img-795de5be-22">
+      <path fill="none" d="M27.57,14.91 L 27.57 121.24"/>
+      <path fill="none" d="M82.71,14.91 L 82.71 121.24"/>
+      <path fill="none" d="M137.86,14.91 L 137.86 121.24"/>
+      <path fill="none" d="M193,14.91 L 193 121.24"/>
+    </g>
+    <g class="plotpanel" id="img-795de5be-23">
+      <g class="geometry" stroke="#000000" stroke-opacity="0.000" fill="#4C404B" font-size="3.44" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" id="img-795de5be-24">
+        <text x="168.59" y="48.56" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="58.87" y="110.66" text-anchor="middle" dy="0.35em" visibility="visible">West</text>
+        <text x="82.36" y="69.54" text-anchor="middle" dy="0.35em" visibility="visible">West</text>
+        <text x="117.04" y="99.17" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="68.35" y="52.43" text-anchor="middle" dy="0.35em" visibility="visible">West</text>
+        <text x="58.45" y="76.81" text-anchor="middle" dy="0.35em" visibility="visible">West</text>
+        <text x="61.86" y="61.9" text-anchor="middle" dy="0.35em" visibility="hidden">Northeast</text>
+        <text x="88.66" y="51.09" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="78.31" y="55.55" text-anchor="middle" dy="0.35em" visibility="hidden">South</text>
+        <text x="87.85" y="57.04" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="143.68" y="73.97" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="49.62" y="63.96" text-anchor="middle" dy="0.35em" visibility="hidden">West</text>
+        <text x="76.67" y="101.74" text-anchor="middle" dy="0.35em" visibility="hidden">West</text>
+        <text x="76.9" y="59.69" text-anchor="middle" dy="0.35em" visibility="hidden">Midwest</text>
+        <text x="87.36" y="78.58" text-anchor="middle" dy="0.35em" visibility="visible">Midwest</text>
+        <text x="69.13" y="81.7" text-anchor="middle" dy="0.35em" visibility="hidden">Midwest</text>
+        <text x="94.93" y="91.97" text-anchor="middle" dy="0.35em" visibility="visible">Midwest</text>
+        <text x="90.56" y="110.52" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="118.88" y="77.94" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="74.49" y="74.4" text-anchor="middle" dy="0.35em" visibility="hidden">Northeast</text>
+        <text x="75.17" y="60.9" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="67.78" y="83.34" text-anchor="middle" dy="0.35em" visibility="hidden">Northeast</text>
+        <text x="72.79" y="75.41" text-anchor="middle" dy="0.35em" visibility="hidden">Midwest</text>
+        <text x="98.21" y="85.25" text-anchor="middle" dy="0.35em" visibility="visible">Midwest</text>
+        <text x="162.66" y="31" text-anchor="middle" dy="0.35em" visibility="hidden">South</text>
+        <text x="76.14" y="92.32" text-anchor="middle" dy="0.35em" visibility="visible">Midwest</text>
+        <text x="74.46" y="94.79" text-anchor="middle" dy="0.35em" visibility="hidden">West</text>
+        <text x="77.68" y="85.53" text-anchor="middle" dy="0.35em" visibility="visible">Midwest</text>
+        <text x="58.26" y="68.07" text-anchor="middle" dy="0.35em" visibility="visible">West</text>
+        <text x="61.93" y="68.83" text-anchor="middle" dy="0.35em" visibility="hidden">Northeast</text>
+        <text x="69.47" y="64.93" text-anchor="middle" dy="0.35em" visibility="hidden">Northeast</text>
+        <text x="74.34" y="67.51" text-anchor="middle" dy="0.35em" visibility="hidden">West</text>
+        <text x="71.75" y="61.8" text-anchor="middle" dy="0.35em" visibility="hidden">Northeast</text>
+        <text x="103.39" y="78.63" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="65.99" y="98.76" text-anchor="middle" dy="0.35em" visibility="visible">Midwest</text>
+        <text x="67.28" y="81.63" text-anchor="middle" dy="0.35em" visibility="hidden">Midwest</text>
+        <text x="104.11" y="104.86" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="70.93" y="73.37" text-anchor="middle" dy="0.35em" visibility="visible">West</text>
+        <text x="85.99" y="82.99" text-anchor="middle" dy="0.35em" visibility="hidden">Northeast</text>
+        <text x="69.65" y="82.82" text-anchor="middle" dy="0.35em" visibility="hidden">Northeast</text>
+        <text x="129.52" y="67.17" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="91.41" y="99" text-anchor="middle" dy="0.35em" visibility="visible">Midwest</text>
+        <text x="114.8" y="88.68" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="81.85" y="104.73" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="77.42" y="111.15" text-anchor="middle" dy="0.35em" visibility="visible">West</text>
+        <text x="42.03" y="47.02" text-anchor="middle" dy="0.35em" visibility="hidden">Northeast</text>
+        <text x="90.39" y="62.91" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="63.53" y="67.84" text-anchor="middle" dy="0.35em" visibility="hidden">West</text>
+        <text x="108.89" y="115.82" text-anchor="middle" dy="0.35em" visibility="visible">South</text>
+        <text x="84.74" y="77.59" text-anchor="middle" dy="0.35em" visibility="hidden">Midwest</text>
+        <text x="80.64" y="118.85" text-anchor="middle" dy="0.35em" visibility="visible">West</text>
+      </g>
+      <g class="geometry" id="img-795de5be-25">
+        <g stroke-width="0.3" id="img-795de5be-26">
+          <use xlink:href="#img-795de5be-27" x="171.85" y="51.19" class="color_1" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="62.71" y="108.03" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="77.21" y="68.41" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="123.03" y="100.17" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="64.63" y="55.06" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="62.02" y="74.18" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="56.57" y="64.53" class="color_3" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="85.45" y="53.72" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="72.32" y="56.57" class="color_3" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="90.89" y="59.67" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="137.69" y="73.03" class="color_1" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="45.82" y="61.33" class="color_3" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="79.39" y="99.11" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="71" y="57.06" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="81.35" y="81.21" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="73.8" y="79.07" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="86.79" y="92.96" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="96.55" y="109.9" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="124.87" y="78.68" class="color_1" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="65.11" y="71.77" class="color_3" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="71.73" y="58.27" class="color_3" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="62.53" y="80.71" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="64.65" y="75.8" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="90.07" y="86.5" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="165.69" y="33.63" class="color_1" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="84.28" y="93.16" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="78.11" y="97.42" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="72.92" y="88.16" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="60.87" y="65.44" class="color_3" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="52.56" y="68.22" class="color_3" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="60.09" y="62.3" class="color_3" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="69.19" y="66.95" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="62.37" y="59.17" class="color_3" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="97.4" y="77.33" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="74.13" y="98.64" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="75.42" y="80.33" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="98.12" y="105.7" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="68.16" y="76" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="76.62" y="80.36" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="60.28" y="80.19" class="color_3" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="123.54" y="67.15" class="color_1" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="83.27" y="99.99" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="111.03" y="91.31" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="87.83" y="104.35" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="72.27" y="111.81" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="47.42" y="44.39" class="color_3" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="84.4" y="63.69" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="68.68" y="67.85" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="104.99" y="118.45" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="76.6" y="78.5" class="color_4" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-795de5be-27" x="84.14" y="116.22" class="color_2" fill="#D4CA3A" stroke="#FFFFFF"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</g>
+  <g class="guide ylabels" font-size="4.76" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-795de5be-28">
+    <text x="24.57" y="119.24" text-anchor="end" dy="0.35em">-0.4</text>
+    <text x="24.57" y="98.77" text-anchor="end" dy="0.35em">-0.2</text>
+    <text x="24.57" y="78.31" text-anchor="end" dy="0.35em">0.0</text>
+    <text x="24.57" y="57.84" text-anchor="end" dy="0.35em">0.2</text>
+    <text x="24.57" y="37.38" text-anchor="end" dy="0.35em">0.4</text>
+    <text x="24.57" y="16.91" text-anchor="end" dy="0.35em">0.6</text>
+  </g>
+  <g font-size="6.35" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-795de5be-29">
+    <text x="9.95" y="66.07" text-anchor="middle" dy="0.35em" transform="rotate(-90, 9.95, 68.07)">PC2</text>
+  </g>
+  <g font-size="6.35" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-795de5be-30">
+    <text x="110.29" y="12.91" text-anchor="middle">k-means Clustering of State PCA</text>
+  </g>
+</g>
+<defs>
+  <clipPath id="img-795de5be-18">
+  <path d="M25.57,14.91 L 195 14.91 195 121.24 25.57 121.24" />
+</clipPath>
+  <g id="img-795de5be-27">
+    <circle cx="0" cy="0" r="0.9"/>
+  </g>
+</defs>
+</svg>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:gadfly="http://www.gadflyjl.org/ns"
+     version="1.2"
+     width="200mm" height="160mm" viewBox="0 0 200 160"
+     stroke="none"
+     fill="#000000"
+     stroke-width="0.3"
+     font-size="3.88"
+>
+<g class="plotroot xscalable yscalable" id="img-c3fd957f-1">
+  <g class="guide colorkey" id="img-c3fd957f-2">
+    <g class="color_Midwest" id="img-c3fd957f-3">
+      <g fill="#4C404B" font-size="4.76" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" id="img-c3fd957f-4">
+        <text x="86.28" y="150.05" dy="0.35em">Midwest</text>
+      </g>
+      <g fill="#00B78D" stroke="#000000" stroke-opacity="0.000" id="img-c3fd957f-5">
+        <rect x="82.56" y="148.69" width="2.72" height="2.72"/>
+      </g>
+    </g>
+    <g class="color_Northeast" id="img-c3fd957f-6">
+      <g fill="#4C404B" font-size="4.76" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" id="img-c3fd957f-7">
+        <text x="61.56" y="150.05" dy="0.35em">Northeast</text>
+      </g>
+      <g fill="#FF6DAE" stroke="#000000" stroke-opacity="0.000" id="img-c3fd957f-8">
+        <rect x="57.85" y="148.69" width="2.72" height="2.72"/>
+      </g>
+    </g>
+    <g class="color_West" id="img-c3fd957f-9">
+      <g fill="#4C404B" font-size="4.76" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" id="img-c3fd957f-10">
+        <text x="46.87" y="150.05" dy="0.35em">West</text>
+      </g>
+      <g fill="#D4CA3A" stroke="#000000" stroke-opacity="0.000" id="img-c3fd957f-11">
+        <rect x="43.15" y="148.69" width="2.72" height="2.72"/>
+      </g>
+    </g>
+    <g class="color_South" id="img-c3fd957f-12">
+      <g fill="#4C404B" font-size="4.76" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" id="img-c3fd957f-13">
+        <text x="30.29" y="150.05" dy="0.35em">South</text>
+      </g>
+      <g fill="#00BFFF" stroke="#000000" stroke-opacity="0.000" id="img-c3fd957f-14">
+        <rect x="26.57" y="148.69" width="2.72" height="2.72"/>
+      </g>
+    </g>
+    <g fill="#362A35" font-size="6.35" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" stroke="#000000" stroke-opacity="0.000" id="img-c3fd957f-15">
+      <text x="26.57" y="145.57">Color</text>
+    </g>
+  </g>
+  <g font-size="6.35" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-c3fd957f-16">
+    <text x="110.29" y="130.75" text-anchor="middle" dy="0.6em">PC1</text>
+  </g>
+  <g class="guide xlabels" font-size="4.76" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-c3fd957f-17">
+    <text x="27.57" y="122.24" text-anchor="middle" dy="0.6em">-3</text>
+    <text x="60.66" y="122.24" text-anchor="middle" dy="0.6em">-2</text>
+    <text x="93.74" y="122.24" text-anchor="middle" dy="0.6em">-1</text>
+    <text x="126.83" y="122.24" text-anchor="middle" dy="0.6em">0</text>
+    <text x="159.91" y="122.24" text-anchor="middle" dy="0.6em">1</text>
+    <text x="193" y="122.24" text-anchor="middle" dy="0.6em">2</text>
+  </g>
+<g clip-path="url(#img-c3fd957f-18)">
+  <g id="img-c3fd957f-19">
+    <g pointer-events="visible" opacity="1" fill="#000000" fill-opacity="0.000" stroke="#000000" stroke-opacity="0.000" class="guide background" id="img-c3fd957f-20">
+      <rect x="25.57" y="14.91" width="169.43" height="106.33"/>
+    </g>
+    <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.26" stroke="#000000" id="img-c3fd957f-21">
+      <path fill="none" d="M25.57,119.24 L 195 119.24"/>
+      <path fill="none" d="M25.57,85.13 L 195 85.13"/>
+      <path fill="none" d="M25.57,51.02 L 195 51.02"/>
+      <path fill="none" d="M25.57,16.91 L 195 16.91"/>
+    </g>
+    <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.26" stroke="#000000" id="img-c3fd957f-22">
+      <path fill="none" d="M27.57,14.91 L 27.57 121.24"/>
+      <path fill="none" d="M60.66,14.91 L 60.66 121.24"/>
+      <path fill="none" d="M93.74,14.91 L 93.74 121.24"/>
+      <path fill="none" d="M126.83,14.91 L 126.83 121.24"/>
+      <path fill="none" d="M159.91,14.91 L 159.91 121.24"/>
+      <path fill="none" d="M193,14.91 L 193 121.24"/>
+    </g>
+    <g class="plotpanel" id="img-c3fd957f-23">
+      <g class="geometry" stroke="#000000" stroke-opacity="0.000" fill="#4C404B" font-size="3.44" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" id="img-c3fd957f-24">
+        <text x="70.11" y="61.38" text-anchor="middle" dy="0.35em" visibility="visible">Alabama</text>
+        <text x="112.1" y="80.38" text-anchor="middle" dy="0.35em" visibility="visible">Arizona</text>
+        <text x="91.24" y="102.85" text-anchor="middle" dy="0.35em" visibility="hidden">Arkansas</text>
+        <text x="138.24" y="75.99" text-anchor="middle" dy="0.35em" visibility="hidden">California</text>
+        <text x="130.68" y="89.79" text-anchor="middle" dy="0.35em" visibility="visible">Colorado</text>
+        <text x="160.1" y="73.85" text-anchor="middle" dy="0.35em" visibility="hidden">Connecticut</text>
+        <text x="138.24" y="63.99" text-anchor="middle" dy="0.35em" visibility="visible">Delaware</text>
+        <text x="97.23" y="68" text-anchor="middle" dy="0.35em" visibility="visible">Florida</text>
+        <text x="73.71" y="89.27" text-anchor="middle" dy="0.35em" visibility="visible">Georgia</text>
+        <text x="122.3" y="108.34" text-anchor="middle" dy="0.35em" visibility="visible">Idaho</text>
+        <text x="152.25" y="75.45" text-anchor="middle" dy="0.35em" visibility="hidden">Illinois</text>
+        <text x="122.01" y="85.95" text-anchor="middle" dy="0.35em" visibility="hidden">Indiana</text>
+        <text x="150.51" y="90.86" text-anchor="middle" dy="0.35em" visibility="hidden">Iowa</text>
+        <text x="140.09" y="95.55" text-anchor="middle" dy="0.35em" visibility="visible">Kansas</text>
+        <text x="118.22" y="98.98" text-anchor="middle" dy="0.35em" visibility="visible">Kentucky</text>
+        <text x="89.61" y="77.74" text-anchor="middle" dy="0.35em" visibility="visible">Louisiana</text>
+        <text x="160" y="65.13" text-anchor="middle" dy="0.35em" visibility="visible">Maine</text>
+        <text x="148.31" y="70.41" text-anchor="middle" dy="0.35em" visibility="hidden">Maryland</text>
+        <text x="173.75" y="81.8" text-anchor="middle" dy="0.35em" visibility="visible">Massachusetts</text>
+        <text x="162.61" y="87.44" text-anchor="middle" dy="0.35em" visibility="visible">Michigan</text>
+        <text x="157.95" y="96.98" text-anchor="middle" dy="0.35em" visibility="visible">Minnesota</text>
+        <text x="62.01" y="48" text-anchor="middle" dy="0.35em" visibility="visible">Mississippi</text>
+        <text x="135.74" y="100.15" text-anchor="middle" dy="0.35em" visibility="hidden">Missouri</text>
+        <text x="122.09" y="104.92" text-anchor="middle" dy="0.35em" visibility="hidden">Montana</text>
+        <text x="116.96" y="98.13" text-anchor="middle" dy="0.35em" visibility="hidden">Nebraska</text>
+        <text x="131.24" y="79.75" text-anchor="middle" dy="0.35em" visibility="hidden">Nevada</text>
+        <text x="125.03" y="73.15" text-anchor="middle" dy="0.35em" visibility="visible">New Hampshire</text>
+        <text x="157.79" y="73.56" text-anchor="middle" dy="0.35em" visibility="hidden">New Jersey</text>
+        <text x="144.19" y="85.26" text-anchor="middle" dy="0.35em" visibility="hidden">New Mexico</text>
+        <text x="158.45" y="71.79" text-anchor="middle" dy="0.35em" visibility="visible">New York</text>
+        <text x="95.74" y="86.43" text-anchor="middle" dy="0.35em" visibility="visible">North Carolina</text>
+        <text x="140.57" y="108.36" text-anchor="middle" dy="0.35em" visibility="visible">North Dakota</text>
+        <text x="142.72" y="81.34" text-anchor="middle" dy="0.35em" visibility="visible">Ohio</text>
+        <text x="105.54" y="115.12" text-anchor="middle" dy="0.35em" visibility="visible">Oklahoma</text>
+        <text x="146.4" y="82.19" text-anchor="middle" dy="0.35em" visibility="hidden">Oregon</text>
+        <text x="161.74" y="85.67" text-anchor="middle" dy="0.35em" visibility="hidden">Pennsylvania</text>
+        <text x="168.33" y="79.74" text-anchor="middle" dy="0.35em" visibility="hidden">Rhode Island</text>
+        <text x="65.79" y="68.77" text-anchor="middle" dy="0.35em" visibility="visible">South Carolina</text>
+        <text x="147.19" y="102.39" text-anchor="middle" dy="0.35em" visibility="hidden">South Dakota</text>
+        <text x="105.15" y="92.29" text-anchor="middle" dy="0.35em" visibility="visible">Tennessee</text>
+        <text x="83.73" y="103.39" text-anchor="middle" dy="0.35em" visibility="visible">Texas</text>
+        <text x="107.1" y="106.95" text-anchor="middle" dy="0.35em" visibility="visible">Utah</text>
+        <text x="162.01" y="57.88" text-anchor="middle" dy="0.35em" visibility="visible">Vermont</text>
+        <text x="113.25" y="67.76" text-anchor="middle" dy="0.35em" visibility="visible">Virginia</text>
+        <text x="154.45" y="87.21" text-anchor="middle" dy="0.35em" visibility="hidden">Washington</text>
+        <text x="144.27" y="107.21" text-anchor="middle" dy="0.35em" visibility="hidden">West Virginia</text>
+        <text x="134.72" y="90.78" text-anchor="middle" dy="0.35em" visibility="hidden">Wisconsin</text>
+        <text x="126.95" y="116.75" text-anchor="middle" dy="0.35em" visibility="visible">Wyoming</text>
+      </g>
+      <g class="geometry" id="img-c3fd957f-25">
+        <g stroke-width="0.3" id="img-c3fd957f-26">
+          <use xlink:href="#img-c3fd957f-27" x="78.5" y="61.21" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="116.13" y="83.01" class="color_West" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="99.78" y="103.92" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="144.2" y="73.36" class="color_West" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="136.25" y="87.16" class="color_West" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="148.86" y="71.22" class="color_Northeast" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="143.4" y="66.62" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="101.59" y="70.63" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="81.25" y="89.11" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="119.21" y="105.71" class="color_West" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="148.08" y="72.82" class="color_Midwest" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="129.52" y="85.46" class="color_Midwest" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="147.42" y="88.23" class="color_Midwest" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="133.13" y="95.03" class="color_Midwest" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="124.03" y="101.6" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="80.39" y="77.45" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="155.9" y="67.76" class="color_Northeast" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="139.5" y="67.78" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="160.3" y="81.49" class="color_Northeast" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="153.84" y="87.45" class="color_Midwest" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="148.05" y="97.04" class="color_Midwest" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="55.46" y="50.63" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="130.92" y="97.52" class="color_Midwest" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="126.99" y="102.29" class="color_West" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="122.74" y="95.5" class="color_Midwest" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="126.8" y="82.38" class="color_West" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="139.43" y="72.33" class="color_Northeast" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="147.51" y="70.93" class="color_Northeast" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="132.87" y="82.63" class="color_West" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="151.85" y="69.16" class="color_Northeast" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="109.07" y="85.69" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="132.06" y="105.74" class="color_Midwest" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="139.91" y="83.97" class="color_Midwest" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="110.76" y="112.49" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="142.46" y="84.82" class="color_West" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="149.54" y="83.04" class="color_Northeast" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="156.12" y="81.02" class="color_Northeast" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="56.9" y="66.14" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="134.74" y="99.76" class="color_Midwest" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="115.23" y="91.55" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="89.68" y="104.08" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="109.64" y="109.58" class="color_West" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="167.58" y="55.26" class="color_Northeast" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="108.19" y="70.39" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="143.32" y="86.06" class="color_West" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="132.07" y="104.58" class="color_South" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="144.29" y="90.47" class="color_Midwest" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c3fd957f-27" x="122.32" y="114.12" class="color_West" fill="#D4CA3A" stroke="#FFFFFF"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</g>
+  <g class="guide ylabels" font-size="4.76" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-c3fd957f-28">
+    <text x="24.57" y="119.24" text-anchor="end" dy="0.35em">-0.5</text>
+    <text x="24.57" y="85.13" text-anchor="end" dy="0.35em">0.0</text>
+    <text x="24.57" y="51.02" text-anchor="end" dy="0.35em">0.5</text>
+    <text x="24.57" y="16.91" text-anchor="end" dy="0.35em">1.0</text>
+  </g>
+  <g font-size="6.35" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-c3fd957f-29">
+    <text x="9.95" y="66.07" text-anchor="middle" dy="0.35em" transform="rotate(-90, 9.95, 68.07)">PC2</text>
+  </g>
+  <g font-size="6.35" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-c3fd957f-30">
+    <text x="110.29" y="12.91" text-anchor="middle">PCA of States</text>
+  </g>
+</g>
+<defs>
+  <clipPath id="img-c3fd957f-18">
+  <path d="M25.57,14.91 L 195 14.91 195 121.24 25.57 121.24" />
+</clipPath>
+  <g id="img-c3fd957f-27">
+    <circle cx="0" cy="0" r="0.9"/>
+  </g>
+</defs>
+</svg>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:gadfly="http://www.gadflyjl.org/ns"
+     version="1.2"
+     width="120mm" height="80mm" viewBox="0 0 120 80"
+     stroke="none"
+     fill="#000000"
+     stroke-width="0.3"
+     font-size="3.88"
+>
+<g class="plotroot xscalable yscalable" id="img-a05ea9d1-1">
+  <g font-size="5.29" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-a05ea9d1-2">
+    <text x="68.83" y="67.08" text-anchor="middle" dy="0.6em">Year</text>
+  </g>
+  <g class="guide xlabels" font-size="3.7" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-a05ea9d1-3">
+    <text x="24.66" y="59.57" text-anchor="middle" dy="0.6em">1960</text>
+    <text x="37.28" y="59.57" text-anchor="middle" dy="0.6em">1968</text>
+    <text x="49.9" y="59.57" text-anchor="middle" dy="0.6em">1976</text>
+    <text x="62.52" y="59.57" text-anchor="middle" dy="0.6em">1984</text>
+    <text x="75.14" y="59.57" text-anchor="middle" dy="0.6em">1992</text>
+    <text x="87.76" y="59.57" text-anchor="middle" dy="0.6em">2000</text>
+    <text x="100.38" y="59.57" text-anchor="middle" dy="0.6em">2008</text>
+    <text x="113" y="59.57" text-anchor="middle" dy="0.6em">2016</text>
+  </g>
+<g clip-path="url(#img-a05ea9d1-4)">
+  <g id="img-a05ea9d1-5">
+    <g pointer-events="visible" opacity="1" fill="#000000" fill-opacity="0.000" stroke="#000000" stroke-opacity="0.000" class="guide background" id="img-a05ea9d1-6">
+      <rect x="22.66" y="5" width="92.34" height="53.57"/>
+    </g>
+    <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.26" stroke="#000000" id="img-a05ea9d1-7">
+      <path fill="none" d="M22.66,56.57 L 115 56.57"/>
+      <path fill="none" d="M22.66,40.04 L 115 40.04"/>
+      <path fill="none" d="M22.66,23.52 L 115 23.52"/>
+      <path fill="none" d="M22.66,7 L 115 7"/>
+    </g>
+    <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.26" stroke="#000000" id="img-a05ea9d1-8">
+      <path fill="none" d="M24.66,5 L 24.66 58.57"/>
+      <path fill="none" d="M37.28,5 L 37.28 58.57"/>
+      <path fill="none" d="M49.9,5 L 49.9 58.57"/>
+      <path fill="none" d="M62.52,5 L 62.52 58.57"/>
+      <path fill="none" d="M75.14,5 L 75.14 58.57"/>
+      <path fill="none" d="M87.76,5 L 87.76 58.57"/>
+      <path fill="none" d="M100.38,5 L 100.38 58.57"/>
+      <path fill="none" d="M113,5 L 113 58.57"/>
+    </g>
+    <g class="plotpanel" id="img-a05ea9d1-9">
+      <g shape-rendering="crispEdges" stroke-width="0.3" id="img-a05ea9d1-10">
+        <g stroke="#000000" stroke-opacity="0.000" fill="#00BFFF" class="geometry" id="img-a05ea9d1-11">
+          <rect x="27.79" y="19.54" width="6.36" height="20.5"/>
+          <rect x="34.1" y="40.04" width="6.36" height="6.76"/>
+          <rect x="40.41" y="35.52" width="6.36" height="4.53"/>
+          <rect x="46.72" y="40.04" width="6.36" height="15.35"/>
+          <rect x="53.03" y="40.04" width="6.36" height="13.06"/>
+          <rect x="59.34" y="40.04" width="6.36" height="5.8"/>
+          <rect x="65.65" y="40.04" width="6.36" height="1.9"/>
+          <rect x="71.96" y="40.04" width="6.36" height="3.13"/>
+          <rect x="78.27" y="40.04" width="6.36" height="0.76"/>
+          <rect x="84.58" y="38.47" width="6.36" height="1.57"/>
+          <rect x="90.89" y="36.33" width="6.36" height="3.71"/>
+          <rect x="97.2" y="31.53" width="6.36" height="8.51"/>
+          <rect x="103.51" y="32.11" width="6.36" height="7.93"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</g>
+  <g class="guide ylabels" font-size="3.7" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-a05ea9d1-12">
+    <text x="21.66" y="56.57" text-anchor="end" dy="0.35em">-0.5</text>
+    <text x="21.66" y="40.04" text-anchor="end" dy="0.35em">0.0</text>
+    <text x="21.66" y="23.52" text-anchor="end" dy="0.35em">0.5</text>
+    <text x="21.66" y="7" text-anchor="end" dy="0.35em">1.0</text>
+  </g>
+  <g font-size="5.29" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-a05ea9d1-13">
+    <text x="9.46" y="29.78" text-anchor="middle" dy="0.35em" transform="rotate(-90, 9.46, 31.78)">PC1 Loadings</text>
+  </g>
+</g>
+<defs>
+  <clipPath id="img-a05ea9d1-4">
+  <path d="M22.66,5 L 115 5 115 58.57 22.66 58.57" />
+</clipPath>
+</defs>
+</svg>

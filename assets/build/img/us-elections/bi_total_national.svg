@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:gadfly="http://www.gadflyjl.org/ns"
+     version="1.2"
+     width="320mm" height="160mm" viewBox="0 0 320 160"
+     stroke="none"
+     fill="#000000"
+     stroke-width="0.3"
+     font-size="3.88"
+>
+<g class="plotroot xscalable yscalable" id="img-dc4ab2a2-1">
+  <g font-size="6.35" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-dc4ab2a2-2">
+    <text x="164.95" y="146.09" text-anchor="middle" dy="0.6em">Year</text>
+  </g>
+<g clip-path="url(#img-dc4ab2a2-3)">
+  <g id="img-dc4ab2a2-4">
+    <g class="plotpanel" id="img-dc4ab2a2-5">
+      <g class="guide xlabels" font-size="4.76" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-dc4ab2a2-6">
+        <text x="-17.45" y="137.58" text-anchor="middle" dy="0.6em">1824</text>
+        <text x="3.07" y="137.58" text-anchor="middle" dy="0.6em">1836</text>
+        <text x="23.6" y="137.58" text-anchor="middle" dy="0.6em">1848</text>
+        <text x="44.13" y="137.58" text-anchor="middle" dy="0.6em">1860</text>
+        <text x="64.66" y="137.58" text-anchor="middle" dy="0.6em">1872</text>
+        <text x="85.19" y="137.58" text-anchor="middle" dy="0.6em">1884</text>
+        <text x="105.72" y="137.58" text-anchor="middle" dy="0.6em">1896</text>
+        <text x="126.24" y="137.58" text-anchor="middle" dy="0.6em">1908</text>
+        <text x="146.77" y="137.58" text-anchor="middle" dy="0.6em">1920</text>
+        <text x="167.3" y="137.58" text-anchor="middle" dy="0.6em">1932</text>
+        <text x="187.83" y="137.58" text-anchor="middle" dy="0.6em">1944</text>
+        <text x="208.36" y="137.58" text-anchor="middle" dy="0.6em">1956</text>
+        <text x="228.89" y="137.58" text-anchor="middle" dy="0.6em">1968</text>
+        <text x="249.41" y="137.58" text-anchor="middle" dy="0.6em">1980</text>
+        <text x="269.94" y="137.58" text-anchor="middle" dy="0.6em">1992</text>
+        <text x="290.47" y="137.58" text-anchor="middle" dy="0.6em">2004</text>
+        <text x="311" y="137.58" text-anchor="middle" dy="0.6em">2016</text>
+      </g>
+<g clip-path="url(#img-dc4ab2a2-7)">
+      <g id="img-dc4ab2a2-8">
+        <g pointer-events="visible" opacity="1" fill="#000000" fill-opacity="0.000" stroke="#000000" stroke-opacity="0.000" class="guide background" id="img-dc4ab2a2-9">
+          <rect x="35.29" y="72.79" width="277.71" height="63.79"/>
+        </g>
+        <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.26" stroke="#000000" id="img-dc4ab2a2-10">
+          <path fill="none" d="M35.29,134.58 L 313 134.58"/>
+          <path fill="none" d="M35.29,119.63 L 313 119.63"/>
+          <path fill="none" d="M35.29,104.69 L 313 104.69"/>
+          <path fill="none" d="M35.29,89.74 L 313 89.74"/>
+          <path fill="none" d="M35.29,74.79 L 313 74.79"/>
+        </g>
+        <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.26" stroke="#000000" id="img-dc4ab2a2-11">
+          <path fill="none" d="M-17.45,72.79 L -17.45 136.58"/>
+          <path fill="none" d="M3.07,72.79 L 3.07 136.58"/>
+          <path fill="none" d="M23.6,72.79 L 23.6 136.58"/>
+          <path fill="none" d="M44.13,72.79 L 44.13 136.58"/>
+          <path fill="none" d="M64.66,72.79 L 64.66 136.58"/>
+          <path fill="none" d="M85.19,72.79 L 85.19 136.58"/>
+          <path fill="none" d="M105.72,72.79 L 105.72 136.58"/>
+          <path fill="none" d="M126.24,72.79 L 126.24 136.58"/>
+          <path fill="none" d="M146.77,72.79 L 146.77 136.58"/>
+          <path fill="none" d="M167.3,72.79 L 167.3 136.58"/>
+          <path fill="none" d="M187.83,72.79 L 187.83 136.58"/>
+          <path fill="none" d="M208.36,72.79 L 208.36 136.58"/>
+          <path fill="none" d="M228.89,72.79 L 228.89 136.58"/>
+          <path fill="none" d="M249.41,72.79 L 249.41 136.58"/>
+          <path fill="none" d="M269.94,72.79 L 269.94 136.58"/>
+          <path fill="none" d="M290.47,72.79 L 290.47 136.58"/>
+          <path fill="none" d="M311,72.79 L 311 136.58"/>
+        </g>
+        <g class="plotpanel" id="img-dc4ab2a2-12">
+          <g stroke-width="0.53" fill="#000000" fill-opacity="0.000" class="geometry" stroke-dasharray="none" stroke="#00BFFF" id="img-dc4ab2a2-13">
+            <path fill="none" d="M44.13,93.22 L 50.97 74.79 57.82 74.79 64.66 75 71.5 75.39 78.35 76.78 85.19 76.49 92.03 76.89 98.87 81.23 105.72 76.06 112.56 76.45 119.4 78.23 126.24 77.84 133.09 95.62 139.93 77.41 146.77 77.86 153.62 84.78 160.46 75.23 167.3 76.28 174.14 76.21 180.99 74.79 187.83 74.96 194.67 77.83 201.52 74.79 208.36 74.98 215.2 74.79 222.04 74.79 228.89 82.9 235.73 75.64 242.57 75.34 249.41 79.55 256.26 74.79 263.1 75.07 269.94 86.3 276.79 80.56 283.63 76.9 290.47 75.21 297.31 75.37 304.16 75.6"/>
+          </g>
+          <g class="geometry" id="img-dc4ab2a2-14">
+            <g class="color_RGBA{Float32}(0.0f0,0.74736935f0,1.0f0,1.0f0)" stroke="#FFFFFF" stroke-width="0.3" fill="#00BFFF" id="img-dc4ab2a2-15">
+              <use xlink:href="#img-dc4ab2a2-16" x="44.13" y="93.22"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="50.97" y="74.79"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="57.82" y="74.79"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="64.66" y="75"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="71.5" y="75.39"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="78.35" y="76.78"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="85.19" y="76.49"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="92.03" y="76.89"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="98.87" y="81.23"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="105.72" y="76.06"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="112.56" y="76.45"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="119.4" y="78.23"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="126.24" y="77.84"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="133.09" y="95.62"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="139.93" y="77.41"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="146.77" y="77.86"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="153.62" y="84.78"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="160.46" y="75.23"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="167.3" y="76.28"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="174.14" y="76.21"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="180.99" y="74.79"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="187.83" y="74.96"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="194.67" y="77.83"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="201.52" y="74.79"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="208.36" y="74.98"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="215.2" y="74.79"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="222.04" y="74.79"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="228.89" y="82.9"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="235.73" y="75.64"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="242.57" y="75.34"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="249.41" y="79.55"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="256.26" y="74.79"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="263.1" y="75.07"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="269.94" y="86.3"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="276.79" y="80.56"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="283.63" y="76.9"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="290.47" y="75.21"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="297.31" y="75.37"/>
+              <use xlink:href="#img-dc4ab2a2-16" x="304.16" y="75.6"/>
+            </g>
+          </g>
+        </g>
+      </g>
+</g>
+      <g class="guide ylabels" font-size="4.76" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-dc4ab2a2-17">
+        <text x="34.29" y="134.58" text-anchor="end" dy="0.35em">0</text>
+        <text x="34.29" y="119.63" text-anchor="end" dy="0.35em">25</text>
+        <text x="34.29" y="104.69" text-anchor="end" dy="0.35em">50</text>
+        <text x="34.29" y="89.74" text-anchor="end" dy="0.35em">75</text>
+        <text x="34.29" y="74.79" text-anchor="end" dy="0.35em">100</text>
+      </g>
+      <g font-size="6.35" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-dc4ab2a2-18">
+        <text x="19.86" y="102.69" text-anchor="middle" dy="0.35em" transform="rotate(-90, 19.86, 104.69)">Popular</text>
+      </g>
+<g clip-path="url(#img-dc4ab2a2-19)">
+      <g id="img-dc4ab2a2-20">
+        <g pointer-events="visible" opacity="1" fill="#000000" fill-opacity="0.000" stroke="#000000" stroke-opacity="0.000" class="guide background" id="img-dc4ab2a2-21">
+          <rect x="35.29" y="7" width="277.71" height="61.79"/>
+        </g>
+        <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.26" stroke="#000000" id="img-dc4ab2a2-22">
+          <path fill="none" d="M35.29,66.79 L 313 66.79"/>
+          <path fill="none" d="M35.29,52.34 L 313 52.34"/>
+          <path fill="none" d="M35.29,37.9 L 313 37.9"/>
+          <path fill="none" d="M35.29,23.45 L 313 23.45"/>
+          <path fill="none" d="M35.29,9 L 313 9"/>
+        </g>
+        <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.26" stroke="#000000" id="img-dc4ab2a2-23">
+          <path fill="none" d="M-17.45,7 L -17.45 68.79"/>
+          <path fill="none" d="M3.07,7 L 3.07 68.79"/>
+          <path fill="none" d="M23.6,7 L 23.6 68.79"/>
+          <path fill="none" d="M44.13,7 L 44.13 68.79"/>
+          <path fill="none" d="M64.66,7 L 64.66 68.79"/>
+          <path fill="none" d="M85.19,7 L 85.19 68.79"/>
+          <path fill="none" d="M105.72,7 L 105.72 68.79"/>
+          <path fill="none" d="M126.24,7 L 126.24 68.79"/>
+          <path fill="none" d="M146.77,7 L 146.77 68.79"/>
+          <path fill="none" d="M167.3,7 L 167.3 68.79"/>
+          <path fill="none" d="M187.83,7 L 187.83 68.79"/>
+          <path fill="none" d="M208.36,7 L 208.36 68.79"/>
+          <path fill="none" d="M228.89,7 L 228.89 68.79"/>
+          <path fill="none" d="M249.41,7 L 249.41 68.79"/>
+          <path fill="none" d="M269.94,7 L 269.94 68.79"/>
+          <path fill="none" d="M290.47,7 L 290.47 68.79"/>
+          <path fill="none" d="M311,7 L 311 68.79"/>
+        </g>
+        <g class="plotpanel" id="img-dc4ab2a2-24">
+          <g stroke-width="0.53" fill="#000000" fill-opacity="0.000" class="geometry" stroke-dasharray="none" stroke="#00BFFF" id="img-dc4ab2a2-25">
+            <path fill="none" d="M44.13,30.17 L 50.97 9 57.82 9 64.66 9 71.5 9 78.35 9 85.19 9 92.03 9 98.87 11.86 105.72 9 112.56 9 119.4 9 126.24 9 133.09 18.58 139.93 9 146.77 9 153.62 10.41 160.46 9 167.3 9 174.14 9 180.99 9 187.83 9 194.67 13.24 201.52 9 208.36 9 215.2 9 222.04 9 228.89 13.94 235.73 9.11 242.57 9 249.41 9 256.26 9 263.1 9 269.94 9 276.79 9 283.63 9 290.47 9 297.31 9 304.16 9"/>
+          </g>
+          <g class="geometry" id="img-dc4ab2a2-26">
+            <g class="color_RGBA{Float32}(0.0f0,0.74736935f0,1.0f0,1.0f0)" stroke="#FFFFFF" stroke-width="0.3" fill="#00BFFF" id="img-dc4ab2a2-27">
+              <use xlink:href="#img-dc4ab2a2-28" x="44.13" y="30.17"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="50.97" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="57.82" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="64.66" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="71.5" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="78.35" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="85.19" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="92.03" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="98.87" y="11.86"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="105.72" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="112.56" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="119.4" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="126.24" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="133.09" y="18.58"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="139.93" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="146.77" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="153.62" y="10.41"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="160.46" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="167.3" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="174.14" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="180.99" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="187.83" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="194.67" y="13.24"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="201.52" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="208.36" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="215.2" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="222.04" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="228.89" y="13.94"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="235.73" y="9.11"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="242.57" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="249.41" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="256.26" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="263.1" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="269.94" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="276.79" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="283.63" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="290.47" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="297.31" y="9"/>
+              <use xlink:href="#img-dc4ab2a2-28" x="304.16" y="9"/>
+            </g>
+          </g>
+        </g>
+      </g>
+</g>
+      <g class="guide ylabels" font-size="4.76" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-dc4ab2a2-29">
+        <text x="34.29" y="66.79" text-anchor="end" dy="0.35em">0</text>
+        <text x="34.29" y="52.34" text-anchor="end" dy="0.35em">25</text>
+        <text x="34.29" y="37.9" text-anchor="end" dy="0.35em">50</text>
+        <text x="34.29" y="23.45" text-anchor="end" dy="0.35em">75</text>
+        <text x="34.29" y="9" text-anchor="end" dy="0.35em">100</text>
+      </g>
+      <g font-size="6.35" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-dc4ab2a2-30">
+        <text x="19.86" y="35.9" text-anchor="middle" dy="0.35em" transform="rotate(-90, 19.86, 37.9)">Electoral</text>
+      </g>
+    </g>
+  </g>
+</g>
+  <g font-size="6.35" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-dc4ab2a2-31">
+    <text x="9.95" y="72.05" text-anchor="middle" dy="0.35em" transform="rotate(-90, 9.95, 74.05)">Percent <tspan style="dominant-baseline:inherit" font-style="italic"><tspan style="dominant-baseline:inherit" font-weight="bold">by</tspan></tspan> Category</text>
+  </g>
+</g>
+<defs>
+  <clipPath id="img-dc4ab2a2-19">
+  <path d="M35.29,7 L 313 7 313 68.79 35.29 68.79" />
+</clipPath>
+  <clipPath id="img-dc4ab2a2-7">
+  <path d="M35.29,72.79 L 313 72.79 313 136.58 35.29 136.58" />
+</clipPath>
+  <clipPath id="img-dc4ab2a2-3">
+  <path d="M14.91,5 L 315 5 315 143.09 14.91 143.09" />
+</clipPath>
+  <g id="img-dc4ab2a2-16">
+    <circle cx="0" cy="0" r="0.9"/>
+  </g>
+  <g id="img-dc4ab2a2-28">
+    <circle cx="0" cy="0" r="0.9"/>
+  </g>
+</defs>
+</svg>

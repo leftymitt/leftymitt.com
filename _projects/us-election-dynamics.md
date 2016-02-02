@@ -5,7 +5,7 @@ category: projects
 repo: us-elections
 added_date: "2016-01-31"
 banner: "united-states.svg"
-tag: "an analysis of presidential elections in the united states from 1824 to 2012, along with the tools used to collect and interpret the data."
+tag: "an analysis of presidential elections in the united states at the state and national level, along with scripts for collecting and interpreting the data."
 
 js: "
 <script src='/assets/build/js/snap.svg.min.js'></script>

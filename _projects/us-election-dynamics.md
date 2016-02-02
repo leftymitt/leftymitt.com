@@ -3,7 +3,11 @@ title: us presidential election dynamics
 layout: post
 category: projects
 repo: us-elections
-added_date: "2016-01-31"
+author: leftymitt
+
+added_date: "2016-02-01"
+published_date: "2016-02-01"
+
 banner: "united-states.svg"
 tag: "an analysis of presidential elections in the united states at the state and national level, along with scripts for collecting and interpreting the data."
 

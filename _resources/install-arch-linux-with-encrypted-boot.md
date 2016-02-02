@@ -3,6 +3,7 @@ title: install arch linux with an encrypted boot partition.
 categories: resources
 layout: post
 icon: arch-linux-logo.svg
+author: leftymitt
 added_date: "2016-01-03"
 published_date: "2016-01-03"
 code: 

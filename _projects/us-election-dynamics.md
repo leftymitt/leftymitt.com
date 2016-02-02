@@ -68,14 +68,6 @@ When all votes are tallied, the candidate with the most electoral votes wins the
 
 Naturally, such a system has potential to be undemocratic, but by and large, the winner of the popular vote has been the winner of the electoral vote. 
 
-<!--
-<figure class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_popular_v_electoral_national_diff.svg"
-	     alt="difference in electoral vote (%) vs. difference in popular vote (%)"
-	     max-width="100%" height="auto">
-</figure>
--->
-
 Potential for being undemocratic notwithstanding, the electoral college has another interesting characteristic - it magnifies tiny wobbles in the overall popular vote into huge electoral margins. 
 Throughout US history, small deviations from 50% popular support for a party translate into large changes in electoral votes one from one election to the next. 
 A party with 40-45 percent of the vote generally wins few electoral votes, whereas parties that win 55-60% typically win almost all of them.  
@@ -163,12 +155,6 @@ Each state has unique preferences and a unique electoral history.
 The two major political parties today, the Democrats and the Republicans, have both competed against each other since 1860, and for the most part, they have both dominated the popular vote. 
 Exceptions in some elections in some states exist, but the overall pattern is clear. 
 
-<!--
-<div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_total_national.svg">
-</div>
--->
-
 <div class="uk-cover uk-text-center">
 	<img src="{{ site.images }}/{{ page.repo }}/bi_total_all_states.svg">
 </div>
@@ -192,12 +178,12 @@ This, coupled with the fact that the most successful third parties often champio
 Still, both parties have dynamic voting histories in each state:  
 
 <div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_difference_all_states.svg">
+	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_states.svg">
 </div>
 
 <!--
 <div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_difference_all_divisions.svg">
+	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_divisions.svg">
 </div>
 -->
 
@@ -213,7 +199,7 @@ Correlated nationally or not, voting patterns in each state is correlated with o
 The first reason for correlation can be easily seen by averaging states according to their [census region](https://en.wikipedia.org/wiki/List_of_regions_of_the_United_States#Census_Bureau-designated_regions_and_divisions). 
 
 <div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_difference_all_regions.svg">
+	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_regions.svg">
 </div>
 
 As implied before, the South exhibits different voting patterns. 
@@ -246,18 +232,23 @@ Continuing with the census assumption of four distinct regions in the United Sta
 	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_kmeans_some_state.svg">
 </div>
 
-Understandably, the four clusters do not fall precisely on 
+Understandably, the four clusters do not fall precisely on the census regions, but they are close. 
+The South is effectively partitioned in two. One South is characterized by states known to be the most reactionary that historically have broken from the two parties to support pro-segregationist candidates. 
+The second south contains most remaining southern states, along with a few western states. 
+
+The Northeastern states all fall into one cluster along with some midwestern and west coast states and those around Washington DC. The other cluster is nebulously defined but contains mostly midwestern and western states. 
 
 Interestingly, the year with the second-highest loading, 1964, was Lyndon Johnson's overwhelming popular victory, where the only states where Republican Barry Goldwater won were Louisiana, Mississippi, Alabama, Georgia, and South Carolina, states that clustered into one group. 
 
-Interpretations based on that observation are purely speculative. The year with the highest loading, 1924, was Calvin Coolidge's easy victory, though it should be mentioned that Robert La Follette took much of the popular vote from the Democratic candidate.  
+Interpretations of these observation are purely speculative. 
+The year with the highest loading, 1924, was Calvin Coolidge's easy victory, though it should be mentioned that Robert La Follette took much of the popular vote from the Democratic candidate.  
 
-<!--
+
+<!-- pca and k-means plots when alaska, dc, and hawaii are included. 
+
 <div class="uk-cover uk-text-center">
 	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_state.svg">
 </div>
-
-Continuing with the census assumption of four distinct regions in the United States: a k-means clustering shows: 
 
 <div class="uk-cover uk-text-center">
 	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_kmeans_state.svg">

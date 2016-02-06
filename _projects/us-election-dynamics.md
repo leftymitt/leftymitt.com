@@ -5,7 +5,7 @@ category: projects
 repo: us-elections
 author: leftymitt
 
-added_date: "2016-02-01"
+added_date: "2016-02-07"
 published_date: "2016-02-01"
 
 banner: "united-states.svg"

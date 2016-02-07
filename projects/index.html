@@ -5,30 +5,30 @@ tag: "where to go and what to see, all with love and irony."
 --- 
 
 <div class="uk-container uk-container-center">
-	<!-- <div class="uk-container-center"> -->
 	{% assign sorted_projects = site.projects | sort: 'added_date' | reverse %}
 	{% for project in sorted_projects %}
 	<div data-uk-parallax="{bg:'-200'}" 
         style="background-image:url('{{ site.images }}/{{ project.banner }}'); height:50vh" 
-	     class="uk-flex uk-flex-center uk-flex-middle">
-		<div class="uk-width-medium-2-3 uk-width-large-1-2 uk-text-center">
-		<!-- <div class="uk-width-medium-2-3 uk-width-large-1-3 uk-text-center"> -->
-			{% if project.link %} <a href="{{ project.link }}">
-			{% else %} <a href="{{ project.url }}">
-			{% endif %}
-				<br>
-				<h2 class="uk-h2 uk-text-contrast">{{ project.title }}</h2>
-				<p class="uk-text-large uk-hidden-small uk-text-contrast">
-					{{ project.tag }}
-				</p>
-				<button class="uk-button uk-button-default">view project.</button>
-			</a>
+	     class="uk-flex uk-flex-middle uk-flex-left">
+		{% if project.link %} <a href="{{ project.link }}">
+		{% else %} <a href="{{ project.url }}">
+		{% endif %}
+		<div class="uk-panel uk-panel-box uk-width-large-3-4">
+			<div class="uk-h2">
+				{{ project.title }}
+				{% if project.link %} 
+				<div class="uk-float-right">
+					&nbsp<i class="uk-icon-external-link"></i>
+				</div>
+				{% endif %}
+			</div>
+			<p class="uk-text-large uk-hidden-small">
+				{{ project.tag }}
+			</p>
 		</div>
+		</a>
 	</div>
 	{% unless project == sorted_projects.last %}
-	<!--
-	<div class="uk-container uk-container-center uk-margin-large"><hr></div>
-	-->
 	<hr class="uk-margin-large">
 	{% endunless %}
 	{% endfor %}

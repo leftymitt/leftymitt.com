@@ -1,0 +1,67 @@
+media:
+ - name: anime
+   color: danger
+
+ - name: science
+   color: primary
+   alt:
+    - publication
+
+ - name: report
+   color: success
+   alt:
+    - documentary
+    - book
+
+ - name: transcript
+   color: warning
+   alt:
+    - speech
+    - interview
+
+ - name: article
+   alt:
+    - news
+
+
+resources:
+ - name: "Arch Linux"
+   url: "https://wiki.archlinux.org/"
+   img: "arch-linux-logo.svg"
+
+ - name: "Gentoo"
+   url: "https://wiki.gentoo.org/wiki/Main_Page"
+   img: "gentoo-logo.svg"
+
+ - name: "Debian"
+   url: "https://www.debian.org/"
+   img: "debian-logo.svg"
+
+ - name: "Wikipedia"
+   url: "https://en.wikipedia.org/wiki/Main_Page"
+   img: "wikipedia-logo.svg"
+
+ - name: "Tails"
+   url: "https://tails.boum.org/"
+   img: "tails-logo.svg"
+
+ - name: "Bitcoin"
+   url: "https://bitcoin.org/en/"
+   img: "bitcoin-logo.svg"
+
+ - name: "GitHub"
+   url: "https://github.com/"
+   img: "github-logo.svg"
+
+ - name: "Firefox"
+   url: "https://www.mozilla.org/en-US/firefox"
+   img: "firefox-logo.svg"
+
+ - name: "Tor"
+   url: "https://www.torproject.org/projects/torbrowser.html"
+   img: "tor-logo.svg"
+
+ - name: "Riseup"
+   url: "https://help.riseup.net/"
+   img: "riseup-button-crow.svg"
+

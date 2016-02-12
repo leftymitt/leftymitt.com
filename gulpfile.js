@@ -317,7 +317,7 @@ gulp.task('watch', function() {
 
 	watch(['_posts/**', '*.html', '_layouts/*', '_config.yml', '_includes/**', 
 	       'resources/*', '_resources/**', '_drafts/**', 'media/*', '_media/*', 
-	       'blog/*', 'projects/*', '_projects/**', 'feed.xml'], 
+	       'blog/*', 'projects/*', '_projects/**', '_data/**', 'feed.xml'], 
 	      function() {
 		run_sequence('build', 'build-html', 'reload'); 
 	});

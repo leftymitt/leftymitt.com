@@ -1,30 +1,6 @@
 ---
 title: media 
 layout: default
-types: 
- - name: anime
-   color: danger
-
- - name: science
-   color: primary
-   alt:
-    - publication
-
- - name: report
-   color: success
-   alt: 
-    - documentary
-    - book
-
- - name: transcript
-   color: warning
-   alt: 
-    - speech
-    - interview
-
- - name: article
-   alt: 
-    - news
 
 tag: "sharing things with you and me, all with love and irony."
 --- 
@@ -33,9 +9,11 @@ tag: "sharing things with you and me, all with love and irony."
 	
 	<ul id="filter" class="uk-subnav uk-subnav-pill">
 		<li class="uk-active" data-uk-filter=""><a href="#">All</a></li>
-		{% assign sorted_types = page.types | sort: 'name' %}
+		{% assign sorted_types = site.data.meta.media | sort: 'name' %}
 		{% for type in sorted_types %}
-		<li data-uk-filter="{{ type.name }}"><a href="#">{{ type.name | capitalize }}</a></li>
+		<li data-uk-filter="{{ type.name }}">
+			<a href="#">{{ type.name | capitalize }}</a>
+		</li>
 		{% endfor %}
 	</ul>
 
@@ -44,7 +22,7 @@ tag: "sharing things with you and me, all with love and irony."
 	{% assign sorted_media = site.media | sort: 'added_date' | reverse %}
 	{% for item in sorted_media %}
 	{% if item.format == "video" %}
-		{% for type in page.types %}
+		{% for type in site.data.meta.media %}
 		{% if item.type == type.name or type.alt contains item.type %}
 		<div class="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-3" 
 			  data-uk-filter="{{ type.name }}">
@@ -117,7 +95,7 @@ tag: "sharing things with you and me, all with love and irony."
 			</div>
 		</div>
 		{% elsif item.format == "text" %}
-		{% for type in page.types %}
+		{% for type in site.data.meta.media %}
 		{% if item.type == type.name or type.alt contains item.type %}
 		<div class="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-3" 
 			  data-uk-filter="{{ type.name }}">

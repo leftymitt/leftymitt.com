@@ -1,11 +1,22 @@
 # rakefile for starting, editing, and publishing new posts.
 
+require 'html/proofer'
+
 desc "print usage information"
 task :default do
 	puts "options: "
-	puts "   rake new \t\t - create a new draft"
-	puts "   rake edit \t\t - edit an existing draft"
-	puts "   rake publish \t - publish an existing draft"
+	puts "   rake new \t\t - create a new draft."
+	puts "   rake edit \t\t - edit an existing draft."
+	puts "   rake publish \t - publish an existing draft."
+	puts "   rake test \t\t - check site html."
+end
+
+desc "check html generated in _site/."
+task :test do
+	opts = { :check_html => true, :disable_external => true, 
+	         :check_favicon => true, :check_external_hash => false, 
+	         :allow_hash_href => true, :only_4xx => true }
+	HTML::Proofer.new("./_site", opts).run
 end
 
 desc "start a new draft."

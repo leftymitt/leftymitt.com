@@ -103,7 +103,9 @@
 			{% include nav.html %}
 			</div>
 			
-			<div class="uk-container uk-container-center uk-margin-top uk-flex-item-1" style="width:100%;">
+			<div class="uk-container uk-container-center uk-margin-top 
+			            uk-flex-item-1" 
+			     style="width:100%;">
 
 			{% if page.table_of_contents %}
 				<div class=" uk-grid">
@@ -151,48 +153,42 @@
 					{% if page.code == true %}
 					<button class="uk-button uk-button-success  
 				                  uk-margin-right uk-margin-bottom"
-							  type="button"
+					        type="button"
 							  data-uk-toggle="{ target: 'p, h3, h4, h5, h6',
-													  animation: 'uk-animation-fade, uk-animation-fade' }">
+					                          animation: 'uk-animation-fade' }">
 						just code.
 					</button>
 					{% else %}
 					<button class="uk-button uk-button-success 
 				                  uk-margin-right uk-margin-bottom"
-							  type="button"
-							  data-uk-toggle="{ target: '#code, #content',
-													  animation: 'uk-animation-fade, uk-animation-fade' }">
+					        type="button"
+					        data-uk-toggle="{ target: '#code, #content',
+					                          animation: 'uk-animation-fade' }">
 						just code.
 					</button>
 					<div class="uk-hidden" id="code">
 						{% for snippet in page.code %}
 						<div class="uk-panel uk-panel-box">
-							<div class="uk-panetl-title uk-panel-header">{{ snippet.script }}</div>
-							<!-- hardcode a few languages because they cannot be injected
-			 				     into liquid highlight tags as variables -->
+							<div class="uk-panel-title uk-panel-header">{{ snippet.script }}</div>
+							<!-- hardcode a few languages because they cannot be 
+							     injected into liquid highlight tags as variables.
+							     leave the highlight tags on one line to avoid extra
+							     whitespaces. -->
 							{% if snippet.language == "bash" %} 
-								{% highlight bash %}
-								{% include code/{{ snippet.script }} %}
-								{% endhighlight %}
+								{% highlight bash %}{% include code/{{ snippet.script }} %}{% endhighlight %}
 							{% elsif snippet.language == "cpp" %} 
-								{% highlight cpp %}
-								{% include code/{{ snippet.script }} %}
-								{% endhighlight %}
+								{% highlight cpp %}{% include code/{{ snippet.script }} %}{% endhighlight %}
 							{% elsif snippet.language == "python" %} 
-								{% highlight python %}
-								{% include code/{{ snippet.script }} %}
-								{% endhighlight %}
+								{% highlight python %}{% include code/{{ snippet.script }} %}{% endhighlight %}
 							{% elsif snippet.language == "ruby" %} 
-								{% highlight ruby %}
-								{% include code/{{ snippet.script }} %}
-								{% endhighlight %}
+								{% highlight ruby %}{% include code/{{ snippet.script }} %}{% endhighlight %}
 							{% else %} 
-								{% highlight bash %}
-								{% include code/{{ snippet.script }} %}
-								{% endhighlight %}
+								{% highlight bash %}{% include code/{{ snippet.script }} %}{% endhighlight %}
 							{% endif %}
 						</div>
+						{% unless snippet == page.code.last %}
 						<div class="uk-panel uk-panel-space"></div>
+						{% endunless %}
 						{% endfor %}
 					</div>
 					{% endif %}
@@ -208,16 +204,23 @@
 					<div class="uk-hidden-small uk-width-medium-1-5 uk-pull-4-5">
 						<aside class="uk-panel uk-panel-box" data-uk-sticky="{top:70}">
 							<ul class="uk-nav uk-nav-side uk-nav-parent-icon" 
-								 data-uk-scrollspy-nav="{closest:'li', topoffset:-250}"
-								 data-uk-nav>
+							    data-uk-scrollspy-nav="{closest:'li', topoffset:-250}"
+							    data-uk-nav>
 								<li class="uk-nav-header">contents.</li>
-								<li class="uk-active"><a href="#top" data-uk-smooth-scroll="{offset:65}">
-									<div class="uk-text-small uk-margin-small-left">back to top.</div>
-								</a></li>
+								<li class="uk-active">
+									<a href="#top" data-uk-smooth-scroll="{offset:65}">
+										<div class="uk-text-small uk-margin-small-left">
+											back to top.
+										</div>
+									</a>
+								</li>
 								{% for toc in page.table_of_contents %}
-									<li><a href="#{{ toc.item }}" data-uk-smooth-scroll="{offset:65}">
-										{{ toc.item | replace: "_", " " | replace: "-", " " }}
-									</a></li>
+									<li>
+										<a href="#{{ toc.item }}" 
+										   data-uk-smooth-scroll="{offset:65}">
+											{{ toc.item | replace: "_", " " | replace: "-", " " }}
+										</a>
+									</li>
 								{% endfor %}
 							</ul>
 						</aside>

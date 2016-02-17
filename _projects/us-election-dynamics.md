@@ -57,8 +57,8 @@ window.onload = function() {
 	<ul class="uk-subnav uk-subnav-pill" 
 		 data-uk-switcher="{connect:'#state_plots, #pop_v_electoral, #pop_elect', 
 	                       animation:'fade'}">
-		<li><a>Democrats/Republicans</a></li>
-		<li><a>All Parties</a></li>
+		<li><a href="#">Democrats/Republicans</a></li>
+		<li><a href="#">All Parties</a></li>
 	</ul>
 </div>
 
@@ -160,7 +160,8 @@ The two major political parties today, the Democrats and the Republicans, have b
 Exceptions in some elections in some states exist, but the overall pattern is clear. 
 
 <div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_total_all_states.svg">
+	<img src="{{ site.images }}/{{ page.repo }}/bi_total_all_states.svg"
+	     alt="total dem and rep popular vote (%) for all elections">
 </div>
 
 One interesting observation is that each of the downward blips in two-party popular totals rarely last for more than one election. 
@@ -169,7 +170,7 @@ These blips correspond to historically interesting events, such as:
  * 1892 - James Weaver sweeps through the west in the Populist party. 
  * 1912 - Theodore Roosevelt runs as a Progressive party candidate. 
  * 1924 - Robert La Follette runs in the Progressive party. 
- * 1948 - Strom Thurmond represents the Dixiecrat party and winds states in the South. 
+ * 1948 - Strom Thurmond represents the Dixiecrat party and wins states in the South. 
  * 1968 - George Wallace carries southern states with the American Independents. 
  * 1992 - Ross Perot challenges George Bush and Bill Clinton. 
 
@@ -182,12 +183,14 @@ This, coupled with the fact that the most successful third parties often champio
 Still, both parties have dynamic voting histories in each state:  
 
 <div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_states.svg">
+	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_states.svg"
+	     alt="difference in rep and dem pop vote (%) for all states">
 </div>
 
 <!--
 <div class="uk-cover uk-text-center">
 	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_divisions.svg">
+	     alt="difference in rep and dem pop vote (%) for all divisions">
 </div>
 -->
 
@@ -203,7 +206,8 @@ Correlated nationally or not, voting patterns in each state is correlated with o
 The first reason for correlation can be easily seen by averaging states according to their [census region](https://en.wikipedia.org/wiki/List_of_regions_of_the_United_States#Census_Bureau-designated_regions_and_divisions). 
 
 <div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_regions.svg">
+	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_regions.svg"
+	     alt="difference in rep and dem pop vote (%) for all regions">
 </div>
 
 As implied before, the South exhibits different voting patterns. 
@@ -213,12 +217,13 @@ A principal components analysis of states for every election yields further, non
 Alaska, Hawaii, and Washington DC were excluded to increase the number of elections used in the analysis. 
 
 <div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_some_state.svg">
+	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_some_state.svg"
+	     alt="pca of difference in rep and dem vote in all states over time">
 </div>
 
 
 <img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_pc1_some_state.svg"
-	  class="uk-align-right">
+	  class="uk-align-right" alt="loadings for component 1">
 
 The first component (`var=0.615307`) is much more important than the second component (`var=0.0508273`), and segregates the South from the Northeast, with the West and Midwest states mixed in between.  
 
@@ -233,7 +238,8 @@ The second component, and presumably the others, has very little information. It
 Continuing with the census assumption of four distinct regions in the United States: a k-means clustering shows: 
 
 <div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_kmeans_some_state.svg">
+	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_kmeans_some_state.svg"
+	     alt="k-means clustering for pca">
 </div>
 
 Understandably, the four clusters do not fall precisely on the census regions, but they are close. 
@@ -251,11 +257,13 @@ The year with the highest loading, 1924, was Calvin Coolidge's easy victory, tho
 <!-- pca and k-means plots when alaska, dc, and hawaii are included. 
 
 <div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_state.svg">
+	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_state.svg"
+	     alt="pca of difference in rep and dem vote in all states over time">
 </div>
 
 <div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_kmeans_state.svg">
+	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_kmeans_state.svg"
+	     alt="k-means clustering for pca">
 </div>
 
 -->

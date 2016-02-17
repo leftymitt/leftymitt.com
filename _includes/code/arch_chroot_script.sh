@@ -67,4 +67,3 @@ grub-mkconfig -o /boot/grub/grub.cfg
 passwd # set root password
 umount -R /mnt # unmount
 reboot
-

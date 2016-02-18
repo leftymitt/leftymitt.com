@@ -19,7 +19,7 @@ table_of_contents:
 The filibuster is a parliamentary procedure where someone, rather than use speaking time to contribute to a debate on some legislation before a vote, speaks interminably so that the debate never conclused and the legislative body runs out of time to get to a vote. 
 This practice occurs when a legislature has limited time to vote on an issue but gives its members unlimited time to speak, and it is a powerful tool to shutter debate on specific issues or even drive the functioning of a body to a halt.  
 
-###Examples 
+### Examples 
 
 In the United States, there have been many famous filibusters over the years on serious political issues:  
 
@@ -87,7 +87,7 @@ Recently in the United States, it has been [consistently abused](http://www.huff
 
 One interesting aspect of the filibuster is *why* it's called a filibuster. The history is somewhat surprising.  
 
-###History
+### History
 
 The word "filibuster" is original derived from a Dutch term for robber or privateer (*vrijbuiter*), later adopted by the Spanish (*filibustero*) during its colonial era. 
 The Spanish used the word to describe freewheeling pirates and privateers who raided Spanish colonies and merchant ships. 

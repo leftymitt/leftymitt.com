@@ -4,7 +4,7 @@ layout: post
 category: media
 author: Martin Gilens and Benjamin Page
 format: text
-type: report
+type: science
 tags: 
  - corruption
  - politics

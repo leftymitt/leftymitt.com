@@ -3,11 +3,15 @@ title: random uniform distributions and modulo division.
 category: blog
 layout: post
 img: rand_dist_2.svg
+
+added_date: "2015-08-31"
+published_date: "2015-08-31"
 ---
 
 Random numbers, while impossible to generate algorithmically, can approximated rather closely. While rigorous analysis of exactly how close any approximations are and what shortcomings exist are a matter of ongoing research, the current body of knowledge on the subject is quite immense. Take [this paper](http://random.mat.sbg.ac.at/results/peter/A19final.pdf) as a starting point.  
 
-When using random numbers, one often needs to generate numbers within a range, via sampling a set of integers, real numbers, etc. **Extreme** caution must be taken when using custom methods not provided in the standard libraries or other well-vetted ones. Hacky solutions can often cause otherwise random sets of number to exhibit non-random properties. 
+When using random numbers, one often needs to generate numbers within a range, via sampling a set of integers, real numbers, etc. 
+Caution must be taken when using custom methods not provided in the standard libraries or other well-vetted ones. Hacky solutions can often cause otherwise random sets of number to exhibit non-random properties. 
 
 
 Take this common scenario:  
@@ -16,7 +20,7 @@ Suppose you want to generate a set of random numbers whose elements are between 
 
     x_random = RANDOM mod 1000
 
-Now, the space of $0\leq x \leq32768$ gets mapped down to $0 \leq x \leq 1000$. See the results:  
+Now, the space of [0, 32767] gets mapped down to [0, 1000]. See the results:  
 
 
 {% highlight julia %}

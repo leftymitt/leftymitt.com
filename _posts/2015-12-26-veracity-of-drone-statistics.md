@@ -47,11 +47,11 @@ All reports, though they doubtlessly undercount civilian deaths, present one sim
 </div></div>
 
 There is one particularly glaring disconnect in the data, though: the ratio of terrorists killed to drone strikes initiated is also very large. 
-What that means is that the military is somehow striking their precisely-chosen targets when they are all in proximity with one another, killing on average about 7-8 targets per strike.  
+What that means is that the military is somehow striking their precisely-chosen targets when they are all in proximity with one another, killing on average about 7-8 targets per strike. 
 It is also worth noting that the number of named targets is [much, much smaller](http://www.theguardian.com/us-news/2014/nov/24/-sp-us-drone-strikes-kill-1147) than the number of people ultimately killed. 
 
 Is it more likely that the military is in fact so surgical and methodical in its targets that they not only kill targets with minimal collateral damage but also manage to hit many of them at once? 
-Does the military not underreport its strikes but not the number of those killed? 
+Does the military underreport its strikes but not the number of people killed? 
 Or is it more likely that most of the people killed, whomever they may be, are lumped into dead terrorist count?  
 
 Perhaps it is impossible to adequately corroborate any particular theory based on these observations alone and barring some substantial leak or hack, but there are definitely some facts worth considering.  

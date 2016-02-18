@@ -3,9 +3,12 @@ layout: post
 title: trump and the other republicans.
 category: blog
 img: republican-logo.svg
+
+added_date: "2015-08-16"
+published_date: "2015-08-16"
 ---
 
-Yes, Trump is a blowhard, but so what? Is he using his quasi-populist appeal to advocate things that are uniquely dangerous to the nation or the political establishment? Are his policies substantially different from his Republican rivals? There is no better place to assess that then the recent Republican debate.  
+Yes, Trump is a blowhard, but so what? Is he using his quasi-populist appeal to advocate things that are uniquely dangerous to the nation or the political establishment? Are his policies substantially different from his Republican rivals? There is no better place to investigate that than the recent August Republican debate.  
 
 During the debate, Trump made several interesting, brash statements:  
 1. The shrewd and crafty Mexican government is sending us its undesirables, and the idiots in our government don't have a clue.  

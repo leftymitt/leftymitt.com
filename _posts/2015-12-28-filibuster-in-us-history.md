@@ -34,7 +34,7 @@ In the United States, there have been many famous filibusters over the years on 
 	<i class="uk-contrast uk-icon-cloud-download uk-icon-medium"></i>
 </h3>
 </figcaption>
-<a class="uk-position-cover" href="{{ site.images }}/thurmond_filibuster_1957.pdf"></a>
+<a class="uk-position-cover" href="https://www.senate.gov/artandhistory/history/resources/pdf/Thurmond_filibuster_1957.pdf"></a>
 </figure>
 </div>
 

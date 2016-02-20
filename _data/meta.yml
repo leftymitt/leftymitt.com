@@ -45,6 +45,10 @@ resources:
    url: "https://tails.boum.org/"
    img: "tails-logo.svg"
 
+ - name: "Qubes OS"
+   url: "https://www.qubes-os.org/"
+   img: "qubes-logo.svg"
+
  - name: "Bitcoin"
    url: "https://bitcoin.org/en/"
    img: "bitcoin-logo.svg"

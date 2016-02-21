@@ -75,7 +75,7 @@ task :edit do
 	unless (Dir.entries('_drafts') - %w{ . .. }).empty?
 
 		Dir.foreach("_drafts") do |fname|
-			next if fname == '.' or fname == '..' 
+			next if fname == '.' or fname == '..' or fname[0] == '.'
 			puts fname
 		end
 
@@ -97,7 +97,7 @@ task :publish do
 	unless (Dir.entries('_drafts') - %w{ . .. }).empty?
 
 		Dir.foreach("_drafts") do |fname|
-			next if fname == '.' or fname == '..' 
+			next if fname == '.' or fname == '..' or fname[0] == '.'
 
 			# only display drafts that are categorized. 
 			if File.readlines("_drafts/#{fname}").grep(/categor(y|ies):.blog/).any?

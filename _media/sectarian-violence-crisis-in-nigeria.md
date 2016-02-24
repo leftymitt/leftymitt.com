@@ -12,7 +12,7 @@ tags:
 
 added_date: "2016-02-16"
 published_date: "2009-01-01"
-icon: 
+icon: nigeria-flagmap.svg
 
 link: "http://www.ifra-nigeria.org/IMG/pdf/N-_D-_DANJIBO_-_Islamic_Fundamentalism_and_Sectarian_Violence_The_Maitatsine_and_Boko_Haram_Crises_in_Northern_Nigeria.pdf"
 ---

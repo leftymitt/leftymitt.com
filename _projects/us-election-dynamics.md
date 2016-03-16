@@ -133,7 +133,7 @@ In such an election, the more popular candidate will win all of the electoral vo
 
 Of course, that scenario does not exist in reality. 
 The people in each state support different policies and candidates, who must run on platforms defined by national political parties. 
-On top of that, the demography of each state is different, and each group votes at different rates. 
+On top of that, the demography of each state is different, and each group votes with variable difficulty at different rates, and majority groups can abuse the system by restricting turnout while maintaining total electoral share. 
 Each state has unique preferences and a unique electoral history. 
 
 <br>
@@ -186,13 +186,6 @@ Still, both parties have dynamic voting histories in each state:
 	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_states.svg"
 	     alt="difference in rep and dem pop vote (%) for all states">
 </div>
-
-<!--
-<div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_divisions.svg">
-	     alt="difference in rep and dem pop vote (%) for all divisions">
-</div>
--->
 
 For the most part, the country followed general trends for supporting one party or another. 
 In other words, an increase in support for one party in one state correlated to an increase in another state. 
@@ -253,17 +246,3 @@ Interestingly, the year with the second-highest loading, 1964, was Lyndon Johnso
 Interpretations of these observation are purely speculative. 
 The year with the highest loading, 1924, was Calvin Coolidge's easy victory, though it should be mentioned that Robert La Follette took much of the popular vote from the Democratic candidate.  
 
-
-<!-- pca and k-means plots when alaska, dc, and hawaii are included. 
-
-<div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_state.svg"
-	     alt="pca of difference in rep and dem vote in all states over time">
-</div>
-
-<div class="uk-cover uk-text-center">
-	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_kmeans_state.svg"
-	     alt="k-means clustering for pca">
-</div>
-
--->

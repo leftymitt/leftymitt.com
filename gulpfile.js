@@ -97,6 +97,7 @@ var uikit = {
 //		src.uikit.js + 'components/form-password.js',
 //		src.uikit.js + 'components/form-select.js',
 		src.uikit.js + 'components/grid.js',
+		src.uikit.js + 'components/grid-parallax.js',
 //		src.uikit.js + 'components/htmleditor.js',
 		src.uikit.js + 'components/lightbox.js',
 //		src.uikit.js + 'components/nestable.js',

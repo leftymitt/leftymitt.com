@@ -57,10 +57,6 @@ resources:
    url: "https://github.com/"
    img: "github-logo.svg"
 
- - name: "Firefox"
-   url: "https://www.mozilla.org/en-US/firefox"
-   img: "firefox-logo.svg"
-
  - name: "Tor"
    url: "https://www.torproject.org/projects/torbrowser.html"
    img: "tor-logo.svg"

@@ -10,7 +10,7 @@ type: report
 link: "https://www.unodc.org/documents/gsh/pdfs/2014_GLOBAL_HOMICIDE_BOOK_web.pdf"
 added_date: "2015-10-06"
 published_date: "2014-03-01"
-author: the UNODC
+author: The UNODC
 icon: "united-nations-emblem.svg"
 ---
 

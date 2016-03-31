@@ -1,5 +1,5 @@
 ---
-title: 1948 speech on war with mexico.
+title: 1948 speech to house of representatives concerning war with mexico.
 layout: post
 categories: media
 type: speech

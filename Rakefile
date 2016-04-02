@@ -1,6 +1,6 @@
 # rakefile for starting, editing, and publishing new posts.
 
-require 'html/proofer'
+require 'html-proofer'
 
 desc "print usage information"
 task :default do

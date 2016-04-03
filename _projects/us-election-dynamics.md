@@ -167,10 +167,10 @@ Exceptions in some elections in some states exist, but the overall pattern is cl
 One interesting observation is that each of the downward blips in two-party popular totals rarely last for more than one election. 
 These blips correspond to historically interesting events, such as: 
 
- * 1892 - James Weaver sweeps through the west in the Populist party. 
- * 1912 - Theodore Roosevelt runs as a Progressive party candidate. 
- * 1924 - Robert La Follette runs in the Progressive party. 
- * 1948 - Strom Thurmond represents the Dixiecrat party and wins states in the South. 
+ * 1892 - James Weaver sweeps through the west in the Populist Party. 
+ * 1912 - Theodore Roosevelt runs as a Progressive Party candidate. 
+ * 1924 - Robert La Follette runs in the Progressive Party. 
+ * 1948 - Strom Thurmond represents the Dixiecrat Party and wins states in the South. 
  * 1968 - George Wallace carries southern states with the American Independents. 
  * 1992 - Ross Perot challenges George Bush and Bill Clinton. 
 
@@ -204,7 +204,7 @@ The first reason for correlation can be easily seen by averaging states accordin
 </div>
 
 As implied before, the South exhibits different voting patterns. 
-It is perhaps notable that its unflagging support for the Democratic party in the pre-Civil Rights era is not reflected as unflagging support for Republicans today. 
+It is perhaps notable that its unflagging support for the Democratic Party in the pre-Civil Rights era is not reflected as unflagging support for Republicans today. 
 
 A principal components analysis of states for every election yields further, non-initially biased information. 
 Alaska, Hawaii, and Washington DC were excluded to increase the number of elections used in the analysis. 
@@ -221,10 +221,11 @@ Alaska, Hawaii, and Washington DC were excluded to increase the number of electi
 The first component (`var=0.615307`) is much more important than the second component (`var=0.0508273`), and segregates the South from the Northeast, with the West and Midwest states mixed in between.  
 
 The loadings for PC1 favor elections away from 1960, which acts as an inflection point where political preferences for each state switch from one party to another. 
-This is historically consistent with the evolution of the Republicans and Democrats during the Civil Rights Era. 
-Dixiecrats in the south fell out of favor and joined the Republican Party, while liberal-minded people in left the Republicans and joined the Democratic party as it more actively pursued civil rights legislation.
+This is historically consistent with the transformation of the Republicans and Democrats during the Civil Rights Era. 
+Dixiecrats in the South fell out of favor among Democrats and joined the Republican Party, while liberal-minded people throughout the country left the Republicans and joined the Democrats as it more actively pursued civil rights legislation.
 
 Of course, history is replete with events that could retroactively be called turning points, and should an interesting feature have shown up on some other year, some event could likely be conjured up as an explanation. 
+An inflection point at 1980 would be attributed to Ronald Reagan, and one in 1940 would point to Franklin Roosevelt and his New Deal. 
 
 The second component, and presumably the others, has very little information. It does put states like Vermont and Mississippi close together, but given its low variance, interpreting it is not likely to be useful.  
 
@@ -243,6 +244,10 @@ The Northeastern states all fall into one cluster along with some midwestern and
 
 Interestingly, the year with the second-highest loading, 1964, was Lyndon Johnson's overwhelming popular victory, where the only states where Republican Barry Goldwater won were Louisiana, Mississippi, Alabama, Georgia, and South Carolina, states that clustered into one group. 
 
-Interpretations of these observation are purely speculative. 
-The year with the highest loading, 1924, was Calvin Coolidge's easy victory, though it should be mentioned that Robert La Follette took much of the popular vote from the Democratic candidate.  
+Interpretations of these observations are purely speculative. 
+The year with the highest loading, 1924, was Calvin Coolidge's easy and hardly monumental victory, though it should be mentioned that Robert La Follette took much of the popular vote from the Democratic candidate. 
 
+<div class="uk-cover uk-text-center">
+	<img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_clusters.svg"
+	     alt="timeseries of k-means clustes">
+</div>

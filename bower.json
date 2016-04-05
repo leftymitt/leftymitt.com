@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "uikit": "^2.23.0",
-    "Snap.svg": "^0.4.1"
+    "Snap.svg": "^0.4.1",
+    "zxcvbn": "^4.3.0"
   }
 }

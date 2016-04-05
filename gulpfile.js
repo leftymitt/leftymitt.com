@@ -37,6 +37,9 @@ var bower = {
 	},
 	snap: {
 		js: './bower_components/Snap.svg/dist/'
+	},
+	zxcvbn: {
+		js: './bower_components/zxcvbn/dist/'
 	}
 }
 
@@ -53,6 +56,9 @@ var src = {
 	},
 	snap: {
 		js: './assets/src/js/snap.svg/'
+	},
+	zxcvbn: {
+		js: './assets/src/js/zxcvbn/'
 	},
 	css: './assets/src/css/',
 	less: './assets/src/less/',
@@ -169,6 +175,11 @@ gulp.task('copy', function() {
 		.pipe(changed(src.snap.js))
 		.pipe(gulp.dest(src.snap.js))
 		.on('end', function() { util.log("copied Snap.svg js files."); });
+	
+	gulp.src([bower.zxcvbn.js + '*.js', '!' + bower.zxcvbn.js + '*-min.js'])
+		.pipe(changed(src.zxcvbn.js))
+		.pipe(gulp.dest(src.zxcvbn.js))
+		.on('end', function() { util.log("copied zxcvbn js files."); });
 });
 
 // rebuild all files in assets/build
@@ -218,6 +229,15 @@ gulp.task('build-js', function() {
 		.pipe(rename('snap.svg.min.js'))
 		.pipe(changed(build.js))
 		.pipe(gulp.dest(build.js));
+
+	gulp.src(src.js + 'zxcvbn/*.js')
+		.pipe(concat('zxcvbn.js'), { newLine: '\n;' })
+		.pipe(gulp.dest(src.js))
+		.pipe(uglify())
+		.pipe(rename('zxcvbn.min.js'))
+		.pipe(changed(build.js))
+		.pipe(gulp.dest(build.js));
+
 
 //		gulp.src(uikit.core)
 //			.pipe(concat('uikit.js'), { newLine: '\n;' })

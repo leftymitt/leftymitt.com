@@ -11,9 +11,6 @@ tags:
 
 added_date: "2015-12-28"
 img: william-walker.jpg
-table_of_contents:
- - item: examples
- - item: history
 ---
 
 The filibuster is a parliamentary procedure where someone, rather than use speaking time to contribute to a debate on some legislation before a vote, speaks interminably so that the debate never conclused and the legislative body runs out of time to get to a vote. 

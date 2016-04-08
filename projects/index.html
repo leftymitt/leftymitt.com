@@ -8,7 +8,7 @@ tag: "where to go and what to see, all with love and irony."
 <div class="uk-container uk-container-center">
 	{% assign sorted_projects = site.projects | sort: 'added_date' | reverse %}
 	{% for project in sorted_projects %}
-	<div data-uk-parallax="{bg:'-200'}" 
+	<div data-uk-parallax="{bg:'-100'}" 
         style="background-image:url('{{ site.images }}/{{ project.banner }}'); height:50vh" 
 	     class="uk-flex uk-flex-middle uk-flex-left">
 		{% if project.link %} <a href="{{ project.link }}">

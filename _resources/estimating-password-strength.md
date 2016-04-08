@@ -1,5 +1,5 @@
 ---
-title: "estimate password strength."
+title: "estimating password strength."
 layout: post
 category: resources
 author: leftymitt
@@ -202,7 +202,7 @@ built with [zxcvbn](https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-pass
 </div></div>
 
 
-## matched sequences:
+### matched sequences:
 
 <ul class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-3" 
     data-uk-grid="{gutter:20, animation:false}" id="sequence_grid" 

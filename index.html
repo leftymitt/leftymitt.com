@@ -69,7 +69,7 @@ tag: "from me to you eternally, with lots of love and irony."
 	{% assign sorted_projects = site.projects | sort: 'added_date' | reverse %}
 	{% assign project = sorted_projects.first %}
    <div data-uk-parallax="{bg:'-100'}" 
-        style="background-image:url('{{ site.images }}/{{ project.banner }}'); height:50vh" 
+        style="background-image:url('{{ site.images }}/{{ project.banner }}'); height:40vh" 
         class="uk-flex uk-flex-middle uk-flex-left">
       {% if project.link %} <a href="{{ project.link }}">
       {% else %} <a href="{{ project.url }}">

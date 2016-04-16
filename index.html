@@ -57,13 +57,7 @@ tag: "from me to you eternally, with lots of love and irony."
 	
 	<!-- show the most recent project. -->
 	<h2 class="uk-h2">
-		<div class="uk-flex uk-flex-space-between 
-		            uk-flex-wrap uk-flex-wrap-space-between">
-			<div>latest projects:</div>
-			<div><a href="/projects/" class="uk-button uk-button-primary">
-				all projects. <i class="uk-icon-justify uk-icon-arrow-right"></i>
-			</a></div>
-		</div>
+		<div>latest projects:</div>
 	</h2>
 
 	{% assign sorted_projects = site.projects | sort: 'added_date' | reverse %}
@@ -89,18 +83,18 @@ tag: "from me to you eternally, with lots of love and irony."
       </div>
       </a>
    </div>
+	<br>
+	<div class="uk-flex uk-flex-right"> 
+		<div><a href="/projects/" class="uk-button uk-button-primary">
+			all projects. <i class="uk-icon-justify uk-icon-arrow-right"></i>
+		</a></div>
+	</div>
 
 	<hr class="uk-article-divider">
 
 	<!-- show most recent entries on the resources page. -->
 	<h2 class="uk-h2">
-		<div class="uk-flex uk-flex-space-between 
-		            uk-flex-wrap uk-flex-wrap-space-between">
-			<div>latest resources:</div>
-			<div><a href="/resources/" class="uk-button uk-button-primary">
-				all resources. <i class="uk-icon-justify uk-icon-arrow-right"></i>
-			</a></div>
-		</div>
+		<div>latest resources:</div>
 	</h2>
    
 	<div class="uk-grid uk-grid-match uk-grid-small" 
@@ -142,18 +136,18 @@ tag: "from me to you eternally, with lots of love and irony."
 		</div>
 		{% endfor %}
    </div>
+	<br>
+	<div class="uk-flex uk-flex-right"> 
+		<div><a href="/resources/" class="uk-button uk-button-primary">
+			all resources. <i class="uk-icon-justify uk-icon-arrow-right"></i>
+		</a></div>
+	</div>
 	
 	<hr class="uk-article-divider">
 
 	<!-- show recent media entries. -->	
 	<h2 class="uk-h2">
-		<div class="uk-flex uk-flex-space-between 
-		            uk-flex-wrap uk-flex-wrap-space-between">
-			<div>latest media:</div>
-			<div><a href="/media/" class="uk-button uk-button-primary">
-				all media. <i class="uk-icon-justify uk-icon-arrow-right"></i>
-			</a></div>
-		</div>
+		<div>latest media:</div>
 	</h2>
 	
 	<div class="uk-grid" data-uk-grid="{gutter:15, animation:false}"> 
@@ -286,20 +280,19 @@ tag: "from me to you eternally, with lots of love and irony."
 		</div>
 		{% endif %}
 	{% endfor %}
-
+	</div>
+	<br>
+	<div class="uk-flex uk-flex-right"> 
+		<div><a href="/media/" class="uk-button uk-button-primary">
+			all media. <i class="uk-icon-justify uk-icon-arrow-right"></i>
+		</a></div>
 	</div>
 
 	<hr class="uk-article-divider">
 
 	<!-- and finally a few blog posts. -->
 	<h2 class="uk-h2">
-		<div class="uk-flex uk-flex-space-between 
-		            uk-flex-wrap uk-flex-wrap-space-between">
-			<div>latest posts:</div>
-			<div><a href="/blog/" class="uk-button uk-button-primary">
-				all posts. <i class="uk-icon-justify uk-icon-arrow-right"></i>
-			</a></div>
-		</div>
+		<div>latest posts:</div>
 	</h2>
 
 	<div class="uk-grid" data-uk-grid="{animation:false}">
@@ -327,6 +320,12 @@ tag: "from me to you eternally, with lots of love and irony."
 		<hr class="uk-article-divider">
 	</div>
 	{% endfor %}
+	</div>
+	<br>
+	<div class="uk-flex uk-flex-right"> 
+		<div><a href="/blog/" class="uk-button uk-button-primary">
+			all posts. <i class="uk-icon-justify uk-icon-arrow-right"></i>
+		</a></div>
 	</div>
 
 </div>

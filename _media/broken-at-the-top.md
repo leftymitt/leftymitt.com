@@ -4,7 +4,7 @@ layout: post
 category: media
 author: Oxfam
 format: text
-type: article
+type: report
 tags: 
  - corruption
  - tax havens

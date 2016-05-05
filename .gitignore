@@ -1,12 +1,12 @@
 # text editor backups
-*.swp
+*.sw?
 *~
 
 # jekyll 
 _site/
 .sass-cache/
-bower_components
-node_modules
+bower_components/
+node_modules/
 
 # exclude source files except a few less files
 !assets/src/

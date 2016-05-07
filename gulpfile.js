@@ -166,7 +166,8 @@ gulp.task('copy', function() {
 		.pipe(gulp.dest(src.uikit.fonts))
 		.on('end', function() { util.log("copied uikit less files."); });
 	
-	gulp.src([bower.jquery.js + '*.js', '!' + bower.jquery.js + '*.min.js'])
+	gulp.src([bower.jquery.js + '*.js', '!' + bower.jquery.js + '*.min.js', 
+	          '!' + bower.jquery.js + '*.slim.js'])
 		.pipe(changed(src.jquery.js))
 		.pipe(gulp.dest(src.jquery.js))
 		.on('end', function() { util.log("copied jquery js files."); });

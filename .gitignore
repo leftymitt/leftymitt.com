@@ -2,11 +2,14 @@
 *.sw?
 *~
 
-# jekyll 
+# jekyll
 _site/
+
+# dependencies
 .sass-cache/
 bower_components/
 node_modules/
+.bundle/
 
 # exclude source files except a few less files
 !assets/src/

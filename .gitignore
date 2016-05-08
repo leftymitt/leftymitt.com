@@ -11,13 +11,19 @@ bower_components/
 node_modules/
 .bundle/
 
-# exclude source files except a few less files
+# exclude source files except a few less and scss files
 !assets/src/
 assets/src/*
-!assets/src/less/
 !assets/src/img/
+!assets/src/less/
 assets/src/less/*
 !assets/src/less/*.less
 !assets/src/less/config/
 assets/src/less/config/*
 !assets/src/less/config/*.less
+!assets/src/scss/
+assets/src/scss/*
+!assets/src/scss/*.scss
+!assets/src/scss/config/
+assets/src/scss/config/*
+!assets/src/scss/config/*.scss

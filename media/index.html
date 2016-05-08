@@ -7,7 +7,7 @@ tag: "sharing things with you and me, all with love and irony."
 
 <div class="uk-container uk-container-center">
 	
-	<ul id="filter" class="uk-subnav uk-subnav-pill">
+	<ul id="filter" class="uk-subnav uk-subnav-pill uk-flex uk-flex-center">
 		<li class="uk-active" data-uk-filter=""><a href="#">All</a></li>
 		{% assign sorted_types = site.data.meta.media | sort: 'name' %}
 		{% for type in sorted_types %}

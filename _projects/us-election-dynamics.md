@@ -53,14 +53,12 @@ window.onload = function() {
 
 <hr>
 
-<div class="uk-flex uk-flex-center">
-	<ul class="uk-subnav uk-subnav-pill" 
-		 data-uk-switcher="{connect:'#state_plots, #pop_v_electoral, #pop_elect', 
-	                       animation:'fade'}">
-		<li><a href="#">Democrats/Republicans</a></li>
-		<li><a href="#">All Parties</a></li>
-	</ul>
-</div>
+<ul class="uk-subnav uk-subnav-pill uk-flex uk-flex-center" 
+    data-uk-switcher="{connect:'#state_plots, #pop_v_electoral, #pop_elect', 
+                       animation:'fade'}">
+   <li><a href="#">Democrats/Republicans</a></li>
+   <li><a href="#">All Parties</a></li>
+</ul>
 
 <hr>
 

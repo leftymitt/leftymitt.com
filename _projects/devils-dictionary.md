@@ -10,7 +10,7 @@ tags:
 added_date: "2016-05-06"
 published_date: 
 banner: ambrose-bierce.jpg 
-repo: devil-dictionary
+repo: devils-dictionary
 
 tag: MAN, n. An animal so lost in rapturous contemplation of what he thinks he is as to overlook what he indubitably ought to be. His chief occupation is extermination of other animals and his own species, which, however, multiplies with such insistent rapidity as to infest the whole habitable earth and Canada. 
 ---

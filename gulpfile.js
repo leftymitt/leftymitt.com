@@ -14,15 +14,14 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     flatten = require('gulp-flatten'),
     util = require('gulp-util'),
-    run = require('gulp-run'),
+    exec = require('gulp-exec'),
     run_sequence = require('run-sequence'),
     rename = require('gulp-rename'),
     changed = require('gulp-changed'),
-//    git = require('gulp-git'),
-//    gh_pages = require('gulp-gh-pages'),
     watch = require('gulp-watch'),
     browser_sync = require('browser-sync').create(),
     child_process = require('child_process'),
+    spawn = require('child_process').spawn,
     event_stream = require('event-stream');
 
 // paths for bower components
@@ -131,16 +130,16 @@ gulp.task('default', ['serve'], function() {
 
 // install required bower, ruby, and node dependencies.
 gulp.task('install', function() {
-	run('bundle install').exec();
-	run('npm install').exec();
-	run('bower install').exec();
+	var cmd = spawn('bundle', ['install'], {stdio: 'inherit'});
+	var cmd = spawn('npm', ['install'], {stdio: 'inherit'});
+	var cmd = spawn('bower', ['install'], {stdio: 'inherit'});
 });
 
 // update bower, ruby, and node dependencies.
 gulp.task('update', function() {
-	run('bundle update').exec();
-	run('npm update').exec();
-	run('bower update').exec();
+	var cmd = spawn('bundle', ['update'], {stdio: 'inherit'});
+	var cmd = spawn('npm', ['update'], {stdio: 'inherit'});
+	var cmd = spawn('bower', ['update'], {stdio: 'inherit'});
 });
 
 // copy bower components into assets/src. 

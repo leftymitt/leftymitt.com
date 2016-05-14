@@ -5,6 +5,7 @@
 // initialize gulp task variables. 
 var gulp = require('gulp'), 
     less = require('gulp-less'),
+    scss = require('gulp-sass'),
     concat = require('gulp-concat'),
     cssmin = require('gulp-cssmin'),
     htmlmin = require('gulp-htmlmin'),
@@ -28,8 +29,8 @@ var gulp = require('gulp'),
 var bower = {
 	uikit: {
 		less: './bower_components/uikit/less/',
-		js: './bower_components/uikit/js/',
 		scss: './bower_components/uikit/scss/',
+		js: './bower_components/uikit/js/',
 		fonts: './bower_components/uikit/fonts/'
 	},
 	jquery: {
@@ -47,8 +48,8 @@ var bower = {
 var src = {
 	uikit: {
 		less: './assets/src/less/uikit/',
-		js: './assets/src/js/uikit/',
 		scss: './assets/src/scss/uikit/',
+		js: './assets/src/js/uikit/',
 		fonts:'./assets/src/fonts/uikit/'
 	},
 	jquery: {
@@ -164,7 +165,7 @@ gulp.task('copy', function() {
 	gulp.src(bower.uikit.fonts + '**/*')
 		.pipe(changed(src.uikit.fonts))
 		.pipe(gulp.dest(src.uikit.fonts))
-		.on('end', function() { util.log("copied uikit less files."); });
+		.on('end', function() { util.log("copied uikit fonts."); });
 	
 	gulp.src([bower.jquery.js + '*.js', '!' + bower.jquery.js + '*.min.js', 
 	          '!' + bower.jquery.js + '*.slim.js'])
@@ -185,16 +186,30 @@ gulp.task('copy', function() {
 
 // rebuild all files in assets/build
 gulp.task('rebuild', function() {
-	run_sequence('build-less', 
+//	run_sequence('build-less', 
+	run_sequence('build-scss', 
 	             ['build-css', 'build-js', 'build-fonts', 'build-img'], 
 	             'build-html');
 });
 
 // build css from less files
-//gulp.task('build-css', function() {
 gulp.task('build-less', function() {
 	return gulp.src(src.less + '*.less')
 		.pipe(less())
+		.pipe(autoprefixer())
+		.pipe(gulp.dest(src.css))
+//		.pipe(cssmin())
+//		.pipe(rename(function (name) {
+//			name.extname = '.min.css';
+//		}))
+//		.pipe(changed(src.css))
+//		.pipe(gulp.dest(build.css));
+});
+
+// build css from scss files
+gulp.task('build-scss', function() {
+	return gulp.src(src.scss + '*.scss')
+		.pipe(scss())
 		.pipe(autoprefixer())
 		.pipe(gulp.dest(src.css))
 //		.pipe(cssmin())
@@ -323,6 +338,10 @@ gulp.task('watch', function() {
 
 	watch('./assets/src/less/**/*.less', function() {
 		run_sequence('build-less', 'build-css', 'build', 'build-html', 'reload'); 
+	});
+
+	watch('./assets/src/scss/**/*.scss', function() {
+		run_sequence('build-scss', 'build-css', 'build', 'build-html', 'reload'); 
 	});
 
 	watch('./assets/src/css/**/*.css', function() {

@@ -1,3 +1,7 @@
+// custom stuff
+@import "config/uikit-variables.scss";
+@import "config/uikit-mixins.scss";
+
 // less related
 @import "uikit/core/variables.scss";
 
@@ -6,7 +10,7 @@
 
 // layout
 @import "uikit/core/grid.scss";
-@import "uikit/core/panel.scss";
+@import "config/panel-extra.scss";
 @import "uikit/core/block.scss";
 @import "uikit/core/article.scss";
 @import "uikit/core/comment.scss";
@@ -74,6 +78,5 @@
 @import "uikit/components/tooltip.scss";
 //@import "uikit/components/upload.scss";
 
-
-// custom stuff
-@import "config/uikit-variables.scs";
+// custom extended classes
+@import "config/extends.scss";

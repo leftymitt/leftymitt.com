@@ -284,11 +284,17 @@
 @mixin hook-panel-title(){}
 @mixin hook-panel-badge(){}
 @mixin hook-panel-box(){}
-@mixin hook-panel-box-hover(){}
+@mixin hook-panel-box-hover() {}
 @mixin hook-panel-box-primary(){}
 @mixin hook-panel-box-primary-hover(){}
 @mixin hook-panel-box-secondary(){}
 @mixin hook-panel-box-secondary-hover(){}
+@mixin hook-panel-box-success(){}
+@mixin hook-panel-box-success-hover(){}
+@mixin hook-panel-box-warning(){}
+@mixin hook-panel-box-warning-hover(){}
+@mixin hook-panel-box-danger(){}
+@mixin hook-panel-box-danger-hover(){}
 @mixin hook-panel-hover(){}
 @mixin hook-panel-hover-hover(){}
 @mixin hook-panel-header(){}

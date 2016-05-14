@@ -1,0 +1,6 @@
+.lm-navbar-brand {
+    @extend .uk-navbar-brand;
+
+    height: $navbar-nav-height;
+    line-height: $navbar-nav-line-height;
+}

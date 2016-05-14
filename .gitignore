@@ -15,6 +15,7 @@ node_modules/
 !assets/src/
 assets/src/*
 !assets/src/img/
+!assets/src/css/syntax.css
 !assets/src/less/
 assets/src/less/*
 !assets/src/less/*.less

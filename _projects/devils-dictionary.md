@@ -30,23 +30,23 @@ To Father Jape's kindly encouragement and assistance the author of the prose tex
 
 A.B.
 
-<div class="uk-grid">
+<div class="uk-grid uk-grid-small">
 
-<div class="uk-width-1-5 uk-width-small-1-6 uk-width-medium-1-10">
+<div class="uk-width-1-5 uk-width-small-1-10 uk-width-medium-1-10">
 	<br>
 	<div data-uk-sticky="{top:50}" class="uk-panel uk-panel-box">
 		<ul class="uk-scrollable-box uk-nav-side uk-nav uk-nav-parent-icon" 
 			 data-uk-scrollspy-nav="{closest:'li', topoffset:-250}" data-uk-nav>
 			{% for letter in site.data.devils-dictionary.dictionary %}
 			<li class="uk-text-center"><a href="#section-{{ letter.letter }}" 
-					data-uk-smooth-scroll="{offset:40}">{{ letter.letter }}
+					data-uk-smooth-scroll="{offset:50}">{{ letter.letter }}
 			</a></li>
 			{% endfor %}
 		</ul>
 	</div>
 </div>
 
-<div class="uk-width-4-5 uk-width-small-5-6 uk-width-medium-9-10">
+<div class="uk-width-4-5 uk-width-small-9-10 uk-width-medium-9-10">
 	{% for letter in site.data.devils-dictionary.dictionary %}
 	<br>
 	<div class="uk-h2 uk-text-center" id="section-{{ letter.letter}}">

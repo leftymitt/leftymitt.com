@@ -30,35 +30,50 @@ To Father Jape's kindly encouragement and assistance the author of the prose tex
 
 A.B.
 
-<hr>
+<div class="uk-grid">
 
-<ul id="letter-filter" class="uk-subnav uk-subnav-pill uk-align-center uk-flex uk-flex-center">
-{% for letter in site.data.devils-dictionary.dictionary %}
-<li><a href="#section-{{ letter.letter }}">{{ letter.letter }}</a></li>
-{% endfor %}
-</ul>
-
-{% for letter in site.data.devils-dictionary.dictionary %}
-<hr>
-<div class="uk-h2 uk-text-center" id="section-{{ letter.letter}}">{{ letter.letter }}</div>
-<br>
-<div class="uk-grid" data-uk-grid="{gutter:15, controls:'#letter-filter', animation:false}">
-{% for term in letter.terms %}
-<div data-uk-filter="{{ letter.letter }}" class="uk-width-1-1 uk-width-medium-1-1 uk-width-xlarge-1-2">
-<div class="uk-panel uk-panel-box">
-	<div class="uk-panel-title uk-panel-header">
-	{{ term.word }} <span class="uk-float-right">{{ term.type }}</span>
+<div class="uk-width-1-5 uk-width-small-1-6 uk-width-medium-1-10">
+	<br>
+	<div data-uk-sticky="{top:50}" class="uk-panel uk-panel-box">
+		<ul class="uk-scrollable-box uk-nav-side uk-nav uk-nav-parent-icon" 
+			 data-uk-scrollspy-nav="{closest:'li', topoffset:-250}" data-uk-nav>
+			{% for letter in site.data.devils-dictionary.dictionary %}
+			<li class="uk-text-center"><a href="#section-{{ letter.letter }}" 
+					data-uk-smooth-scroll="{offset:40}">{{ letter.letter }}
+			</a></li>
+			{% endfor %}
+		</ul>
 	</div>
+</div>
 
-	<p>{{ term.def }}</p> 
-	{% if term.poem  %} 
-	<blockquote> 
-	<p>{{ term.poem | strip | newline_to_br }}</p>
-	<small> {{ term.author }}</small>
-	</blockquote> 
-	{% endif %}
+<div class="uk-width-4-5 uk-width-small-5-6 uk-width-medium-9-10">
+	{% for letter in site.data.devils-dictionary.dictionary %}
+	<br>
+	<div class="uk-h2 uk-text-center" id="section-{{ letter.letter}}">
+		{{ letter.letter }}
+	</div>
+	<br>
+	<div class="uk-grid" data-uk-grid="{gutter:15, animation:false}">
+		{% for term in letter.terms %}
+		<div class="uk-width-1-1 uk-width-medium-1-1 uk-width-xlarge-1-2">
+			<div class="uk-panel uk-panel-box">
+				<div class="uk-panel-title uk-panel-header">
+					{{ term.word }} 
+					<span class="uk-float-right">{{ term.type }}</span>
+				</div>
+
+				<p>{{ term.def }}</p> 
+				{% if term.poem  %} 
+				<blockquote> 
+					<p>{{ term.poem | strip | newline_to_br }}</p>
+					<small> {{ term.author }}</small>
+				</blockquote> 
+				{% endif %}
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	{% endfor %}
 </div>
+
 </div>
-{% endfor %}
-</div>
-{% endfor %}

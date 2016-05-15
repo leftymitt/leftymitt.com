@@ -3,6 +3,44 @@ title: media
 layout: default
 
 tag: "sharing things with you and me, all with love and irony."
+
+css: "
+<style>
+.uk-subnav-pill > * > * {
+    /*padding: $subnav-pill-padding-vertical $subnav-pill-padding-horizontal;*/
+}
+.uk-subnav-pill > * > :hover.lm-*,
+.uk-subnav-pill > * > :focus.lm-* { 
+    background: #4B5263;
+    text-decoration: none;
+    outline: none;
+}
+.uk-subnav-pill > .uk-active > *.lm-primary {
+    background: #5077BF;
+    color: #fff;
+}
+
+.uk-subnav-pill > .uk-active > *.lm-success {
+    background: #529573;
+    color: #fff;
+}
+
+.uk-subnav-pill > .uk-active > *.lm-warning {
+    background: #E0AB5A;
+    color: #fff;
+}
+
+.uk-subnav-pill > .uk-active > *.lm- {
+    background: #4B5263;
+    color: #fff;
+}
+
+.uk-subnav-pill > .uk-active > *.lm-danger {
+    background: #CB5257;
+    color: #fff;
+}
+</style>
+"
 --- 
 
 <div class="uk-container uk-container-center">
@@ -12,7 +50,7 @@ tag: "sharing things with you and me, all with love and irony."
 		{% assign sorted_types = site.data.meta.media | sort: 'name' %}
 		{% for type in sorted_types %}
 		<li data-uk-filter="{{ type.name }}">
-			<a href="#">{{ type.name | capitalize }}</a>
+			<a href="#" class="lm-{{ type.color }}">{{ type.name | capitalize }}</a>
 		</li>
 		{% endfor %}
 	</ul>

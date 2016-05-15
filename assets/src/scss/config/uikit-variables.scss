@@ -7,7 +7,7 @@ $primary-hover-bg:                               lighten($primary-bg, 7%);//#35b
 $primary-active-bg:                              darken($primary-bg, 7%);//#0091ca;
 $primary-box:                                    lighten($primary-bg, 40%);//#ebf7fd; 
 $primary-box-bg:                                 transparentize($primary-bg, .4);//#2d7091;
-$success-bg:                                     #66B88E; //#76c4ae;//#8cc14c;
+$success-bg:                                     #529573; //#76c4ae;//#8cc14c;
 $success-hover-bg:                               lighten($success-bg, 7%);//#8ec73b;
 $success-active-bg:                              darken($success-bg, 7%);//#72ae41;
 $success-box:                                    lighten($success-bg, 45%);//#f2fae3;
@@ -15,20 +15,21 @@ $success-box-bg:                                 transparentize($success-bg, .3)
 $warning-bg:                                     #E0AB5A; //#faa732;
 $warning-hover-bg:                               lighten($warning-bg, 7%);
 $warning-active-bg:                              darken($warning-bg, 7%);
-$warning-box:                                    lighten($warning-bg, 50%);//#fffceb;
+$warning-box:                                    lighten($warning-bg, 55%);//#fffceb;
 $warning-box-bg:                                 transparentize($warning-bg, .3);//#e28327;
-$danger-bg:                                      #E76F74;//#da314b;
+$danger-bg:                                      #CB5257;//#da314b;
 $danger-hover-bg:                                lighten($danger-bg, 7%);//#e4345f;
 $danger-active-bg:                               darken($danger-bg, 7%);//#c91032;
 $danger-box:                                     lighten($danger-bg, 50%);//#fff1f0;
-$danger-box-bg:                                  transparentize($danger-bg, .3);//#d85030;
+$danger-box-bg:                                  transparentize($danger-bg, .2);//#d85030;
 
 $contrast-color:                                 #fff; 
 $contrast-inverted-color:                        #444;
-$selection-bg:                                   #39f;
+
+$selection-bg:                                   #2A80D5; //#39f;
 $selection-color:                                #fff;
 
-$base-bg:                                        #4B5263; //#fff;
+$base-bg:                                        #515867; //#fff;
 $base-bg2:                                       #383C4A; 
 $muted-color:                                    transparentize(#D3DAE3, 0.15); //#999;
 $disabled-color:                                 transparentize(#D3DAE3, 0.15); //#999;
@@ -37,14 +38,14 @@ $link-color:                                     lighten(#4FABE3, 10%); //#07D;
 $link-hover-color:                               lighten(#4FABE3, 5%); //#059;
 $text-decoration:                                none;
 $text-color-light:                               #D3DAE3; //#fff;
-$text-color-code:                                #DB6492; //#D05;
-$text-color-em:                                  #DB6492; //#D05;
+$text-color-code:                                #EB84AC; //#D05;
+$text-color-em:                                  #EB84AC; //#D05;
 
-$default-box-bg1:                                #4B5263; //#f5f5f5; light
+$default-box-bg1:                                #515867; //#f5f5f5; light
 $default-box-bg2:                                #2f343f; //#eee; navbar
 $default-box-bg3:                                darken(#353945, 7%); //panel_bg; //#ddd; dark
 $default-box:                                    #D3DAE3; //#444;
-$default-box-border1:                            lighten(#4B5263, 7%); //$header_border; //#ddd;
+$default-box-border1:                            lighten(#515867, 7%); //$header_border; //#ddd;
 $default-box-border2:                            transparentize(darken(#353945, 12%), 0.6);; //#aaa;
 
 $nested-bg:                                      lighten(#4FABE3, 10%); //#07D;
@@ -174,7 +175,7 @@ $progress-margin-vertical:                       15px !default;
 $progress-background:                            $default-box-bg2 !default;
 $progress-bar-background:                        $primary-bg !default;
 $progress-bar-font-size:                         12px !default;
-$progress-bar-color:                             $base-bg !default;
+$progress-bar-color:                             $text-color-light !default; //$base-bg
 $progress-bar-success-background:                $success-bg !default;
 $progress-bar-warning-background:                $warning-bg !default;
 $progress-bar-danger-background:                 $danger-bg !default;

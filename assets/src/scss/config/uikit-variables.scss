@@ -2,64 +2,59 @@
  * 
  */
 
-$primary-bg:                                     #4f94cd;//#00a8e6
+$primary-bg:                                     #5077BF; //#4f94cd;//#00a8e6
 $primary-hover-bg:                               lighten($primary-bg, 7%);//#35b3ee;
 $primary-active-bg:                              darken($primary-bg, 7%);//#0091ca;
-$primary-box-bg:                                 lighten($primary-bg, 40%);//#ebf7fd; 
-$primary-box:                                    darken($primary-bg, 30%);//#2d7091;
-$success-bg:                                     #76c4ae;//#8cc14c;
+$primary-box:                                    lighten($primary-bg, 40%);//#ebf7fd; 
+$primary-box-bg:                                 transparentize($primary-bg, .4);//#2d7091;
+$success-bg:                                     #66B88E; //#76c4ae;//#8cc14c;
 $success-hover-bg:                               lighten($success-bg, 7%);//#8ec73b;
 $success-active-bg:                              darken($success-bg, 7%);//#72ae41;
-$success-box-bg:                                 lighten($success-bg, 30%);//#f2fae3;
-$success-box:                                    darken($success-bg, 40%);//#659f13;
-$warning-bg:                                     #faa732;
+$success-box:                                    lighten($success-bg, 45%);//#f2fae3;
+$success-box-bg:                                 transparentize($success-bg, .3);//#659f13;
+$warning-bg:                                     #E0AB5A; //#faa732;
 $warning-hover-bg:                               lighten($warning-bg, 7%);
 $warning-active-bg:                              darken($warning-bg, 7%);
-$warning-box-bg:                                 lighten($warning-bg, 37%);//#fffceb;
-$warning-box:                                    darken($warning-bg, 33%);//#e28327;
-$danger-bg:                                      #da1130;//#da314b;
+$warning-box:                                    lighten($warning-bg, 50%);//#fffceb;
+$warning-box-bg:                                 transparentize($warning-bg, .3);//#e28327;
+$danger-bg:                                      #E76F74;//#da314b;
 $danger-hover-bg:                                lighten($danger-bg, 7%);//#e4345f;
 $danger-active-bg:                               darken($danger-bg, 7%);//#c91032;
-$danger-box-bg:                                  lighten($danger-bg, 47%);//#fff1f0;
-$danger-box:                                     darken($danger-bg, 17%);//#d85030;
+$danger-box:                                     lighten($danger-bg, 50%);//#fff1f0;
+$danger-box-bg:                                  transparentize($danger-bg, .3);//#d85030;
 
 $contrast-color:                                 #fff; 
 $contrast-inverted-color:                        #444;
 $selection-bg:                                   #39f;
 $selection-color:                                #fff;
 
-$base-bg:                                        #fff;
-$muted-color:                                    #999;
-$disabled-color:                                 #999;
-$disabled-bg:                                    #f5f5f5;
-$link-color:                                     #07D;
-$link-hover-color:                               #059;
+$base-bg:                                        #4B5263; //#fff;
+$base-bg2:                                       #383C4A; 
+$muted-color:                                    transparentize(#D3DAE3, 0.15); //#999;
+$disabled-color:                                 transparentize(#D3DAE3, 0.15); //#999;
+$disabled-bg:                                    lighten(#383C4A, 3%);; //#f5f5f5;
+$link-color:                                     lighten(#4FABE3, 10%); //#07D;
+$link-hover-color:                               lighten(#4FABE3, 5%); //#059;
 $text-decoration:                                none;
-$text-color-light:                               #fff;
-$text-color-code:                                #D05;
-$text-color-em:                                  #D05;
+$text-color-light:                               #D3DAE3; //#fff;
+$text-color-code:                                #DB6492; //#D05;
+$text-color-em:                                  #DB6492; //#D05;
 
-$default-box-bg1:                                #f5f5f5;
-$default-box-bg2:                                #eee;
-$default-box-bg3:                                #ddd;
-$default-box:                                    #444;
-$default-box-border1:                            #ddd;
-$default-box-border2:                            #aaa;
+$default-box-bg1:                                #4B5263; //#f5f5f5; light
+$default-box-bg2:                                #2f343f; //#eee; navbar
+$default-box-bg3:                                darken(#353945, 7%); //panel_bg; //#ddd; dark
+$default-box:                                    #D3DAE3; //#444;
+$default-box-border1:                            lighten(#4B5263, 7%); //$header_border; //#ddd;
+$default-box-border2:                            transparentize(darken(#353945, 12%), 0.6);; //#aaa;
 
-$nested-bg:                                      #07D;
-$nested-hover-bg:                                #059;
+$nested-bg:                                      lighten(#4FABE3, 10%); //#07D;
+$nested-hover-bg:                                lighten(#4FABE3, 5%); //#059;
 
-$offcanvas-box:                                  #777;
-$offcanvas-color:                                #ccc;
-$offcanvas-box-bg1:                              #1a1a1a;
-$offcanvas-box-bg2:                              #404040;
-$offcanvas-box-bg3:                              #333;
-
-/*
-$form-danger-border:                             #dc8d99 !default;
-$form-danger-background:                         #fff7f8 !default;
-$form-success-background:                        #fafff2 !default;
-*/
+$offcanvas-box:                                  #BAC3CF; //#777;
+$offcanvas-color:                                #D3DAE3; //#ccc;
+$offcanvas-box-bg1:                              darken(#353945, 7%); //$panel_bg; //#1a1a1a;
+$offcanvas-box-bg2:                              #2f343f; //#404040;
+$offcanvas-box-bg3:                              #2f343f; //333;
 
 $accordion-title-margin-bottom:                  15px !default;
 $accordion-title-padding-vertical:               5px !default;
@@ -325,8 +320,8 @@ $base-pre-color:                                 $default-box !default; //$defau
 $base-pre-font-size:                             12px !default;
 $base-pre-line-height:                           18px !default;
 $base-pre-font-family:                           $base-code-font-family !default;
-$base-selection-background:                      #39f !default;
-$base-selection-color:                           #fff !default;
+$base-selection-background:                      $selection-bg !default;
+$base-selection-color:                           $selection-color !default;
 $block-padding-vertical:                         20px !default;
 $block-padding-vertical-large:                   50px !default;
 $block-large-padding-vertical:                   $block-padding-vertical !default;
@@ -509,8 +504,8 @@ $form-border:                                    $default-box-border1 !default;
 $form-border-width:                              1px !default;
 $form-background:                                $base-bg !default;
 $form-color:                                     $default-box !default;
-$form-focus-border:                              #99baca !default;
-$form-focus-background:                          #f5fbfe !default;
+$form-focus-border:                              lighten($default-box-border1, 5%) !default; //#99baca !default;
+$form-focus-background:                          lighten($default-box-bg1, 5%) !default; //#f5fbfe !default;
 $form-focus-color:                               $default-box !default;
 $form-disabled-border:                           $default-box-border1 !default;
 $form-disabled-background:                       $disabled-bg !default;
@@ -527,11 +522,11 @@ $form-small-padding:                             3px 3px !default;
 $form-large-padding:                             8px 6px !default;
 $form-small-font-size:                           12px !default;
 $form-large-font-size:                           16px !default;
-$form-danger-border:                             #dc8d99 !default;
-$form-danger-background:                         #fff7f8 !default;
+$form-danger-border:                             lighten($danger-bg, 10%) !default; //#dc8d99 !default;
+$form-danger-background:                         lighten($danger-bg, 5%) !default; //#fff7f8 !default;
 $form-danger-color:                              $danger-box !default;
 $form-success-border:                            $success-hover-bg !default;
-$form-success-background:                        #fafff2 !default;
+$form-success-background:                        lighten($success-bg, 5%) !default; //#fafff2 !default;
 $form-success-color:                             $success-box !default;
 $form-blank-border:                              $default-box-border1 !default;
 $form-blank-border-style:                        dashed !default;
@@ -573,10 +568,10 @@ $icon-hover-hover-color:                         $default-box !default;
 $icon-button-width:                              35px !default;
 $icon-button-height:                             $icon-button-width !default;
 $icon-button-border-radius:                      100% !default;
-$icon-button-background:                         $default-box-bg2 !default;
+$icon-button-background:                         $default-box-bg1 !default;
 $icon-button-font-size:                          round(($icon-button-width * 0.5)) !default;
 $icon-button-color:                              $default-box !default;
-$icon-button-hover-background:                   $default-box-bg1 !default;
+$icon-button-hover-background:                   $default-box-bg3 !default;
 $icon-button-hover-color:                        $default-box !default;
 $icon-button-active-background:                  $default-box-bg3 !default;
 $icon-button-active-color:                       $default-box !default;
@@ -670,11 +665,11 @@ $navbar-nav-color:                               $default-box !default;
 $navbar-nav-font-size:                           14px !default;
 $navbar-nav-font-weight:                         normal !default;
 $navbar-nav-font-family:                         "FontAwesome", sans-serif; //"Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$navbar-nav-hover-background:                    $default-box-bg1 !default;
+$navbar-nav-hover-background:                    $default-box-bg3 !default;
 $navbar-nav-hover-color:                         $default-box !default;
 $navbar-nav-onclick-background:                  $default-box-bg3 !default;
 $navbar-nav-onclick-color:                       $default-box !default;
-$navbar-nav-active-background:                   $default-box-bg1 !default;
+$navbar-nav-active-background:                   $default-box-bg3 !default;
 $navbar-nav-active-color:                        $default-box !default;
 $navbar-nav-subtitle-font-size:                  10px !default;
 $navbar-nav-subtitle-offset:                     2px !default;
@@ -688,7 +683,7 @@ $navbar-toggle-icon:                             "\f0c9" !default;
 $navbar-toggle-icon-alt:                         "\f002" !default;
 $offcanvas-z-index:                              1000 !default;
 $offcanvas-background:                           rgba(0,0,0,0.1) !default;
-$offcanvas-bar-width:                            270px !default;
+$offcanvas-bar-width:                            200px !default;
 $offcanvas-bar-background:                       $offcanvas-box-bg3 !default;
 $offcanvas-panel-margin:                         20px 15px !default;
 $offcanvas-panel-color:                          $offcanvas-box !default;
@@ -727,9 +722,9 @@ $pagination-margin-left:                         5px !default;
 $pagination-padding-vertical:                    3px !default;
 $pagination-padding-horizontal:                  5px !default;
 $pagination-line-height:                         20px !default;
-$pagination-background:                          $default-box-bg2 !default;
+$pagination-background:                          $default-box-bg1 !default;
 $pagination-color:                               $default-box !default;
-$pagination-hover-background:                    $default-box-bg1 !default;
+$pagination-hover-background:                    $default-box-bg2 !default;
 $pagination-hover-color:                         $default-box !default;
 $pagination-onclick-background:                  $default-box-bg3 !default;
 $pagination-onclick-color:                       $default-box !default;
@@ -806,7 +801,7 @@ $subnav-line-border:                             $default-box-border1 !default;
 $subnav-line-border-width:                       1px !default;
 $subnav-pill-padding-vertical:                   3px !default;
 $subnav-pill-padding-horizontal:                 9px !default;
-$subnav-pill-hover-background:                   $default-box-bg2 !default;
+$subnav-pill-hover-background:                   $default-box-bg1 !default;
 $subnav-pill-hover-color:                        $default-box !default;
 $subnav-pill-active-background:                  $primary-bg !default;
 $subnav-pill-active-color:                       $text-color-light !default;

@@ -335,5 +335,7 @@
 @mixin hook-thumbnav(){}
 @mixin hook-thumbnav-misc(){}
 @mixin hook-container(){}
-@mixin hook-scrollable-box(){}
+@mixin hook-scrollable-box(){
+	max-height: 70vh;
+}
 @mixin hook-utility-misc(){}

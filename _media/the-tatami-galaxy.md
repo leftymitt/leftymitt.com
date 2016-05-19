@@ -10,7 +10,7 @@ tags:
 added_date: "2016-03-01"
 published_date: "2010-04-22"
 cover: tatami-galaxy.png
-rating: "4.5"
+rating: "5"
 
 link: "https://en.wikipedia.org/wiki/The_Tatami_Galaxy"
 ---

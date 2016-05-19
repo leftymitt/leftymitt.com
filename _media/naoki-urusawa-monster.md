@@ -7,7 +7,7 @@ format: text
 tags: 
  - anime
 added_date: "2015-08-25"
-rating: "5"
+rating: "4.5"
 link: "https://en.wikipedia.org/wiki/Monster_(manga)"
 cover: monster-cover.jpg
 ---

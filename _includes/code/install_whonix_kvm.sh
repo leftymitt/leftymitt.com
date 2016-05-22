@@ -4,7 +4,7 @@
 # install whonix on kvm in arch linux.
 ################################################################################
 CURDIR=${PWD}
-KVMDIR=${HOME}/.local/share/kvm
+KVMDIR=${HOME}/.kvm
 WHONIX_VERSION=12.0.0.3.2
 
 mkdir -p ${KVMDIR}

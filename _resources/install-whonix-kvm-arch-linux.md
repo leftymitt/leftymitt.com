@@ -22,7 +22,7 @@ code:
  - script: uninstall_whonix_kvm.sh
    language: bash
 
-whonix_version: 12.0.0.3.2
+whonix_version: 13.0.0.1.1
 ---
 
 [Whonix](https://www.whonix.org/) is a privacy and security-oriented operating system based on virtual machines (VMs). 

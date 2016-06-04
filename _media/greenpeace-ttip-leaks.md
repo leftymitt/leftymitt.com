@@ -4,7 +4,7 @@ layout: post
 category: media
 author: Greenpeace
 format: text
-type: article
+type: report
 tags: 
  - free trade
  - ttip

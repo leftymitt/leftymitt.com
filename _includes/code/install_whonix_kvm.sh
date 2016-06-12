@@ -5,7 +5,7 @@
 ################################################################################
 CURDIR=${PWD}
 KVMDIR=${HOME}/.kvm
-WHONIX_VERSION=12.0.0.3.2
+WHONIX_VERSION=13.0.0.1.1
 
 mkdir -p ${KVMDIR}
 cd ${KVMDIR}

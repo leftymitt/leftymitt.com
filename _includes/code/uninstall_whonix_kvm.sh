@@ -17,7 +17,7 @@ virsh -c qemu:///system destroy Whonix-Workstation
 virsh -c qemu:///system undefine Whonix-Gateway
 virsh -c qemu:///system undefine Whonix-Workstation
 
-# removen network rules.
+# remove network rules.
 virsh -c qemu:///system net-destroy Whonix
 virsh -c qemu:///system net-undefine Whonix
 

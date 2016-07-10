@@ -1,11 +1,14 @@
 #! /bin/bash
 
+set -eu
+
 ################################################################################
 # install whonix on kvm in arch linux.
 ################################################################################
 CURDIR=${PWD}
 KVMDIR=${HOME}/.kvm
 WHONIX_VERSION=13.0.0.1.1
+PATRICK_FINGERPRINT="916B 8D99 C38E AF5E 8ADC  7A2A 8D66 066A 2EEA CCDA"
 
 mkdir -p ${KVMDIR}
 cd ${KVMDIR}
@@ -21,9 +24,21 @@ torify wget https://www.whonix.org/download/${WHONIX_VERSION}/Whonix-Gateway-${W
 torify wget https://www.whonix.org/download/${WHONIX_VERSION}/Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc
 torify wget https://www.whonix.org/patrick.asc
 
+# download patrick's gpg key and check the fingerprint.
+FINGERPRINT=$(gpg --with-fingerprint patrick.asc | \
+   sed -n "s/^\s*\([A-Z0-9\ ]*\)$/\1/p")
+
+if [ "${FINGERPRINT}" = "${PATRICK_FINGERPRINT}" ]; then
+   gpg --import patrick.asc
+else
+   echo "downloaded fingerprint does not match hard-coded one:"
+   echo "hard-coded: ${PATRICK_FINGERPRINT}"
+   echo "downloaded: ${FINGERPRINT}"
+   echo "exiting."
+   exit 1
+fi
+
 # verify the images.
-gpg --with-fingerprint patrick.asc # check the fingerprint
-gpg --import patrick.asc
 gpg --verify Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
 gpg --verify Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
 
@@ -44,19 +59,25 @@ sed -i "s|\/var\/lib\/libvirt\/images|${PWD}|g" Whonix-Workstation-${WHONIX_VERS
 ################################################################################
 
 # check that network is up. 
-virsh -c qemu:///system net-autostart default
-virsh -c qemu:///system net-start default
+IS_ACTIVE=$(virsh -c qemu:///system net-info default | grep "Active" | \
+   cut -d ":" -f2 | sed -e "s/\s//g")
+IS_AUTOSTART=$(virsh -c qemu:///system net-info default | grep "Autostart" | \
+   cut -d ":" -f2 | sed -e "s/\s//g")
+
+[ "${IS_ACTIVE}" = "no" ] && virsh -c qemu:///system net-start default
+[ "${IS_AUTOSTART}" = "no" ] && virsh -c qemu:///system net-autostart default
 
 # define vms and network rules. 
-virsh -c qemu:///system define Whonix-Gateway*.xml
-virsh -c qemu:///system net-define Whonix_network*.xml
+virsh -c qemu:///system define Whonix-Gateway-${WHONIX_VERSION}.xml
+virsh -c qemu:///system net-define Whonix_network-${WHONIX_VERSION}.xml
 virsh -c qemu:///system net-autostart Whonix
 virsh -c qemu:///system net-start Whonix
-virsh -c qemu:///system define Whonix-Workstation*.xml
+virsh -c qemu:///system define Whonix-Workstation-${WHONIX_VERSION}.xml
 
 ################################################################################
 # cleanup and exit. 
 ################################################################################
+
 rm Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
 rm Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
 rm Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc

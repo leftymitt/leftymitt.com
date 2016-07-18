@@ -1,5 +1,5 @@
 ---
-title: "The Iraq Inquiry."
+title: "the iraq inquiry."
 layout: post
 category: media
 author: John Chilcot, Lawrence Freedman, Martin Gilbert, Roderic Lync, and Usha Kumari Prashar

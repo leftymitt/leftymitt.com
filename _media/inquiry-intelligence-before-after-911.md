@@ -1,5 +1,5 @@
 ---
-title: Joint Inquiry into Intelligence Community Activities Before and After the Terrorist Attacks of September 11, 2001
+title: "joint inquiry into intelligence community activities before and after the terrorist attacks of september 11, 2001."
 layout: post
 category: media
 author: House Permanent Select Committee on Intelligence

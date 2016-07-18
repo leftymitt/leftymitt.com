@@ -91,7 +91,7 @@ css: "
 						{% endif %}
 					{% endif %}
 					</div>
-					{{ item.title }}
+					{{ item.title | downcase }}
 				</div>
 				
 <!--
@@ -113,7 +113,7 @@ css: "
 				{% if item.link contains "youtube.com" %}
 					<div class="uk-text-center">
 						<figure class="uk-overlay uk-overlay-hover">
-							<img alt="{{ item.title }} cover image"
+							<img alt="{{ item.title | downcase }} cover image"
 							     src="{{ item.link | replace: 'www.youtube.com/watch?v=', 'img.youtube.com/vi/' }}/hqdefault.jpg">
 							<div class="uk-overlay-panel uk-overlay-fade uk-overlay-background
 											uk-flex uk-flex-center uk-flex-middle">
@@ -171,7 +171,7 @@ css: "
 						{% endif %}
 						{% if item.link %}<i class="uk-icon-external-link"></i>{% endif %}
 					</div>
-					{{ item.title }}
+					{{ item.title | downcase }}
 				</div>
 				{% if item.author %}
 				<div class="uk-text-muted uk-margin-small-left">by {{ item.author }}
@@ -182,7 +182,7 @@ css: "
 				{% endif %}
 				<p>
 					{% if item.cover %}
-					<img class="uk-thumbnail-expand" alt="{{ item.title }} cover"
+					<img class="uk-thumbnail-expand" alt="{{ item.title | downcase }} cover"
 					     src="{{ site.images }}/{{ item.cover }}">
 					{% elsif item.icon %}
 					<img style="max-width:10%" alt="source logo"

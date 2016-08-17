@@ -6,65 +6,65 @@ tag: "thoughts to poke you laughingly, all with love and irony."
 --- 
 
 <div class="uk-container uk-container-center">
-	
-	<div class="uk-grid" data-uk-grid="{animation:false}" style="min-height:72vh;">
-	{% for post in paginator.posts %}
-	<div class="uk-width-1-1 uk-width-medium-1-2 uk-margin">
-		<div class="uk-flex">
-			<div class="uk-margin-right">
-				{% if post.img %}
-				<img style="width:60px; height:auto" 
-			        src="{{ site.images }}/{{ post.img }}" alt="post image">
-				{% elsif post.icon %}
-				<img style="width:60px; height:auto" alt="post image"
-				     src="{{ site.images }}/{{ post.icon }}">
-				{% else %}
-				<img style="width:60px; height:auto" alt="post image"
-				     src="{{ site.face }}">
-				{% endif %}
-			</div>
-			<div>
-				<h3 class="uk-h3"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-				<div class="uk-article-meta uk-margin-left">posted on {{ post.date | date_to_string }}</div>
-			</div>
-		</div>
-		<p class="uk-article">{{ post.excerpt | strip_html | truncatewords:100 }}</p>
-		<hr class="uk-article-divider">
-	</div>
-	{% endfor %}
-	</div>
+  
+  <div class="uk-grid" data-uk-grid="{animation:false}" style="min-height:72vh;">
+  {% for post in paginator.posts %}
+  <div class="uk-width-1-1 uk-width-medium-1-2 uk-margin">
+    <div class="uk-flex">
+      <div class="uk-margin-right">
+        {% if post.img %}
+        <img style="width:60px; height:auto" 
+             src="{{ site.images }}/{{ post.img }}" alt="post image">
+        {% elsif post.icon %}
+        <img style="width:60px; height:auto" alt="post image"
+             src="{{ site.images }}/{{ post.icon }}">
+        {% else %}
+        <img style="width:60px; height:auto" alt="post image"
+             src="{{ site.face }}">
+        {% endif %}
+      </div>
+      <div>
+        <h3 class="uk-h3"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <div class="uk-article-meta uk-margin-left">posted on {{ post.date | date_to_string }}</div>
+      </div>
+    </div>
+    <p class="uk-article">{{ post.excerpt | strip_html | truncatewords:100 }}</p>
+    <hr class="uk-article-divider">
+  </div>
+  {% endfor %}
+  </div>
 
-	{% if paginator.total_pages > 1 %} <ul class="uk-pagination uk-margin-large-top">
-		{% assign paginator_start = paginator.page | minus: page.paginator_edge %}
-		{% assign paginator_stop = paginator.page | plus: page.paginator_edge %}
-		{% if paginator_start < 1 %} {% assign paginator_start = 1 %} {% endif %}
-		{% if paginator_stop > paginator.total_pages %} {% assign paginator_stop = paginator.total_pages %} {% endif %}
+  {% if paginator.total_pages > 1 %} <ul class="uk-pagination uk-margin-large-top">
+    {% assign paginator_start = paginator.page | minus: page.paginator_edge %}
+    {% assign paginator_stop = paginator.page | plus: page.paginator_edge %}
+    {% if paginator_start < 1 %} {% assign paginator_start = 1 %} {% endif %}
+    {% if paginator_stop > paginator.total_pages %} {% assign paginator_stop = paginator.total_pages %} {% endif %}
 
-		{% if paginator.previous_page %} <li><a class="uk-icon-angle-left" href="{{ paginator.previous_page_path }}"></a></li>
-		{% else %} <li class="uk-disabled"><span><i class="uk-icon-angle-left"></i></span></li>
-		{% endif %}
+    {% if paginator.previous_page %} <li><a class="uk-icon-angle-left" href="{{ paginator.previous_page_path }}"></a></li>
+    {% else %} <li class="uk-disabled"><span><i class="uk-icon-angle-left"></i></span></li>
+    {% endif %}
 
-		{% if paginator_start > 1 %} 
-			<li><a href="{{ '/blog/' }}">{{ 1 | pnumber }}</a></li>
-			<li><span>...</span></li>
-		{% endif %}
+    {% if paginator_start > 1 %} 
+      <li><a href="{{ '/blog/' }}">{{ 1 | pnumber }}</a></li>
+      <li><span>...</span></li>
+    {% endif %}
 
-		{% for page in (paginator_start..paginator_stop) %}
-			{% if page == paginator.page %} <li class="uk-active"><span>{{ page | pnumber }}</span></li>
-			{% elsif page == 1 %} <li><a href="{{ '/blog/' }}">{{ page | pnumber }}</a></li>
-			{% else %} <li><a href="{{ site.paginate_path | replace: ':num', page }}">{{ page | pnumber }}</a></li>
-			{% endif %}
-		{% endfor %}
-		
-		{% if paginator_stop < paginator.total_pages %} 
-			<li><span>...</span></li>
-			<li><a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages | pnumber }}</a></li>
-		{% endif %}
+    {% for page in (paginator_start..paginator_stop) %}
+      {% if page == paginator.page %} <li class="uk-active"><span>{{ page | pnumber }}</span></li>
+      {% elsif page == 1 %} <li><a href="{{ '/blog/' }}">{{ page | pnumber }}</a></li>
+      {% else %} <li><a href="{{ site.paginate_path | replace: ':num', page }}">{{ page | pnumber }}</a></li>
+      {% endif %}
+    {% endfor %}
+    
+    {% if paginator_stop < paginator.total_pages %} 
+      <li><span>...</span></li>
+      <li><a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages | pnumber }}</a></li>
+    {% endif %}
 
-		{% if paginator.next_page %} <li><a class="uk-icon-angle-right" href="{{ paginator.next_page_path }}"></a></li>
-		{% else %} <li class="uk-disabled"><span><i class="uk-icon-angle-right"></i></span></li>
-		{% endif %}
-	</ul>
-	{% endif %}
+    {% if paginator.next_page %} <li><a class="uk-icon-angle-right" href="{{ paginator.next_page_path }}"></a></li>
+    {% else %} <li class="uk-disabled"><span><i class="uk-icon-angle-right"></i></span></li>
+    {% endif %}
+  </ul>
+  {% endif %}
 
 </div>

@@ -21,28 +21,28 @@ cd ${KVMDIR}
 
 # download the compressed files via tor. 
 torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-   https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
+  https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
 torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-   https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
+  https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
 torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-   https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc
+  https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc
 torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-   https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc
+  https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc
 torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-   https://${DOMAIN_NAME}/download/patrick.asc
+  https://${DOMAIN_NAME}/download/patrick.asc
 
 # download patrick's gpg key and check the fingerprint.
 FINGERPRINT=$(gpg --with-fingerprint patrick.asc | \
-   sed -n "s/^\s*\([A-Z0-9\ ]*\)$/\1/p")
+  sed -n "s/^\s*\([A-Z0-9\ ]*\)$/\1/p")
 
 if [ "${FINGERPRINT}" = "${PATRICK_FINGERPRINT}" ]; then
-   gpg --import patrick.asc
+  gpg --import patrick.asc
 else
-   echo "downloaded fingerprint does not match hard-coded one:"
-   echo "hard-coded: ${PATRICK_FINGERPRINT}"
-   echo "downloaded: ${FINGERPRINT}"
-   echo "exiting."
-   exit 1
+  echo "downloaded fingerprint does not match hard-coded one:"
+  echo "hard-coded: ${PATRICK_FINGERPRINT}"
+  echo "downloaded: ${FINGERPRINT}"
+  echo "exiting."
+  exit 1
 fi
 
 # verify the images.
@@ -67,9 +67,9 @@ sed -i "s|\/var\/lib\/libvirt\/images|${PWD}|g" Whonix-Workstation-${WHONIX_VERS
 
 # check that network is up. 
 IS_ACTIVE=$(virsh -c qemu:///system net-info default | grep "Active" | \
-   cut -d ":" -f2 | sed -e "s/\s//g")
+  cut -d ":" -f2 | sed -e "s/\s//g")
 IS_AUTOSTART=$(virsh -c qemu:///system net-info default | grep "Autostart" | \
-   cut -d ":" -f2 | sed -e "s/\s//g")
+  cut -d ":" -f2 | sed -e "s/\s//g")
 
 [ "${IS_ACTIVE}" = "no" ] && virsh -c qemu:///system net-start default
 [ "${IS_AUTOSTART}" = "no" ] && virsh -c qemu:///system net-autostart default

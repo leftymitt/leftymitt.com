@@ -9,8 +9,8 @@ read DEVICE
 echo "use device $DEVICE? (y/N)"
 read REPLY
 if [[ ! $REPLY =~ ^([Yy]$|[Yy]es) ]]; then
-	echo "stopping script..."
-	exit 1
+  echo "stopping script..."
+  exit 1
 fi
 
 ################################################################################

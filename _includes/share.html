@@ -1,69 +1,69 @@
 <!-- icons for sharing page on social media sites. -->
 <div class="uk-container uk-margin-large-top uk-align-center">
-	
-	<!-- twitter -->
-	<a class="uk-icon-hover uk-icon-twitter-square uk-icon-large" 
-	   title="tweet it." 
-	   {% capture twitter_url %}https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url}}&text={{ page.title }}&via={{ site.twitter }}&hashtags={% for tag in page.tags %}{{ tag }},{% endfor %}{% endcapture %}
-	   href="{{ twitter_url | strip_newlines | uri_escape }}">
-	</a>
+  
+  <!-- twitter -->
+  <a class="uk-icon-hover uk-icon-twitter-square uk-icon-large" 
+     title="tweet it." 
+     {% capture twitter_url %}https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url}}&text={{ page.title }}&via={{ site.twitter }}&hashtags={% for tag in page.tags %}{{ tag }},{% endfor %}{% endcapture %}
+     href="{{ twitter_url | strip_newlines | uri_escape }}">
+  </a>
 
-	<!-- facebook -->
-	<a class="uk-icon-hover uk-icon-facebook-square uk-icon-large" 
-	   title="share on facebook." 
-	   {% capture facebook_url %}https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t={{ page.title }}{% endcapture %}
-	   href="{{ facebook_url | strip_newlines | uri_escape }}" >
-	</a>
+  <!-- facebook -->
+  <a class="uk-icon-hover uk-icon-facebook-square uk-icon-large" 
+     title="share on facebook." 
+     {% capture facebook_url %}https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&t={{ page.title }}{% endcapture %}
+     href="{{ facebook_url | strip_newlines | uri_escape }}" >
+  </a>
 
-	<!-- google+ -->
-	<a class="uk-icon-hover uk-icon-google-plus-square uk-icon-large" 
-	   title="share on google+."
-	   {% capture google_url %}https://plus.google.com/share?url={{ site.url }}{{ page.url}}{% endcapture %}
-	   href="{{ google_url | strip_newlines | uri_escape }}">
-	</a>
+  <!-- google+ -->
+  <a class="uk-icon-hover uk-icon-google-plus-square uk-icon-large" 
+     title="share on google+."
+     {% capture google_url %}https://plus.google.com/share?url={{ site.url }}{{ page.url}}{% endcapture %}
+     href="{{ google_url | strip_newlines | uri_escape }}">
+  </a>
 
-	<!-- reddit -->
-	<a class="uk-icon-hover uk-icon-reddit-square uk-icon-large" 
-	   title="post on reddit."
-	   {% capture reddit_url %}https://www.reddit.com/submit?url={{ site.url }}{{ page.url}}&title={{ page.title }}{% endcapture %}
-	   href="{{ reddit_url | strip_newlines | uri_escape }}">
-	</a>
+  <!-- reddit -->
+  <a class="uk-icon-hover uk-icon-reddit-square uk-icon-large" 
+     title="post on reddit."
+     {% capture reddit_url %}https://www.reddit.com/submit?url={{ site.url }}{{ page.url}}&title={{ page.title }}{% endcapture %}
+     href="{{ reddit_url | strip_newlines | uri_escape }}">
+  </a>
 
-	<!-- pinterest -->
-	<a class="uk-icon-hover uk-icon-pinterest-square uk-icon-large" 
-	   title="pin this."
-	   {% if page.banner %} 
-	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.banner }}{% endcapture %}
-	   {% elsif page.img %} 
-	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.img }}{% endcapture %}
-		{% elsif page.icon %} 
-	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.icon }}{% endcapture %}
-		{% else %} 
-	   	{% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.face }}{% endcapture %}
-	   {% endif %}
-		href="{{ pinterest_url | strip_newlines | uri_escape }}">
-	</a>
-	
-	<!-- tumblr -->
-	<a class="uk-icon-hover uk-icon-tumblr-square uk-icon-large" 
-	   title="post on tumblr."
-	   {% if page.tag %}
-	   	{% capture tumblr_url %}https://www.tumblr.com/share/link?url={{ site.url }}{{ page.url}}&name={{ page.title }}&description={{ page.tag | strip_html | truncate:200 }}{% endcapture %}
-	   {% else %}
-	   	{% capture tumblr_url %}https://www.tumblr.com/share/link?url={{ site.url }}{{ page.url}}&name={{ page.title }}&description={{ page.content | strip_html | truncate:200 }}{% endcapture %}
-	   {% endif %}
-	   href="{{ tumblr_url | strip_newlines | uri_escape }}">
-	</a>
+  <!-- pinterest -->
+  <a class="uk-icon-hover uk-icon-pinterest-square uk-icon-large" 
+     title="pin this."
+     {% if page.banner %} 
+       {% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.banner }}{% endcapture %}
+     {% elsif page.img %} 
+       {% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.img }}{% endcapture %}
+     {% elsif page.icon %} 
+       {% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.images }}/{{ page.icon }}{% endcapture %}
+     {% else %} 
+       {% capture pinterest_url %}https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}&media={{ site.url }}{{ site.face }}{% endcapture %}
+     {% endif %}
+     href="{{ pinterest_url | strip_newlines | uri_escape }}">
+  </a>
+  
+  <!-- tumblr -->
+  <a class="uk-icon-hover uk-icon-tumblr-square uk-icon-large" 
+     title="post on tumblr."
+     {% if page.tag %}
+       {% capture tumblr_url %}https://www.tumblr.com/share/link?url={{ site.url }}{{ page.url}}&name={{ page.title }}&description={{ page.tag | strip_html | truncate:200 }}{% endcapture %}
+     {% else %}
+       {% capture tumblr_url %}https://www.tumblr.com/share/link?url={{ site.url }}{{ page.url}}&name={{ page.title }}&description={{ page.content | strip_html | truncate:200 }}{% endcapture %}
+     {% endif %}
+     href="{{ tumblr_url | strip_newlines | uri_escape }}">
+  </a>
 
-	<!-- email -->
-	<a class="uk-icon-hover uk-icon-envelope-square uk-icon-large" 
-	   title="email this." data-proofer-ignore
-	   {% if page.link %}
-		{% capture mailto_url %}mailto:?body={{ site.url }}{{ page.link }}&amp;subject={{ page.title }}{% endcapture %}
-	   {% else %}
-		{% capture mailto_url %}mailto:?body={{ site.url }}{{ page.url  }}&amp;subject={{ page.title }}{% endcapture %}
-	   {% endif %}
-		href="{{ mailto_url | strip_html | strip_newlines | uri_escape }}">
-	</a>
+  <!-- email -->
+  <a class="uk-icon-hover uk-icon-envelope-square uk-icon-large" 
+     title="email this." data-proofer-ignore
+     {% if page.link %}
+       {% capture mailto_url %}mailto:?body={{ site.url }}{{ page.link }}&amp;subject={{ page.title }}{% endcapture %}
+     {% else %}
+       {% capture mailto_url %}mailto:?body={{ site.url }}{{ page.url  }}&amp;subject={{ page.title }}{% endcapture %}
+     {% endif %}
+     href="{{ mailto_url | strip_html | strip_newlines | uri_escape }}">
+  </a>
 
 </div>

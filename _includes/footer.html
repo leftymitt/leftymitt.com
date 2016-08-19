@@ -1,46 +1,46 @@
 <footer style="background:#2f343f;" class="uk-margin-large-top">
 
-	<div class="uk-container uk-container-center">
-		<div class="uk-hidden-small uk-margin-top">
-			<div class="uk-contrast uk-align-left">
-				rebuilt on {{ site.time | date_to_string }}<br>
-				tips: <a href="bitcoin:{{ site.bitcoin.address }}?amount=.05">
-						{{ site.bitcoin.address }}
-					</a>
-			</div>
-			<a data-uk-modal href="#bitcoin" 
-			   class="uk-align-right uk-icon-button uk-icon-bitcoin"></a>
-			<a href="{{ site.github }}" 
-			   class="uk-align-right uk-icon-button uk-icon-github"></a>
-			<a href="https://twitter.com/{{ site.twitter }}" 
-			   class="uk-align-right uk-icon-button uk-icon-twitter"></a>
-			<a href="mailto:{{ site.email }}" 
-			   class="uk-align-right uk-icon-button uk-icon-envelope-o"></a>
-		</div>
+  <div class="uk-container uk-container-center">
+    <div class="uk-hidden-small uk-margin-top">
+      <div class="uk-contrast uk-align-left">
+        rebuilt on {{ site.time | date_to_string }}<br>
+        tips: <a href="bitcoin:{{ site.bitcoin.address }}?amount=.05">
+            {{ site.bitcoin.address }}
+          </a>
+      </div>
+      <a data-uk-modal href="#bitcoin" 
+         class="uk-align-right uk-icon-button uk-icon-bitcoin"></a>
+      <a href="{{ site.github }}" 
+         class="uk-align-right uk-icon-button uk-icon-github"></a>
+      <a href="https://twitter.com/{{ site.twitter }}" 
+         class="uk-align-right uk-icon-button uk-icon-twitter"></a>
+      <a href="mailto:{{ site.email }}" 
+         class="uk-align-right uk-icon-button uk-icon-envelope-o"></a>
+    </div>
 
-		<div class="uk-visible-small uk-margin">
-			<ul class="uk-grid uk-grid-width-1-4">
-				<li>
-					<a href="mailto:{{ site.email }}" 
-					   class="uk-align-center uk-icon-button uk-icon-envelope-o"></a>
-				</li>
-				<li>
-					<a href="https://twitter.com/{{ site.twitter }}" 
-					   class="uk-align-center uk-icon-button uk-icon-twitter"></a>
-				</li>
-				<li>
-					<a href="{{ site.github }}" 
-					   class="uk-align-center uk-icon-button uk-icon-github"></a>
-				</li>
-				<li>
-					<!-- bitcoin element defined in _includes/bitcoin.html -->
-					<a data-uk-modal href="#bitcoin" 
-					   class="uk-align-center uk-icon-button uk-icon-bitcoin"></a>
-				</li>
-			</ul>
-		</div>
-	</div>
+    <div class="uk-visible-small uk-margin">
+      <ul class="uk-grid uk-grid-width-1-4">
+        <li>
+          <a href="mailto:{{ site.email }}" 
+             class="uk-align-center uk-icon-button uk-icon-envelope-o"></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/{{ site.twitter }}" 
+             class="uk-align-center uk-icon-button uk-icon-twitter"></a>
+        </li>
+        <li>
+          <a href="{{ site.github }}" 
+             class="uk-align-center uk-icon-button uk-icon-github"></a>
+        </li>
+        <li>
+          <!-- bitcoin element defined in _includes/bitcoin.html -->
+          <a data-uk-modal href="#bitcoin" 
+             class="uk-align-center uk-icon-button uk-icon-bitcoin"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-	{% include bitcoin.html %}
+  {% include bitcoin.html %}
 
 </footer>

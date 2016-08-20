@@ -1,246 +1,246 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr" itemscope itemtype="http://schema.org/Article">
 
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>{{ page.title }} | {{ site.title }}</title>
-		<meta name="description" content="{{ page.content | strip_html | truncate:200 }}"/>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{{ page.content | strip_html | truncate:200 }}"/>
 
-		<!-- schema.org markup for google+ -->
-		<meta itemprop="name" content="{{ page.title }}"/>
-		{% if page.tag %}
-		<meta itemprop="description" content="{{ page.tag | strip_html | truncate:200 }}"/>
-		{% else %}
-		<meta itemprop="description" content="{{ page.content | strip_html | truncate:200 }}"/>
-		{% endif %}
-		{% if page.img %}
-		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/> 
-		{% elsif page.icon %}
-		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.icon | replace: '.svg', '.png'  }}"/>
-		{% elsif page.banner %}
-		<meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png'  }}"/>
-		{% else %}
-		<meta itemprop="image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
-		{% endif %}
+    <!-- schema.org markup for google+ -->
+    <meta itemprop="name" content="{{ page.title }}"/>
+    {% if page.tag %}
+    <meta itemprop="description" content="{{ page.tag | strip_html | truncate:200 }}"/>
+    {% else %}
+    <meta itemprop="description" content="{{ page.content | strip_html | truncate:200 }}"/>
+    {% endif %}
+    {% if page.img %}
+    <meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/> 
+    {% elsif page.icon %}
+    <meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.icon | replace: '.svg', '.png'  }}"/>
+    {% elsif page.banner %}
+    <meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png'  }}"/>
+    {% else %}
+    <meta itemprop="image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+    {% endif %}
 
-		<!-- twitter card data -->
-		{% unless page.type == "video" %}
-			{% if page.type == "anime" or page.banner %}
-		<meta name="twitter:card" content="summary_large_image"/>
-			{% else %}
-		<meta name="twitter:card" content="summary"/>
-			{% endif %}
-		{% endunless %}
-		<meta name="twitter:site" content="{{ site.twitter }}"/>
-		<meta name="twitter:title" content="{{ page.title }}"/>
-		{% if page.tag %}
-		<meta name="twitter:description" content="{{ page.tag | strip_html | truncate:200 }}"/>
-		{% else %}
-		<meta name="twitter:description" content="{{ page.content | strip_html | truncate:200 }}"/>
-		{% endif %}
-		<meta name="twitter:creator" content="{{ site.twitter }}"/>
-		<!-- twitter summary_large_image: at least 280x150px -->
-		<!-- twitter summary: at least 120x120px -->
-		{% unless page.type == "video" %}
-			{% if page.type == "anime" %}
-		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.cover }}"/>
-			{% elsif page.banner %}
-		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png' }}"/>
-			{% else %}
-				{% if page.img %}
-		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
-				{% elsif page.icon %}
-		<meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
-				{% else %}
-		<meta name="twitter:image:src" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
-				{% endif %}
-			{% endif %}
-		{% endunless %}
+    <!-- twitter card data -->
+    {% unless page.type == "video" %}
+      {% if page.type == "anime" or page.banner %}
+    <meta name="twitter:card" content="summary_large_image"/>
+      {% else %}
+    <meta name="twitter:card" content="summary"/>
+      {% endif %}
+    {% endunless %}
+    <meta name="twitter:site" content="{{ site.twitter }}"/>
+    <meta name="twitter:title" content="{{ page.title }}"/>
+    {% if page.tag %}
+    <meta name="twitter:description" content="{{ page.tag | strip_html | truncate:200 }}"/>
+    {% else %}
+    <meta name="twitter:description" content="{{ page.content | strip_html | truncate:200 }}"/>
+    {% endif %}
+    <meta name="twitter:creator" content="{{ site.twitter }}"/>
+    <!-- twitter summary_large_image: at least 280x150px -->
+    <!-- twitter summary: at least 120x120px -->
+    {% unless page.type == "video" %}
+      {% if page.type == "anime" %}
+    <meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.cover }}"/>
+      {% elsif page.banner %}
+    <meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png' }}"/>
+      {% else %}
+        {% if page.img %}
+    <meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
+        {% elsif page.icon %}
+    <meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
+        {% else %}
+    <meta name="twitter:image:src" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+        {% endif %}
+      {% endif %}
+    {% endunless %}
 
-		<!-- open graph data -->
-		<meta property="og:title" content="{{ page.title }}"/>
-		<meta property="og:type" content="article"/>
-		<meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-		{% if page.banner %}
-		<meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png' }}"/>
-		{% elsif page.img %}
-		<meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
-		{% elsif page.icon %}
-		<meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
-		{% else %}
-		<meta property="og:image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
-		{% endif %}
-		{% if page.tag %}
-		<meta property="og:description" content="{{ page.tag | strip_html | truncate:200 }}"/>
-		{% else %}
-		<meta property="og:description" content="{{ page.content | strip_html | truncate:200 }}"/>
-		{% endif %}
-		<meta property="og:site_name" content="{{ site.title }}"/>
-		{% if page.date %}
-		<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}"/>
-		<meta property="article:modified_time" content="{{ page.date | date_to_xmlschema }}"/>
-		{% else %}
-		<meta property="article:published_time" content="{{ page.published_date }}"/>
-		<meta property="article:modified_time" content="{{ page.added_date }}"/>
-		{% endif %}
-		<meta property="article:section" content="{{ page.category }}"/>
-		<meta property="article:tag" content="{{ page.tags }}"/>
+    <!-- open graph data -->
+    <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+    {% if page.banner %}
+    <meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png' }}"/>
+    {% elsif page.img %}
+    <meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
+    {% elsif page.icon %}
+    <meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
+    {% else %}
+    <meta property="og:image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+    {% endif %}
+    {% if page.tag %}
+    <meta property="og:description" content="{{ page.tag | strip_html | truncate:200 }}"/>
+    {% else %}
+    <meta property="og:description" content="{{ page.content | strip_html | truncate:200 }}"/>
+    {% endif %}
+    <meta property="og:site_name" content="{{ site.title }}"/>
+    {% if page.date %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}"/>
+    <meta property="article:modified_time" content="{{ page.date | date_to_xmlschema }}"/>
+    {% else %}
+    <meta property="article:published_time" content="{{ page.published_date }}"/>
+    <meta property="article:modified_time" content="{{ page.added_date }}"/>
+    {% endif %}
+    <meta property="article:section" content="{{ page.category }}"/>
+    <meta property="article:tag" content="{{ page.tags }}"/>
 
-		<link rel="stylesheet" href="{{ site.css }}/uikit.min.css"/>
+    <link rel="stylesheet" href="{{ site.css }}/uikit.min.css"/>
 
-		{{ page.css }}
+    {{ page.css }}
 
-		<link rel="apple-touch-icon" href="{{ site.images }}/apple-touch-icon.png"/>
-		<link rel="icon" href="{{ site.images }}/favicon.ico"/>
-	</head>
+    <link rel="apple-touch-icon" href="{{ site.images }}/apple-touch-icon.png"/>
+    <link rel="icon" href="{{ site.images }}/favicon.ico"/>
+  </head>
 
-	<body>
-		<div class="uk-flex uk-flex-column" style="min-height:100vh;">
+  <body>
+    <div class="uk-flex uk-flex-column" style="min-height:100vh;">
 
-			<!-- add padding to bottom equal to navbar height -->
-			<div style="padding-bottom:40px;">
-			{% include nav.html %}
-			</div>
-			
-			<div class="uk-container uk-container-center uk-margin-top 
-			            uk-flex-item-1" 
-			     style="width:100%;">
+      <!-- add padding to bottom equal to navbar height -->
+      <div style="padding-bottom:40px;">
+      {% include nav.html %}
+      </div>
+      
+      <div class="uk-container uk-container-center uk-margin-top 
+                  uk-flex-item-1" 
+           style="width:100%;">
 
-			{% if page.table_of_contents %}
-				<div class=" uk-grid">
-					<div class="uk-width-1-1 uk-width-medium-4-5 uk-push-1-5">
-			{% endif %}
+      {% if page.table_of_contents %}
+        <div class=" uk-grid">
+          <div class="uk-width-1-1 uk-width-medium-4-5 uk-push-1-5">
+      {% endif %}
 
-			<article class="uk-article" style="">
-				<h1 class="uk-h2" id="top">{{ page.title }}</h1>
-				{% if page.repo %}
-				<div data-uk-margin class="uk-margin-bottom">
-					<a href="{{ site.github }}/{{ page.repo }}" 
-						class="uk-button uk-button-success" type="button">
-						<i class="uk-icon-github uk-icon-justify"></i> github
-					</a>
-					<a href="{{ site.github }}/{{ page.repo }}/archive/master.tar.gz" 
-					   class="uk-button uk-button-success" type="button" download>
-						<i class="uk-icon-download uk-icon-justify"></i> tar.gz
-					</a>
-					<a href="{{ site.github }}/{{ page.repo }}/archive/master.zip" 
-						class="uk-button uk-button-success" type="button" download>
-						<i class="uk-icon-download uk-icon-justify"></i> zip
-					</a>
-				</div>
-				{% endif %}
-				{% if page.category == 'blog' or page.categories == "blog" %}
-				<p class="uk-article-meta uk-margin-left">
-					posted on {% if page.date %} {{ page.date | date_to_string }}
-					          {% elsif page.published_date %} {{ page.published_date | date_to_string }}
-					          {% elsif page.added_date %} {{ page.added_date | date_to_string }}
-					          {% endif %} 
-				</p>
-				{% elsif page.category == 'media' or page.categories == "media" %}
-					{% if page.author %}
-						<p class="uk-article-meta uk-margin-left">
-						{% if page.published_date %}
-							by {{ page.author }} on {{ page.published_date | date_to_string }}
-						{% elsif page.added_date %}
-							by {{ page.author }} on {{ page.added_date | date_to_string }}
-						{% endif %}
-						</p>
-					{% endif %}
-				{% endif %}
+      <article class="uk-article" style="">
+        <h1 class="uk-h2" id="top">{{ page.title }}</h1>
+        {% if page.repo %}
+        <div data-uk-margin class="uk-margin-bottom">
+          <a href="{{ site.github }}/{{ page.repo }}" 
+             class="uk-button uk-button-success" type="button">
+            <i class="uk-icon-github uk-icon-justify"></i> github
+          </a>
+          <a href="{{ site.github }}/{{ page.repo }}/archive/master.tar.gz" 
+             class="uk-button uk-button-success" type="button" download>
+            <i class="uk-icon-download uk-icon-justify"></i> tar.gz
+          </a>
+          <a href="{{ site.github }}/{{ page.repo }}/archive/master.zip" 
+             class="uk-button uk-button-success" type="button" download>
+            <i class="uk-icon-download uk-icon-justify"></i> zip
+          </a>
+        </div>
+        {% endif %}
+        {% if page.category == 'blog' or page.categories == "blog" %}
+        <p class="uk-article-meta uk-margin-left">
+          posted on {% if page.date %} {{ page.date | date_to_string }}
+                    {% elsif page.published_date %} {{ page.published_date | date_to_string }}
+                    {% elsif page.added_date %} {{ page.added_date | date_to_string }}
+                    {% endif %} 
+        </p>
+        {% elsif page.category == 'media' or page.categories == "media" %}
+          {% if page.author %}
+            <p class="uk-article-meta uk-margin-left">
+            {% if page.published_date %}
+              by {{ page.author }} on {{ page.published_date | date_to_string }}
+            {% elsif page.added_date %}
+              by {{ page.author }} on {{ page.added_date | date_to_string }}
+            {% endif %}
+            </p>
+          {% endif %}
+        {% endif %}
 
-				{% unless page.code == false or page.code == nil %} 
-					{% if page.code == true %}
-					<button class="uk-button uk-button-success  
-				                  uk-margin-right uk-margin-bottom"
-					        type="button"
-							  data-uk-toggle="{ target: 'p, h3, h4, h5, h6',
-					                          animation: 'uk-animation-fade' }">
-						just code.
-					</button>
-					{% else %}
-					<button class="uk-button uk-button-success 
-				                  uk-margin-right uk-margin-bottom"
-					        type="button"
-					        data-uk-toggle="{ target: '#code, #content',
-					                          animation: 'uk-animation-fade' }">
-						just code.
-					</button>
-					<div class="uk-hidden" id="code">
-						{% for snippet in page.code %}
-						<div class="uk-panel uk-panel-box">
-							<div class="uk-panel-title uk-panel-header">{{ snippet.script }}</div>
-							<!-- hardcode a few languages because they cannot be 
-							     injected into liquid highlight tags as variables.
-							     leave the highlight tags on one line to avoid extra
-							     whitespaces. -->
-							{% if snippet.language == "bash" %} 
-								{% highlight bash %}{% include code/{{ snippet.script }} %}{% endhighlight %}
-							{% elsif snippet.language == "cpp" %} 
-								{% highlight cpp %}{% include code/{{ snippet.script }} %}{% endhighlight %}
-							{% elsif snippet.language == "python" %} 
-								{% highlight python %}{% include code/{{ snippet.script }} %}{% endhighlight %}
-							{% elsif snippet.language == "ruby" %} 
-								{% highlight ruby %}{% include code/{{ snippet.script }} %}{% endhighlight %}
-							{% else %} 
-								{% highlight bash %}{% include code/{{ snippet.script }} %}{% endhighlight %}
-							{% endif %}
-						</div>
-						{% unless snippet == page.code.last %}
-						<div class="uk-panel uk-panel-space"></div>
-						{% endunless %}
-						{% endfor %}
-					</div>
-					{% endif %}
-				{% endunless %}
+        {% unless page.code == false or page.code == nil %} 
+          {% if page.code == true %}
+          <button class="uk-button uk-button-success  
+                         uk-margin-right uk-margin-bottom"
+                  type="button"
+                data-uk-toggle="{ target: 'p, h3, h4, h5, h6',
+                                  animation: 'uk-animation-fade' }">
+            just code.
+          </button>
+          {% else %}
+          <button class="uk-button uk-button-success 
+                         uk-margin-right uk-margin-bottom"
+                  type="button"
+                  data-uk-toggle="{ target: '#code, #content',
+                                    animation: 'uk-animation-fade' }">
+            just code.
+          </button>
+          <div class="uk-hidden" id="code">
+            {% for snippet in page.code %}
+            <div class="uk-panel uk-panel-box">
+              <div class="uk-panel-title uk-panel-header">{{ snippet.script }}</div>
+              <!-- hardcode a few languages because they cannot be 
+                   injected into liquid highlight tags as variables.
+                   leave the highlight tags on one line to avoid extra
+                   whitespaces. -->
+              {% if snippet.language == "bash" %} 
+                {% highlight bash %}{% include code/{{ snippet.script }} %}{% endhighlight %}
+              {% elsif snippet.language == "cpp" %} 
+                {% highlight cpp %}{% include code/{{ snippet.script }} %}{% endhighlight %}
+              {% elsif snippet.language == "python" %} 
+                {% highlight python %}{% include code/{{ snippet.script }} %}{% endhighlight %}
+              {% elsif snippet.language == "ruby" %} 
+                {% highlight ruby %}{% include code/{{ snippet.script }} %}{% endhighlight %}
+              {% else %} 
+                {% highlight bash %}{% include code/{{ snippet.script }} %}{% endhighlight %}
+              {% endif %}
+            </div>
+            {% unless snippet == page.code.last %}
+            <div class="uk-panel uk-panel-space"></div>
+            {% endunless %}
+            {% endfor %}
+          </div>
+          {% endif %}
+        {% endunless %}
 
-				<div id="content">{{ content }}</div>
+        <div id="content">{{ content }}</div>
 
-			</article>
-			
-			{% if page.table_of_contents %}
-					</div>
+      </article>
+      
+      {% if page.table_of_contents %}
+          </div>
 
-					<div class="uk-hidden-small uk-width-medium-1-5 uk-pull-4-5">
-						<aside class="uk-panel uk-panel-box" data-uk-sticky="{top:70}">
-							<ul class="uk-nav uk-nav-side uk-nav-parent-icon" 
-							    data-uk-scrollspy-nav="{closest:'li', topoffset:-250}"
-							    data-uk-nav>
-								<li class="uk-nav-header">contents.</li>
-								<li class="uk-active">
-									<a href="#top" data-uk-smooth-scroll="{offset:65}">
-										<div class="uk-text-small uk-margin-small-left">
-											back to top.
-										</div>
-									</a>
-								</li>
-								{% for toc in page.table_of_contents %}
-									<li>
-										<a href="#{{ toc.item }}" 
-										   data-uk-smooth-scroll="{offset:65}">
-											{{ toc.item | replace: "_", " " | replace: "-", " " }}
-										</a>
-									</li>
-								{% endfor %}
-							</ul>
-						</aside>
-					</div>
+          <div class="uk-hidden-small uk-width-medium-1-5 uk-pull-4-5">
+            <aside class="uk-panel uk-panel-box" data-uk-sticky="{top:70}">
+              <ul class="uk-nav uk-nav-side uk-nav-parent-icon" 
+                  data-uk-scrollspy-nav="{closest:'li', topoffset:-250}"
+                  data-uk-nav>
+                <li class="uk-nav-header">contents.</li>
+                <li class="uk-active">
+                  <a href="#top" data-uk-smooth-scroll="{offset:65}">
+                    <div class="uk-text-small uk-margin-small-left">
+                      back to top.
+                    </div>
+                  </a>
+                </li>
+                {% for toc in page.table_of_contents %}
+                  <li>
+                    <a href="#{{ toc.item }}" 
+                       data-uk-smooth-scroll="{offset:65}">
+                      {{ toc.item | replace: "_", " " | replace: "-", " " }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </aside>
+          </div>
 
-				</div>
-			{% endif %}
-			
-			</div>
+        </div>
+      {% endif %}
+      
+      </div>
 
-		{% include share.html %}
-		
-		{% include footer.html %}
+    {% include share.html %}
+    
+    {% include footer.html %}
 
-		</div>
-	</body>
+    </div>
+  </body>
 
-	<script src="{{ site.js }}/jquery.min.js"></script>
-	<script src="{{ site.js }}/uikit.min.js"></script>
+  <script src="{{ site.js }}/jquery.min.js"></script>
+  <script src="{{ site.js }}/uikit.min.js"></script>
 
-	{{ page.js }}
+  {{ page.js }}
 
 </html>

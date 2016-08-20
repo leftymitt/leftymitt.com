@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr" itemscope itemtype="http://schema.org/WebPage">
 
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>{{ page.title }} | {{ site.title }}</title>
-		<meta name="description" content="{{ site.description }} {{ page.tag }}"/>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{{ site.description }} {{ page.tag }}"/>
 
-		<!-- schema.org markup for google+ -->
-		<meta itemprop="name" content="{{ page.title }}"/>
-		<meta itemprop="description" content="{{ site.description }} {{ page.tag }}"/>
-		<meta itemprop="image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+    <!-- schema.org markup for google+ -->
+    <meta itemprop="name" content="{{ page.title }}"/>
+    <meta itemprop="description" content="{{ site.description }} {{ page.tag }}"/>
+    <meta itemprop="image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
 
-		<!-- twitter card data -->
-		<meta name="twitter:card" content="summary"/>
-		<meta name="twitter:site" content="{{ site.twitter }}"/>
-		<meta name="twitter:title" content="{{ page.title }}"/>
-		<meta name="twitter:description" content="{{ site.description }} {{ page.tag }}"/>
-		<meta name="twitter:creator" content="{{ site.twitter }}"/>
-		<meta name="twitter:image:src" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+    <!-- twitter card data -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="{{ site.twitter }}"/>
+    <meta name="twitter:title" content="{{ page.title }}"/>
+    <meta name="twitter:description" content="{{ site.description }} {{ page.tag }}"/>
+    <meta name="twitter:creator" content="{{ site.twitter }}"/>
+    <meta name="twitter:image:src" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
 
-		<!-- open graph data -->
-		<meta property="og:title" content="{{ page.title }}"/>
-		<meta property="og:type" content="article"/>
-		<meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-		<meta property="og:image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
-		<meta property="og:description" content="{{ site.description }} {{ page.tag }}"/>
-		<meta property="og:site_name" content="{{ site.title }}"/>
-		<meta property="article:section" content="{{ page.category }}"/>
+    <!-- open graph data -->
+    <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+    <meta property="og:image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+    <meta property="og:description" content="{{ site.description }} {{ page.tag }}"/>
+    <meta property="og:site_name" content="{{ site.title }}"/>
+    <meta property="article:section" content="{{ page.category }}"/>
 
-		<link rel="stylesheet" href="{{ site.css }}/uikit.min.css"/>
+    <link rel="stylesheet" href="{{ site.css }}/uikit.min.css"/>
 
-		{{ page.css }}
+    {{ page.css }}
 
-		<link rel="apple-touch-icon" href="{{ site.images }}/apple-touch-icon.png"/>
-		<link rel="icon" href="{{ site.images }}/favicon.ico"/>
-	</head>
+    <link rel="apple-touch-icon" href="{{ site.images }}/apple-touch-icon.png"/>
+    <link rel="icon" href="{{ site.images }}/favicon.ico"/>
+  </head>
 
-	<body>
-		<div class="uk-flex uk-flex-column" style="min-height:100vh;">
-	
-			<!-- add padding to botton equal to navbar height -->
-			<div style="padding-bottom:40px;">
-			{% include nav.html %}
-			</div>
+  <body>
+    <div class="uk-flex uk-flex-column" style="min-height:100vh;">
+  
+      <!-- add padding to botton equal to navbar height -->
+      <div style="padding-bottom:40px;">
+      {% include nav.html %}
+      </div>
 
-			<div class="uk-margin-top uk-flex-item-1" style="">
-			{{ content }}
-			</div>
-		
-			{% include footer.html %}
+      <div class="uk-margin-top uk-flex-item-1" style="">
+      {{ content }}
+      </div>
+    
+      {% include footer.html %}
 
-		</div>
-	</body>
+    </div>
+  </body>
 
-	<script src="{{ site.js }}/jquery.min.js"></script>
-	<script src="{{ site.js }}/uikit.min.js"></script>
+  <script src="{{ site.js }}/jquery.min.js"></script>
+  <script src="{{ site.js }}/uikit.min.js"></script>
 
-	{{ page.js }}
+  {{ page.js }}
 
 </html>

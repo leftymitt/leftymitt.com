@@ -6,6 +6,7 @@
 
 CURDIR=${PWD}
 KVMDIR=${HOME}/.kvm
+WHONIX_VERSION=13.0.0.1.1
 
 cd ${KVMDIR}
 
@@ -22,7 +23,10 @@ virsh -c qemu:///system net-destroy Whonix
 virsh -c qemu:///system net-undefine Whonix
 
 # delete vm images. 
-rm Whonix-Gateway.qcow2
-rm Whonix-Workstation.qcow2
+rm -f Whonix-Gateway.qcow2
+rm -f Whonix-Workstation.qcow2
+rm -f Whonix_network-${WHONIX_VERSION}.xml
+rm -f Whonix-Gateway-${WHONIX_VERSION}.xml
+rm -f Whonix-Workstation-${WHONIX_VERSION}.xml
 
 cd ${CURDIR}

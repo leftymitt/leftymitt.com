@@ -5,6 +5,7 @@ set -eu
 ################################################################################
 # install whonix on kvm in arch linux.
 ################################################################################
+
 CURDIR=${PWD}
 KVMDIR=${HOME}/.kvm
 WHONIX_VERSION=13.0.0.1.1
@@ -14,6 +15,7 @@ PATRICK_FINGERPRINT="916B 8D99 C38E AF5E 8ADC  7A2A 8D66 066A 2EEA CCDA"
 
 mkdir -p ${KVMDIR}
 cd ${KVMDIR}
+
 
 ################################################################################
 # download, verify, and extract whonix files. 
@@ -29,7 +31,7 @@ torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
 torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
   https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc
 torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-  https://${DOMAIN_NAME}/download/patrick.asc
+  https://${DOMAIN_NAME}/patrick.asc
 
 # download patrick's gpg key and check the fingerprint.
 FINGERPRINT=$(gpg --with-fingerprint patrick.asc | \
@@ -46,11 +48,15 @@ else
 fi
 
 # verify the images.
-gpg --verify Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
-gpg --verify Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
+gpg --verify Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc \
+   Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
+gpg --verify Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc \
+   Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
 
 # extract.
+echo "extracting whonix gateway."
 tar xf Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
+echo "extracting whonix workstation."
 tar xf Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
 
 # rename vm images. 
@@ -60,6 +66,7 @@ mv Whonix-Workstation-${WHONIX_VERSION}.qcow2 Whonix-Workstation.qcow2
 # change vm image location in xml rules. 
 sed -i "s|\/var\/lib\/libvirt\/images|${PWD}|g" Whonix-Gateway-${WHONIX_VERSION}.xml
 sed -i "s|\/var\/lib\/libvirt\/images|${PWD}|g" Whonix-Workstation-${WHONIX_VERSION}.xml 
+
 
 ################################################################################
 # set up virtual machines. 
@@ -74,12 +81,23 @@ IS_AUTOSTART=$(virsh -c qemu:///system net-info default | grep "Autostart" | \
 [ "${IS_ACTIVE}" = "no" ] && virsh -c qemu:///system net-start default
 [ "${IS_AUTOSTART}" = "no" ] && virsh -c qemu:///system net-autostart default
 
+# disable acceleration in xml file (need to revisit this).
+sed -i "s/<acceleration accel3d/<\!--<acceleration accel3d/" \
+   Whonix-Workstation-${WHONIX_VERSION}.xml
+sed -i "s/ accel2d='yes'\/>/ accel2d='yes'\/>-->/" \
+   Whonix-Workstation-${WHONIX_VERSION}.xml
+sed -i "s/<acceleration accel3d/<\!--<acceleration accel3d/" \
+   Whonix-Gateway-${WHONIX_VERSION}.xml
+sed -i "s/ accel2d='yes'\/>/ accel2d='yes'\/>-->/" \
+   Whonix-Gateway-${WHONIX_VERSION}.xml
+
 # define vms and network rules. 
 virsh -c qemu:///system define Whonix-Gateway-${WHONIX_VERSION}.xml
 virsh -c qemu:///system net-define Whonix_network-${WHONIX_VERSION}.xml
 virsh -c qemu:///system net-autostart Whonix
 virsh -c qemu:///system net-start Whonix
 virsh -c qemu:///system define Whonix-Workstation-${WHONIX_VERSION}.xml
+
 
 ################################################################################
 # cleanup and exit. 

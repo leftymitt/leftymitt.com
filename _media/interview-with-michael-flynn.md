@@ -17,8 +17,8 @@ link: "https://www.youtube.com/watch?v=SG3j8OYKgn4"
 ---
 
 <div class="uk-cover uk-text-center">
-	<iframe width="560" height="315" 
-			  src="{{ page.iframe_link }}?showinfo=0&wmode=transparent&modestbranding=1&rel=0" 
-			  frameborder="0" allowfullscreen>
-	</iframe>
+  <iframe width="560" height="315" 
+        src="{{ page.iframe_link }}?showinfo=0&wmode=transparent&modestbranding=1&rel=0" 
+        frameborder="0" allowfullscreen>
+  </iframe>
 </div>

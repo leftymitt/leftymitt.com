@@ -15,8 +15,8 @@ rating: "5"
 ---
 
 <div class="uk-text-center uk-cover">
-	<iframe width="560" height="315" 
-			  src="{{ page.iframe_link }}?showinfo=0&wmode=transparent&modestbranding=1&rel=0" 
-			  frameborder="0" allowfullscreen>
-	</iframe>
+  <iframe width="560" height="315" 
+          src="{{ page.iframe_link }}?showinfo=0&wmode=transparent&modestbranding=1&rel=0" 
+          frameborder="0" allowfullscreen>
+  </iframe>
 </div>

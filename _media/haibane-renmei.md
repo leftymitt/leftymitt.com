@@ -14,4 +14,6 @@ rating: "5"
 link: "https://en.wikipedia.org/wiki/Haibane_Renmei"
 ---
 
-The story follows Rakka, a newly hatched Haibane (a being resembling an angel), and other characters in the city of Glie , a walled town with a single gate through which only a mysterious group, the Toga, are allowed to enter or exit.
+The story follows Rakka, a newly hatched Haibane (a being resembling an angel),
+and other characters in the city of Glie , a walled town with a single gate
+through which only a mysterious group, the Toga, are allowed to enter or exit.

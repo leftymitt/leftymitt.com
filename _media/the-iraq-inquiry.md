@@ -15,5 +15,9 @@ icon: iraq-inquiry.png
 link: "http://www.iraqinquiry.org.uk/the-report/"
 ---
 
-In 2003, for the first time since the Second World War, the United Kingdom took 
-part in an invasion and full-scale occupation of a sovereign State. That was a decision of the utmost gravity. Saddam Hussein was undoubtedly a brutal dictator who had attacked Iraq’s neighbours, repressed and killed many of his own people, and was in violation of obligations imposed by the UN Security Council. 
+In 2003, for the first time since the Second World War, the United Kingdom took
+part in an invasion and full-scale occupation of a sovereign State. That was a
+decision of the utmost gravity. Saddam Hussein was undoubtedly a brutal
+dictator who had attacked Iraq’s neighbours, repressed and killed many of his
+own people, and was in violation of obligations imposed by the UN Security
+Council. 

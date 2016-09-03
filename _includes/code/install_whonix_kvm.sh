@@ -6,6 +6,10 @@ set -eu
 # install whonix on kvm in arch linux.
 ################################################################################
 
+################################################################################
+# define global variables.
+################################################################################
+
 CURDIR=${PWD}
 KVMDIR=${HOME}/.kvm
 WHONIX_VERSION=13.0.0.1.1
@@ -13,13 +17,13 @@ DOMAIN_NAME="www.whonix.org"
 IP_ADDR=`tor-resolve ${DOMAIN_NAME}`
 PATRICK_FINGERPRINT="916B 8D99 C38E AF5E 8ADC  7A2A 8D66 066A 2EEA CCDA"
 
-mkdir -p ${KVMDIR}
-cd ${KVMDIR}
-
 
 ################################################################################
 # download, verify, and extract whonix files. 
 ################################################################################
+
+mkdir -p ${KVMDIR}
+cd ${KVMDIR}
 
 # download the compressed files via tor. 
 torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \

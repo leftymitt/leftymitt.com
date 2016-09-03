@@ -4,8 +4,10 @@
 # install dependencies for whonix and kvm.
 ################################################################################
 
-sudo pacman -S libvirt qemu virt-manager dnsmasq ebtables bridge-utils
+sudo pacman -S \
+  libvirt qemu virt-manager dnsmasq ebtables bridge-utils tor torsocks
 
+sudo systemctl enable tor.service
 sudo systemctl enable libvirtd.service
 sudo usermod -aG kvm,libvirt $(whoami)
 

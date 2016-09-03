@@ -1,4 +1,5 @@
 #! /bin/bash
+set -eu
 
 ################################################################################
 # install dependencies for whonix and kvm.

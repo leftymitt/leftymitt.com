@@ -1,4 +1,5 @@
 #! /bin/bash
+set -eu
 
 ################################################################################
 # uninstall kvm images. assumes kvm images are in ~/.kvm directory.
@@ -11,8 +12,12 @@ WHONIX_VERSION=13.0.0.1.1
 cd ${KVMDIR}
 
 # make sure kvm is shut down.
-virsh -c qemu:///system destroy Whonix-Gateway
-virsh -c qemu:///system destroy Whonix-Workstation
+if ! [ "$(virsh list --all | grep running | grep Gateway)" = "" ]; then
+  virsh -c qemu:///system destroy Whonix-Gateway
+fi
+if ! [ "$(virsh list --all | grep running | grep Workstation)" = "" ]; then
+  virsh -c qemu:///system destroy Whonix-Workstation
+fi
 
 # remove vm settings.
 virsh -c qemu:///system undefine Whonix-Gateway

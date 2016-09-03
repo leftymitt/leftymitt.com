@@ -1,8 +1,10 @@
 #! /bin/bash
+set -eu
 
 ################################################################################
 # prompt for info.
 ################################################################################
+
 lsblk
 echo "which device? (e.g., sda, sdb, sdc, etc.)"
 read DEVICE
@@ -13,10 +15,13 @@ if [[ ! $REPLY =~ ^([Yy]$|[Yy]es) ]]; then
   exit 1
 fi
 
+
 ################################################################################
 # connect to internet (automatic for wired connections).
 ################################################################################
+
 wifi-menu -o wlp2s0 # wireless only
+
 
 ################################################################################
 # detect devices and configure storage options.
@@ -39,6 +44,7 @@ lvcreate -l +100%FREE vg -n home
 mkswap -L swap /dev/mapper/vg-swap
 mkfs.ext4 /dev/mapper/vg-root
 mkfs.ext4 /dev/mapper/vg-home
+
 
 ################################################################################
 # mount logical volumes and bootstrap base and base-devel packages. 

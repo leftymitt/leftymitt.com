@@ -20,7 +20,7 @@ fi
 
 # generate keyfile and prevent non-root from reading it. 
 dd bs=512 count=4 if=/dev/urandom of=/etc/crypto_keyfile.bin
-chmod 600 /etc/crypto_keyfile.bin
+chmod 400 /etc/crypto_keyfile.bin
 cryptsetup luksAddKey /dev/${DEVICE}1 /etc/crypto_keyfile.bin
 
 # add key to /etc/mkinitcpio.conf

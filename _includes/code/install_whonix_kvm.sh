@@ -25,15 +25,20 @@ mkdir -p ${KVMDIR}
 cd ${KVMDIR}
 
 # download the compressed files via tor. 
-torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
+torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} -C - -o \
+  Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz \
   https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
-torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
+torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} -C - -o \
+  Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz \
   https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
-torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
+torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} -C - -o \
+  Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc \
   https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc
-torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
+torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} -C - -o \
+  Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc \
   https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc
-torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
+torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} -C - -o \
+  patrick.asc \
   https://${DOMAIN_NAME}/patrick.asc
 
 # download patrick's gpg key and check the fingerprint.

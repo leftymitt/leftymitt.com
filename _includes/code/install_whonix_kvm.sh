@@ -12,7 +12,7 @@ set -eu
 CURDIR=${PWD}
 KVMDIR=${HOME}/.kvm
 WHONIX_VERSION=13.0.0.1.1
-DOMAIN_NAME="www.whonix.org"
+DOMAIN_NAME="whonix.org"
 IP_ADDR=`tor-resolve ${DOMAIN_NAME}`
 PATRICK_FINGERPRINT="916B 8D99 C38E AF5E 8ADC  7A2A 8D66 066A 2EEA CCDA"
 
@@ -25,23 +25,27 @@ mkdir -p ${KVMDIR}
 cd ${KVMDIR}
 
 # download the compressed files via tor. 
-torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} -C - -o \
-  Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz \
-  https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
-torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} -C - -o \
-  Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz \
-  https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
-torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} -C - -o \
-  Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc \
-  https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc
-torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} -C - -o \
-  Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc \
-  https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc
-torify curl -O --resolve ${DOMAIN_NAME}:443:${IP_ADDR} -C - -o \
-  patrick.asc \
-  https://${DOMAIN_NAME}/patrick.asc
+GATEWAY=Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
+WORKSTATION=Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
+GATEWAY_URL=https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/${GATEWAY}
+WORKSTATION_URL=https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/${WORKSTATION}
+
+torify curl ${GATEWAY_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
+   -C - -o ${GATEWAY}
+torify curl ${GATEWAY_URL}.asc --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
+   -C - -o ${GATEWAY}
+torify curl ${WORKSTATION_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
+   -C - -o ${WORKSTATION}.asc
+torify curl ${WORKSTATION_URL}.asc --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
+   -C - -o ${WORKSTATION}.asc
 
 # download patrick's gpg key and check the fingerprint.
+KEY=patrick.asc
+KEY_URL=https://${DOMAIN_NAME}/{$KEY}
+
+torify curl --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
+  -C - -o patrick.asc 
+
 FINGERPRINT=$(gpg --with-fingerprint patrick.asc | \
   sed -n "s/^\s*\([A-Z0-9\ ]*\)$/\1/p")
 

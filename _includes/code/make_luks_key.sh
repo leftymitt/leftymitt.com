@@ -4,6 +4,7 @@ set -eu
 ################################################################################
 # prompt for info.
 ################################################################################
+
 lsblk
 echo "which device? (e.g., sda, sdb, sdc, etc.)"
 read DEVICE
@@ -13,6 +14,7 @@ if [[ ! $REPLY =~ ^([Yy]$|[Yy]es) ]]; then
   echo "stopping script..."
   exit 1
 fi
+
 
 ################################################################################
 # (optional) create a binary luks key to store in the initial ramdisk. 
@@ -31,7 +33,7 @@ mkinitcpio -p linux
 
 # add key to grub config file
 CRYPTO_KEY="cryptkey=rootfs:/etc/crypto_keyfile.bin"
-CUR_GRUB_CMDLINE_LINUX=$(grep "GRUB_CMDLINE_LINUX=" grub)
+CUR_GRUB_CMDLINE_LINUX=$(grep "^GRUB_CMDLINE_LINUX=" /etc/default/grub)
 NEW_GRUB_CMDLINE_LINUX=$(echo $CUR_GRUB_CMDLINE_LINUX | cut -d \" -f2)
 NEW_GRUB_CMDLINE_LINUX="GRUB_CMDLINE_LINUX=$NEW_GRUB_CMDLINE_LINUX $CRYPTO_KEY"
 sed -i "s/$CUR_GRUB_CMDLINE_LINUX/$NEW_GRUB_CMDLINE_LINUX/g" /etc/default/grub

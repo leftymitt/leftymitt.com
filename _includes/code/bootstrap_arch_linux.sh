@@ -17,10 +17,22 @@ fi
 
 
 ################################################################################
-# connect to internet (automatic for wired connections).
+# connect to internet (usually automatic for wired connections).
 ################################################################################
 
-wifi-menu -o wlp2s0 # wireless only
+# for a wireless connections
+wifi-menu -o $(iw dev | sed -n "s/^\s*Interface \(.*\)$/\1/p")
+
+# for non-broadcasting wireless networks, wifi-menu will fail. manually define
+# the netork via netctl. see examples available in /etc/netcl. once definined
+# network <my_network> is in /etc/netctl, run: 
+# 
+#   netctl start <my_network>
+#
+# to automatically connect from now on, also run: 
+#
+#   netctl enable <my_network>
+#   systemctl enable netctl@<my_network>.service
 
 
 ################################################################################
@@ -59,7 +71,18 @@ mount /dev/mapper/vg-home /mnt/home
 pacstrap -i /mnt base base-devel
 
 # generate filesystem table
-genfstab -U /mnt > /mnt/etc/fstab
+genfstab -U /mnt >> /mnt/etc/fstab
 
 # chroot
 arch-chroot /mnt /bin/bash
+
+# run content in arch_chroot_script.sh within the chroot
+
+################################################################################
+# return from chroot, clean up, and reboot. 
+################################################################################
+
+umount -R /mnt
+
+# remove the live image when rebooting
+reboot

@@ -149,31 +149,27 @@
           {% endif %}
         {% endif %}
 
-        {% unless page.code == false or page.code == nil %} 
-          {% if page.code == true %}
-          <button class="uk-button uk-button-success  
-                         uk-margin-right uk-margin-bottom"
-                  type="button"
-                data-uk-toggle="{ target: 'p, h3, h4, h5, h6',
+        {% if page.code == true or page.code %}
+        <button class="uk-button uk-button-success 
+                       uk-margin-right uk-margin-bottom"
+                type="button"
+                data-uk-toggle="{ target: '#code, #content',
                                   animation: 'uk-animation-fade' }">
-            just code.
-          </button>
-          {% else %}
-          <button class="uk-button uk-button-success 
-                         uk-margin-right uk-margin-bottom"
-                  type="button"
-                  data-uk-toggle="{ target: '#code, #content',
-                                    animation: 'uk-animation-fade' }">
-            just code.
-          </button>
-          <div class="uk-hidden" id="code">
-            {% for snippet in page.code %}
-            <div class="uk-panel uk-panel-box">
-              <div class="uk-panel-title uk-panel-header">{{ snippet.script }}</div>
-              <!-- hardcode a few languages because they cannot be 
-                   injected into liquid highlight tags as variables.
-                   leave the highlight tags on one line to avoid extra
-                   whitespaces. -->
+          just code.
+        </button>
+        <div class="uk-hidden" id="code">
+          {% for snippet in page.code %}
+          <div class="uk-panel uk-panel-box">
+            <div class="uk-panel-title uk-panel-header">
+              {{ snippet.script }}
+              <button onClick="download('{{ snippet.script }}')"
+                 class="uk-button uk-button-danger uk-float-right">
+                <i class="uk-icon-download"></i>
+              </button>
+            </div>
+            <!-- hardcode a few languages because they cannot be injected into 
+                 liquid highlight tags as variables. leave the highlight tags 
+                 on one line to avoid extra whitespaces. -->
               {% if snippet.language == "bash" %} 
                 {% highlight bash %}{% include code/{{ snippet.script }} %}{% endhighlight %}
               {% elsif snippet.language == "cpp" %} 
@@ -185,14 +181,18 @@
               {% else %} 
                 {% highlight bash %}{% include code/{{ snippet.script }} %}{% endhighlight %}
               {% endif %}
-            </div>
-            {% unless snippet == page.code.last %}
-            <div class="uk-panel uk-panel-space"></div>
-            {% endunless %}
-            {% endfor %}
+
+            <!-- formatting looks strange to avoid adding whitespaces to the 
+                 generated text files. -->
+            <div id="{{ snippet.script }}" 
+                 class="uk-hidden">{% include code/{{ snippet.script }} %}</div>
           </div>
-          {% endif %}
-        {% endunless %}
+          {% unless snippet == page.code.last %}
+          <div class="uk-panel uk-panel-space"></div>
+          {% endunless %}
+          {% endfor %}
+        </div>
+        {% endif %}
 
         <div id="content">{{ content }}</div>
 
@@ -240,6 +240,18 @@
 
   <script src="{{ site.js }}/jquery.min.js"></script>
   <script src="{{ site.js }}/uikit.min.js"></script>
+  {% if page.code == true or page.code %}
+  <script type="text/javascript">
+    function download(name){
+      var a = document.body.appendChild(
+        document.createElement("a")
+      );
+      a.download = name;
+      a.href = "data:text/plain," + encodeURIComponent(document.getElementById(name).innerText);
+      a.click();
+    }
+  </script>
+  {% endif %}
 
   {{ page.js }}
 

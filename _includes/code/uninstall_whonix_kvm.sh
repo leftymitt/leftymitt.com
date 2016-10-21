@@ -6,10 +6,10 @@ set -eu
 ################################################################################
 
 CURDIR=${PWD}
-KVMDIR=${HOME}/.kvm
+LIBVIRT_DIR=${HOME}/.local/libvirt/images
 WHONIX_VERSION=13.0.0.1.1
 
-cd ${KVMDIR}
+cd ${LIBVIRT_DIR}
 
 # make sure kvm is shut down.
 if ! [ "$(virsh list --all | grep running | grep Gateway)" = "" ]; then

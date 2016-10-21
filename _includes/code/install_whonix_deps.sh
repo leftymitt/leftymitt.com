@@ -12,8 +12,8 @@ sudo systemctl enable tor.service
 sudo systemctl enable libvirtd.service
 sudo usermod -aG kvm,libvirt $(whoami)
 
-# set qemu user to `whoami` instead of nobody.
-sudo sed -i "s/#user = \"root\"/user = \"`whoami`\"/g" /etc/libvirt/qemu.conf
+# enable dynamic file permissions. 
+sudo sed -i "s/#dynamic_ownership = 1/dynamic_ownership = 1/" /etc/libvirt/qemu.conf
 
 # reboot here.
 echo "reboot your computer now."

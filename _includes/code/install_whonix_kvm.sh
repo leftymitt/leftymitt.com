@@ -10,7 +10,7 @@ set -eu
 ################################################################################
 
 CURDIR=${PWD}
-KVMDIR=${HOME}/.kvm
+LIBVIRT_DIR=${HOME}/.local/libvirt/images
 WHONIX_VERSION=13.0.0.1.1
 DOMAIN_NAME="whonix.org"
 IP_ADDR=`tor-resolve ${DOMAIN_NAME}`
@@ -18,11 +18,15 @@ PATRICK_FINGERPRINT="916B 8D99 C38E AF5E 8ADC  7A2A 8D66 066A 2EEA CCDA"
 
 
 ################################################################################
-# download, verify, and extract whonix files. 
+# (optional) define local storage pool at .local/libvirt/images.
 ################################################################################
 
-mkdir -p ${KVMDIR}
-cd ${KVMDIR}
+mkdir -p ${LIBVIRT_DIR}
+cd ${LIBVIRT_DIR}
+
+################################################################################
+# download, verify, and extract whonix files. 
+################################################################################
 
 # download the compressed files via tor. 
 GATEWAY=Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
@@ -93,7 +97,7 @@ IS_AUTOSTART=$(virsh -c qemu:///system net-info default | grep "Autostart" | \
 [ "${IS_ACTIVE}" = "no" ] && virsh -c qemu:///system net-start default
 [ "${IS_AUTOSTART}" = "no" ] && virsh -c qemu:///system net-autostart default
 
-# disable acceleration in xml file (need to revisit this).
+# commend out acceleration lines in the xml files. they are not supported. 
 sed -i "s/<acceleration accel3d/<\!--<acceleration accel3d/" \
    Whonix-Workstation-${WHONIX_VERSION}.xml
 sed -i "s/ accel2d='yes'\/>/ accel2d='yes'\/>-->/" \

@@ -24,8 +24,8 @@ tag: "thoughts to poke you laughingly, all with love and irony."
         {% endif %}
       </div>
       <div>
-        <h3 class="uk-h3"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <div class="uk-article-meta uk-margin-left">posted on {{ post.date | date_to_string }}</div>
+        <h3 class="uk-h3"><a href="{{ post.url }}">{{ post.title | downcase }}</a></h3>
+        <div class="uk-article-meta uk-margin-left">posted on {{ post.date | date_to_string | downcase }}</div>
       </div>
     </div>
     <p class="uk-article">{{ post.excerpt | strip_html | truncatewords:100 }}</p>

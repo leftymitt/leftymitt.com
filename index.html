@@ -248,9 +248,9 @@ tag: "from me to you eternally, with lots of love and irony."
           {{ item.title | downcase }}
         </div>
         {% if item.author %}
-        <div class="uk-text-muted uk-margin-small-left">by {{ item.author }}
-          {% if item.published_date %} on {{ item.published_date | date_to_string }}
-          {% elsif item.added_date %} on {{ item.added_date | date_to_string }}
+        <div class="uk-text-muted uk-margin-small-left">by {{ item.author | downcase }}
+          {% if item.published_date %} on {{ item.published_date | date_to_string | downcase}}
+          {% elsif item.added_date %} on {{ item.added_date | date_to_string | downcase }}
           {% endif %} 
         </div>
         {% endif %}
@@ -310,9 +310,9 @@ tag: "from me to you eternally, with lots of love and irony."
         {% endif %}
       </div>
       <div>
-        <h3 class="uk-h3"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <h3 class="uk-h3"><a href="{{ post.url }}">{{ post.title | downcase}}</a></h3>
         <div class="uk-article-meta uk-margin-left">
-          posted on {{ post.date | date_to_string }}
+          posted on {{ post.date | date_to_string | downcase }}
         </div>
       </div>
     </div>

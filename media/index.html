@@ -46,11 +46,11 @@ css: "
 <div class="uk-container uk-container-center">
   
   <ul id="filter" class="uk-subnav uk-subnav-pill uk-flex uk-flex-center">
-    <li class="uk-active" data-uk-filter=""><a href="#">All</a></li>
+    <li class="uk-active" data-uk-filter=""><a href="#">all</a></li>
     {% assign sorted_types = site.data.meta.media | sort: 'name' %}
     {% for type in sorted_types %}
     <li data-uk-filter="{{ type.name }}">
-      <a href="#" class="lm-{{ type.color }}">{{ type.name | capitalize }}</a>
+      <a href="#" class="lm-{{ type.color }}">{{ type.name }}</a>
     </li>
     {% endfor %}
   </ul>
@@ -174,9 +174,9 @@ css: "
           {{ item.title | downcase }}
         </div>
         {% if item.author %}
-        <div class="uk-text-muted uk-margin-small-left">by {{ item.author }}
-          {% if item.published_date %} on {{ item.published_date | date_to_string }}
-          {% elsif item.added_date %} on {{ item.added_date | date_to_string }}
+        <div class="uk-text-muted uk-margin-small-left">by {{ item.author | downcase }}
+          {% if item.published_date %} on {{ item.published_date | date_to_string | downcase }}
+          {% elsif item.added_date %} on {{ item.added_date | date_to_string | downcase }}
           {% endif %} 
         </div>
         {% endif %}

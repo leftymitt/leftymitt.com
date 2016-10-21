@@ -3,7 +3,7 @@
   <div class="uk-container uk-container-center">
     <div class="uk-hidden-small uk-margin-top">
       <div class="uk-contrast uk-align-left">
-        rebuilt on {{ site.time | date_to_string }}<br>
+        rebuilt on {{ site.time | date_to_string | downcase }}<br>
         tips: <a href="bitcoin:{{ site.bitcoin.address }}?amount=.05">
             {{ site.bitcoin.address }}
           </a>

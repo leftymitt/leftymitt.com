@@ -53,6 +53,8 @@ task :new do
         file.puts ""
         file.puts "added_date: \"#{@post_date}\""
         file.puts "published_date: "
+        file.puts "publisher: "
+        file.puts ""
         file.puts "icon: "
         file.puts "img: "
         file.puts "cover: "

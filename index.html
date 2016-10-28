@@ -258,6 +258,18 @@ tag: "from me to you eternally, with lots of love and irony."
           {% if item.cover %}
           <img class="uk-thumbnail-expand" alt="{{ item.title | downcase }} cover"
                src="{{ site.images }}/{{ item.cover }}">
+          {% elsif item.publisher %}
+            {% for publisher in publishers %} 
+              {% if item.publisher == publisher.name %}
+          <img style="max-width:10%" alt="{{ publisher.name }} logo"
+               class="uk-float-left uk-margin-small-bottom uk-margin-right" 
+               src="{{ site.images }}/{{ publisher.icon }}">
+              {% else %} {% for altname in publisher.alt %} {% if item.publisher == altname %}
+          <img style="max-width:10%" alt="{{ publisher.name }} logo"
+               class="uk-float-left uk-margin-small-bottom uk-margin-right" 
+               src="{{ site.images }}/{{ publisher.icon }}">
+              {% endif %} {% endfor %} {% endif %}
+            {% endfor %}
           {% elsif item.icon %}
           <img style="max-width:10%" alt="source logo"
                class="uk-float-left uk-margin-small-bottom uk-margin-right" 

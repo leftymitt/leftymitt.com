@@ -1,0 +1,168 @@
+publishers: 
+ - name: me
+   alt: ['']
+   icon: face.svg
+
+ - name: al-jazeera
+   alt: ['aljazeera', 'al jazeera']
+   icon: al-jazeera.svg
+
+ - name: american physical society
+   alt: ['aps']
+   icon: aps.svg
+
+ - name: archlinux
+   alt: ['arch linux']
+   icon: arch-linux-logo.svg
+
+ - name: bbc
+   alt: ['']
+   icon: bbc.svg
+
+ - name: bitcoin
+   alt: ['']
+   icon: bitcoin-logo.svg
+
+ - name: cambridge-university-press
+   alt: ['cup']
+   icon: cambridge-university-press.svg
+
+ - name: congressional-research-service
+   alt: ['crs']
+   icon: congressional-research-service.svg
+
+ - name: consortium news
+   alt: ['consortiumnews']
+   icon: consortiumnews.png
+
+ - name: counterpunch
+   alt: ['counter punch']
+   icon: counterpunch.pnpg
+
+ - name: daily mail
+   alt: ['dailymail']
+   icon: daily-mail-logo.png
+
+ - name: debian
+   alt: ['']
+   icon: debian-logo.svg
+
+ - name: der spiegel
+   alt: ['derspiegel']
+   icon: der-spiegel.svg
+
+ - name: drexel university
+   alt: ['drexel']
+   icon: drexel.svg
+
+ - name: dropbox
+   alt: ['']
+   icon: dropbox-logo.svg
+
+ - name: greenpeace
+   alt: ['green peace']
+   icon: greenpeace.svg
+
+ - name: house permanent select committee on intelligence
+   alt: ['hpsci']
+   icon: hpsci.jpg
+
+ - name: ibtimes
+   alt: ['']
+   icon: ibtimes.svg
+
+ - name: international consortium of investigative journalists
+   alt: ['icij']
+   icon: icij.png
+
+ - name: international monetary fund
+   alt: ['imf']
+   icon: imf.svg
+
+ - name: insurge intelligence
+   alt: ['']
+   icon: insurge-intelligence.png
+
+ - name: legal information institute
+   alt: ['lii']
+   icon: lii.png
+
+ - name: london review of books
+   alt: ['lrb']
+   icon: lrb.png
+
+ - name: medium
+   alt: ['']
+   icon: medium.svg
+
+ - name: motherjones
+   alt: ['mother jones']
+   icon: motherjones.jpg
+
+ - name: new york times
+   alt: ['nytimes']
+   icon: nytimes.svg
+
+ - name: office of the inspector general for the secretary of defense
+   alt: ['oigsd', 'ogi-sd']
+   icon: oigsd.svg
+
+ - name: pnas
+   alt: ['proceedings of the natural academy of sciences']
+   icon: pnas.svg
+
+ - name: white house
+   alt: ['potus', 'president']
+   icon: potus-seal.svg
+
+ - name: qubes
+   alt: ['']
+   icon: qubes-logo.svg
+
+ - name: the atlantic
+   alt: ['atlantic']
+   icon: the-atlantic.png
+
+ - name: the guardian
+   alt: ['guardian']
+   icon: the-guardian.svg
+
+ - name: the hague
+   alt: ['hague']
+   icon: the-hague.svg
+
+ - name: the intercept
+   alt: ['intercept']
+   icon: the-intercept.png
+
+ - name: tomdispatch
+   alt: ['tom dispatch']
+   icon: tomdispatch.svg
+
+ - name: truthout
+   alt: ['truth out', 'truth-out']
+   icon: truthout.jpg
+
+ - name: united nations
+   alt: ['un', 'the un']
+   icon: united-nations-emblem.svg
+
+ - name: the washington post
+   alt: ['washington post']
+   icon: washington-post.svg
+
+ - name: watson institute
+   alt: ['']
+   icon: watson-institute.png
+
+ - name: wikileaks
+   alt: ['']
+   icon: wikileaks-logo.svg
+
+ - name: wikipedia
+   alt: ['']
+   icon: wikipedia.svg
+
+ - name: world socialist web site
+   alt: ['wsws']
+   icon: wsws.svg

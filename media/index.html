@@ -40,11 +40,13 @@ css: "
 "
 --- 
 
+{% assign sorted_types = site.data.meta.media | sort: 'name' %}
+{% assign publishers = site.data.publishers.publishers %}
+
 <div class="uk-container uk-container-center">
   
   <ul id="filter" class="uk-subnav uk-subnav-pill uk-flex uk-flex-center">
     <li class="uk-active" data-uk-filter=""><a href="#">all</a></li>
-    {% assign sorted_types = site.data.meta.media | sort: 'name' %}
     {% for type in sorted_types %}
     <li data-uk-filter="{{ type.name }}">
       <a href="#" class="lm-{{ type.color }}">{{ type.name }}</a>
@@ -182,6 +184,18 @@ css: "
           <img class="uk-thumbnail-expand" 
                alt="{{ item.title | downcase }} cover"
                src="{{ site.images }}/{{ item.cover }}">
+          {% elsif item.publisher %}
+            {% for publisher in publishers %} 
+              {% if item.publisher == publisher.name %}
+          <img style="max-width:10%" alt="{{ publisher.name }} logo"
+               class="uk-float-left uk-margin-small-bottom uk-margin-right" 
+               src="{{ site.images }}/{{ publisher.icon }}">
+              {% else %} {% for altname in publisher.alt %} {% if item.publisher == altname %}
+          <img style="max-width:10%" alt="{{ publisher.name }} logo"
+               class="uk-float-left uk-margin-small-bottom uk-margin-right" 
+               src="{{ site.images }}/{{ publisher.icon }}">
+              {% endif %} {% endfor %} {% endif %}
+            {% endfor %}
           {% elsif item.icon %}
           <img style="max-width:10%" alt="source logo"
                class="uk-float-left uk-margin-small-bottom uk-margin-right" 

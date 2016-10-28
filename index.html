@@ -151,6 +151,8 @@ tag: "from me to you eternally, with lots of love and irony."
   <div class="uk-grid" data-uk-grid="{gutter:15, animation:false}"> 
   
   {% assign sorted_media = site.media | sort: 'added_date' | reverse %}
+  {% assign publishers = site.data.publishers.publishers %}
+
   {% for item in sorted_media limit:6 %}
   {% if item.format == "video" %}
     {% for type in site.data.meta.media %}

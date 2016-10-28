@@ -2,7 +2,8 @@
 set -eu
 
 ################################################################################
-# uninstall kvm images. assumes kvm images are in ~/.kvm directory.
+# uninstall kvm images. assumes kvm images are in ~/.local/libvirt/images
+# directory.
 ################################################################################
 
 CURDIR=${PWD}

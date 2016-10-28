@@ -97,7 +97,7 @@ IS_AUTOSTART=$(virsh -c qemu:///system net-info default | grep "Autostart" | \
 [ "${IS_ACTIVE}" = "no" ] && virsh -c qemu:///system net-start default
 [ "${IS_AUTOSTART}" = "no" ] && virsh -c qemu:///system net-autostart default
 
-# commend out acceleration lines in the xml files. they are not supported. 
+# comment out acceleration lines in the xml files. they are not supported. 
 sed -i "s/<acceleration accel3d/<\!--<acceleration accel3d/" \
    Whonix-Workstation-${WHONIX_VERSION}.xml
 sed -i "s/ accel2d='yes'\/>/ accel2d='yes'\/>-->/" \

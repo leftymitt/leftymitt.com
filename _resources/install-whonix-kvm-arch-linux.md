@@ -238,14 +238,16 @@ filesystem, respectively set below as /tmp/kvmshare and /kvmshare.
 <img class="uk-align-center" alt="Virtual Machine Manager UI" 
      src="{{ site.images }}/virt-manager-new-hw.png">
 
-Open a terminal in the guest and run: 
+This will create a mountable filesystem inside your VM that contains the
+contents of the /tmp/kvmshare directory on the host system. To mount the
+filesystem, open a terminal in the guest and run: 
 
 {% highlight bash %}
-mkdir -p ~/kvmshare
-mount -t 9p -o trans=virtio,version=9p2000.L /mnt/kvmshare ~/kvmshare
+mkdir -p /tmp/kvmshare
+mount -t 9p -o trans=virtio,version=9p2000.L /kvmshare /tmp/kvmshare
 {% endhighlight %}
 
-Replace "kvmshare" with the path specified in the "Target path" field. 
-
-Files in the host will be available read-only in the guest. To edit the files
-in the VM, copy the files from the mounted subdevice to the guest filesystem. 
+This mounts the /kvmshare filesystem defined in the "Target path" field in the
+virt-manager menu as /tmp/kvmshare within the VM. Files in the host will be
+available read-only in the guest. To edit the files in the VM, copy the files
+from the mounted subdevice to the guest filesystem. 

@@ -8,7 +8,7 @@ set -eu
 
 CURDIR=${PWD}
 LIBVIRT_DIR=${HOME}/.local/libvirt/images
-WHONIX_VERSION=13.0.0.1.1
+WHONIX_VERSION=13.0.0.1.4
 
 cd ${LIBVIRT_DIR}
 

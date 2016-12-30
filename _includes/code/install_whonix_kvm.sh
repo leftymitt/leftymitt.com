@@ -24,6 +24,7 @@ PATRICK_FINGERPRINT="916B 8D99 C38E AF5E 8ADC  7A2A 8D66 066A 2EEA CCDA"
 mkdir -p ${LIBVIRT_DIR}
 cd ${LIBVIRT_DIR}
 
+
 ################################################################################
 # download, verify, and extract whonix files. 
 ################################################################################
@@ -31,23 +32,23 @@ cd ${LIBVIRT_DIR}
 # download the compressed files via tor. 
 GATEWAY=Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
 WORKSTATION=Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
-GATEWAY_URL=https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/${GATEWAY}
-WORKSTATION_URL=https://${DOMAIN_NAME}/download/${WHONIX_VERSION}/${WORKSTATION}
+GATEWAY_URL=https://download.${DOMAIN_NAME}/linux/${WHONIX_VERSION}/${GATEWAY}
+WORKSTATION_URL=https://download.${DOMAIN_NAME}/linux/${WHONIX_VERSION}/${WORKSTATION}
 
 torify curl ${GATEWAY_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-   -C - -o ${GATEWAY}
+  -C - -o ${GATEWAY}
 torify curl ${GATEWAY_URL}.asc --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-   -C - -o ${GATEWAY}
+  -C - -o ${GATEWAY}
 torify curl ${WORKSTATION_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-   -C - -o ${WORKSTATION}.asc
+  -C - -o ${WORKSTATION}.asc
 torify curl ${WORKSTATION_URL}.asc --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-   -C - -o ${WORKSTATION}.asc
+  -C - -o ${WORKSTATION}.asc
 
 # download patrick's gpg key and check the fingerprint.
 KEY=patrick.asc
 KEY_URL=https://${DOMAIN_NAME}/{$KEY}
 
-torify curl --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
+torify curl ${KEY_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
   -C - -o patrick.asc 
 
 FINGERPRINT=$(gpg --with-fingerprint patrick.asc | \
@@ -65,9 +66,9 @@ fi
 
 # verify the images.
 gpg --verify Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc \
-   Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
+  Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
 gpg --verify Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc \
-   Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
+  Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
 
 # extract.
 echo "extracting whonix gateway."
@@ -99,13 +100,13 @@ IS_AUTOSTART=$(virsh -c qemu:///system net-info default | grep "Autostart" | \
 
 # comment out acceleration lines in the xml files. they are not supported. 
 sed -i "s/<acceleration accel3d/<\!--<acceleration accel3d/" \
-   Whonix-Workstation-${WHONIX_VERSION}.xml
+  Whonix-Workstation-${WHONIX_VERSION}.xml
 sed -i "s/ accel2d='yes'\/>/ accel2d='yes'\/>-->/" \
-   Whonix-Workstation-${WHONIX_VERSION}.xml
+  Whonix-Workstation-${WHONIX_VERSION}.xml
 sed -i "s/<acceleration accel3d/<\!--<acceleration accel3d/" \
-   Whonix-Gateway-${WHONIX_VERSION}.xml
+  Whonix-Gateway-${WHONIX_VERSION}.xml
 sed -i "s/ accel2d='yes'\/>/ accel2d='yes'\/>-->/" \
-   Whonix-Gateway-${WHONIX_VERSION}.xml
+  Whonix-Gateway-${WHONIX_VERSION}.xml
 
 # define vms and network rules. 
 virsh -c qemu:///system define Whonix-Gateway-${WHONIX_VERSION}.xml

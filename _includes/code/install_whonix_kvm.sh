@@ -44,24 +44,23 @@ torify curl ${WORKSTATION_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
 torify curl ${WORKSTATION_URL}.asc --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
   -C - -o ${WORKSTATION}.asc
 
-# download patrick's gpg key and check the fingerprint.
+# check if patrick's gpg key has already been imported. If not, download it.
 KEY=patrick.asc
 KEY_URL=https://${DOMAIN_NAME}/{$KEY}
-
-torify curl ${KEY_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-  -C - -o patrick.asc 
-
-FINGERPRINT=$(gpg --with-fingerprint patrick.asc | \
-  sed -n "s/^\s*\([A-Z0-9\ ]*\)$/\1/p")
-
-if [ "${FINGERPRINT}" = "${PATRICK_FINGERPRINT}" ]; then
-  gpg --import patrick.asc
-else
-  echo "downloaded fingerprint does not match hard-coded one:"
-  echo "hard-coded: ${PATRICK_FINGERPRINT}"
-  echo "downloaded: ${FINGERPRINT}"
-  echo "exiting."
-  exit 1
+if ! gpg --fingerprint ${PATRICK_FINGERPRINT}; then
+  torify curl ${KEY_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
+    -C - -o patrick.asc 
+  FINGERPRINT=$(gpg --with-fingerprint patrick.asc | \
+    sed -n "s/^\s*\([A-Z0-9\ ]*\)$/\1/p")
+  if [ "${FINGERPRINT}" = "${PATRICK_FINGERPRINT}" ]; then
+    gpg --import patrick.asc
+  else
+    echo "downloaded fingerprint does not match hard-coded one:"
+    echo "hard-coded: ${PATRICK_FINGERPRINT}"
+    echo "downloaded: ${FINGERPRINT}"
+    echo "exiting."
+    exit 1
+  fi
 fi
 
 # verify the images.

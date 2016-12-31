@@ -91,7 +91,8 @@ result is the Corruption Perception Index.  Look at the figure below to
 visualize this.  The mean of all countries' CPI for each year is ~45 and
 standard deviation (the area colored above and below the line) is ~20.
 
-![CPI density after 2012]({{ site.images
+[![CPI density after 2012]({{ site.images
+}}/corruption-index/cpi_stats_after_2012.svg)]({{ site.images
 }}/corruption-index/cpi_stats_after_2012.svg)
 
 This only applies to reports from 2012 and after.  Previous years (1995-2011)
@@ -99,7 +100,8 @@ used a different normalization scheme.  Data from the two groups are not
 comparable.  See below for a time-series for the mean and standard deviation
 for all countries each year.
 
-![CPI density before 2012]({{ site.images
+[![CPI density before 2012]({{ site.images
+}}/corruption-index/cpi_stats_before_2012.svg)]({{ site.images
 }}/corruption-index/cpi_stats_before_2012.svg)
 
 By no means is the CPI a rigorous measurement.  Of course, any measure of
@@ -121,11 +123,10 @@ And, for the conspiratorially-minded, Transparency International is by no means
 an organization exempt from [pressures from powerful
 governments](https://en.wikipedia.org/wiki/Transparency_International#Refusal_to_support_Edward_Snowden). 
 
-
-
 Still, it's worth noting some patterns in the data. 
 
-![CPI density before 2012]({{ site.images
+[![CPI density before 2012]({{ site.images
+}}/corruption-index/cpi_density_before_2012.svg)]({{ site.images
 }}/corruption-index/cpi_density_before_2012.svg)
 
 For the dataset from 1998-2011, plotted above, the distribution of CPI values
@@ -135,7 +136,8 @@ countries are overall becoming more or less corrupt cannot be answered by the
 distribution, but it does establish that countries became more similarly
 corrupt. 
 
-![CPI density after 2012]({{ site.images
+[![CPI density after 2012]({{ site.images
+}}/corruption-index/cpi_density_after_2012.svg)]({{ site.images
 }}/corruption-index/cpi_density_after_2012.svg)
 
 On inspection, changes in CPI distributions from 2012 to 2015 (plotted above)

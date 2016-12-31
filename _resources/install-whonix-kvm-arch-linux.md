@@ -122,10 +122,10 @@ it to [verify the Whonix
 images](https://www.whonix.org/wiki/Whonix_Signing_Key). 
 
 {% highlight bash %}
-wget https://www.whonix.org/download/{{ page.whonix_version }}/Whonix-Gateway-{{ page.whonix_version }}.libvirt.xz
-wget https://www.whonix.org/download/{{ page.whonix_version }}/Whonix-Workstation-{{ page.whonix_version }}.libvirt.xz
-wget https://www.whonix.org/download/{{ page.whonix_version }}/Whonix-Gateway-{{ page.whonix_version }}.libvirt.xz.asc
-wget https://www.whonix.org/download/{{ page.whonix_version }}/Whonix-Workstation-{{ page.whonix_version }}.libvirt.xz.asc
+wget https://download.whonix.org/linux/{{ page.whonix_version }}/Whonix-Gateway-{{ page.whonix_version }}.libvirt.xz
+wget https://download.whonix.org/linux/{{ page.whonix_version }}/Whonix-Workstation-{{ page.whonix_version }}.libvirt.xz
+wget https://download.whonix.org/linux/{{ page.whonix_version }}/Whonix-Gateway-{{ page.whonix_version }}.libvirt.xz.asc
+wget https://download.whonix.org/linux/{{ page.whonix_version }}/Whonix-Workstation-{{ page.whonix_version }}.libvirt.xz.asc
 wget https://www.whonix.org/patrick.asc
 {% endhighlight %}
 

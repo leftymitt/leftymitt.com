@@ -5,10 +5,10 @@ require 'html-proofer'
 desc "print usage information"
 task :default do
   puts "options: "
-  puts "  rake new \t\t - create a new draft."
-  puts "  rake edit \t\t - edit an existing draft."
-  puts "  rake publish \t - publish an existing draft."
-  puts "  rake test \t\t - check site html."
+  puts "  rake new     - create a new draft."
+  puts "  rake edit    - edit an existing draft."
+  puts "  rake publish - publish an existing draft."
+  puts "  rake test    - check site html."
 end
 
 desc "check html generated in _site/."

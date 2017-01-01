@@ -57,9 +57,9 @@ window.onload = function() {
 
 <ul class="uk-subnav uk-subnav-pill uk-flex uk-flex-center" 
     data-uk-switcher="{connect:'#state_plots, #pop_v_electoral, #pop_elect', 
-                       animation:'fade'}">
-   <li><a href="#">Democrats/Republicans</a></li>
-   <li><a href="#">All Parties</a></li>
+                      animation:'fade'}">
+  <li><a href="#">Democrats/Republicans</a></li>
+  <li><a href="#">All Parties</a></li>
 </ul>
 
 <hr>
@@ -91,13 +91,16 @@ over time:
 
 <div class="uk-cover uk-text-center">
   <div id="pop_elect" class="uk-switcher">
-    <img src="{{ site.images }}/{{ page.repo }}/bi_national.svg"
-         alt="national voting for democrats and republicans">
-    <img src="{{ site.images }}/{{ page.repo }}/all_national.svg"
-         alt="national voting for all parties">
+    <figure>
+      <img src="{{ site.images }}/{{ page.repo }}/bi_national.svg"
+           alt="national voting for democrats and republicans">
+    </figure>
+    <figure>
+      <img src="{{ site.images }}/{{ page.repo }}/all_national.svg"
+           alt="national voting for all parties">
+    </figure>
   </div>
 </div>
-
 
 <div class="uk-cover uk-text-center">
   <div id="pop_v_electoral" class="uk-switcher">
@@ -164,6 +167,8 @@ unique electoral history.
 
   <svg id="mysvg" width="100%" height="100%"  
       viewBox="0 0 1035.2319 722.80334"></svg>
+
+  <div>&nbsp;</div>
 
   <div id="state_plots" class="uk-switcher">
     <img id="bi_state_plots" 

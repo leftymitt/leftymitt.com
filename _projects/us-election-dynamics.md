@@ -92,12 +92,16 @@ over time:
 <div class="uk-cover uk-text-center">
   <div id="pop_elect" class="uk-switcher">
     <figure>
-      <img src="{{ site.images }}/{{ page.repo }}/bi_national.svg"
-           alt="national voting for democrats and republicans">
+      <a href="{{ site.images }}/{{ page.repo }}/bi_national.svg">
+        <img src="{{ site.images }}/{{ page.repo }}/bi_national.svg"
+             alt="national voting for democrats and republicans">
+      </a>
     </figure>
     <figure>
-      <img src="{{ site.images }}/{{ page.repo }}/all_national.svg"
-           alt="national voting for all parties">
+      <a href="{{ site.images }}/{{ page.repo }}/all_national.svg">
+        <img src="{{ site.images }}/{{ page.repo }}/all_national.svg"
+             alt="national voting for all parties">
+      </a>
     </figure>
   </div>
 </div>
@@ -105,12 +109,16 @@ over time:
 <div class="uk-cover uk-text-center">
   <div id="pop_v_electoral" class="uk-switcher">
     <figure>
-      <img src="{{ site.images }}/{{ page.repo }}/bi_popular_v_electoral_national.svg"
-           alt="national popular vs electoral vote for democrats/republicans.">
+      <a href="{{ site.images }}/{{ page.repo }}/bi_popular_v_electoral_national.svg">
+        <img src="{{ site.images }}/{{ page.repo }}/bi_popular_v_electoral_national.svg"
+             alt="national popular vs electoral vote for democrats/republicans.">
+      </a>
     </figure>
     <figure>
-      <img src="{{ site.images }}/{{ page.repo }}/all_popular_v_electoral_national.svg"
-           alt="national popular vs electoral vote for all parties.">
+      <a href="{{ site.images }}/{{ page.repo }}/all_popular_v_electoral_national.svg">
+        <img src="{{ site.images }}/{{ page.repo }}/all_popular_v_electoral_national.svg"
+             alt="national popular vs electoral vote for all parties.">
+      </a>
     </figure>
   </div>
 </div>
@@ -123,9 +131,11 @@ losing the popular vote but winning in the electoral college: George Bush
 (2000), Rutherford Hayes (1876), and Benjamin Harrison (1888). 
 
 <div class="">
-<img src="{{ site.images }}/{{ page.repo }}/bi_popular_v_electoral_national_diff.svg"
-     alt="national popular vs electoral vote for democrats/republicans."
-     class="uk-align-right uk-width-medium-2-3">
+  <a href="{{ site.images }}/{{ page.repo }}/bi_popular_v_electoral_national_diff.svg">
+    <img src="{{ site.images }}/{{ page.repo }}/bi_popular_v_electoral_national_diff.svg"
+         alt="national popular vs electoral vote for democrats/republicans."
+         class="uk-align-right uk-width-medium-2-3">
+  </a>
 </div>
 
 That, by no means, is a vindication of the system. There have been numerous
@@ -188,8 +198,10 @@ both dominated the popular vote. Exceptions in some elections in some states
 exist, but the overall pattern is clear. 
 
 <div class="uk-cover uk-text-center">
+  <a href="{{ site.images }}/{{ page.repo }}/bi_total_all_states.svg">
   <img src="{{ site.images }}/{{ page.repo }}/bi_total_all_states.svg"
        alt="total dem and rep popular vote (%) for all elections">
+  </a>
 </div>
 
 One interesting observation is that each of the downward blips in two-party
@@ -221,8 +233,10 @@ segregation, leads to a stabilizing effect on the existing two party system.
 Still, both parties have dynamic voting histories in each state:  
 
 <div class="uk-cover uk-text-center">
-  <img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_states.svg"
-       alt="difference in rep and dem pop vote (%) for all states">
+  <a href="{{ site.images }}/{{ page.repo }}/bi_diff_all_states.svg">
+    <img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_states.svg"
+         alt="difference in rep and dem pop vote (%) for all states">
+  </a>
 </div>
 
 For the most part, the country followed general trends for supporting one party
@@ -247,8 +261,10 @@ by averaging states according to their [census
 region](https://en.wikipedia.org/wiki/List_of_regions_of_the_United_States#Census_Bureau-designated_regions_and_divisions). 
 
 <div class="uk-cover uk-text-center">
-  <img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_regions.svg"
-       alt="difference in rep and dem pop vote (%) for all regions">
+  <a href="{{ site.images }}/{{ page.repo }}/bi_diff_all_regions.svg">
+    <img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_regions.svg"
+         alt="difference in rep and dem pop vote (%) for all regions">
+  </a>
 </div>
 
 As implied before, the South exhibits different voting patterns.  It is perhaps
@@ -260,13 +276,17 @@ non-initially biased information.  Alaska, Hawaii, and Washington DC were
 excluded to increase the number of elections used in the analysis. 
 
 <div class="uk-cover uk-text-center">
-  <img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_some_state.svg"
-       alt="pca of difference in rep and dem vote in all states over time">
+  <a href="{{ site.images }}/{{ page.repo }}/bi_diff_pca_some_state.svg">
+    <img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_some_state.svg"
+         alt="pca of difference in rep and dem vote in all states over time">
+  </a>
 </div>
 
 
-<img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_pc1_some_state.svg"
-    class="uk-align-right" alt="loadings for component 1">
+<a href="{{ site.images }}/{{ page.repo }}/bi_diff_pca_pc1_some_state.svg">
+  <img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_pc1_some_state.svg"
+      class="uk-align-right" alt="loadings for component 1">
+</a>
 
 The first component (`var=0.615307`) is much more important than the second
 component (`var=0.0508273`), and segregates the South from the Northeast, with
@@ -294,8 +314,10 @@ Continuing with the census assumption of four distinct regions in the United
 States: a k-means clustering shows: 
 
 <div class="uk-cover uk-text-center">
-  <img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_kmeans_some_state.svg"
-       alt="k-means clustering for pca">
+  <a href="{{ site.images }}/{{ page.repo }}/bi_diff_pca_kmeans_some_state.svg">
+    <img src="{{ site.images }}/{{ page.repo }}/bi_diff_pca_kmeans_some_state.svg"
+         alt="k-means clustering for pca">
+  </a>
 </div>
 
 Understandably, the four clusters do not fall precisely on the census regions,
@@ -320,6 +342,8 @@ victory, though it should be mentioned that Robert La Follette took much of the
 popular vote from the Democratic candidate. 
 
 <div class="uk-cover uk-text-center">
-  <img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_clusters.svg"
-       alt="timeseries of k-means clustes">
+  <a href="{{ site.images }}/{{ page.repo }}/bi_diff_all_clusters.svg">
+    <img src="{{ site.images }}/{{ page.repo }}/bi_diff_all_clusters.svg"
+         alt="timeseries of k-means clustes">
+  </a>
 </div>

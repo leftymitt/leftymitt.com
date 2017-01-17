@@ -112,11 +112,11 @@
 @mixin hook-badge-warning(){}
 @mixin hook-badge-danger(){}
 @mixin hook-badge-misc(){
-	body { 
-		margin: 0; 
-		background: $base-bg2;
-		color: $text-color-light;
-	}
+  body { 
+    margin: 0; 
+    background: $base-bg2;
+    color: $text-color-light;
+  }
 }
 @mixin hook-base-body(){}
 @mixin hook-base-link(){}
@@ -336,6 +336,6 @@
 @mixin hook-thumbnav-misc(){}
 @mixin hook-container(){}
 @mixin hook-scrollable-box(){
-	max-height: 70vh;
+  max-height: 70vh;
 }
 @mixin hook-utility-misc(){}

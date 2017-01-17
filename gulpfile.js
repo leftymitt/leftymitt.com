@@ -3,28 +3,29 @@
  */ 
 
 // initialize gulp task variables. 
-var gulp = require('gulp'), 
-    less = require('gulp-less'),
-    scss = require('gulp-sass'),
-    concat = require('gulp-concat'),
-    cssmin = require('gulp-cssmin'),
-    htmlmin = require('gulp-htmlmin'),
-    imagemin = require('gulp-imagemin'),
-    uglify = require('gulp-uglify'),
-    autoprefixer = require('gulp-autoprefixer'),
-    flatten = require('gulp-flatten'),
-    util = require('gulp-util'),
-    run_sequence = require('run-sequence'),
-    rename = require('gulp-rename'),
-    changed = require('gulp-changed'),
-    watch = require('gulp-watch'),
-    browser_sync = require('browser-sync').create(),
-    child_process = require('child_process'),
-    spawn = require('child_process').spawn,
-    event_stream = require('event-stream');
+const gulp = require('gulp'), 
+      less = require('gulp-less'),
+      scss = require('gulp-sass'),
+      concat = require('gulp-concat'),
+      cssmin = require('gulp-cssmin'),
+      htmlmin = require('gulp-htmlmin'),
+      imagemin = require('gulp-imagemin'),
+      uglify = require('gulp-uglify'),
+      autoprefixer = require('gulp-autoprefixer'),
+      flatten = require('gulp-flatten'),
+      util = require('gulp-util'),
+      print = require('gulp-print'),
+      run_sequence = require('run-sequence'),
+      rename = require('gulp-rename'),
+      changed = require('gulp-changed'),
+      watch = require('gulp-watch'),
+      browser_sync = require('browser-sync').create(),
+      child_process = require('child_process'),
+      spawn = require('child_process').spawn,
+      event_stream = require('event-stream');
 
 // paths for bower components
-var bower = {
+const bower = {
   uikit: {
     less: './bower_components/uikit/less/',
     scss: './bower_components/uikit/scss/',
@@ -43,7 +44,7 @@ var bower = {
 }
 
 // paths for source components
-var src = {
+const src = {
   uikit: {
     less: './assets/src/less/uikit/',
     scss: './assets/src/scss/uikit/',
@@ -68,7 +69,7 @@ var src = {
 }
 
 // paths for final build components
-var build = {
+const build = {
   css: './assets/build/css/',
   js: './assets/build/js/',
   fonts:'./assets/build/fonts/',
@@ -76,7 +77,7 @@ var build = {
 }
 
 // uikit source files, exclude as needed
-var uikit = {
+const uikit = {
   core: [ 
     src.uikit.js + 'core/core.js',
     src.uikit.js + 'core/alert.js', 
@@ -110,10 +111,10 @@ var uikit = {
     src.uikit.js + 'components/pagination.js',
     src.uikit.js + 'components/parallax.js',
     src.uikit.js + 'components/search.js',
-    src.uikit.js + 'components/slider.js',
-    src.uikit.js + 'components/slideset.js',
-    src.uikit.js + 'components/slideshow.js',
-    src.uikit.js + 'components/slideshow-fx.js',
+//    src.uikit.js + 'components/slider.js',
+//    src.uikit.js + 'components/slideset.js',
+//    src.uikit.js + 'components/slideshow.js',
+//    src.uikit.js + 'components/slideshow-fx.js',
 //    src.uikit.js + 'components/sortable.js',
     src.uikit.js + 'components/sticky.js'
 //    src.uikit.js + 'components/timepicker.js',
@@ -148,46 +149,57 @@ gulp.task('copy', function() {
   gulp.src(bower.uikit.less + '**/*')
     .pipe(changed(src.uikit.less))
     .pipe(gulp.dest(src.uikit.less))
-    .on('end', function() { util.log("copied uikit less files."); });
+    .pipe(print(function(file) { return file + " changed."; }))
+    .on('end', function() { util.log("Copied uikit less files."); });
 
   gulp.src(bower.uikit.scss + '**/*')
     .pipe(changed(src.uikit.scss))
     .pipe(gulp.dest(src.uikit.scss))
-    .on('end', function() { util.log("copied uikit scss files."); });
+    .pipe(print(function(file) { return file + " changed."; }))
+    .on('end', function() { util.log("Copied uikit scss files."); });
   
   gulp.src([bower.uikit.js + '**/*.js', '!' + bower.uikit.js + '**/*min.js'])
     .pipe(changed(src.uikit.js))
     .pipe(gulp.dest(src.uikit.js))
-    .on('end', function() { util.log("copied uikit js files."); });
+    .pipe(print(function(file) { return file + " changed."; }))
+    .on('end', function() { util.log("Copied uikit js files."); });
 
   gulp.src(bower.uikit.fonts + '**/*')
     .pipe(changed(src.uikit.fonts))
     .pipe(gulp.dest(src.uikit.fonts))
-    .on('end', function() { util.log("copied uikit fonts."); });
+    .pipe(print(function(file) { return file + " changed."; }))
+    .on('end', function() { util.log("Copied uikit fonts."); });
   
   gulp.src([bower.jquery.js + '*.js', '!' + bower.jquery.js + '*.min.js', 
             '!' + bower.jquery.js + '*.slim.js'])
     .pipe(changed(src.jquery.js))
     .pipe(gulp.dest(src.jquery.js))
-    .on('end', function() { util.log("copied jquery js files."); });
+    .pipe(print(function(file) { return file + " changed."; }))
+    .on('end', function() { util.log("Copied jquery js files."); });
   
   gulp.src([bower.snap.js + '*.js', '!' + bower.snap.js + '*-min.js'])
     .pipe(changed(src.snap.js))
     .pipe(gulp.dest(src.snap.js))
-    .on('end', function() { util.log("copied Snap.svg js files."); });
+    .pipe(print(function(file) { return file + " changed."; }))
+    .on('end', function() { util.log("Copied snap.svg js files."); });
   
   gulp.src([bower.zxcvbn.js + '*.js', '!' + bower.zxcvbn.js + '*-min.js'])
     .pipe(changed(src.zxcvbn.js))
     .pipe(gulp.dest(src.zxcvbn.js))
-    .on('end', function() { util.log("copied zxcvbn js files."); });
+    .pipe(print(function(file) { return file + " changed."; }))
+    .on('end', function() { util.log("Copied zxcvbn js files."); });
 });
 
 // rebuild all files in assets/build
 gulp.task('rebuild', function() {
-//  run_sequence('build-less', 
-  run_sequence('build-scss', 
-               ['build-css', 'build-js', 'build-fonts', 'build-img'], 
-               'build-html');
+  run_sequence(
+    'build-scss',
+    [ 
+      'build-css', 
+      'build-js', 
+      'build-fonts', 
+      'build-img'
+    ]);
 });
 
 // build css from less files
@@ -195,13 +207,9 @@ gulp.task('build-less', function() {
   return gulp.src(src.less + '*.less')
     .pipe(less())
     .pipe(autoprefixer())
-    .pipe(gulp.dest(src.css))
-//    .pipe(cssmin())
-//    .pipe(rename(function (name) {
-//      name.extname = '.min.css';
-//    }))
 //    .pipe(changed(src.css))
-//    .pipe(gulp.dest(build.css));
+    .pipe(gulp.dest(src.css))
+    .pipe(print(function(file) { return "Rebuilt " + file + " with less."; }))
 });
 
 // build css from scss files
@@ -209,13 +217,9 @@ gulp.task('build-scss', function() {
   return gulp.src(src.scss + '*.scss')
     .pipe(scss())
     .pipe(autoprefixer())
-    .pipe(gulp.dest(src.css))
-//    .pipe(cssmin())
-//    .pipe(rename(function (name) {
-//      name.extname = '.min.css';
-//    }))
 //    .pipe(changed(src.css))
-//    .pipe(gulp.dest(build.css));
+    .pipe(gulp.dest(src.css))
+    .pipe(print(function(file) { return "Rebuilt " + file + " with scss."; }))
 });
 
 gulp.task('build-css', function() {
@@ -223,7 +227,9 @@ gulp.task('build-css', function() {
     .pipe(concat('uikit.css'))
     .pipe(cssmin())
     .pipe(rename('uikit.min.css'))
-    .pipe(gulp.dest(build.css));
+    .pipe(changed(build.css))
+    .pipe(gulp.dest(build.css))
+    .pipe(print(function(file) { return "Minified " + file + "."; }))
 });
 
 // compile all js files into one and compress it
@@ -234,7 +240,8 @@ gulp.task('build-js', function() {
     .pipe(uglify())
     .pipe(rename('jquery.min.js'))
     .pipe(changed(build.js))
-    .pipe(gulp.dest(build.js));
+    .pipe(gulp.dest(build.js))
+    .pipe(print(function(file) { return file + " changed."; }))
 
   gulp.src(src.js + 'snap.svg/*.js')
     .pipe(concat('snap.svg.js'), { newLine: '\n;' })
@@ -242,7 +249,8 @@ gulp.task('build-js', function() {
     .pipe(uglify())
     .pipe(rename('snap.svg.min.js'))
     .pipe(changed(build.js))
-    .pipe(gulp.dest(build.js));
+    .pipe(gulp.dest(build.js))
+    .pipe(print(function(file) { return file + " changed."; }))
 
   gulp.src(src.js + 'zxcvbn/*.js')
     .pipe(concat('zxcvbn.js'), { newLine: '\n;' })
@@ -250,24 +258,24 @@ gulp.task('build-js', function() {
     .pipe(uglify())
     .pipe(rename('zxcvbn.min.js'))
     .pipe(changed(build.js))
-    .pipe(gulp.dest(build.js));
+    .pipe(gulp.dest(build.js))
+    .pipe(print(function(file) { return file + " changed."; }))
 
+//  gulp.src(uikit.core)
+//    .pipe(concat('uikit.js'), { newLine: '\n;' })
+//    .pipe(gulp.dest(src.js))
+//    .pipe(uglify())
+//    .pipe(rename('uikit.min.js'))
+//    .pipe(gulp.dest(build.js));
 
-//    gulp.src(uikit.core)
-//      .pipe(concat('uikit.js'), { newLine: '\n;' })
-//      .pipe(gulp.dest(src.js))
-//      .pipe(uglify())
-//      .pipe(rename('uikit.min.js'))
-//      .pipe(gulp.dest(build.js));
+//  gulp.src(uikit.components)
+//    .pipe(concat('uk-components.js'), { newLine: '\n;' })
+//    .pipe(gulp.dest(src.js))
+//    .pipe(uglify())
+//    .pipe(rename('uk-components.min.js'))
+//    .pipe(gulp.dest(build.js));
 
-//    gulp.src(uikit.components)
-//      .pipe(concat('uk-components.js'), { newLine: '\n;' })
-//      .pipe(gulp.dest(src.js))
-//      .pipe(uglify())
-//      .pipe(rename('uk-components.min.js'))
-//      .pipe(gulp.dest(build.js));
-
-  var jquery_stream = gulp.src(src.js + 'jquery/*.js');
+//  var jquery_stream = gulp.src(src.js + 'jquery/*.js');
   var ukcore_stream = gulp.src(uikit.core);
   var ukcomponents_stream = gulp.src(uikit.components);
 
@@ -277,38 +285,44 @@ gulp.task('build-js', function() {
     .pipe(gulp.dest(src.js))
     .pipe(uglify())
     .pipe(rename('uikit.min.js'))
-//    .pipe(changed(build.js))
-    .pipe(gulp.dest(build.js));
+    .pipe(changed(build.js))
+    .pipe(gulp.dest(build.js))
+    .pipe(print(function(file) { return file + " changed."; }))
 });
 
 // copy fonts and flatten directory structure
 gulp.task('build-fonts', function() {
   return gulp.src(src.fonts + '**/*')
     .pipe(flatten())
-//    .pipe(changed(build.fonts))
-    .pipe(gulp.dest(build.fonts));
+    .pipe(changed(build.fonts))
+    .pipe(gulp.dest(build.fonts))
+    .pipe(print(function(file) { return file + " changed."; }))
 });
 
 // minify images in assets/src and save to assets/build. 
 gulp.task('build-img', function() {
   return gulp.src(src.img + '**/*')
-//    .pipe(changed(build.img))
-//    .pipe(imagemin())
-    .pipe(gulp.dest(build.img));
+    .pipe(changed(build.img))
+    .pipe(imagemin())
+    .pipe(gulp.dest(build.img))
+    .pipe(print(function(file) { return file + " changed."; }))
 });
 
-// minify new or changed HTML pages
-gulp.task('build-html', function() {
-  return gulp.src('_site/**/*.html')
-//    .pipe(htmlmin({collapseWhitespace:true, removeComments:true}))
-    .pipe(gulp.dest('_site/'));
-});
+// // minify new or changed HTML pages
+// gulp.task('build-html', function() {
+//   return gulp.src('_site/**/*.html')
+//     .pipe(htmlmin({collapseWhitespace:true, removeComments:true}))
+//     .pipe(gulp.dest('_site/'));
+// });
 
 gulp.task('build', function(callback) {
   browser_sync.notify('building jekyll site.');
-  return child_process.spawn('bundle', ['exec', 'jekyll', 'build', '--drafts'], 
-    {stdio: 'inherit'})
-    .on('close', callback);
+  return child_process.spawn(
+    'bundle', 
+    ['exec', 'jekyll', 'build', '--drafts'], 
+    {
+      stdio: 'inherit'
+    }).on('close', callback);
 });
 
 gulp.task('reload', function() {
@@ -330,35 +344,38 @@ gulp.task('serve', ['build'], function() {
 });
 
 gulp.task('watch', function() {
-  watch('./assets/src/js/**/*.js', function() {
-    run_sequence('build-js', 'build', 'build-html', 'reload'); 
+  watch('./assets/src/js/*/**.js', function() {
+    run_sequence('build-js', 'build', 'reload'); 
   });
 
   watch('./assets/src/less/**/*.less', function() {
-    run_sequence('build-less', 'build-css', 'build', 'build-html', 'reload'); 
+    run_sequence('build-less', 'build-css', 'build', 'reload'); 
   });
 
   watch('./assets/src/scss/**/*.scss', function() {
-    run_sequence('build-scss', 'build-css', 'build', 'build-html', 'reload'); 
+    run_sequence('build-scss', 'build-css', 'build', 'reload'); 
   });
 
-  watch('./assets/src/css/**/*.css', function() {
-    run_sequence('build-css', 'build', 'build-html', 'reload'); 
-  });
+//   watch('./assets/src/css/**/*.css', function() {
+//     run_sequence('build-css', 'build', 'reload'); 
+//   });
 
   watch('./assets/src/fonts/**/*', function() {
-    run_sequence('build-fonts', 'build', 'build-html', 'reload'); 
+    run_sequence('build-fonts', 'build', 'reload'); 
   });
 
   watch('./assets/src/img/**/*', function() {
-    run_sequence('build-img', 'build', 'build-html', 'reload'); 
+    run_sequence('build-img', 'build', 'reload'); 
   });
 
-  watch(['_posts/**', '*.html', '_layouts/*', '_config.yml', '_includes/**', 
-         'resources/*', '_resources/**', '_drafts/**', 'media/*', '_media/*', 
-         'blog/*', 'projects/*', '_projects/**', '_data/**', 'feed.xml', 
-         '404.html'], 
-        function() {
-    run_sequence('build', 'build-html', 'reload'); 
+  watch(
+    [
+      '_posts/**', '*.html', '_layouts/*', '_config.yml', '_includes/**',
+      'resources/*', '_resources/**', '_drafts/**', 'media/*', '_media/*',
+      'blog/*', 'projects/*', '_projects/**', '_data/**', 'feed.xml',
+      '404.html'
+    ], 
+    function() {
+      run_sequence('build', 'reload'); 
   });
 });

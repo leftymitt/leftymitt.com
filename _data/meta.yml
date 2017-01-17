@@ -49,6 +49,10 @@ resources:
    url: "https://www.qubes-os.org/"
    img: "qubes-logo.svg"
 
+ - name: "Whonix"
+   url: "https://www.whonix.org/"
+   img: "whonix-logo.svg"
+
  - name: "Bitcoin"
    url: "https://bitcoin.org/en/"
    img: "bitcoin-logo.svg"

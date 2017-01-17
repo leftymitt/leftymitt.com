@@ -136,6 +136,11 @@
                     {% elsif page.published_date %} {{ page.published_date | date_to_string }}
                     {% elsif page.added_date %} {{ page.added_date | date_to_string }}
                     {% endif %} 
+          <br>
+          last edited on 
+            <a href="{{ site.github }}/{{ site.repo }}/commit/{{ page.git.last_commit.long_sha }}">
+              {{ page.git.last_commit.commit_date | date_to_string }}
+            </a>
         </p>
         {% elsif page.category == 'media' or page.categories == "media" %}
           {% if page.author %}

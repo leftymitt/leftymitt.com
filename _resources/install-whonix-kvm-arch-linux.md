@@ -12,7 +12,7 @@ tags:
 
 added_date: "2016-05-20"
 published_date: 
-icon: whonix-logo.png
+icon: whonix-logo.svg
 
 code: 
  - script: install_whonix_deps.sh

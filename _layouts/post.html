@@ -132,10 +132,20 @@
         {% endif %}
         {% if page.category == 'blog' or page.categories == "blog" %}
         <p class="uk-article-meta uk-margin-left">
-          posted on {% if page.date %} {{ page.date | date_to_string }}
-                    {% elsif page.published_date %} {{ page.published_date | date_to_string }}
-                    {% elsif page.added_date %} {{ page.added_date | date_to_string }}
-                    {% endif %} 
+          posted on 
+            {% if page.date %} 
+            <a href="{{ site.github }}/{{ site.repo }}/commit/{{ page.git.first_commit.long_sha }}">
+              {{ page.date | date_to_string }}
+            </a>
+            {% elsif page.published_date %} 
+            <a href="{{ site.github }}/{{ site.repo }}/commit/{{ page.git.first_commit.long_sha }}">
+              {{ page.published_date | date_to_string }}
+            </a>
+            {% elsif page.added_date %} 
+            <a href="{{ site.github }}/{{ site.repo }}/commit/{{ page.git.first_commit.long_sha }}">
+              {{ page.added_date | date_to_string }}
+            </a>
+            {% endif %} 
           <br>
           last edited on 
             <a href="{{ site.github }}/{{ site.repo }}/commit/{{ page.git.last_commit.long_sha }}">

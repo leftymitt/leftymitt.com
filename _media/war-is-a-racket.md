@@ -1,5 +1,5 @@
 ---
-title: "War Is a Racket."
+title: "war is a racket."
 layout: post
 category: media
 author: Smedley Butler
@@ -10,17 +10,8 @@ tags:
 
 added_date: "2017-01-13"
 published_date: "1935-01-01"
-publisher: 
 
 icon: war-is-a-racket.jpg
-img: 
-cover: 
-banner: 
-rating: 
-
-table_of_contents: 
-code: false
-link: 
 ---
 
 CHAPTER ONE 

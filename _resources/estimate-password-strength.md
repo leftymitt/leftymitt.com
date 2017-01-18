@@ -127,7 +127,9 @@ $(document).on('keypress', 'form', function (e) {
 "
 ---
 
-built with [zxcvbn](https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/) by dropbox. 
+built with
+[zxcvbn](https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/)
+by dropbox. 
 
 <form class="uk-form" id="">
   <fieldset data-uk-margin>

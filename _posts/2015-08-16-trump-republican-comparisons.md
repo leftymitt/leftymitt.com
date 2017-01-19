@@ -3,9 +3,6 @@ layout: post
 title: trump and the other republicans.
 category: blog
 img: republican-logo.svg
-
-added_date: "2015-08-16"
-published_date: "2015-08-16"
 ---
 
 Yes, Trump is a blowhard, but so what? Is he using his quasi-populist appeal to

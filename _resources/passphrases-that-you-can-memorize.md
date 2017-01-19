@@ -5,7 +5,6 @@ category: resources
 author: Micah Lee
 icon: the-intercept.png
 link: "https://theintercept.com/2015/03/26/passphrases-can-memorize-attackers-cant-guess/"
-added_date: "2015-12-20"
 published_date: "2015-03-26"
 ---
 

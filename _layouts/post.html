@@ -79,11 +79,12 @@
     <meta property="og:site_name" content="{{ site.title }}"/>
     {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}"/>
-    <meta property="article:modified_time" content="{{ page.date | date_to_xmlschema }}"/>
-    {% else %}
+    {% elsif page.published_date %}
     <meta property="article:published_time" content="{{ page.published_date }}"/>
-    <meta property="article:modified_time" content="{{ page.added_date }}"/>
+    {% else %}
+    <meta property="article:published_time" content="{{ page.git.first_commit.commit_date }}">
     {% endif %}
+    <meta property="article:modified_time" content="{{ page.git.last_commit.commit_date }}">
     <meta property="article:section" content="{{ page.category }}"/>
     <meta property="article:tag" content="{{ page.tags }}"/>
 
@@ -141,9 +142,9 @@
             <a href="{{ site.github }}/{{ site.repo }}/commit/{{ page.git.first_commit.long_sha }}">
               {{ page.published_date | date_to_string }}
             </a>
-            {% elsif page.added_date %} 
+            {% else %} 
             <a href="{{ site.github }}/{{ site.repo }}/commit/{{ page.git.first_commit.long_sha }}">
-              {{ page.added_date | date_to_string }}
+              {{ page.git.first_commit.commit_date | date_to_string }}
             </a>
             {% endif %} 
           <br>
@@ -157,8 +158,8 @@
             <p class="uk-article-meta uk-margin-left">
             {% if page.published_date %}
               by {{ page.author }} on {{ page.published_date | date_to_string }}
-            {% elsif page.added_date %}
-              by {{ page.author }} on {{ page.added_date | date_to_string }}
+            {% else %}
+              by {{ page.author }} on {{ page.git.last_commit.commit_date | date_to_string }}
             {% endif %}
             </p>
           {% endif %}

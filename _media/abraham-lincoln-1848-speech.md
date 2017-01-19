@@ -5,7 +5,9 @@ categories: media
 type: speech
 format: text
 tags: 
- - speech
+ - abraham lincoln
+ - mexican war
+
 published_date: "1848-01-12"
 added_date: "2015-09-10"
 author: Abraham Lincoln

@@ -1,4 +1,5 @@
 require 'rbconfig'
+require 'time'
 
 module Jekyll
   module GitMetadata 
@@ -86,10 +87,10 @@ module Jekyll
           'long_sha' => long_sha,
           'author_name' => author_name,
           'author_email' => author_email,
-          'author_date' => author_date,
+          'author_date' => Time.parse(author_date),
           'commit_name' => commit_name,
           'commit_email' => commit_email,
-          'commit_date' => commit_date,
+          'commit_date' => Time.parse(commit_date),
           'message' => message
         }
       end

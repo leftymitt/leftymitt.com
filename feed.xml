@@ -15,7 +15,7 @@
       {% if docs %}
       {% for doc in docs %}
         {% if doc %}
-          ||||| {{ doc.added_date }}
+          ||||| {{ doc.git.first_commit.commit_date }}
           {% if doc.link %} ||| {{ doc.link }}
           {% else %} ||| {{ site.url }}{{ doc.url }}
           {% endif %}

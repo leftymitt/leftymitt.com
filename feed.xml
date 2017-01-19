@@ -19,7 +19,9 @@
           {% if doc.link %} ||| {{ doc.link }}
           {% else %} ||| {{ site.url }}{{ doc.url }}
           {% endif %}
-          ||| {{ doc.content | strip_html | truncatewords: 200 }}
+          {% if doc.category == "projects" %} ||| {{ doc.tag | strip_html | truncatewords: 200 }}
+          {% else %} ||| {{ doc.content | strip_html | truncatewords: 200 }}
+          {% endif %}
           ||| {{ doc.title }} 
           ||| {{ doc.author }} 
         {% endif %}

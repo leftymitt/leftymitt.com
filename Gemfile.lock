@@ -180,6 +180,10 @@ GEM
       mini_portile2 (~> 2.1.0)
     octokit (4.6.2)
       sawyer (~> 0.8.0, >= 0.5.3)
+    octopress-hooks (2.6.2)
+      jekyll (>= 2.0)
+    octopress-paginate (1.2.0)
+      octopress-hooks
     parallel (1.10.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
@@ -210,6 +214,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   html-proofer
+  octopress-paginate
   rake
 
 BUNDLED WITH

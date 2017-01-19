@@ -25,7 +25,6 @@ module Jekyll
             page.data['git'] = page_data(myUrl)
           }
         end
-        
       end
 
       def site_data

@@ -215,6 +215,7 @@ DEPENDENCIES
   github-pages
   html-proofer
   octopress-paginate
+  parallel
   rake
 
 BUNDLED WITH

@@ -1,5 +1,6 @@
 require 'rbconfig'
 require 'time'
+require 'parallel'
 
 module Jekyll
   module GitMetadata 
@@ -15,14 +16,14 @@ module Jekyll
 
         Dir.chdir(site.source) do
           site.config['git'] = site_data
-          site.documents.each do |page|
+          Parallel.map(site.documents, in_threads: 8) { |page|
             if page.is_a?(Jekyll::Page)
               myUrl = page.path
             else
               myUrl = page.relative_path
             end
             page.data['git'] = page_data(myUrl)
-          end
+          }
         end
         
       end

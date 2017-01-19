@@ -5,14 +5,14 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>{{ page.title }} | {{ site.title }}</title>
-    <meta name="description" content="{{ page.content | strip_html | truncate:200 }}"/>
+    <meta name="description" content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
 
     <!-- schema.org markup for google+ -->
     <meta itemprop="name" content="{{ page.title }}"/>
     {% if page.tag %}
-    <meta itemprop="description" content="{{ page.tag | strip_html | truncate:200 }}"/>
+    <meta itemprop="description" content="{{ page.tag | strip_html | strip_newlines | truncate:200 }}"/>
     {% else %}
-    <meta itemprop="description" content="{{ page.content | strip_html | truncate:200 }}"/>
+    <meta itemprop="description" content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
     {% endif %}
     {% if page.img %}
     <meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/> 
@@ -35,9 +35,9 @@
     <meta name="twitter:site" content="{{ site.twitter }}"/>
     <meta name="twitter:title" content="{{ page.title }}"/>
     {% if page.tag %}
-    <meta name="twitter:description" content="{{ page.tag | strip_html | truncate:200 }}"/>
+    <meta name="twitter:description" content="{{ page.tag | strip_html | strip_newlines | truncate:200 }}"/>
     {% else %}
-    <meta name="twitter:description" content="{{ page.content | strip_html | truncate:200 }}"/>
+    <meta name="twitter:description" content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
     {% endif %}
     <meta name="twitter:creator" content="{{ site.twitter }}"/>
     <!-- twitter summary_large_image: at least 280x150px -->
@@ -72,9 +72,9 @@
     <meta property="og:image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
     {% endif %}
     {% if page.tag %}
-    <meta property="og:description" content="{{ page.tag | strip_html | truncate:200 }}"/>
+    <meta property="og:description" content="{{ page.tag | strip_html | strip_newlines | truncate:200 }}"/>
     {% else %}
-    <meta property="og:description" content="{{ page.content | strip_html | truncate:200 }}"/>
+    <meta property="og:description" content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
     {% endif %}
     <meta property="og:site_name" content="{{ site.title }}"/>
     {% if page.date %}

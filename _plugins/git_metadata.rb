@@ -23,6 +23,13 @@ module Jekyll
               myUrl = page.relative_path
             end
             page.data['git'] = page_data(myUrl)
+
+            # add 'date' info from git metadata when variable not explicitly set
+            if defined?(page.data['git']['first_commit']['commit_date'])
+              if page.data['date'] == site.time
+                then page.data['date'] = page.data['git']['first_commit']['commit_date']
+              end
+            end
           }
         end
       end

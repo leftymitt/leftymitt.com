@@ -9,7 +9,6 @@ tags:
  - iran
  - history
 
-added_date: "2016-06-11"
 published_date: "2016-06-10"
 icon: the-guardian.svg
 code: false

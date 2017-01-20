@@ -10,7 +10,6 @@ tags:
  - terrorism
  - opium
 
-added_date: "2016-02-24"
 published_date: "2016-02-23"
 icon: tomdispatch.svg
 link: "http://www.tomdispatch.com/post/176106/tomgram:_alfred_mccoy,_washington%27s_twenty-first-century_opium_wars/"

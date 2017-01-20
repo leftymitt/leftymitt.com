@@ -8,7 +8,6 @@ tags:
  - war
  - united states
  - history
-added_date: "2015-10-01"
 published_date: "2015-01-15"
 link: "https://www.fas.org/sgp/crs/natsec/R42738.pdf"
 icon: "congressional-research-service.svg" 

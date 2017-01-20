@@ -6,7 +6,6 @@ format: text
 type: anime
 tags: 
 
-added_date: "2016-02-18"
 published_date: "2015-01-09"
 cover: death-parade.jpg
 rating: "5"

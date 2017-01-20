@@ -10,7 +10,6 @@ tags:
  - intellegence
  - middle ease
 
-added_date: "2015-12-21"
 published_date: "2016-01-07"
 icon: lrb.png
 

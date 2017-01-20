@@ -8,7 +8,6 @@ type: book
 tags: 
  - drones
 
-added_date: "2015-12-03"
 published_date: "2015-03-23"
 icon: kill-chain-book.jpg
 

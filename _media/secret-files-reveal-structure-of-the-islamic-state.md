@@ -9,7 +9,6 @@ tags:
  - isis
  - war on terror
 
-added_date: "2015-11-25"
 published_date: "2015-04-18"
 icon: der-spiegel.svg
 link: "https://www.spiegel.de/international/world/islamic-state-files-show-structure-of-islamist-terror-group-a-1029274-druck.html"

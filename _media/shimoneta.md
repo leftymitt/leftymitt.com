@@ -8,7 +8,6 @@ tags:
  - censorship
  - anime
 
-added_date: "2016-05-18"
 published_date: "2015-07-04"
 cover: shimoneta.jpg
 rating: "4"

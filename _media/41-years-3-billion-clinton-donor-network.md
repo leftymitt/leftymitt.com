@@ -10,7 +10,6 @@ tags:
  - 2016 election
  - campaign contributions
 
-added_date: "2015-11-20"
 published_date: "2015-11-19"
 icon: washington-post.svg
 

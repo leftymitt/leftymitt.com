@@ -8,7 +8,6 @@ tags:
  - anime
  - funny
 
-added_date: "2015-12-06"
 published_date: "2006-08-05"
 cover: kemonozume.png
 rating: "5"

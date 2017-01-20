@@ -9,7 +9,6 @@ tags:
  - clinton
  - wikileaks
 
-added_date: "2016-10-28"
 published_date: "2016-10-20"
 publisher: wikileaks
 link: "https://wikileaks.org/podesta-emails/emailid/927"

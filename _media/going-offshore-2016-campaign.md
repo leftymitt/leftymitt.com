@@ -8,7 +8,6 @@ type: article
 tags: 
  - tax evasion
 
-added_date: "2016-05-18"
 published_date: "2016-05-05" 
 icon: tomdispatch.svg
 link: "http://www.tomdispatch.com/post/176136/tomgram%3A_nomi_prins%2C_going_offshore_in_the_2016_election_campaign/"

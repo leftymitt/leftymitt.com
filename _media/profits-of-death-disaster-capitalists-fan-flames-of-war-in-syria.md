@@ -10,7 +10,6 @@ tags:
  - syria
  - military-industrial complex
 
-added_date: "2016-04-08"
 published_date: "2016-03-15" 
 icon: insurge-intelligence.png
 

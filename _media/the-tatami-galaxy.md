@@ -7,7 +7,6 @@ type: anime
 tags: 
  - anime
 
-added_date: "2016-03-01"
 published_date: "2010-04-22"
 cover: tatami-galaxy.png
 rating: "5"

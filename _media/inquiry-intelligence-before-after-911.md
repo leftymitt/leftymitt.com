@@ -8,7 +8,6 @@ type: report
 tags: 
  - 9/11
 
-added_date: "2016-07-17"
 published_date: "2016-07-15"
 icon: hpsci.jpg
 link: "http://intelligence.house.gov/sites/intelligence.house.gov/files/documents/declasspart4.pdf"

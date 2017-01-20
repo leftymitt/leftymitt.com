@@ -9,7 +9,6 @@ tags:
  - clinton
  - arms sales
 
-added_date: "2016-05-18"
 pubished_date: "2015-05-26"
 icon: ibtimes.svg
 link: "http://s4.ibtimes.com/clinton-foundation-donors-got-weapons-deals-hillary-clintons-state-department-1934187"

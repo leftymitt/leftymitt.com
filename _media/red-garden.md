@@ -5,7 +5,6 @@ category: media
 format: text
 type: anime
 
-added_date: "2015-11-17"
 cover: "red-garden.png"
 rating: "4"
 tags: 

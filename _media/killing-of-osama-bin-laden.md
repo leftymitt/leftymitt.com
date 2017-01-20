@@ -8,7 +8,6 @@ tags:
  - war
  - terrorism
  - propaganda
-added_date: "2015-05-21"
 author: "Seymour Hersh"
 link: "https://www.lrb.co.uk/v37/n10/seymour-m-hersh/the-killing-of-osama-bin-laden"
 icon: "lrb.png"

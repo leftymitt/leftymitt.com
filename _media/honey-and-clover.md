@@ -7,7 +7,6 @@ format: text
 type: anime
 tags: 
 
-added_date: "2016-07-17"
 published_date: "2005-04-14"
 cover: honey-and-clover.jpg
 rating: "5"

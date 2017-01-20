@@ -5,7 +5,6 @@ layout: post
 category: media
 type: anime
 format: text
-added_date: "2015-10-07"
 tags: 
  - anime
  - supernatural

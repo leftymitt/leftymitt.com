@@ -9,7 +9,6 @@ tags:
  - propaganda
  - terrorism
 
-added_date: "2016-06-23"
 published_date: "2016-06-21"
 icon: the-intercept.png
 link: "https://theintercept.com/2016/06/21/democrats-war-on-due-process-and-terrorist-fear-mongering-long-pre-dates-orlando/"

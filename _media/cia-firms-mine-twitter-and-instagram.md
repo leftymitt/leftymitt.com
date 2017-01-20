@@ -8,7 +8,6 @@ type: article
 tags: 
  - surveillance
 
-added_date: "2016-04-14"
 icon: the-intercept.png
 link: "https://theintercept.com/2016/04/14/in-undisclosed-cia-investments-social-media-mining-looms-large/"
 ---

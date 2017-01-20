@@ -8,7 +8,6 @@ tags:
  - social
  - networks
 link: "https://dx.doi.org/10.1103/PhysRevE.92.042805"
-added_date: "2015-10-08"
 published_date: "2015-10-07"
 icon: aps.jpg
 author: Dina Mistry et al. 

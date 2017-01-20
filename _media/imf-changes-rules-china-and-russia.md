@@ -9,7 +9,6 @@ tags:
  - finance
  - imf
 
-added_date: "2016-01-21"
 published_date: "2015-12-18"
 icon: counterpunch.png
 link: "http://www.counterpunch.org/2015/12/18/the-imf-changes-its-rules-to-isolate-china-and-russia/"

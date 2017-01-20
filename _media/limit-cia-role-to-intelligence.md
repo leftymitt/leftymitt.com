@@ -8,7 +8,6 @@ type: transcript
 tags: 
  - cia
 
-added_date: "2016-11-23"
 published_date: "1963-12-22"
 publisher: washington post
 ---

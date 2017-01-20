@@ -8,7 +8,6 @@ type: article
 tags: 
  - russia
 
-added_date: "2016-02-07"
 published_date: "2015-03-15"
 icon: consortiumnews.png
 link: "https://consortiumnews.com/2015/03/27/distorting-putins-favorite-philosophers/"

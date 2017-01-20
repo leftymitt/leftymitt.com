@@ -9,7 +9,6 @@ tags:
  - israel
  - palestine
 
-added_date: "2016-02-08"
 published_date: "2016-01-31"
 icon: nytimes.svg
 link: "https://www.nytimes.com/2016/02/01/opinion/dont-shoot-the-messenger-israel.html"

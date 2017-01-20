@@ -9,7 +9,6 @@ tags:
  - energy
  - imf
 
-added_date: "2016-02-03"
 published_date: "2015-05-18"
 icon: imf.svg
 link: "https://www.imf.org/external/pubs/ft/wp/2015/wp15105.pdf"

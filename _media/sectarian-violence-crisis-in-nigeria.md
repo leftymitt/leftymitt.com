@@ -10,7 +10,6 @@ tags:
  - nigeria
  - terrorism
 
-added_date: "2016-02-16"
 published_date: "2009-01-01"
 icon: nigeria-flagmap.svg
 

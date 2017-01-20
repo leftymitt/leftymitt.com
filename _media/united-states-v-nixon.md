@@ -8,7 +8,6 @@ type: transcript
 tags: 
  - supreme court
 
-added_date: "2015-11-27"
 published_date: "1974-07-08"
 icon: lii.png
 

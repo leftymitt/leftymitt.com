@@ -9,7 +9,6 @@ tags:
  - privacy
  - social media
 
-added_date: "2016-05-21"
 published_date: "2016-05-19" 
 icon: medium.svg
 link: "https://medium.com/@tristanharris/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3#.7jdg1y6by"

@@ -9,7 +9,6 @@ tags:
  - russia
  - corruption 
 
-added_date: "2016-04-03"
 icon: "icij.png"
 
 link: "https://panamapapers.icij.org/20160403-putin-russia-offshore-network.html"

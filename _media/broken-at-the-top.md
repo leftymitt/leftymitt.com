@@ -9,7 +9,6 @@ tags:
  - corruption
  - tax havens
 
-added_date: "2016-04-16"
 published_date: "2016-04-14"
 icon: oxfam.svg
 link: "http://www.oxfamamerica.org/static/media/files/Broken_at_the_Top_FINAL_EMBARGOED_4.12.2016.pdf"

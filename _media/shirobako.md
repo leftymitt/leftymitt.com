@@ -6,7 +6,6 @@ format: text
 type: anime
 tags: 
 
-added_date: "2015-11-24"
 published_date: "2015-09-27"
 cover: shirobako.png
 rating: "5"

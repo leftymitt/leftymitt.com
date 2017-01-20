@@ -10,7 +10,6 @@ tags:
  - drone
  - war
  - propaganda
-added_date: "2015-10-20"
 published_date: "2015-10-15"
 link: "https://theintercept.com/drone-papers"
 ---

@@ -10,7 +10,6 @@ tags:
  - history
  - imperialism
 
-added_date: "2016-02-14"
 published_date: "2015-09-04"
 icon: consortiumnews.png
 

@@ -9,7 +9,6 @@ tags:
  - clinton
  - email
 
-added_date: "2016-06-06"
 published_date: "2016-05-26"
 icon: oig-sd.svg
 link: "https://assets.documentcloud.org/documents/2842429/ESP-16-03-Final.pdf"

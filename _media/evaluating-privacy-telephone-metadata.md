@@ -10,7 +10,6 @@ tags:
  - surveillance
  - metadata
 
-added_date: "2016-05-18"
 published_date: "2016-05-17"
 icon: pnas.svg
 

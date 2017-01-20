@@ -9,7 +9,6 @@ tags:
  - Soviet Union
  - Cold War
 
-added_date: "2015-12-23"
 published_date: "2009-11-26"
 icon: der-spiegel.svg
 link: "http://www.spiegel.de/international/world/nato-s-eastward-expansion-did-the-west-break-its-promise-to-moscow-a-663315-druck.html"

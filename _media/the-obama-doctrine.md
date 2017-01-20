@@ -9,7 +9,6 @@ tags:
  - potus
  - obama
 
-added_date: "2016-03-14"
 published_date: "2016-03-10"
 icon: the-atlantic.png
 link: "http://www.theatlantic.com/magazine/archive/2016/04/the-obama-doctrine/471525/"

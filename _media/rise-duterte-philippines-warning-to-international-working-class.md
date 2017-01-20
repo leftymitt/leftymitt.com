@@ -9,7 +9,6 @@ tags:
  - philippines
  - maoist
 
-added_date: "2016-05-18"
 published_date: "2016-05-11"
 icon: wsws.svg
 link: "https://www.wsws.org/en/articles/2016/05/11/pers-m11.html"

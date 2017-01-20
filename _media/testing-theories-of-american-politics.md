@@ -10,7 +10,6 @@ tags:
  - politics
  - oligarchy
 
-added_date: "2015-11-23"
 published_date: "2014-09-01"
 icon: "cambridge-university-press.svg"
 link: "https://journals.cambridge.org/download.php?file=%2FPPS%2FPPS12_03%2FS1537592714001595a.pdf"

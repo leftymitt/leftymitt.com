@@ -56,7 +56,7 @@ css: "
 
   <div class="uk-grid" data-uk-grid="{gutter:15, controls:'#filter'}"> 
   
-  {% assign sorted_media = site.media | sort: 'added_date' | reverse %}
+  {% assign sorted_media = site.media | sort: 'date' | reverse %}
   {% for item in sorted_media %}
   {% if item.format == "video" %}
     {% for type in site.data.meta.media %}
@@ -175,7 +175,7 @@ css: "
         {% if item.author %}
         <div class="uk-text-muted uk-margin-small-left">by {{ item.author | downcase }}
           {% if item.published_date %} on {{ item.published_date | date_to_string | downcase }}
-          {% elsif item.added_date %} on {{ item.added_date | date_to_string | downcase }}
+          {% else %} on {{ item.date | date_to_string | downcase }}
           {% endif %} 
         </div>
         {% endif %}

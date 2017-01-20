@@ -8,7 +8,6 @@ tags:
  - mystery
  - horror
 
-added_date: "2016-02-11"
 published_date: "2006-04-04"
 cover: higurashi.jpg
 rating: "5"

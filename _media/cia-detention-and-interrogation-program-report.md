@@ -10,7 +10,6 @@ tags:
  - torture
  - war on terror
 
-added_date: "2015-12-10"
 published_date: "2014-12-03"
 icon: us-senate-seal.svg
 link: "https://www.feinstein.senate.gov/public/index.cfm/files/serve?File_id=7c85429a-ec38-4bb5-968f-289799bf6d0e&SK=D500C4EBC500E1D256BA519211895909"

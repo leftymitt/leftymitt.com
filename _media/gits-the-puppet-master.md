@@ -10,7 +10,6 @@ tags:
 layout: post
 iframe_link: "https://www.youtube.com/embed/FpWdFykMVBk"
 link: "https://www.youtube.com/watch?v=FpWdFykMVBk"
-added_date: "2015-04-03"
 rating: "5"
 ---
 

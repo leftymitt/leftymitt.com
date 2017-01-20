@@ -7,7 +7,6 @@ format: text
 tags: 
  - technology
  - employment
-added_date: "2015-08-16"
 link: "https://www.nytimes.com/2015/08/16/technology/inside-amazon-wrestling-big-ideas-in-a-bruising-workplace.html"
 icon: nytimes.svg
 author: "Jodi Kantor and David Streitfeld"

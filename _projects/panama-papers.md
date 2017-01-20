@@ -7,7 +7,7 @@ tags:
  - offshore money
  - corruption
 
-added_date: "2016-04-03"
+date: 2016-04-03
 banner: the-panama-papers.png
 
 link: "https://panamapapers.icij.org/" 

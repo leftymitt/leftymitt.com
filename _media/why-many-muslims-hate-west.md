@@ -9,7 +9,6 @@ tags:
  - imperialism
  - middle east
 
-added_date: "2016-02-14"
 published_date: "2015-08-05" 
 icon: consortiumnews.png
 link: "https://consortiumnews.com/2015/08/05/why-many-muslims-hate-the-west/"

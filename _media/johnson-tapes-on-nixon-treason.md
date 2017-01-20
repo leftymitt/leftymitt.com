@@ -11,7 +11,6 @@ tags:
  - richard nixon
  - lyndon johnson
 
-added_date: "2015-11-29"
 published_date: "2013-03-22"
 icon: bbc.svg
 link: "http://www.bbc.com/news/magazine-21768668"

@@ -9,7 +9,6 @@ tags:
  - mexican war
 
 published_date: "1848-01-12"
-added_date: "2015-09-10"
 author: Abraham Lincoln
 icon: lincoln-1848.jpg
 ---

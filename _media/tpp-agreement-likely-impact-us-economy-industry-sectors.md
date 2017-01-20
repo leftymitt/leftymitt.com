@@ -9,7 +9,6 @@ tags:
  - tpp
  - free trade
 
-added_date: "2016-05-29"
 published_date: "2016-05-01"
 icon: usitc.svg
 link: "https://www.usitc.gov/publications/332/pub4607.pdf"

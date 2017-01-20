@@ -3,9 +3,6 @@ title: onlinecensorship.org
 layout: post
 category: projects
 
-added_date: "2016-02-06"
-published_date: "2016-02-06"
-
 banner: onlinecensorship.png
 link: "https://onlinecensorship.org/"
 tag: "onlinecensorship.org seeks to encourage social media companies to operate

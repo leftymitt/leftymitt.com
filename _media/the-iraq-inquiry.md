@@ -9,7 +9,6 @@ tags:
  - iraq war
  - chilcot report 
 
-added_date: "2016-07-09"
 published_date: "2016-07-06"
 icon: iraq-inquiry.png
 link: "http://www.iraqinquiry.org.uk/the-report/"

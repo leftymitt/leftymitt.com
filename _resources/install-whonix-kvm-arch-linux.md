@@ -10,8 +10,8 @@ tags:
  - anonymity
  - tor
 
-added_date: "2016-05-20"
-published_date: 
+date: 2016-04-02
+
 icon: whonix-logo.svg
 
 code: 

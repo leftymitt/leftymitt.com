@@ -10,7 +10,6 @@ tags:
  - economics
  - income inequality
 
-added_date: "2016-02-05"
 published_date: "2016-01-18"
 icon: oxfam.svg
 link: "http://www.oxfamamerica.org/static/media/files/bp210-economy-one-percent-tax-havens-180116-en_0.pdf"

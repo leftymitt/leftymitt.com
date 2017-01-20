@@ -7,7 +7,6 @@ type: anime
 tags: 
  - supernatural
 
-added_date: "2015-11-18"
 cover: haibane-renmei.png
 rating: "5"
 

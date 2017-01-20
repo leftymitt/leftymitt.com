@@ -9,7 +9,6 @@ tags:
  - google
  - privacy
 
-added_date: "2016-09-15"
 published_date: "2014-07-01"
 icon: wikileaks-logo.svg
 link: "https://wikileaks.org/google-is-not-what-it-seems/"

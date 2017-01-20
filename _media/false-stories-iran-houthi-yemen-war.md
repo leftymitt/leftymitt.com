@@ -10,7 +10,6 @@ tags:
  - saudi arabia
  - middle east
 
-added_date: "2016-01-04"
 published_date: "2015-12-31"
 icon: truthout.jpg
 link: "http://www.truth-out.org/news/item/34240-how-false-stories-of-iran-arming-the-houthis-were-used-to-justify-war-in-yemen"

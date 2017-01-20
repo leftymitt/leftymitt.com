@@ -9,7 +9,6 @@ tags:
  - libya
  - hillary clinton
 
-added_date: "2016-03-01"
 published_date: "2016-02-28"
 icon: nytimes.svg
 

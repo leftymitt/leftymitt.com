@@ -8,7 +8,6 @@ tags:
  - civil war
  - transcript
 author: Convention of South Carolina
-added_date: "2015-10-21"
 published_date: "1860-12-20"
 icon: first-confederate-flag.svg
 ---

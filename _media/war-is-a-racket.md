@@ -8,7 +8,6 @@ type: book
 tags: 
  - war
 
-added_date: "2017-01-13"
 published_date: "1935-01-01"
 
 icon: war-is-a-racket.jpg

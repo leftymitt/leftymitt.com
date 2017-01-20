@@ -5,8 +5,7 @@ category: projects
 repo: us-elections
 author: leftymitt
 
-added_date: "2016-02-07"
-published_date: "2016-02-01"
+date: 2016-02-07
 
 banner: "united-states.svg"
 tag: "an analysis of presidential elections in the united states at the state

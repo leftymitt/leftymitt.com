@@ -5,7 +5,6 @@ category: media
 type: article
 format: text
 icon: daily-mail-logo.png
-added_date: "2015-10-20"
 published_date: "2015-10-17"
 tags: 
  - iraq war

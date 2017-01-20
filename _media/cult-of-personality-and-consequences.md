@@ -8,7 +8,6 @@ author: Nikita Khrushchev
 tags: 
  - speech
 published_date: "1956-02-25"
-added_date: "2015-09-25"
 icon: nikita-khrushchev.jpg
 ---
 

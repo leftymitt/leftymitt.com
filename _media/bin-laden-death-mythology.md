@@ -7,7 +7,6 @@ format: text
 tags: 
  - propaganda
  - terrorism
-added_date: "2015-07-03"
 link: "https://medium.com/insurge-intelligence/the-bin-laden-death-mythology-9a3776a6e3c3"
 icon: "insurge-intelligence.png"
 author: Nafeez Ahmed

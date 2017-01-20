@@ -7,7 +7,6 @@ format: text
 type: article
 tags: 
 
-added_date: "2016-06-06"
 published_date: "2016-05-22"
 icon: tomdispatch.svg
 link: "http://www.tomdispatch.com/post/176143/tomgram%3A_aviva_chomsky%2C_will_the_millennial_movement_rebuild_the_ivory_tower_or_be_crushed_by_it/"

@@ -10,7 +10,6 @@ tags:
  - security
  - intel
 
-added_date: "2016-02-15"
 published_date: "2015-10-01"
 icon: qubes-logo.svg
 

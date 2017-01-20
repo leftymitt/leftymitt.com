@@ -9,7 +9,6 @@ tags:
  - privacy
  - supreme court
 
-added_date: "2016-02-15"
 published_date: "1928-02-20"
 icon: lii.png 
 ---

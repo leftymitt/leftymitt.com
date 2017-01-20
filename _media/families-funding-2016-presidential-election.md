@@ -10,7 +10,6 @@ tags:
  - politics
  - finance
 link: "https://www.nytimes.com/interactive/2015/10/11/us/politics/2016-presidential-election-super-pac-donors.html"
-added_date: "2015-10-11"
 published_date: "2015-10-11"
 author: Nicholas Confessore, Sarah Cohen, and Karen Yourish
 ---

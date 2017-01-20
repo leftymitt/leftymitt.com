@@ -7,8 +7,7 @@ format: text
 type: article
 tags: 
 
-added_date: "2016-05-06"
-published_date: 
+date: 2016-05-06
 banner: ambrose-bierce.jpg 
 repo: devils-dictionary
 
@@ -67,32 +66,39 @@ A.B.
   </div>
 </div>
 
-<div class="uk-width-4-5 uk-width-small-9-10 uk-width-medium-9-10">
+<div class="uk-width-4-5 uk-width-small-9-10 uk-width-medium-9-10"
+     id="dictionary" data-uk-observe data-uk-check-display>
   {% for letter in site.data.devils-dictionary.dictionary %}
   <br>
-  <div class="uk-h2 uk-text-center" id="section-{{ letter.letter}}">
-    {{ letter.letter }}
-  </div>
-  <br>
-  <div class="uk-grid" data-uk-grid="{gutter:15, animation:false}">
-    {% for term in letter.terms %}
-    <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-xlarge-1-2">
-      <div class="uk-panel uk-panel-box">
-        <div class="uk-panel-title uk-panel-header">
-          {{ term.word }} 
-          <span class="uk-float-right">{{ term.type }}</span>
-        </div>
-
-        <p>{{ term.def }}</p> 
-        {% if term.poem  %} 
-        <blockquote> 
-          <p>{{ term.poem | strip | newline_to_br }}</p>
-          <small> {{ term.author }}</small>
-        </blockquote> 
-        {% endif %}
-      </div>
+  {% if letter.letter == "A" %}
+  <div>
+  {% else %}
+  <div class="uk-hidden">
+  {% endif %}
+    <div class="uk-h2 uk-text-center" id="section-{{ letter.letter}}">
+      {{ letter.letter }}
     </div>
-    {% endfor %}
+    <br>
+    <div class="uk-grid" data-uk-grid="{gutter:15, animation:false}">
+      {% for term in letter.terms %}
+      <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-xlarge-1-2">
+        <div class="uk-panel uk-panel-box">
+          <div class="uk-panel-title uk-panel-header">
+            {{ term.word }} 
+            <span class="uk-float-right">{{ term.type }}</span>
+          </div>
+
+          <p>{{ term.def }}</p> 
+          {% if term.poem  %} 
+          <blockquote> 
+            <p>{{ term.poem | strip | newline_to_br }}</p>
+            <small> {{ term.author }}</small>
+          </blockquote> 
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
   {% endfor %}
 </div>

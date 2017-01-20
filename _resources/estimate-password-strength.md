@@ -8,8 +8,7 @@ type: article
 tags: 
  - passwords
 
-added_date: "2016-04-02"
-published_date: "2016-04-02" 
+date: 2016-04-02
 icon: dropbox-logo.svg
 
 js: "

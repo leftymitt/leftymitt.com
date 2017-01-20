@@ -9,7 +9,6 @@ tags:
  - saudi arabia
  - terrorism
 
-added_date: "2016-04-18"
 published_date: "2016-04-15"
 icon: nytimes.svg
 link: "https://www.nytimes.com/2016/04/16/world/middleeast/saudi-arabia-warns-ofeconomic-fallout-if-congress-passes-9-11-bill.html"

@@ -9,7 +9,6 @@ tags:
  - free trade
  - ttip
 
-added_date: "2016-05-29"
 published_date: "2016-05-02"
 icon: greenpeace.svg
 

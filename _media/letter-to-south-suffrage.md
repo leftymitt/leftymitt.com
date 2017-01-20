@@ -9,7 +9,6 @@ tags:
  - history
  - suffrage
 published_date: "1867-01-15"
-added_date: "2015-10-03"
 author: "Henry Blackwell"
 icon: henry-blackwell.jpg
 ---

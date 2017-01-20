@@ -9,7 +9,6 @@ tags:
  - military spending
  - war
 
-added_date: "2015-11-22"
 published_date: "2014-06-22"
 icon: watson-institute.png
 

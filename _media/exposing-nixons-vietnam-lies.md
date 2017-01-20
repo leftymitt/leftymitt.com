@@ -7,7 +7,6 @@ type: article
 link: "https://consortiumnews.com/2015/08/10/exposing-nixons-vietnam-lies/"
 author: James DiEugenio
 icon: consortiumnews.png
-added_date: "2015-08-10"
 ---
 
 After resigning over the Watergate political-spying scandal, President Nixon

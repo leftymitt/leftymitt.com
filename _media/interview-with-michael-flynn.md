@@ -9,7 +9,6 @@ tags:
  - isis
  - war on terror
 
-added_date: "2015-11-25"
 published_date: "2015-08-13"
 icon: al-jazeera.svg
 iframe_link: "https://www.youtube.com/embed/SG3j8OYKgn4"

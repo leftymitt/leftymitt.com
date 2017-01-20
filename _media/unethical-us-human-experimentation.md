@@ -7,7 +7,6 @@ format: text
 tags: 
  - secrets
  - human experiments
-added_date: "2015-08-02"
 link: "https://en.wikipedia.org/wiki/Unethical_human_experimentation_in_the_United_States"
 icon: wikipedia.svg
 ---

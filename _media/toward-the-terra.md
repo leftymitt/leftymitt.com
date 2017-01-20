@@ -6,7 +6,6 @@ type: anime
 tags: 
  - anime
  - supernatural
-added_date: "2015-05-12"
 rating: "4.5"
 cover: toward-the-terra-cover.jpg
 format: text

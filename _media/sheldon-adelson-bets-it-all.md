@@ -10,7 +10,6 @@ tags:
  - corruption
  - adelson
 
-added_date: "2016-02-21"
 published_date: "2016-02-17"
 icon: motherjones.jpg
 

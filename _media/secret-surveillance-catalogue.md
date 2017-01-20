@@ -10,7 +10,6 @@ tags:
  - hardware
  - privacy
 
-added_date: "2015-12-17"
 published_date: "2015-12-17"
 icon: the-intercept.png
 link: "https://theintercept.com/surveillance-catalogue/"

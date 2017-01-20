@@ -9,7 +9,6 @@ tags:
  - trump
  - corruption
 
-added_date: "2016-11-23"
 published_date: 
 publisher: the intercept
 

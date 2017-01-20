@@ -7,7 +7,6 @@ type: anime
 tags: 
  - anime
 
-added_date: "2016-01-16"
 published_date: "2009-10-11"
 cover: aoi-bungaku.jpg
 rating: "5"

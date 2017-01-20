@@ -8,7 +8,6 @@ type: article
 tags: 
  - 2016 election
 
-added_date: "2016-08-09"
 published_date: "2016-08-04"
 icon: tomdispatch.svg
 link: "http://www.tomdispatch.com/post/176172/tomgram%3A_andrew_bacevich%2C_pseudo-election_2016/"

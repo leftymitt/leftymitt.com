@@ -7,8 +7,6 @@ tags:
  - journals
  - open science
 
-added_date: "2016-02-04"
-published_date: "2016-02-04"
 banner: sci-hub.png
 
 link: "https://sci-hub.io/"

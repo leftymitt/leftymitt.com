@@ -8,7 +8,6 @@ type: article
 tags: 
  - anonymity
 
-added_date: "2016-09-15"
 published_date: "2016-08-22"
 icon: whonix-logo.svg
 link: "https://www.whonix.org/blog/advanced-deanonymization-attacks"

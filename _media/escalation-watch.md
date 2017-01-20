@@ -7,7 +7,6 @@ format: text
 type: article
 tags: 
 
-added_date: "2017-01-18"
 published_date: "2017-01-17"
 publisher: tomdispatch
 

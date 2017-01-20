@@ -5,7 +5,7 @@ category: resources
 author: Micah Lee
 icon: the-intercept.png
 link: "https://theintercept.com/2015/03/26/passphrases-can-memorize-attackers-cant-guess/"
-published_date: "2015-03-26"
+date: 2015-03-26
 ---
 
 It’s getting easier to secure your digital privacy. iPhones now encrypt a great

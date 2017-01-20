@@ -7,7 +7,6 @@ type: anime
 tags: 
  - anime
 
-added_date: "2016-02-17"
 published_date: "2006-02-25" 
 cover: ergo-proxy.png
 rating: "4.5"

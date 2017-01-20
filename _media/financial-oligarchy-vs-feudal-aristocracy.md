@@ -10,7 +10,6 @@ tags:
  - banks
  - economy
 
-added_date: "2016-02-13"
 published_date: "2016-02-12"
 icon: counterpunch.png
 link: "http://www.counterpunch.org/2016/02/12/financial-oligarchy-vs-feudal-aristocracy/"

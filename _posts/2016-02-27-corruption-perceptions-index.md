@@ -26,12 +26,12 @@ img {
 The Corruption Perceptions Index (CPI) is a rough metric for political and
 corporate corruption created by Transparency International (TI), a German
 anti-corruption NGO Each year, TI releases a score ranging from 0 to 100 for
-each country.  Low scores correspond to high levels of corruption, and vice
-versa.  Corruption is broadly defined as misuse of public power for private
+each country. Low scores correspond to high levels of corruption, and vice
+versa. Corruption is broadly defined as misuse of public power for private
 gain. 
 
 Scores are derived from between 3 to 11 external reports or surveys that
-provide some measurement for corruption.  They are calculated as follows: 
+provide some measurement for corruption. They are calculated as follows: 
 
 > Each source is then standardised to be compatible with other available
 > sources, for aggregation to the CPI scale. The standardisation converts all
@@ -82,38 +82,38 @@ provide some measurement for corruption.  They are calculated as follows:
 
 Basically, all external scores are normalized to a mean of 0 and standard
 deviation of 1, and then they are rescaled to a mean of 45 and standard
-deviation of 20.  The normalized scores for each country are averaged, and the
-result is the Corruption Perception Index.  Look at the figure below to
-visualize this.  The mean of all countries' CPI for each year is ~45 and
+deviation of 20. The normalized scores for each country are averaged, and the
+result is the Corruption Perception Index. Look at the figure below to
+visualize this. The mean of all countries' CPI for each year is ~45 and
 standard deviation (the area colored above and below the line) is ~20.
 
 [![CPI density after 2012]({{ site.images
 }}/corruption-index/cpi_stats_after_2012.svg)]({{ site.images
 }}/corruption-index/cpi_stats_after_2012.svg)
 
-This only applies to reports from 2012 and after.  Previous years (1995-2011)
-used a different normalization scheme.  Data from the two groups are not
-comparable.  See below for a time-series for the mean and standard deviation
-for all countries each year.
+This only applies to reports from 2012 and after. Previous years (1995-2011)
+used a different normalization scheme. Data from the two groups are not
+comparable. See below for a time-series for the mean and standard deviation for
+all countries each year.
 
 [![CPI density before 2012]({{ site.images
 }}/corruption-index/cpi_stats_before_2012.svg)]({{ site.images
 }}/corruption-index/cpi_stats_before_2012.svg)
 
-By no means is the CPI a rigorous measurement.  Of course, any measure of
+By no means is the CPI a rigorous measurement. Of course, any measure of
 corruption is inherently not rigorous because corruption happens clandestinely.
 Still, the fact that not every external measure covers all countries and that
 each country gets different numbers of measurements from different sources
 undoubtedly skews normalizations. 
 
 Also, the normalization step renders changes in CPI scores for each country
-over time somewhat meaningless.  For example, if Denmark maintains is lack of
+over time somewhat meaningless. For example, if Denmark maintains is lack of
 corruption while many corrupt countries become less corrupt, Denmark's CPI will
 decrease because the globally elevated corruption scores will reduce the
-distance it is from the global mean.  Another scenario, that the corrupt
-nations maintain their levels of corruption while Denmark becomes more corrupt,
-fits the same data.  That is very problematic, and it can only be addressed by
-going though the original raw scores from each source.
+distance it is from the global mean. Another scenario, that the corrupt nations
+maintain their levels of corruption while Denmark becomes more corrupt, fits
+the same data. That is very problematic, and it can only be addressed by going
+though the original raw scores from each source.
 
 And, for the conspiratorially-minded, Transparency International is by no means
 an organization exempt from [pressures from powerful
@@ -126,8 +126,8 @@ Still, it's worth noting some patterns in the data.
 }}/corruption-index/cpi_density_before_2012.svg)
 
 For the dataset from 1998-2011, plotted above, the distribution of CPI values
-becomes more skewed over time toward the largest peak.  The smaller peak
-corresponding to higher CPIs shrinks over time.  Questions of whether some
+becomes more skewed over time toward the largest peak. The smaller peak
+corresponding to higher CPIs shrinks over time. Questions of whether some
 countries are overall becoming more or less corrupt cannot be answered by the
 distribution, but it does establish that countries became more similarly
 corrupt. 

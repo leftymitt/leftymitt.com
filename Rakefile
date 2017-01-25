@@ -51,7 +51,6 @@ task :new do
         file.puts "type: article"
         file.puts "tags: "
         file.puts ""
-        file.puts "added_date: \"#{@post_date}\""
         file.puts "published_date: "
         file.puts "publisher: "
         file.puts ""
@@ -129,7 +128,7 @@ task :publish do
         FileUtils.mv("_drafts/#{@post_name}", "_resources/#{@post_name}")
       elsif File.readlines("_drafts/#{@post_name}").grep(/categor(y|ies):.media/).any?
         Dir.mkdir("_media") unless File.exists?("_media")
-        FileUtils.mv("_drafts/#{@post_name}", "_media/#{@post_name}")
+        FileUtils.mv("_drafts/#{@post_name}", "_media/#{@post_date}-#{@post_name}")
       elsif File.readlines("_drafts/#{@post_name}").grep(/categor(y|ies):.project/).any?
         Dir.mkdir("_projects") unless File.exists?("_projects")
         FileUtils.mv("_drafts/#{@post_name}", "_projects/#{@post_name}")
@@ -140,20 +139,9 @@ task :publish do
 
         if @yes == "Y" || @yes == "y"
           Dir.mkdir("_media") unless File.exists?("_media")
-
-          # automatically fill the published_date field.
-          text = File.read("_drafts/#{@post_name}")
-          text = text.gsub(/published_date:\ /, "published_date: \"#{@post_date}\"")
-          File.open("_drafts/#{@post_name}", "w") {|file| file.puts text}
-
           FileUtils.mv("_drafts/#{@post_name}", "_posts/#{@post_date}-#{@post_name}")
-#          FileUtils.symlink("../_posts/#{@post_date}-#{@post_name}", "_media/#{@post_name}")
+#          FileUtils.symlink("../_posts/#{@post_date}-#{@post_name}", "_media/#{@post_date}-#{@post_name}")
         else 
-          # automatically fill the published_date field.
-          text = File.read("_drafts/#{@post_name}")
-          text = text.gsub(/published_date:\ /, "published_date: \"#{@post_date}\"")
-          File.open("_drafts/#{@post_name}", "w") {|file| file.puts text}
-
           FileUtils.mv("_drafts/#{@post_name}", "_posts/#{@post_date}-#{@post_name}")
         end
       end

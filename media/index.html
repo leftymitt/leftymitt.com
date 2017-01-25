@@ -127,8 +127,8 @@ css: "
     {% endfor %}
   </ul>
 
-  <div data-uk-check-display>
-  <div class="uk-grid" id="mediagrid" data-uk-grid="{gutter: 15, controls:'#filter'}"> 
+  <div class="uk-grid" id="mediagrid" style="min-height:65vh;"
+       data-uk-grid="{gutter: 15, controls:'#filter'}"> 
   
   {% for item in paginator.media %}
   {% if item.format == "video" %}
@@ -294,7 +294,6 @@ css: "
     {% endif %}
   {% endfor %}
 
-  </div>
   </div>
 
   <div class="uk-text-center uk-margin-large-top">

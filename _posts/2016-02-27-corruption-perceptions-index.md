@@ -3,14 +3,10 @@ title: "corruption perceptions index."
 layout: post
 category: blog
 author: leftymitt
-format: text
-type: article
 tags: 
  - data
  - corruption
 
-added_date: "2016-02-27"
-published_date: "2016-02-27"
 img: "corruption-index/cpi_density_before_2012.svg"
 repo: corruption-perceptions-index
 

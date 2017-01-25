@@ -2,10 +2,7 @@
 title: a map of a future middle east.
 layout: post
 category: blog
-format: text
 author: leftymitt
-type: article
-added_date: "2016-02-25"
 
 img: "redrawn-middle-east-map.png"
 table_of_contents: 

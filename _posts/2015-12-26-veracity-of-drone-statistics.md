@@ -6,9 +6,6 @@ author: leftymitt
 tags: 
  - drones
 
-type: article
-format: text
-added_date: "2015-12-26"
 img: predator-drone.jpg
 ---
 

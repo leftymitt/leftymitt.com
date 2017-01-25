@@ -3,12 +3,8 @@ title: "presidential waivers (2011-15) for the child soldier prevention act of 2
 layout: post
 category: blog
 author: leftymitt
-format: text
-type: article
 tags: 
 
-added_date: "2016-02-15"
-published_date: "2016-02-15"
 img: potus-seal.svg
 ---
 

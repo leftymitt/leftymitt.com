@@ -3,9 +3,6 @@ title: random uniform distributions and modulo division.
 category: blog
 layout: post
 img: rand_dist_2.svg
-
-added_date: "2015-08-31"
-published_date: "2015-08-31"
 ---
 
 Random numbers, while impossible to generate algorithmically, can approximated

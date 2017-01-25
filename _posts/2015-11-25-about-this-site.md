@@ -3,9 +3,6 @@ title: "about this site."
 layout: post
 category: blog
 author: leftymitt
-
-added_date: "2015-11-24"
-published_date: "2015-11-25"
 ---
 
 This site functions mostly as an information aggregator, compiling noteworthy

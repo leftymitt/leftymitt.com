@@ -19,9 +19,9 @@ Canada."
 ---
 
 The Devil's Dictionary was begun in a weekly paper in 1881, and was continued
-in a desultory way at long intervals until 1906.  In that year a large part of
+in a desultory way at long intervals until 1906. In that year a large part of
 it was published in covers with the title *The Cynic's Word Book*, a name which
-the author had not the power to reject or happiness to approve.  To quote the
+the author had not the power to reject or happiness to approve. To quote the
 publishers of the present work:
 
 >This more reverent title had previously been forced upon him by the religious
@@ -66,39 +66,32 @@ A.B.
   </div>
 </div>
 
-<div class="uk-width-4-5 uk-width-small-9-10 uk-width-medium-9-10"
-     id="dictionary" data-uk-observe data-uk-check-display>
+<div class="uk-width-4-5 uk-width-small-9-10 uk-width-medium-9-10">
   {% for letter in site.data.devils-dictionary.dictionary %}
   <br>
-  {% if letter.letter == "A" %}
-  <div>
-  {% else %}
-  <div class="uk-hidden">
-  {% endif %}
-    <div class="uk-h2 uk-text-center" id="section-{{ letter.letter}}">
-      {{ letter.letter }}
-    </div>
-    <br>
-    <div class="uk-grid" data-uk-grid="{gutter:15, animation:false}">
-      {% for term in letter.terms %}
-      <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-xlarge-1-2">
-        <div class="uk-panel uk-panel-box">
-          <div class="uk-panel-title uk-panel-header">
-            {{ term.word }} 
-            <span class="uk-float-right">{{ term.type }}</span>
-          </div>
-
-          <p>{{ term.def }}</p> 
-          {% if term.poem  %} 
-          <blockquote> 
-            <p>{{ term.poem | strip | newline_to_br }}</p>
-            <small> {{ term.author }}</small>
-          </blockquote> 
-          {% endif %}
+  <div class="uk-h2 uk-text-center" id="section-{{ letter.letter}}">
+    {{ letter.letter }}
+  </div>
+  <br>
+  <div class="uk-grid" data-uk-grid="{gutter:15, animation:false}">
+    {% for term in letter.terms %}
+    <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-xlarge-1-2">
+      <div class="uk-panel uk-panel-box">
+        <div class="uk-panel-title uk-panel-header">
+          {{ term.word }} 
+          <span class="uk-float-right">{{ term.type }}</span>
         </div>
+
+        <p>{{ term.def }}</p> 
+        {% if term.poem %} 
+        <blockquote> 
+          <p>{{ term.poem | strip | newline_to_br }}</p>
+          <small> {{ term.author }}</small>
+        </blockquote> 
+        {% endif %}
       </div>
-      {% endfor %}
     </div>
+    {% endfor %}
   </div>
   {% endfor %}
 </div>

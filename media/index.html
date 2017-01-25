@@ -12,9 +12,45 @@ tag: "sharing things with you and me, all with love and irony."
 
 js: "
 <script>
-var page = 1;
 
-$(document).ready(function () {
+var page = 1;
+$(document).ready(function() {
+
+  $('[data-uk-grid]').on('beforeupdate.uk.grid', function(e, children) {
+    $('#mediagrid').children().each(function() {
+      var loadimage = $(this).find('#loadimage');
+      var placeholder = $(this).find('#placeholder');
+      var url = $(loadimage).attr('data-src');
+      var alt = $(loadimage).attr('data-alt');
+
+      if (typeof url != 'undefined') {
+        var preload = new Image();
+        $(preload).attr({
+          src: url
+        });
+
+        if (preload.complete || preload.readyState === 4) {
+          $(placeholder).remove();
+          $(loadimage).attr('src', url);
+          $(loadimage).removeAttr('data-src');
+          $(loadimage).attr('alt', alt);
+          $(loadimage).removeAttr('data-alt');
+        } else {
+          $(preload).load(function (r,s,x) {
+            if (status === 'error') {
+              console.log('could not load ' + url + '.');
+            } else {
+              $(placeholder).remove();
+              $(loadimage).attr('src', url);
+              $(loadimage).removeAttr('data-src');
+              $(loadimage).attr('alt', alt);
+              $(loadimage).removeAttr('data-alt');
+            }
+          });
+        };
+      };
+    });
+  });
 
   $('#loadbutton').click( function() {
     page += 1;
@@ -29,7 +65,6 @@ $(document).ready(function () {
             $(this).css('display', 'none');
           };
         }));
-        $('#mediagrid').trigger('display.uk.check');
       },
       error: function(XMLHttpRequest, textStatus, errorThrown) {
         $('#loadbutton').text('no more');
@@ -39,7 +74,6 @@ $(document).ready(function () {
   });
 
 });
-
 </script>
 "
 
@@ -93,6 +127,7 @@ css: "
     {% endfor %}
   </ul>
 
+  <div data-uk-check-display>
   <div class="uk-grid" id="mediagrid" data-uk-grid="{gutter: 15, controls:'#filter'}"> 
   
   {% for item in paginator.media %}
@@ -219,9 +254,13 @@ css: "
         {% endif %}
         <p>
           {% if item.cover %}
-          <img class="uk-thumbnail-expand" 
-               alt="{{ item.title | downcase }} cover">
-               <!-- src="{{ site.images }}/{{ item.cover }}"> -->
+          <img class="uk-thumbnail-expand" width="200px" height="200px" 
+               id="loadimage"
+               data-alt="{{ item.title | downcase }} cover"
+               data-src="{{ site.images }}/{{ item.cover }}">
+          <div id="placeholder" class="uk-text-center">
+            <i class="uk-icon-large uk-icon-spin uk-icon-spinner"></i>
+          </div>
           {% elsif item.publisher %}
             {% for publisher in publishers %} 
               {% if item.publisher == publisher.name %}
@@ -255,6 +294,7 @@ css: "
     {% endif %}
   {% endfor %}
 
+  </div>
   </div>
 
   <div class="uk-text-center uk-margin-large-top">

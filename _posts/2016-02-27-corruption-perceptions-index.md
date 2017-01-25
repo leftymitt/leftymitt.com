@@ -13,11 +13,11 @@ repo: corruption-perceptions-index
 css: "
 <style>
 img {
-	margin-left:auto;
-	margin-right:auto;
-	display:block;
-	max-width:100%;
-	height:auto;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  max-width:100%;
+  height:auto;
 }
 </style>
 "

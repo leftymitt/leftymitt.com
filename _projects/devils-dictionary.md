@@ -36,16 +36,16 @@ publishers of the present work:
 Meantime, too, some of the enterprising humorists of the country had helped
 themselves to such parts of the work as served their needs, and many of its
 definitions, anecdotes, phrases and so forth, had become more or less current
-in popular speech.  This explanation is made, not with any pride of priority in
+in popular speech. This explanation is made, not with any pride of priority in
 trifles, but in simple denial of possible charges of plagiarism, which is no
-trifle.  In merely resuming his own the author hopes to be held guiltless by
+trifle. In merely resuming his own the author hopes to be held guiltless by
 those to whom the work is addressed -- enlightened souls who prefer dry wines
 to sweet, sense to sentiment, wit to humor and clean English to slang.
 
 A conspicuous, and it is hoped not unpleasant, feature of the book is its
 abundant illustrative quotations from eminent poets, chief of whom is that
 learned and ingenius cleric, Father Gassalasca Jape, S.J., whose lines bear his
-initials.  To Father Jape's kindly encouragement and assistance the author of
+initials. To Father Jape's kindly encouragement and assistance the author of
 the prose text is greatly indebted.
 
 A.B.

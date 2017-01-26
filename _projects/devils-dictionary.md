@@ -16,6 +16,20 @@ is as to overlook what he indubitably ought to be. His chief occupation is
 extermination of other animals and his own species, which, however, multiplies
 with such insistent rapidity as to infest the whole habitable earth and
 Canada."
+
+js: "
+<script>
+$(document).ready(function() {
+  $('[data-uk-scrollspy]').on('init.uk.scrollspy', function() {
+    var letter = $(this).text().trim();
+    if ($('#pseudo-'+letter).length) {
+      $('#grid-'+letter).append($('#pseudo-'+letter).html());
+      $('#pseudo-'+letter).remove();
+    };
+  });
+});
+</script>
+"
 ---
 
 The Devil's Dictionary was begun in a weekly paper in 1881, and was continued
@@ -59,7 +73,7 @@ A.B.
         data-uk-scrollspy-nav="{closest:'li', topoffset:-250}" data-uk-nav>
       {% for letter in site.data.devils-dictionary.dictionary %}
       <li class="uk-text-center"><a href="#section-{{ letter.letter }}" 
-          data-uk-smooth-scroll="{offset:50}">{{ letter.letter }}
+           data-uk-smooth-scroll="{offset:50}">{{ letter.letter }}
       </a></li>
       {% endfor %}
     </ul>
@@ -69,13 +83,45 @@ A.B.
 <div class="uk-width-4-5 uk-width-small-9-10 uk-width-medium-9-10">
   {% for letter in site.data.devils-dictionary.dictionary %}
   <br>
-  <div class="uk-h2 uk-text-center" id="section-{{ letter.letter}}">
+  <div class="uk-h2 uk-text-center" id="section-{{ letter.letter }}" 
+       data-uk-scrollspy>
     {{ letter.letter }}
   </div>
   <br>
-  <div class="uk-grid" data-uk-grid="{gutter:15, animation:false}">
+  <div class="uk-grid" id="grid-{{ letter.letter }}" 
+       data-uk-grid="{gutter:15, animation:false}">
+    {% if letter.letter == "A" %}
     {% for term in letter.terms %}
-    <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-xlarge-1-2">
+    <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-xlarge-1-2"
+         id="wrapper-{{ letter.letter }}">
+      <div class="uk-panel uk-panel-box">
+        <div class="uk-panel-title uk-panel-header">
+          {{ term.word }} 
+          <span class="uk-float-right">{{ term.type }}</span>
+        </div>
+
+        <p>{{ term.def }}</p> 
+        {% if term.poem %} 
+        <blockquote> 
+          <p>{{ term.poem | strip | newline_to_br }}</p>
+          <small> {{ term.author }}</small>
+        </blockquote> 
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+<div class="uk-hidden">
+  {% for letter in site.data.devils-dictionary.dictionary %}
+  {% if letter.letter != "A" %}
+  <div id="pseudo-{{ letter.letter }}">
+    {% for term in letter.terms %}
+    <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-xlarge-1-2"
+         id="wrapper-{{ letter.letter }}">
       <div class="uk-panel uk-panel-box">
         <div class="uk-panel-title uk-panel-header">
           {{ term.word }} 
@@ -93,6 +139,7 @@ A.B.
     </div>
     {% endfor %}
   </div>
+  {% endif %}
   {% endfor %}
 </div>
 

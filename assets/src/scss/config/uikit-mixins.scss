@@ -111,14 +111,12 @@
 @mixin hook-badge-success(){}
 @mixin hook-badge-warning(){}
 @mixin hook-badge-danger(){}
-@mixin hook-badge-misc(){
-  body { 
-    margin: 0; 
-    background: $base-bg2;
-    color: $text-color-light;
-  }
+@mixin hook-badge-misc(){}
+@mixin hook-base-body(){
+  margin: 0; 
+  background: $base-bg2;
+  color: $text-color-light;
 }
-@mixin hook-base-body(){}
 @mixin hook-base-link(){}
 @mixin hook-base-link-hover(){}
 @mixin hook-base-code(){}

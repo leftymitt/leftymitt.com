@@ -92,7 +92,7 @@ const uikit = {
     src.uikit.js + 'core/smooth-scroll.js', 
 //    src.uikit.js + 'core/switcher.js', 
 //    src.uikit.js + 'core/tab.js', 
-//    src.uikit.js + 'core/toggle.js', 
+    src.uikit.js + 'core/toggle.js', 
     src.uikit.js + 'core/touch.js', 
     src.uikit.js + 'core/utility.js' 
   ],

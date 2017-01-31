@@ -4,7 +4,7 @@
 @import "config/syntax.scss";
 
 // less related
-@import "uikit/core/variables.scss";
+//@import "uikit/core/variables.scss";
 
 // defaults
 @import "uikit/core/base.scss";
@@ -21,33 +21,33 @@
 @import "uikit/core/nav.scss";
 @import "uikit/core/navbar.scss";
 @import "uikit/core/subnav.scss";
-@import "uikit/core/breadcrumb.scss";
+//@import "uikit/core/breadcrumb.scss";
 @import "uikit/core/pagination.scss";
-@import "uikit/core/tab.scss";
-@import "uikit/core/thumbnav.scss";
+//@import "uikit/core/tab.scss";
+//@import "uikit/core/thumbnav.scss";
 
 // elements
 @import "uikit/core/list.scss";
 @import "uikit/core/description-list.scss";
 @import "uikit/core/table.scss";
-@import "uikit/core/form.scss";
+//@import "uikit/core/form.scss";
 
 // common
 @import "uikit/core/button.scss";
 @import "uikit/core/icon.scss";
 @import "uikit/core/close.scss";
 @import "uikit/core/badge.scss";
-@import "uikit/core/alert.scss";
+//@import "uikit/core/alert.scss";
 @import "uikit/core/thumbnail.scss";
 @import "uikit/core/overlay.scss";
 @import "uikit/core/column.scss";
 @import "uikit/core/animation.scss";
 
 // javascript
-@import "uikit/core/dropdown.scss";
+//@import "uikit/core/dropdown.scss";
 @import "uikit/core/modal.scss";
 @import "uikit/core/offcanvas.scss";
-@import "uikit/core/switcher.scss";
+//@import "uikit/core/switcher.scss";
 
 // need to be loaded last
 @import "uikit/core/text.scss";
@@ -57,26 +57,26 @@
 @import "uikit/core/print.scss";
 
 // components
-@import "uikit/components/accordion.scss";
+//@import "uikit/components/accordion.scss";
 //@import "uikit/components/autocomplete.scss";
 //@import "uikit/components/datepicker.scss";
-@import "uikit/components/dotnav.scss";
+//@import "uikit/components/dotnav.scss";
 //@import "uikit/components/form-advanced.scss";
 //@import "uikit/components/form-file.scss";
 //@import "uikit/components/form-password.scss";
 //@import "uikit/components/form-select.scss";
 //@import "uikit/components/htmleditor.scss";
 //@import "uikit/components/nestable.scss";
-@import "uikit/components/notify.scss";
-@import "uikit/components/placeholder.scss";
+//@import "uikit/components/notify.scss";
+//@import "uikit/components/placeholder.scss";
 @import "uikit/components/progress.scss";
-@import "uikit/components/search.scss";
+//@import "uikit/components/search.scss";
 //@import "uikit/components/slidenav.scss";
 //@import "uikit/components/slider.scss";
 //@import "uikit/components/slideshow.scss";
 //@import "uikit/components/sortable.scss";
 @import "uikit/components/sticky.scss";
-@import "uikit/components/tooltip.scss";
+//@import "uikit/components/tooltip.scss";
 //@import "uikit/components/upload.scss";
 
 // custom extended classes

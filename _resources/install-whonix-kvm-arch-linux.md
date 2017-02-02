@@ -90,7 +90,7 @@ run as root.
 
 {% highlight bash %}
 sudo systemctl enable libvirtd.service
-sudo usermod -aG ${whomai} kvm
+sudo usermod -aG ${whoami} kvm
 {% endhighlight %}
 
 In Arch Linux, virt-manager by default changes the ownership of each disk image
@@ -135,7 +135,7 @@ This allows you to hide your Whonix download from your ISP or anyone watching
 your connection. If doing this, you should also use `tor-resolve` to avoid DNS
 lookups leaking your IP address. 
 
-Now, check the integrity of the download. Import patrick's GPG key and check
+Now, check the integrity of the download. Import Patrick's GPG key and check
 the fingerprint to ensure that it is correct. Then, use it to verify the
 Gateway and Workstation VMs. 
 

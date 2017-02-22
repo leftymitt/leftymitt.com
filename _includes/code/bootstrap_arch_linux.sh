@@ -8,20 +8,30 @@ set -eu
 lsblk
 echo "which device? (e.g., sda, sdb, sdc, etc.)"
 read DEVICE
-echo "use device $DEVICE? (y/N)"
+echo "use device ${DEVICE}? (y/N)"
 read REPLY
-if [[ ! $REPLY =~ ^([Yy]$|[Yy]es) ]]; then
+if [[ ! ${REPLY} =~ ^([Yy]$|[Yy]es) ]]; then
   echo "stopping script..."
   exit 1
 fi
 
 
 ################################################################################
-# connect to internet (usually automatic for wired connections).
+# connect to internet (usually automatic for wired connections). 
 ################################################################################
 
-# for a wireless connections
-wifi-menu -o $(iw dev | sed -n "s/^\s*Interface \(.*\)$/\1/p")
+# check if connection active
+wget -q --tries=10 --timeout=20 --spider https://google.com
+if ! [[ $? -eq 0 ]]; then
+  # for wireless connections (connects to first interface available)
+  if iw dev | grep Interface > /dev/null; then
+    wifi-menu -o $(iw dev | grep -n 1 "Interface" | \
+                   sed -n "s/^\s*Interface \(.*\)$/\1/p")
+  else
+    echo "no wireless interface available. check your wired connection."
+  fi
+fi
+
 
 # for non-broadcasting wireless networks, wifi-menu will fail. manually define
 # the netork via netctl. see examples available in /etc/netcl. once definined
@@ -77,6 +87,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash
 
 # run content in arch_chroot_script.sh within the chroot
+
 
 ################################################################################
 # return from chroot, clean up, and reboot. 

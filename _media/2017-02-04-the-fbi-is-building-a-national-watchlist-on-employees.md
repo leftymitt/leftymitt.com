@@ -10,7 +10,7 @@ tags:
  - fbi
 
 published_date: 2017-02-04
-publisher: The Intercept
+publisher: the intercept
 link: "https://theintercept.com/2017/02/04/the-fbi-is-building-a-national-watchlist-that-gives-companies-real-time-updates-on-employees/"
 ---
 

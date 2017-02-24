@@ -10,7 +10,7 @@ tags:
  - Deep State
 
 published_date: 2017-02-10
-publisher: Insurge Intelligence
+publisher: insurge intelligence
 
 link: "https://medium.com/insurge-intelligence/how-the-trump-regime-was-manufactured-by-a-war-inside-the-deep-state-f9e757071c70"
 ---

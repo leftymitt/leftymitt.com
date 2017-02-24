@@ -59,6 +59,10 @@ publishers:
    alt: ['']
    icon: dropbox-logo.svg
 
+ - name: fermat's library
+   alt: ['fermat']
+   icon: fermat.png
+
  - name: greenpeace
    alt: ['green peace']
    icon: greenpeace.svg

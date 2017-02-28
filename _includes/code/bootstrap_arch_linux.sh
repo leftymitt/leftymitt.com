@@ -5,9 +5,13 @@ set -eu
 # prompt for info.
 ################################################################################
 
-lsblk
-echo "which device? (e.g., sda, sdb, sdc, etc.)"
-read DEVICE
+DISKS=($(lsblk | grep disk | cut -d" " -f1 | tr "\n" " "))
+echo "install on which disk?"
+select DEVICE in "${DISKS[@]}"; do
+  echo "${DEVICE} selected"
+  break
+done
+
 echo "use device ${DEVICE}? (y/N)"
 read REPLY
 if [[ ! ${REPLY} =~ ^([Yy]$|[Yy]es) ]]; then

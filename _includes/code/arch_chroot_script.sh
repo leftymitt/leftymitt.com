@@ -39,9 +39,10 @@ else
 fi
 hwclock --systohc --utc
 
-# set locale to en_US.UTF-8
-sed -i "s/#en_US.UTF-8/en_US.UTF-8/g" /etc/locale.gen
-locale-gen 
+# set locale
+LOCALE=$(locale | grep LANG | cut -d "=" -f2)
+sed -i "s/#${LOCALE}/${LOCALE}/g" /etc/locale.gen
+locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 
 # set hostname and append hostname to /etc/hosts

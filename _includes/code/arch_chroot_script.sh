@@ -52,7 +52,7 @@ echo LANG=${LOCALE} > /etc/locale.conf
 
 # set hostname and append hostname to /etc/hosts
 echo ${HOSTNAME} > /etc/hostname
-sed -i "s/::1/a 127.0.1.1\t${HOSTNAME}.localdomain\t${HOSTNAME}" /etc/hosts
+sed -i "/::1/a 127.0.1.1\t${HOSTNAME}.localdomain\t${HOSTNAME}" /etc/hosts
 
 # install wireless tools
 pacman -S iw wpa_supplicant dialog

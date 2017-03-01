@@ -64,7 +64,7 @@ pacman -S iw wpa_supplicant dialog
 
 OLD_HOOKS="base udev autodetect modconf block filesystems keyboard fsck"
 NEW_HOOKS="base udev autodetect modconf block encrypt lvm2 filesystems keyboard fsck"
-sed -i "s/{$OLD_HOOKS}/${NEW_HOOKS}/g" /etc/mkinitcpio.conf
+sed -i "s/${OLD_HOOKS}/${NEW_HOOKS}/g" /etc/mkinitcpio.conf
 
 # rebuild initial ramdisk with new modules
 mkinitcpio -p linux
@@ -82,7 +82,7 @@ LVM_ROOT="root=/dev/mapper/vg-root"
 GRUB_CMDLINE_LINUX="GRUB_CMDLINE_LINUX=\"${FOR_SSD} ${LVM_ROOT}\""
 GRUB_ENABLE_CRYPTODISK="GRUB_ENABLE_CRYPTODISK=y"
 
-sed -i "s/GRUB_CMDLINE_LINUX=/${GRUB_CMDLINE_LINUX}/g" grub
+sed -i "s/GRUB_CMDLINE_LINUX=/${GRUB_CMDLINE_LINUX}/g" /etc/default/grub
 echo "${GRUB_ENABLE_CRYPTODISK}" >> /etc/default/grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -97,7 +97,7 @@ passwd
 
 # create new user with administrator rights
 echo "create a new user."
-usermod -m -c ${USER} ${USER} -s /bin/bash
+useradd -m -c ${USER} ${USER} -s /bin/bash
 usermod -aG wheel,${USER} ${USER}
 echo "set user password."
 passwd ${USER}

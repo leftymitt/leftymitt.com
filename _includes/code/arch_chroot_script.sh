@@ -38,9 +38,9 @@ read USER
 # set time
 # rm /etc/localtime
 if [ ${REGION} == "UTC" ]; then
-  ln -s /usr/share/zoneinfo/${REGION} /etc/localtime
+  ln -sfn /usr/share/zoneinfo/${REGION} /etc/localtime
 else
-  ln -s /usr/share/zoneinfo/${REGION}/${CITY} /etc/localtime
+  ln -sfn /usr/share/zoneinfo/${REGION}/${CITY} /etc/localtime
 fi
 hwclock --systohc --utc
 

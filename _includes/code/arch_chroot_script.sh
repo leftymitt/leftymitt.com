@@ -1,8 +1,6 @@
 #! /bin/bash
 set -eu
 
-HOSTNAME=hostname
-USER=user
 REGION=UTC
 CITY=
 
@@ -24,6 +22,13 @@ if [[ ! ${REPLY} =~ ^([Yy]$|[Yy]es) ]]; then
   echo "stopping script..."
   exit 1
 fi
+
+# compatible with bash and zsh
+printf '%s ' 'enter a new hostname: '
+read HOSTNAME
+
+printf '%s ' 'enter a new username: '
+read USER
 
 
 ################################################################################

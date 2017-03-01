@@ -45,10 +45,10 @@ fi
 hwclock --systohc --utc
 
 # set locale
-LOCALE=$(locale | grep LANG | cut -d "=" -f2)
-sed -i "s/#${LOCALE}/${LOCALE}/g" /etc/locale.gen
+LOCALE=$(locale | grep ^LANG | cut -d= -f2 | cut -d\. f1)
+sed -i "/^#${LOCALE}.UTF/s/^#//" /etc/locale.gen
 locale-gen
-echo LANG=en_US.UTF-8 > /etc/locale.conf
+echo LANG=${LOCALE} > /etc/locale.conf
 
 # set hostname and append hostname to /etc/hosts
 echo ${HOSTNAME} > /etc/hostname

@@ -68,6 +68,7 @@ lvcreate -l +100%FREE vg -n home
 
 # configure swap and filesystems
 mkswap -L swap /dev/mapper/vg-swap
+swapon /dev/mapper/vg-swap
 mkfs.ext4 /dev/mapper/vg-root
 mkfs.ext4 /dev/mapper/vg-home
 

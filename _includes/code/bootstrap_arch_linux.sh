@@ -90,7 +90,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 # if swap partition wasn't added to the fstab, add it manually
 if test "$(grep '^UUID.*swap' /etc/fstab)"; then
-  echo -e "# /dev/mapper/vg-swap" >> /mnt/etc/fstab
+  echo -e "# /dev/mapper/vg-swap LABEL=swap" >> /mnt/etc/fstab
   echo -e "UUID=$(lsblk -no UUID /dev/mapper/vg-swap)\tnone      \tswap      \tdefaults  \t0 0" >> /mnt/etc/fstab
   echo -e "" >> /mnt/etc/fstab
 fi

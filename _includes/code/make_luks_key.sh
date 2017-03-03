@@ -5,12 +5,16 @@ set -eu
 # prompt for info.
 ################################################################################
 
-lsblk
-echo "which device? (e.g., sda, sdb, sdc, etc.)"
-read DEVICE
-echo "use device $DEVICE? (y/N)"
+DISKS=($(lsblk | grep disk | cut -d" " -f1 | tr "\n" " "))
+echo "install on which disk?"
+select DEVICE in "${DISKS[@]}"; do
+  echo "${DEVICE} selected"
+  break
+done
+
+echo "use device ${DEVICE}? (y/N)"
 read REPLY
-if [[ ! $REPLY =~ ^([Yy]$|[Yy]es) ]]; then
+if [[ ! ${REPLY} =~ ^([Yy]$|[Yy]es) ]]; then
   echo "stopping script..."
   exit 1
 fi
@@ -21,19 +25,24 @@ fi
 ################################################################################
 
 # generate keyfile and prevent non-root from reading it. 
-dd bs=512 count=4 if=/dev/urandom of=/etc/crypto_keyfile.bin
-chmod 400 /etc/crypto_keyfile.bin
-cryptsetup luksAddKey /dev/${DEVICE}1 /etc/crypto_keyfile.bin
+CRYPTOKEY="/etc/crypto_keyfile.bin"
+dd bs=512 count=4 if=/dev/urandom of=${CRYPTOKEY}
+chmod 400 ${CRYPTOKEY}
+cryptsetup luksAddKey /dev/${DEVICE}1 ${CRYPTOKEY}
 
 # add key to /etc/mkinitcpio.conf
-sed -i "s/FILES=\".*\"/FILES=\"\/etc\/crypto_keyfile.bin\"/g" /etc/mkinitcpio.conf
+OLD_MKINITCPIO_FILES=$(sed -n "s/^FILES=\"\(.*\)\"/\1/p" /etc/mkinitcpio.conf)
+NEW_MKINITCPIO_FILES=$(echo ${OLD_MKINITCPIO_FILES} ${CRYPTOKEY})
+sed -i "s|^FILES=\"${OLD_MKINITCPIO_FILES}\"|FILES=\"${NEW_MKINITCPIO_FILES}\"|g" /etc/mkinitcpio.conf
 
 # rebuild the kernel
 mkinitcpio -p linux
 
 # add key to grub config file
-CRYPTO_KEY="cryptkey=rootfs:/etc/crypto_keyfile.bin"
-CUR_GRUB_CMDLINE_LINUX=$(grep "^GRUB_CMDLINE_LINUX=" /etc/default/grub)
-NEW_GRUB_CMDLINE_LINUX=$(echo $CUR_GRUB_CMDLINE_LINUX | cut -d \" -f2)
-NEW_GRUB_CMDLINE_LINUX="GRUB_CMDLINE_LINUX=$NEW_GRUB_CMDLINE_LINUX $CRYPTO_KEY"
-sed -i "s/$CUR_GRUB_CMDLINE_LINUX/$NEW_GRUB_CMDLINE_LINUX/g" /etc/default/grub
+CRYPTO_KEY="cryptkey=rootfs:${CRYPTOKEY}"
+OLD_GRUB_CMDLINE_LINUX=$(sed -n "s/^GRUB_CMDLINE_LINUX=\"\(.*\)\"/\1/p" /etc/default/grub)
+NEW_GRUB_CMDLINE_LINUX="${NEW_GRUB_CMDLINE_LINUX} ${CRYPTO_KEY}"
+sed -i "s|${OLD_GRUB_CMDLINE_LINUX}|${NEW_GRUB_CMDLINE_LINUX}|g" /etc/default/grub
+
+# rebuild grub
+grub-mkconfig -o /boot/grub/grub.cfg

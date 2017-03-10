@@ -110,7 +110,7 @@ const uikit = {
 //    src.uikit.js + 'components/notify.js',
 //    src.uikit.js + 'components/pagination.js',
     src.uikit.js + 'components/parallax.js',
-//    src.uikit.js + 'components/search.js',
+    src.uikit.js + 'components/search.js',
 //    src.uikit.js + 'components/slider.js',
 //    src.uikit.js + 'components/slideset.js',
 //    src.uikit.js + 'components/slideshow.js',

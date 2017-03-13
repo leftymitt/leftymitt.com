@@ -5,23 +5,30 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>{{ page.title }} | {{ site.title }}</title>
-    <meta name="description" content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
+    <meta name="description"
+          content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
 
     <!-- schema.org markup for google+ -->
     <meta itemprop="name" content="{{ page.title }}"/>
     {% if page.tag %}
-    <meta itemprop="description" content="{{ page.tag | strip_html | strip_newlines | truncate:200 }}"/>
+    <meta itemprop="description"
+          content="{{ page.tag | strip_html | strip_newlines | truncate:200 }}"/>
     {% else %}
-    <meta itemprop="description" content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
+    <meta itemprop="description"
+          content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
     {% endif %}
     {% if page.img %}
-    <meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/> 
+    <meta itemprop="image"
+          content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
     {% elsif page.icon %}
-    <meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.icon | replace: '.svg', '.png'  }}"/>
+    <meta itemprop="image"
+          content="{{ site.url }}{{ site.images }}/{{ page.icon | replace: '.svg', '.png'  }}"/>
     {% elsif page.banner %}
-    <meta itemprop="image" content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png'  }}"/>
+    <meta itemprop="image"
+          content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png'  }}"/>
     {% else %}
-    <meta itemprop="image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+    <meta itemprop="image"
+          content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
     {% endif %}
 
     <!-- twitter card data -->
@@ -35,25 +42,32 @@
     <meta name="twitter:site" content="{{ site.twitter }}"/>
     <meta name="twitter:title" content="{{ page.title }}"/>
     {% if page.tag %}
-    <meta name="twitter:description" content="{{ page.tag | strip_html | strip_newlines | truncate:200 }}"/>
+    <meta name="twitter:description"
+          content="{{ page.tag | strip_html | strip_newlines | truncate:200 }}"/>
     {% else %}
-    <meta name="twitter:description" content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
+    <meta name="twitter:description"
+          content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
     {% endif %}
     <meta name="twitter:creator" content="{{ site.twitter }}"/>
     <!-- twitter summary_large_image: at least 280x150px -->
     <!-- twitter summary: at least 120x120px -->
     {% unless page.type == "video" %}
       {% if page.type == "anime" %}
-    <meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.cover }}"/>
+    <meta name="twitter:image:src"
+          content="{{ site.url }}{{ site.images }}/{{ page.cover }}"/>
       {% elsif page.banner %}
-    <meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png' }}"/>
+    <meta name="twitter:image:src"
+          content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png' }}"/>
       {% else %}
         {% if page.img %}
-    <meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
+    <meta name="twitter:image:src"
+          content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
         {% elsif page.icon %}
-    <meta name="twitter:image:src" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
+    <meta name="twitter:image:src"
+          content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
         {% else %}
-    <meta name="twitter:image:src" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+    <meta name="twitter:image:src"
+          content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
         {% endif %}
       {% endif %}
     {% endunless %}
@@ -63,22 +77,29 @@
     <meta property="og:type" content="article"/>
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
     {% if page.banner %}
-    <meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png' }}"/>
+    <meta property="og:image"
+          content="{{ site.url }}{{ site.images }}/{{ page.banner | replace: '.svg', '.png' }}"/>
     {% elsif page.img %}
-    <meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
+    <meta property="og:image"
+          content="{{ site.url }}{{ site.images }}/{{ page.img | replace: '.svg', '.png' }}"/>
     {% elsif page.icon %}
-    <meta property="og:image" content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
+    <meta property="og:image"
+          content="{{ site.url }}{{ site.images }}/{{ page.icon }}"/>
     {% else %}
-    <meta property="og:image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+    <meta property="og:image"
+          content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
     {% endif %}
     {% if page.tag %}
-    <meta property="og:description" content="{{ page.tag | strip_html | strip_newlines | truncate:200 }}"/>
+    <meta property="og:description"
+          content="{{ page.tag | strip_html | strip_newlines | truncate:200 }}"/>
     {% else %}
-    <meta property="og:description" content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
+    <meta property="og:description"
+          content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
     {% endif %}
     <meta property="og:site_name" content="{{ site.title }}"/>
     <meta property="article:published_time" content="{{ page.date }}"/>
-    <meta property="article:modified_time" content="{{ page.git.last_commit.commit_date }}">
+    <meta property="article:modified_time"
+          content="{{ page.git.last_commit.commit_date }}">
     <meta property="article:section" content="{{ page.category }}"/>
     <meta property="article:tag" content="{{ page.tags }}"/>
 
@@ -97,9 +118,9 @@
       <div style="padding-bottom:40px;">
       {% include nav.html %}
       </div>
-      
-      <div class="uk-container uk-container-center uk-margin-top 
-                  uk-flex-item-1" 
+
+      <div class="uk-container uk-container-center uk-margin-top
+                  uk-flex-item-1"
            style="width:100%;">
 
       {% if page.table_of_contents %}
@@ -111,15 +132,15 @@
         <h1 class="uk-h2" id="top">{{ page.title }}</h1>
         {% if page.repo %}
         <div data-uk-margin class="uk-margin-bottom">
-          <a href="{{ site.github }}/{{ page.repo }}" 
+          <a href="{{ site.github }}/{{ page.repo }}"
              class="uk-button uk-button-success" type="button">
             <i class="uk-icon-github uk-icon-justify"></i> github
           </a>
-          <a href="{{ site.github }}/{{ page.repo }}/archive/master.tar.gz" 
+          <a href="{{ site.github }}/{{ page.repo }}/archive/master.tar.gz"
              class="uk-button uk-button-success" type="button" download>
             <i class="uk-icon-download uk-icon-justify"></i> tar.gz
           </a>
-          <a href="{{ site.github }}/{{ page.repo }}/archive/master.zip" 
+          <a href="{{ site.github }}/{{ page.repo }}/archive/master.zip"
              class="uk-button uk-button-success" type="button" download>
             <i class="uk-icon-download uk-icon-justify"></i> zip
           </a>
@@ -127,12 +148,12 @@
         {% endif %}
         {% if page.category == 'blog' or page.categories == "blog" %}
         <p class="uk-article-meta uk-margin-left">
-          posted on 
+          posted on
             <a href="{{ site.github }}/{{ site.repo }}/commit/{{ page.git.first_commit.long_sha }}">
               {{ page.date | date_to_string }}
             </a>
           <br>
-          last edited on 
+          last edited on
             <a href="{{ site.github }}/{{ site.repo }}/commit/{{ page.git.last_commit.long_sha }}">
               {{ page.git.last_commit.commit_date | date_to_string }}
             </a>
@@ -146,7 +167,7 @@
         {% endif %}
 
         {% if page.code == true or page.code %}
-        <button class="uk-button uk-button-success 
+        <button class="uk-button uk-button-success
                        uk-margin-right uk-margin-bottom"
                 type="button"
                 data-uk-toggle="{ target: '#code, #content',
@@ -163,24 +184,24 @@
                 <i class="uk-icon-download"></i>
               </button>
             </div>
-            <!-- hardcode a few languages because they cannot be injected into 
-                 liquid highlight tags as variables. leave the highlight tags 
+            <!-- hardcode a few languages because they cannot be injected into
+                 liquid highlight tags as variables. leave the highlight tags
                  on one line to avoid extra whitespaces. -->
-              {% if snippet.language == "bash" %} 
+              {% if snippet.language == "bash" %}
                 {% highlight bash %}{% include code/{{ snippet.script }} %}{% endhighlight %}
-              {% elsif snippet.language == "cpp" %} 
+              {% elsif snippet.language == "cpp" %}
                 {% highlight cpp %}{% include code/{{ snippet.script }} %}{% endhighlight %}
-              {% elsif snippet.language == "python" %} 
+              {% elsif snippet.language == "python" %}
                 {% highlight python %}{% include code/{{ snippet.script }} %}{% endhighlight %}
-              {% elsif snippet.language == "ruby" %} 
+              {% elsif snippet.language == "ruby" %}
                 {% highlight ruby %}{% include code/{{ snippet.script }} %}{% endhighlight %}
-              {% else %} 
+              {% else %}
                 {% highlight bash %}{% include code/{{ snippet.script }} %}{% endhighlight %}
               {% endif %}
 
-            <!-- formatting looks strange to avoid adding whitespaces to the 
+            <!-- formatting looks strange to avoid adding whitespaces to the
                  generated text files. -->
-            <div id="{{ snippet.script }}" 
+            <div id="{{ snippet.script }}"
                  class="uk-hidden">{% include code/{{ snippet.script }} %}</div>
           </div>
           {% unless snippet == page.code.last %}
@@ -193,13 +214,13 @@
         <div id="content">{{ content }}</div>
 
       </article>
-      
+
       {% if page.table_of_contents %}
           </div>
 
           <div class="uk-hidden-small uk-width-medium-1-5 uk-pull-4-5">
             <aside class="uk-panel uk-panel-box" data-uk-sticky="{top:70}">
-              <ul class="uk-nav uk-nav-side uk-nav-parent-icon" 
+              <ul class="uk-nav uk-nav-side uk-nav-parent-icon"
                   data-uk-scrollspy-nav="{closest:'li', topoffset:-250}"
                   data-uk-nav>
                 <li class="uk-nav-header">contents.</li>
@@ -212,7 +233,7 @@
                 </li>
                 {% for toc in page.table_of_contents %}
                   <li>
-                    <a href="#{{ toc.item }}" 
+                    <a href="#{{ toc.item }}"
                        data-uk-smooth-scroll="{offset:65}">
                       {{ toc.item | replace: "_", " " | replace: "-", " " }}
                     </a>
@@ -224,11 +245,11 @@
 
         </div>
       {% endif %}
-      
+
       </div>
 
     {% include share.html %}
-    
+
     {% include footer.html %}
 
     </div>

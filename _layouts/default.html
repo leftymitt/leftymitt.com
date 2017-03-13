@@ -9,23 +9,29 @@
 
     <!-- schema.org markup for google+ -->
     <meta itemprop="name" content="{{ page.title }}"/>
-    <meta itemprop="description" content="{{ site.description }} {{ page.tag }}"/>
-    <meta itemprop="image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+    <meta itemprop="description"
+          content="{{ site.description }} {{ page.tag }}"/>
+    <meta itemprop="image"
+          content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
 
     <!-- twitter card data -->
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="{{ site.twitter }}"/>
     <meta name="twitter:title" content="{{ page.title }}"/>
-    <meta name="twitter:description" content="{{ site.description }} {{ page.tag }}"/>
+    <meta name="twitter:description"
+          content="{{ site.description }} {{ page.tag }}"/>
     <meta name="twitter:creator" content="{{ site.twitter }}"/>
-    <meta name="twitter:image:src" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+    <meta name="twitter:image:src"
+          content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
 
     <!-- open graph data -->
     <meta property="og:title" content="{{ page.title }}"/>
     <meta property="og:type" content="article"/>
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-    <meta property="og:image" content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
-    <meta property="og:description" content="{{ site.description }} {{ page.tag }}"/>
+    <meta property="og:image"
+          content="{{ site.url }}{{ site.face | replace: '.svg', '.png' }}"/>
+    <meta property="og:description"
+          content="{{ site.description }} {{ page.tag }}"/>
     <meta property="og:site_name" content="{{ site.title }}"/>
     <meta property="article:section" content="{{ page.category }}"/>
 
@@ -39,7 +45,7 @@
 
   <body>
     <div class="uk-flex uk-flex-column" style="min-height:100vh;">
-  
+
       <!-- add padding to botton equal to navbar height -->
       <div style="padding-bottom:40px;">
       {% include nav.html %}
@@ -48,7 +54,7 @@
       <div class="uk-margin-top uk-flex-item-1" style="">
       {{ content }}
       </div>
-    
+
       {% include footer.html %}
 
     </div>

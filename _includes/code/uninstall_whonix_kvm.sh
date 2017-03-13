@@ -28,7 +28,7 @@ virsh -c qemu:///system undefine Whonix-Workstation
 virsh -c qemu:///system net-destroy Whonix
 virsh -c qemu:///system net-undefine Whonix
 
-# delete vm images. 
+# delete vm images.
 rm -f Whonix-Gateway.qcow2
 rm -f Whonix-Workstation.qcow2
 rm -f Whonix_network-${WHONIX_VERSION}.xml

@@ -26,10 +26,10 @@ cd ${LIBVIRT_DIR}
 
 
 ################################################################################
-# download, verify, and extract whonix files. 
+# download, verify, and extract whonix files.
 ################################################################################
 
-# download the compressed files via tor. 
+# download the compressed files via tor.
 GATEWAY=Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
 WORKSTATION=Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
 GATEWAY_URL=https://download.${DOMAIN_NAME}/linux/${WHONIX_VERSION}/${GATEWAY}
@@ -49,7 +49,7 @@ KEY=patrick.asc
 KEY_URL=https://${DOMAIN_NAME}/{$KEY}
 if ! gpg --fingerprint ${PATRICK_FINGERPRINT}; then
   torify curl ${KEY_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-    -C - -o patrick.asc 
+    -C - -o patrick.asc
   FINGERPRINT=$(gpg --with-fingerprint patrick.asc | \
     sed -n "s/^\s*\([A-Z0-9\ ]*\)$/\1/p")
   if [ "${FINGERPRINT}" = "${PATRICK_FINGERPRINT}" ]; then
@@ -75,20 +75,20 @@ tar xf Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
 echo "extracting whonix workstation."
 tar xf Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
 
-# rename vm images. 
+# rename vm images.
 mv Whonix-Gateway-${WHONIX_VERSION}.qcow2 Whonix-Gateway.qcow2
 mv Whonix-Workstation-${WHONIX_VERSION}.qcow2 Whonix-Workstation.qcow2
 
-# change vm image location in xml rules. 
+# change vm image location in xml rules.
 sed -i "s|\/var\/lib\/libvirt\/images|${PWD}|g" Whonix-Gateway-${WHONIX_VERSION}.xml
-sed -i "s|\/var\/lib\/libvirt\/images|${PWD}|g" Whonix-Workstation-${WHONIX_VERSION}.xml 
+sed -i "s|\/var\/lib\/libvirt\/images|${PWD}|g" Whonix-Workstation-${WHONIX_VERSION}.xml
 
 
 ################################################################################
-# set up virtual machines. 
+# set up virtual machines.
 ################################################################################
 
-# check that network is up. 
+# check that network is up.
 IS_ACTIVE=$(virsh -c qemu:///system net-info default | grep "Active" | \
   cut -d ":" -f2 | sed -e "s/\s//g")
 IS_AUTOSTART=$(virsh -c qemu:///system net-info default | grep "Autostart" | \
@@ -97,7 +97,7 @@ IS_AUTOSTART=$(virsh -c qemu:///system net-info default | grep "Autostart" | \
 [ "${IS_ACTIVE}" = "no" ] && virsh -c qemu:///system net-start default
 [ "${IS_AUTOSTART}" = "no" ] && virsh -c qemu:///system net-autostart default
 
-# comment out acceleration lines in the xml files. they are not supported. 
+# comment out acceleration lines in the xml files. they are not supported.
 sed -i "s/<acceleration accel3d/<\!--<acceleration accel3d/" \
   Whonix-Workstation-${WHONIX_VERSION}.xml
 sed -i "s/ accel2d='yes'\/>/ accel2d='yes'\/>-->/" \
@@ -107,7 +107,7 @@ sed -i "s/<acceleration accel3d/<\!--<acceleration accel3d/" \
 sed -i "s/ accel2d='yes'\/>/ accel2d='yes'\/>-->/" \
   Whonix-Gateway-${WHONIX_VERSION}.xml
 
-# define vms and network rules. 
+# define vms and network rules.
 virsh -c qemu:///system define Whonix-Gateway-${WHONIX_VERSION}.xml
 virsh -c qemu:///system net-define Whonix_network-${WHONIX_VERSION}.xml
 virsh -c qemu:///system net-autostart Whonix
@@ -116,7 +116,7 @@ virsh -c qemu:///system define Whonix-Workstation-${WHONIX_VERSION}.xml
 
 
 ################################################################################
-# cleanup and exit. 
+# cleanup and exit.
 ################################################################################
 
 rm Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz

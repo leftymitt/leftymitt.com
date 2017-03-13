@@ -21,7 +21,7 @@ fi
 
 
 ################################################################################
-# connect to internet (usually automatic for wired connections). 
+# connect to internet (usually automatic for wired connections).
 ################################################################################
 
 # check if connection active
@@ -39,11 +39,11 @@ fi
 
 # for non-broadcasting wireless networks, wifi-menu will fail. manually define
 # the netork via netctl. see examples available in /etc/netcl. once definined
-# network <my_network> is in /etc/netctl, run: 
-# 
+# network <my_network> is in /etc/netctl, run:
+#
 #   netctl start <my_network>
 #
-# to automatically connect from now on, also run: 
+# to automatically connect from now on, also run:
 #
 #   netctl enable <my_network>
 #   systemctl enable netctl@<my_network>.service
@@ -74,7 +74,7 @@ mkfs.ext4 /dev/mapper/vg-home
 
 
 ################################################################################
-# mount logical volumes and bootstrap base and base-devel packages. 
+# mount logical volumes and bootstrap base and base-devel packages.
 ################################################################################
 
 # mount logical volumes
@@ -102,7 +102,7 @@ arch-chroot /mnt /bin/bash
 
 
 ################################################################################
-# return from chroot, clean up, and reboot. 
+# return from chroot, clean up, and reboot.
 ################################################################################
 
 umount -R /mnt

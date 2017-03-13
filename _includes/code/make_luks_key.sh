@@ -21,10 +21,10 @@ fi
 
 
 ################################################################################
-# (optional) create a binary luks key to store in the initial ramdisk. 
+# (optional) create a binary luks key to store in the initial ramdisk.
 ################################################################################
 
-# generate keyfile and prevent non-root from reading it. 
+# generate keyfile and prevent non-root from reading it.
 CRYPTOKEY="/etc/crypto_keyfile.bin"
 dd bs=512 count=4 if=/dev/urandom of=${CRYPTOKEY}
 chmod 400 ${CRYPTOKEY}

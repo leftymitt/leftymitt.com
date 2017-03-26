@@ -47,7 +47,7 @@ torify curl ${WORKSTATION_URL}.asc --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
 # check if patrick's gpg key has already been imported. If not, download it.
 KEY=patrick.asc
 KEY_URL=https://${DOMAIN_NAME}/${KEY}
-if ! gpg --fingerprint ${PATRICK_FINGERPRINT}; then
+if ! gpg --fingerprint "${PATRICK_FINGERPRINT}"; then
   torify curl ${KEY_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
     -C - -o patrick.asc
   FINGERPRINT=$(gpg --with-fingerprint patrick.asc | \

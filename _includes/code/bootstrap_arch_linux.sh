@@ -52,13 +52,18 @@ fi
 # detect devices and configure storage options.
 ################################################################################
 
+echo "start paritioning device: ${DEVICE}."
+
 # create partition table
 parted -s /dev/${DEVICE} mklabel msdos
 parted -s /dev/${DEVICE} mkpart primary 2048s 100%
 
 # create encrypted logical volumes
+echo "initialize luks partition."
 cryptsetup luksFormat /dev/${DEVICE}1
+echo "set password for opening luks volume."
 cryptsetup luksOpen /dev/${DEVICE}1 lvm
+echo "enter newly set password to mount luks volume."
 pvcreate /dev/mapper/lvm
 vgcreate vg /dev/mapper/lvm
 lvcreate -L 4G vg -n swap

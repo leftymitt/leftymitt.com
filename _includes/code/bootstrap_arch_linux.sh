@@ -59,11 +59,11 @@ parted -s /dev/${DEVICE} mklabel msdos
 parted -s /dev/${DEVICE} mkpart primary 2048s 100%
 
 # create encrypted logical volumes
-echo "initialize luks partition."
+echo "\ninitialize luks partition."
 cryptsetup luksFormat /dev/${DEVICE}1
-echo "set password for opening luks volume."
+echo "\nset password for opening luks volume."
 cryptsetup luksOpen /dev/${DEVICE}1 lvm
-echo "enter newly set password to mount luks volume."
+echo "\nenter newly set password to mount luks volume."
 pvcreate /dev/mapper/lvm
 vgcreate vg /dev/mapper/lvm
 lvcreate -L 4G vg -n swap

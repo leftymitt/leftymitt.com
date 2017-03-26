@@ -99,10 +99,19 @@ if test "$(grep '^UUID.*swap' /etc/fstab)"; then
   echo -e "" >> /mnt/etc/fstab
 fi
 
-# chroot
-arch-chroot /mnt /bin/bash
+# execute chroot script to install base system
+if [ -f arch_chroot_script.sh ]; then
+  cp -f arch_chroot_script.sh /mnt
+  arch-chroot /mnt ./arch_chroot_script.sh
+  rm -f /mnt/arch_chroot_script.sh
+fi
 
-# run content in arch_chroot_script.sh within the chroot
+# execute chroot script to build luks key into initcpio
+if [ -f make_luks_key.sh ]; then
+  cp -f make_luks_key.sh /mnt
+  arch-chroot /mnt ./make_luks_key.sh
+  rm -f /mnt/make_luks_key.sh
+fi
 
 
 ################################################################################

@@ -101,6 +101,9 @@ passwd ${USER}
 cat /etc/sudoers | sed -e "s/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g" | \
   EDITOR=tee visudo >/dev/null
 
-# (optional) run make_luks_key.sh here
+# (optional) make_luks_key.sh
+# if [ -f make_luks_key.sh ]; then
+#   ./make_luks_key.sh
+# fi
 
 exit 0

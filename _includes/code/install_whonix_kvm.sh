@@ -35,21 +35,16 @@ WORKSTATION=Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
 GATEWAY_URL=https://download.${DOMAIN_NAME}/linux/${WHONIX_VERSION}/${GATEWAY}
 WORKSTATION_URL=https://download.${DOMAIN_NAME}/linux/${WHONIX_VERSION}/${WORKSTATION}
 
-torify curl ${GATEWAY_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-  -C - -o ${GATEWAY}
-torify curl ${GATEWAY_URL}.asc --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-  -C - -o ${GATEWAY}
-torify curl ${WORKSTATION_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-  -C - -o ${WORKSTATION}.asc
-torify curl ${WORKSTATION_URL}.asc --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-  -C - -o ${WORKSTATION}.asc
+torify wget -N ${GATEWAY_URL}
+torify wget -N ${GATEWAY_URL}.asc
+torify wget -N ${WORKSTATION_URL}
+torify wget -N ${WORKSTATION_URL}.asc
 
 # check if patrick's gpg key has already been imported. If not, download it.
 KEY=patrick.asc
 KEY_URL=https://${DOMAIN_NAME}/${KEY}
 if ! gpg --fingerprint "${PATRICK_FINGERPRINT}"; then
-  torify curl ${KEY_URL} --resolve ${DOMAIN_NAME}:443:${IP_ADDR} \
-    -C - -o patrick.asc
+  torify wget -N ${KEY_URL}
   FINGERPRINT=$(gpg --with-fingerprint patrick.asc | \
     sed -n "s/^\s*\([A-Z0-9\ ]*\)$/\1/p")
   if [ "${FINGERPRINT}" = "${PATRICK_FINGERPRINT}" ]; then

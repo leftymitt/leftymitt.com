@@ -43,7 +43,7 @@ sudo chmod -R 700 /boot/
 # add key to grub config file
 CRYPTO_KEY="cryptkey=rootfs:${CRYPTOKEY}"
 OLD_GRUB_CMDLINE_LINUX=$(sed -n "s/^GRUB_CMDLINE_LINUX=\"\(.*\)\"/\1/p" /etc/default/grub)
-NEW_GRUB_CMDLINE_LINUX="${NEW_GRUB_CMDLINE_LINUX} ${CRYPTO_KEY}"
+NEW_GRUB_CMDLINE_LINUX="${OLD_GRUB_CMDLINE_LINUX} ${CRYPTO_KEY}"
 sed -i "s|${OLD_GRUB_CMDLINE_LINUX}|${NEW_GRUB_CMDLINE_LINUX}|g" /etc/default/grub
 
 # rebuild grub

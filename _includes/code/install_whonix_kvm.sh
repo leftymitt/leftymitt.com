@@ -40,22 +40,9 @@ torify wget -N ${GATEWAY_URL}.asc
 torify wget -N ${WORKSTATION_URL}
 torify wget -N ${WORKSTATION_URL}.asc
 
-# check if patrick's gpg key has already been imported. If not, download it.
-KEY=patrick.asc
-KEY_URL=https://${DOMAIN_NAME}/${KEY}
-if ! gpg --fingerprint "${PATRICK_FINGERPRINT}"; then
-  torify wget -N ${KEY_URL}
-  FINGERPRINT=$(gpg --with-fingerprint patrick.asc | \
-    sed -n "s/^\s*\([A-Z0-9\ ]*\)$/\1/p")
-  if [ "${FINGERPRINT}" = "${PATRICK_FINGERPRINT}" ]; then
-    gpg --import patrick.asc
-  else
-    echo "downloaded fingerprint does not match hard-coded one:"
-    echo "hard-coded: ${PATRICK_FINGERPRINT}"
-    echo "downloaded: ${FINGERPRINT}"
-    echo "exiting."
-    exit 1
-  fi
+# import patrick's gpg key if it has not been imported already.
+if ! gpg --fingerprint "${PATRICK_FINGERPRINT}" >/dev/null; then
+  gpg --keyserver pgp.mit.edu --recv 0x8D66066A2EEACCDA
 fi
 
 # verify the images.

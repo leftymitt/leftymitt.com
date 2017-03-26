@@ -12,8 +12,7 @@ select DEVICE in "${DISKS[@]}"; do
   break
 done
 
-echo "use device ${DEVICE}? (y/N)"
-read REPLY
+read -r -p "use device ${DEVICE}? (y/N): " REPLY
 if [[ ! ${REPLY} =~ ^([Yy]$|[Yy]es) ]]; then
   echo "stopping script..."
   exit 1

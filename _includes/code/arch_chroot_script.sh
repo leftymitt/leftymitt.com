@@ -16,19 +16,14 @@ select DEVICE in "${DISKS[@]}"; do
   break
 done
 
-echo "use device ${DEVICE}? (y/N)"
-read REPLY
+read -r -p "use device ${DEVICE}? (y/N): " REPLY
 if [[ ! ${REPLY} =~ ^([Yy]$|[Yy]es) ]]; then
   echo "stopping script..."
   exit 1
 fi
 
-# compatible with bash and zsh
-printf '%s ' 'enter a new hostname: '
-read HOSTNAME
-
-printf '%s ' 'enter a new username: '
-read USER
+read -r -p 'enter a new hostname: ' HOSTNAME
+read -r -p 'enter a new username: ' USER
 
 
 ################################################################################

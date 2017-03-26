@@ -40,7 +40,7 @@ fi
 hwclock --systohc --utc
 
 # set locale
-LOCALE=$(locale | grep ^LANG | cut -d= -f2 | cut -d\. f1)
+LOCALE=$(locale | grep ^LANG | cut -d= -f2 | cut -d\. -f1)
 sed -i "/^#${LOCALE}.UTF/s/^#//" /etc/locale.gen
 locale-gen
 echo LANG=${LOCALE} > /etc/locale.conf

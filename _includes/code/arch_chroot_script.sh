@@ -22,8 +22,8 @@ if [[ ! ${REPLY} =~ ^([Yy]$|[Yy]es) ]]; then
   exit 1
 fi
 
-read -r -p 'enter a new hostname: ' HOSTNAME
-read -r -p 'enter a new username: ' USER
+read -r -p "enter a new hostname: " HOSTNAME
+read -r -p "enter a new username: " USER
 
 
 ################################################################################

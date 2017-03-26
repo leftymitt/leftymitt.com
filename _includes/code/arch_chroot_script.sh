@@ -50,7 +50,7 @@ echo ${HOSTNAME} > /etc/hostname
 sed -i "/::1/a 127.0.1.1\t${HOSTNAME}.localdomain\t${HOSTNAME}" /etc/hosts
 
 # install wireless tools
-pacman -S iw wpa_supplicant dialog
+pacman -S --noconfirm iw wpa_supplicant dialog
 
 
 ################################################################################
@@ -69,8 +69,7 @@ mkinitcpio -p linux
 # install grub (assuing bios/mbr) and add encryption support.
 ################################################################################
 
-pacman -S grub os-prober
-grub-install --recheck /dev/${DEVICE}
+pacman -S --noconfirm grub os-prober
 
 FOR_SSD="cryptdevice=/dev/${DEVICE}1:lvm:allow-discards"
 LVM_ROOT="root=/dev/mapper/vg-root"
@@ -80,6 +79,7 @@ GRUB_ENABLE_CRYPTODISK="GRUB_ENABLE_CRYPTODISK=y"
 sed -i "s/GRUB_CMDLINE_LINUX=/${GRUB_CMDLINE_LINUX}/g" /etc/default/grub
 echo "${GRUB_ENABLE_CRYPTODISK}" >> /etc/default/grub
 
+grub-install --recheck /dev/${DEVICE}
 grub-mkconfig -o /boot/grub/grub.cfg
 
 

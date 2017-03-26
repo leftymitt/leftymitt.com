@@ -37,6 +37,9 @@ sed -i "s|^FILES=\"${OLD_MKINITCPIO_FILES}\"|FILES=\"${NEW_MKINITCPIO_FILES}\"|g
 # rebuild the kernel
 mkinitcpio -p linux
 
+# prevent non-privileged users from reading any ramdisk
+sudo chmod -R 700 /boot/
+
 # add key to grub config file
 CRYPTO_KEY="cryptkey=rootfs:${CRYPTOKEY}"
 OLD_GRUB_CMDLINE_LINUX=$(sed -n "s/^GRUB_CMDLINE_LINUX=\"\(.*\)\"/\1/p" /etc/default/grub)

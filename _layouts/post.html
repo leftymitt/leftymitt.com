@@ -155,7 +155,7 @@
           <br>
           last edited on
             <a href="{{ site.github }}/{{ site.repo }}/commit/{{ page.git.last_commit.long_sha }}">
-              {% if page.git %}{{ page.git.last_commit.commit_date | date_to_string }}{% endif %}
+              {% if page.git %}{{ page.git.last_commit.commit_date | date_to_string }} at {{ page.git.last_commit.commit_date | date: "%R" }}{% endif %}
             </a>
         </p>
         {% elsif page.category == 'media' or page.categories == "media" %}

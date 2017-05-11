@@ -99,7 +99,7 @@
     <meta property="og:site_name" content="{{ site.title }}"/>
     <meta property="article:published_time" content="{{ page.date }}"/>
     <meta property="article:modified_time"
-          content="{{ page.git.last_commit.commit_date }}">
+          content="{% if page.git %}{{ page.git.last_commit.commit_date }}{% endif %}">
     <meta property="article:section" content="{{ page.category }}"/>
     <meta property="article:tag" content="{{ page.tags }}"/>
 
@@ -155,7 +155,7 @@
           <br>
           last edited on
             <a href="{{ site.github }}/{{ site.repo }}/commit/{{ page.git.last_commit.long_sha }}">
-              {{ page.git.last_commit.commit_date | date_to_string }}
+              {% if page.git %}{{ page.git.last_commit.commit_date | date_to_string }}{% endif %}
             </a>
         </p>
         {% elsif page.category == 'media' or page.categories == "media" %}

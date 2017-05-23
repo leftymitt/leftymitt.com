@@ -35,10 +35,10 @@ WORKSTATION=Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
 GATEWAY_URL=https://download.${DOMAIN_NAME}/linux/${WHONIX_VERSION}/${GATEWAY}
 WORKSTATION_URL=https://download.${DOMAIN_NAME}/linux/${WHONIX_VERSION}/${WORKSTATION}
 
-torify wget -N ${GATEWAY_URL}
-torify wget -N ${GATEWAY_URL}.asc
-torify wget -N ${WORKSTATION_URL}
-torify wget -N ${WORKSTATION_URL}.asc
+torify wget -vN ${GATEWAY_URL}
+torify wget -vN ${GATEWAY_URL}.asc
+torify wget -vN ${WORKSTATION_URL}
+torify wget -vN ${WORKSTATION_URL}.asc
 
 # import patrick's gpg key if it has not been imported already.
 if ! gpg --fingerprint "${PATRICK_FINGERPRINT}" >/dev/null; then

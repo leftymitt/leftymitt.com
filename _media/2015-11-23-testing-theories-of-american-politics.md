@@ -12,7 +12,7 @@ tags:
 
 published_date: "2014-09-01"
 icon: "cambridge-university-press.svg"
-link: "https://journals.cambridge.org/download.php?file=%2FPPS%2FPPS12_03%2FS1537592714001595a.pdf"
+link: "https://sci-hub.ac/journals.cambridge.org/download.php?file=%2FPPS%2FPPS12_03%2FS1537592714001595a.pdf"
 ---
 
 Each of four theoretical traditions in the study of American politics—which can

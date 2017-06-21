@@ -7,7 +7,7 @@ type: science
 tags:
  - social
  - networks
-link: "https://dx.doi.org/10.1103/PhysRevE.92.042805"
+link: "https://sci-hub.ac/dx.doi.org/10.1103/PhysRevE.92.042805"
 published_date: "2015-10-07"
 icon: aps.jpg
 author: Dina Mistry et al. 

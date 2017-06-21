@@ -12,7 +12,7 @@ tags:
 published_date: 2016-10-24
 publisher: fermat's library
 
-link: "http://fermatslibrary.com/s/when-csi-meets-public-wifi-inferring-your-mobile-phone-password-via-wifi-signals"
+link: "https://sci-hub.ac/fermatslibrary.com/s/when-csi-meets-public-wifi-inferring-your-mobile-phone-password-via-wifi-signals"
 ---
 
 In this study, we present WindTalker, a novel and practical keystroke inference

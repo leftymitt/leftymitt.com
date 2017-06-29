@@ -27,6 +27,7 @@ timezone: "UTC"
 permalink: pretty
 paginate: 10
 paginate_path: "/blog/page:num/"
+content_path: "/content"
 
 collections:
    resources:

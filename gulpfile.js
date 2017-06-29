@@ -370,10 +370,10 @@ gulp.task('watch', function() {
 
   watch(
     [
-      '_posts/**', '*.md', '*.html', '_layouts/*', '_config.yml', '_plugins/*',
-      '_includes/**', 'resources/*', '_resources/**', '_drafts/**', 'media/*',
-      '_media/*', 'blog/*', 'projects/*', '_projects/**', '_data/**',
-      'feed.xml', '404.html'
+      '_posts/**', '*.md', '*.html', '_layouts/*', '_config.yml', 'content/**',
+      '_plugins/*', '_includes/**', 'resources/*', '_resources/**',
+      '_drafts/**', 'media/*', '_media/*', 'blog/*', 'projects/*',
+      '_projects/**', '_data/**', 'feed.xml', '404.html'
     ], 
     function() {
       run_sequence('build', 'reload'); 

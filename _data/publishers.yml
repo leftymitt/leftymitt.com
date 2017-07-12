@@ -107,6 +107,10 @@ publishers:
    alt: ['mother jones']
    icon: motherjones.jpg
 
+ - name: new york magazine
+   alt: ['nymag', 'ny magazine']
+   icon: nymag.png
+
  - name: new york times
    alt: ['nytimes']
    icon: nytimes.svg

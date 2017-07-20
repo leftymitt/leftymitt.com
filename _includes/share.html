@@ -29,6 +29,13 @@
      href="{{ reddit_url | strip_newlines | uri_escape }}">
   </a>
 
+  <!-- hacker news -->
+  <a class="uk-icon-hover uk-icon-hacker-news uk-icon-large"
+     title="post on hacker news."
+     {% capture hackernews_url %}https://news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}{% endcapture %}
+     href="{{ hackernews_url | strip_newlines | uri_escape }}">
+  </a>
+
   <!-- pinterest -->
   <a class="uk-icon-hover uk-icon-pinterest-square uk-icon-large"
      title="pin this."

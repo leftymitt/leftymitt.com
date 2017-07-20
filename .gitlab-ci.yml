@@ -5,7 +5,7 @@ variables:
 
 cache:
   paths:
-   - vendor
+   - vendor/
 
 before_script:
   - bundle install --path vendor
@@ -13,9 +13,9 @@ before_script:
 pages:
   stage: deploy
   script:
-  - bundle exec jekyll build
+  - bundle exec jekyll build -d public/
   artifacts:
     paths:
-    - _site
+    - public
   only:
   - master

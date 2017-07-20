@@ -4,7 +4,7 @@
   <!-- twitter -->
   <a class="uk-icon-hover uk-icon-twitter-square uk-icon-large"
      title="tweet it."
-     {% capture twitter_url %}https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url}}&text={{ page.title }}&via={{ site.twitter }}&hashtags={% for tag in page.tags %}{{ tag }},{% endfor %}{% endcapture %}
+     {% capture twitter_url %}https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via={{ site.twitter }}&hashtags={% for tag in page.tags %}{{ tag }},{% endfor %}{% endcapture %}
      href="{{ twitter_url | strip_newlines | uri_escape }}">
   </a>
 
@@ -18,14 +18,14 @@
   <!-- google+ -->
   <a class="uk-icon-hover uk-icon-google-plus-square uk-icon-large"
      title="share on google+."
-     {% capture google_url %}https://plus.google.com/share?url={{ site.url }}{{ page.url}}{% endcapture %}
+     {% capture google_url %}https://plus.google.com/share?url={{ site.url }}{{ page.url }}{% endcapture %}
      href="{{ google_url | strip_newlines | uri_escape }}">
   </a>
 
   <!-- reddit -->
   <a class="uk-icon-hover uk-icon-reddit-square uk-icon-large"
      title="post on reddit."
-     {% capture reddit_url %}https://www.reddit.com/submit?url={{ site.url }}{{ page.url}}&title={{ page.title }}{% endcapture %}
+     {% capture reddit_url %}https://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}{% endcapture %}
      href="{{ reddit_url | strip_newlines | uri_escape }}">
   </a>
 

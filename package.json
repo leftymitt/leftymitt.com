@@ -14,23 +14,23 @@
   },
   "homepage": "https://github.com/leftymitt/leftymitt.github.io",
   "devDependencies": {
-    "browser-sync": "^2.8.2",
-    "event-stream": "^3.3.1",
-    "gulp": "^3.9.0",
+    "browser-sync": "^2.18.13",
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-changed": "^3.1.0",
-    "gulp-concat": "^2.6.0",
+    "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
     "gulp-flatten": "^0.3.1",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-imagemin": "^3.2.0",
-    "gulp-less": "^3.0.3",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-less": "^3.3.2",
     "gulp-print": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.6",
-    "gulp-watch": "^4.3.4",
-    "run-sequence": "^1.1.2"
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "run-sequence": "^2.0.0"
   }
 }

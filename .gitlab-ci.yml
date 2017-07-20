@@ -1,0 +1,21 @@
+image: ruby:2.4
+
+variables:
+  JEKYLL_ENV: production
+
+cache:
+  paths:
+   - vendor
+
+before_script:
+  - bundle install --path vendor
+
+pages:
+  stage: deploy
+  script:
+  - bundle exec jekyll build
+  artifacts:
+    paths:
+    - _site
+  only:
+  - master

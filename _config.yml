@@ -47,6 +47,7 @@ include:
 exclude:
  - "Gemfile"
  - "Gemfile.lock"
+ - "vendor/"
  - "bower.json"
  - "bower_components"
  - "node_modules"

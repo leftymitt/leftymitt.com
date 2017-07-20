@@ -87,9 +87,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # set root password, create new user, and exit.
 ################################################################################
 
-echo "set a password for root user."
-passwd
-
 # create new user with administrator rights
 echo "creating user ${USER}."
 useradd -m -c ${USER} ${USER} -s /bin/bash
@@ -100,6 +97,9 @@ passwd ${USER}
 # enable wheel group
 cat /etc/sudoers | sed -e "s/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g" | \
   EDITOR=tee visudo >/dev/null
+
+# disable root account
+passwd -l root
 
 # (optional) make_luks_key.sh
 # if [ -f make_luks_key.sh ]; then

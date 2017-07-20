@@ -338,6 +338,7 @@ gulp.task('serve', ['build'], function() {
     ui: false,
     port: 8000,
     open: false,
+    online: false,
     notify: false,
     host: 'localhost'
   });

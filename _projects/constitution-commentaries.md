@@ -10,6 +10,7 @@ tags:
 
 date: 2017-07-10
 banner: joseph-story.png
+repo: constitution-commentaries
 
 tag: "\"My object will be, sufficiently attained, if I shall have succeeded in bringing before the reader the true view of its powers, maintained by its founders and friends, and confirmed and illustrated by the actual practice of the government.\" - Joseph Story"
 ---

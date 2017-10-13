@@ -60,7 +60,7 @@ exclude:
  - "LICENSE"
  - "assets/src/"
 
-gems:
+plugins:
  - "jekyll-sitemap"
  - "jekyll-paginate"
  - "octopress-paginate"

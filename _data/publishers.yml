@@ -159,6 +159,10 @@ publishers:
    alt: ['un', 'the un']
    icon: united-nations-emblem.svg
 
+ - name: vanity fair
+   alt: ['']
+   icon: vanity-fair.png
+
  - name: the washington post
    alt: ['washington post']
    icon: washington-post.svg

@@ -101,9 +101,9 @@ virsh -c qemu:///system define Whonix-Workstation-${WHONIX_VERSION}.xml
 # cleanup and exit.
 ################################################################################
 
-rm Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
-rm Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
-rm Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc
-rm Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc
+rm -f Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz
+rm -f Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz
+rm -f Whonix-Gateway-${WHONIX_VERSION}.libvirt.xz.asc
+rm -f Whonix-Workstation-${WHONIX_VERSION}.libvirt.xz.asc
 
 cd ${CURDIR}

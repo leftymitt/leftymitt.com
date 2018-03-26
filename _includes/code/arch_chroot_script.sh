@@ -75,10 +75,9 @@ UUID=$(lsblk -dno UUID /dev/${DEVICE}1)
 FOR_SSD="cryptdevice=UUID=${UUID}:lvm:allow-discards"
 LVM_ROOT="root=/dev/mapper/vg-root"
 GRUB_CMDLINE_LINUX="GRUB_CMDLINE_LINUX=\"${FOR_SSD} ${LVM_ROOT}\""
-GRUB_ENABLE_CRYPTODISK="GRUB_ENABLE_CRYPTODISK=y"
 
 sed -i "s|^GRUB_CMDLINE_LINUX=[\"\"]*|${GRUB_CMDLINE_LINUX}|g" /etc/default/grub
-sed -i "/^GRUB_CMDLINE_LINUX=.*$/a ${GRUB_ENABLE_CRYPTODISK}" /etc/default/grub
+sed -i "s|^#GRUB_ENABLE_CRYPTODISK=y$|GRUB_ENABLE_CRYPTODISK=y|g" /etc/default/grub
 
 grub-install --recheck /dev/${DEVICE}
 grub-mkconfig -o /boot/grub/grub.cfg

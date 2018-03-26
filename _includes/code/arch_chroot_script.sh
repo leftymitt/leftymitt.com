@@ -89,7 +89,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # create new user with administrator rights
 echo "creating user ${USER}."
-useradd -m -c ${USER} ${USER} -s /bin/bash
+useradd -m -c ${USER[@]^} ${USER} -s /bin/bash
 usermod -aG wheel,${USER} ${USER}
 echo "set a password for ${USER}."
 passwd ${USER}

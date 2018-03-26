@@ -30,9 +30,9 @@ chmod 400 ${CRYPTOKEY}
 cryptsetup luksAddKey /dev/${DEVICE}1 ${CRYPTOKEY}
 
 # add key to /etc/mkinitcpio.conf
-OLD_MKINITCPIO_FILES=$(sed -n "s/^FILES=\"\(.*\)\"/\1/p" /etc/mkinitcpio.conf)
+OLD_MKINITCPIO_FILES=$(sed -n "s/^FILES=(\(.*\))/\1/p" /etc/mkinitcpio.conf)
 NEW_MKINITCPIO_FILES=$(echo ${OLD_MKINITCPIO_FILES} ${CRYPTOKEY})
-sed -i "s|^FILES=\"${OLD_MKINITCPIO_FILES}\"|FILES=\"${NEW_MKINITCPIO_FILES}\"|g" /etc/mkinitcpio.conf
+sed -i "s|^FILES=(${OLD_MKINITCPIO_FILES})|FILES=(${NEW_MKINITCPIO_FILES})|g" /etc/mkinitcpio.conf
 
 # rebuild the kernel
 mkinitcpio -p linux

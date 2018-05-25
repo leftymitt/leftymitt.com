@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="description"
-          content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
+          content="{{ page.content | markdownify | strip_html | strip_newlines | truncate:200 }}"/>
 
     <!-- schema.org markup for google+ -->
     <meta itemprop="name" content="{{ page.title }}"/>
     {% if page.tag %}
     <meta itemprop="description"
-          content="{{ page.tag | strip_html | strip_newlines | truncate:200 }}"/>
+          content="{{ page.tag | markdownify | strip_html | strip_newlines | truncate:200 }}"/>
     {% else %}
     <meta itemprop="description"
-          content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
+          content="{{ page.content | markdownify | strip_html | strip_newlines | truncate:200 }}"/>
     {% endif %}
     {% if page.img %}
     <meta itemprop="image"
@@ -43,10 +43,10 @@
     <meta name="twitter:title" content="{{ page.title }}"/>
     {% if page.tag %}
     <meta name="twitter:description"
-          content="{{ page.tag | strip_html | strip_newlines | truncate:200 }}"/>
+          content="{{ page.tag | markdownify | strip_html | strip_newlines | truncate:200 }}"/>
     {% else %}
     <meta name="twitter:description"
-          content="{{ page.content | strip_html | strip_newlines | truncate:200 }}"/>
+          content="{{ page.content | markdownify | strip_html | strip_newlines | truncate:200 }}"/>
     {% endif %}
     <meta name="twitter:creator" content="{{ site.twitter }}"/>
     <!-- twitter summary_large_image: at least 280x150px -->
